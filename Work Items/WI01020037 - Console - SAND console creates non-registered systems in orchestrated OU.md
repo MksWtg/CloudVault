@@ -1,6 +1,6 @@
 
 
-SAND CCC is used for functionally testing Console changes. New customer systems are orchestrated by default- you can see this by the fact (they have service tasks running). Systems are orchestrated by p
+SAND CCC is used for functionally testing Console changes. New customer systems are orchestrated by default- you can see this by the fact (they have service tasks running). Systems are orchestrated by placing them in a specific OU in the AD. Then separately, PCO (Process Controller Orchestrator)
 
 
 
