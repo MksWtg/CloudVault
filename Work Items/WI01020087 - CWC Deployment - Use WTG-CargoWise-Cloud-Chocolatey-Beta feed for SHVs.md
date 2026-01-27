@@ -10,3 +10,6 @@ Previous System
 - Typically this is just pushing the binaries to the right remote feed e.g. https://proget.wtg.zone/nuget/WTG-Chocolatey/
 - Our projects consume them by pulling from a repo on demand [TODO: confirm if project is configured to pull from repo on demand or if we manually install it onto the server by going onto the server and fetching the file or what]
 
+New System
+- We are stopping using sand proget for deploying our sand projects. Sand proget is now for the proget team to test proget itself, which means it cannot reliably host binaries and packages for us
+- The standard wisecloud builddeployer now needs to 
