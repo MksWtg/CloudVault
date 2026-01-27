@@ -15,3 +15,6 @@ New System
 - The standard WiseCloud BuildDeployer now needs to push to ordinary proget as well
 - To keep PROD and SAND binaries segregated, we will use separate feeds
 
+
+More Detailed Info:
+- 
