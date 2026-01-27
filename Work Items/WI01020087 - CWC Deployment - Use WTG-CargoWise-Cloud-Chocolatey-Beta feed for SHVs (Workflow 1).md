@@ -2,6 +2,7 @@ Context:
 - proget is a binaries/packages repository
 - It is a computer that hosts a bunch of packages such as npm, nuget, binaries, etc.
 - It is accessible on the WiseTech network at https://proget.wtg.zone/ and a SAND version at https://proget.sand.wtg.zone/
+![[Pasted image 20260128105031.png]]
 
 Previous System
 - We would use proget to host all binaries for PROD and proget sand for SAND environments
