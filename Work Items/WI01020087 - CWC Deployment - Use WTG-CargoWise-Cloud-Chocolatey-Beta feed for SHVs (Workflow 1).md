@@ -7,9 +7,14 @@ Context:
 Previous System
 - We would use proget to host all binaries for PROD and proget sand for SAND environments
 - When we deployed a product via DAT, we could pick from one of several deployment "targets". These targets are specified in the build.xml file and includes information such as build type (DEBUG, RELEASE) and deployment config (SAND, PROD).
+	- For an example of a build.xml with targets, see: https://github.com/WiseTechGlobal/CargoWise.DocumentUtility/blob/master/Build.xml
 - Our deployment targets are connected to a build deployer, after clicking deploy DAT hands control to our build deployer which has logic that reads the information provided by our build.xml and chooses what to do to deploy the product
+	- For the build deployer corresponding to the above targets, see: https://github.com/WiseTechGlobal/CargoWiseCloud.Shared/blob/master/Deployment/Deployment/ChocoDeployer.cs
 - Typically this is just pushing the binaries to the right remote feed e.g. https://proget.wtg.zone/nuget/WTG-Chocolatey/
-- Our projects consume them by pulling from a repo on demand [TODO: confirm if project is configured to pull from repo on demand or if we manually install it onto the server by going onto the server and fetching the file or what]
+- Our projects consume them by pulling from a repo on demand
+	- We trigger this typically through another target, but the build deployer for this actually installs the new package/binaries onto the server
+
+![[Pasted image 20260128105121.png]]
 
 New System
 - We are stopping using sand proget for deploying our sand projects. Sand proget is now for the proget team to test proget itself, which means it cannot reliably host binaries and packages for us
