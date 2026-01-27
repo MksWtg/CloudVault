@@ -17,4 +17,4 @@ New System
 
 
 More Detailed Info:
-- 
+- Before we had targets for SAND and SAND ALPHA targets, copying the system of PROD and PROD ALPHA system for prod. However, we have decided to remove that feed.
