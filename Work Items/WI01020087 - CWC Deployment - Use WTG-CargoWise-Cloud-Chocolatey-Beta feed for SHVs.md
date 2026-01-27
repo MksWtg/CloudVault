@@ -1,7 +1,7 @@
 Context:
 - proget is a binaries/packages repository
 - It is a computer that hosts a bunch of packages such as npm, nuget, binaries, etc.
-- It is accessible on the wisetech network at https://proget.wtg.zone/ and a SAND version at https://proget.sand.wtg.zone/
+- It is accessible on the WiseTech network at https://proget.wtg.zone/ and a SAND version at https://proget.sand.wtg.zone/
 
 Previous System
 - We would use proget to host all binaries for PROD and proget sand for SAND environments
@@ -12,4 +12,6 @@ Previous System
 
 New System
 - We are stopping using sand proget for deploying our sand projects. Sand proget is now for the proget team to test proget itself, which means it cannot reliably host binaries and packages for us
-- The standard wisecloud builddeployer now needs to 
+- The standard WiseCloud BuildDeployer now needs to push to ordinary proget as well
+- To keep PROD and SAND binaries segregated, we will use separate feeds
+
