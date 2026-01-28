@@ -7,39 +7,27 @@ SAND CCC is used for functionally testing Console changes. New customer systems 
 Systems are orchestrated by placing them in a specific OU in the AD. Then separately, PCO (Process Controller Orchestrator) will look for all the instances listed in this OU and create process controllers that run service tasks for those instances.
 
 The issue:
-- When Denny's team create PROD systems they register customer systems with a product license manually (The process is detailed here: [Mukund Srinivasan: What is "Registering" a customer system? | CargoWise Cloud > CargoWise Cloud Console | Microsoft Teams](https://teams.microsoft.com/l/message/19:J_86s9F8V8fw-qtEJ6XkiTRBLQDTwAFtfOQmy4wjKZk1@thread.tacv2/1769125776064?tenantId=8b493985-e1b4-4b95-ade6-98acafdbdb01&groupId=ced3190c-f7ff-408f-a149-760a9449c556&parentMessageId=1769125776064&teamName=CargoWise%20Cloud&channelName=CargoWise%20Cloud%20Console&createdTime=1769125776064&ngc=true&allowXTenantAccess=true "https://teams.microsoft.com/l/message/19:J_86s9F8V8fw-qtEJ6XkiTRBLQDTwAFtfOQmy4wjKZk1@thread.tacv2/1769125776064?tenantId=8b493985-e1b4-4b95-ade6-98acafdbdb01&groupId=ced3190c-f7ff-408f-a149-760a9449c556&parentMessageId=1769125776064&teamName=CargoWise%20Cloud&channelName=CargoWise%20Cloud%20Console&createdTime=1769125776064&ngc=true&allowXTenantAccess=true")). When test rigs create customer systems they register them programmatically. However, console instances are not registered with a product license.
+- When Denny's team create PROD systems (with or without console) they register customer systems with a product license manually (The process is detailed here: [Mukund Srinivasan: What is "Registering" a customer system? | CargoWise Cloud > CargoWise Cloud Console | Microsoft Teams](https://teams.microsoft.com/l/message/19:J_86s9F8V8fw-qtEJ6XkiTRBLQDTwAFtfOQmy4wjKZk1@thread.tacv2/1769125776064?tenantId=8b493985-e1b4-4b95-ade6-98acafdbdb01&groupId=ced3190c-f7ff-408f-a149-760a9449c556&parentMessageId=1769125776064&teamName=CargoWise%20Cloud&channelName=CargoWise%20Cloud%20Console&createdTime=1769125776064&ngc=true&allowXTenantAccess=true "https://teams.microsoft.com/l/message/19:J_86s9F8V8fw-qtEJ6XkiTRBLQDTwAFtfOQmy4wjKZk1@thread.tacv2/1769125776064?tenantId=8b493985-e1b4-4b95-ade6-98acafdbdb01&groupId=ced3190c-f7ff-408f-a149-760a9449c556&parentMessageId=1769125776064&teamName=CargoWise%20Cloud&channelName=CargoWise%20Cloud%20Console&createdTime=1769125776064&ngc=true&allowXTenantAccess=true")). When test rigs create customer systems they register them programmatically. However, when we create console instances they are not registered with a product license.
 	- TODO: figure out what registration is for. As of right now it is just an arbitrary action, mandated for policy.
+	- TODO: confirm test rigs register programmatically
 - When PCO tries to spin up a PC, it performs a check to see if the instance it is creating a PC for is registered. This is determined by running a simple TSQL stored procedure. (You can see this here: https://github.com/WiseTechGlobal/CargoWiseCloud.ProcessControllerOrchestrator/blob/93b69b7d5b4a096c9eb9a6023a61ffa7eeb18967/Source/Common/DataLayer/DataAccess.cs#L83).
 - Since the console instance is not registered, it triggers a SCOM alert, because in its eyes something has gone wrong if a non-registered system is asking to be orchestrated.
 
 Solutions:
-1. Make SAND console create these systems in the non-orchestrated OU
-
-
-
-
+1. Make console create SAND systems in the non-orchestrated OU (no service tasks, so no registration required). For PROD systems, keep doing what we are doing now- which is Denny's team manually registering them. This solution is not great because we need service tasks for functionally testing Winzor test rigs.
+2. Make console register customer systems on creation (register programmatically like the test rigs). But we are blocked by the CW Installer project. This is to reduce effort/code duplication + separate business logic (i.e., Console shouldn't be making CargoWise changes, CargoWise should).
+3. Just a policy change, have a little popup that asks users to register the instance when they create one.
 
   
 
-Either:
 
+Other Info:
 
+- why has this not been an issue until now?
+	- Garland was cancelling the SCOM alert
 
-or
-
-2. Make SAND Console register customer systems on creation
-
-  
-
-M22 22-Jan-26 11:46 GMT+11:00:
-
-  
-
-some random questions:
-
-- why has this not been an issue until now (ans: garland was cancelling the SCOM alert)
-
-- where is the portal that can be used to see all the alerts? (ans: operations manager, need to request access from SRE) or are we simply noticing them because they are turned into incidents and pushed onto the board (ans: YES, there is a mapping between SCOM source and the target capability, all the ones that matter come onto the board anyway)
+- where is the portal that can be used to see all the alerts?
+	- (ans: operations manager, need to request access from SRE) or are we simply noticing them because they are turned into incidents and pushed onto the board (ans: YES, there is a mapping between SCOM source and the target capability, all the ones that matter come onto the board anyway)
 
   
 
