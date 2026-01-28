@@ -33,3 +33,8 @@ Other Info:
 Chosen Solution: 3
 - The policy change does come with a small code change, show an alert when a user creates a new customer system if they select service tasks, which is created by default. 
 - TODO: Once auto registration is complete, remove this feature
+
+
+Prompts used:
+
+- When users click teh "Create Customer System" button in the create customer system modal, if the "Service Tasks Enabled" is toggled on, open a dialog box that says "Make sure to register customer system or otherwise disable service tasks" and teh user can eitehr go back or confirm, which closes both the dialog box and the modal. if service tasks are toggled off, just do nothing- the create customer system button does what it does now
