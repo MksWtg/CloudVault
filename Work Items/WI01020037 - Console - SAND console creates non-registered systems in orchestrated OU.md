@@ -1,8 +1,10 @@
 
 
-SAND CCC is used for functionally testing Console changes. New customer systems are orchestrated by default- you can see this by the fact (they have service tasks running). Systems are orchestrated by placing them in a specific OU in the AD. Then separately, PCO (Process Controller Orchestrator)
+SAND CCC is used for functionally testing Console changes. New customer systems are orchestrated by default- you can see this by the fact (they have service tasks running). Systems are orchestrated by placing them in a specific OU in the AD. Then separately, PCO (Process Controller Orchestrator) will look for all the instances listed in this OU and create process controllers that run service tasks for those instances.
 
-
+The issue:
+- When PCO does this, it performs a check to see if the instance it is creating a PC for is "registered". This is determined by running a simple TSQL stored procedure.
+- TODO: figure out what registration is for. As of right now it is just an arbitrary action, mandated for policy.
 
 In addition, these instances are not registered with a product license.
 
