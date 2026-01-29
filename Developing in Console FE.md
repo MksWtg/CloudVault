@@ -10,7 +10,6 @@ Solution:
 # How QGL Builds Console FE (Not a .NET Project)
 - Runs the following commands after a build
 
-1) `cmd /c "cd /d ..\ConsoleFrontend\  && npm ci  && npm run check-format  && npm run build"`
-2) `cmd /c "cd /d ..\ConsoleFrontend\  && npm install  && npm run format  && npm run build"`
-3) `cmd /c "robocopy ..\ConsoleFrontend\dist ..\Bin\WebApi\wwwroot /MIR & IF %ERRORLEVEL% LSS 8 (exit 0) ELSE (exit %ERRORLEVEL%)"`
+1) `cmd /c "cd /d ..\ConsoleFrontend\  && npm install  && npm run format  && npm run build"`
+2) `cmd /c "robocopy ..\ConsoleFrontend\dist ..\Bin\WebApi\wwwroot /MIR & IF %ERRORLEVEL% LSS 8 (exit 0) ELSE (exit %ERRORLEVEL%)"`
 
