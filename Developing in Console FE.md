@@ -17,3 +17,5 @@ Or
 
 1) `cd /d ..\ConsoleFrontend\  && npm install  && npm run format  && npm run build`
 2) `robocopy ..\ConsoleFrontend\dist ..\Bin\WebApi\wwwroot /MIR & IF %ERRORLEVEL% LSS 8 (exit 0) ELSE (exit %ERRORLEVEL%)`
+
+Run from the sunlight dracula
