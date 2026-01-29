@@ -37,4 +37,4 @@ Chosen Solution: 3
 
 Prompts used:
 
-- When users click the "Create Customer System" button in the create customer system modal, if the "Service Tasks Enabled" is toggled on, open a dialog box that says "Make sure to register customer system or otherwise disable service tasks" and the user can either go back or confirm, which closes both the dialog box and the modal. if service tasks are toggled off, just do nothing- the create customer system button does what it does now
+- When users click the "Create Customer System" button in the create customer system modal, if the "Service Tasks Enabled" is toggled on, open a dialog box that says "Make sure to register customer system or otherwise disable service tasks" and the user can either go back or confirm, which closes both the dialog box and the modal. if service tasks are toggled off, just do nothing- the final create customer system button does what it does now
