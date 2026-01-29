@@ -15,5 +15,5 @@ Solution:
 
 Or 
 
-1) `cd C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Console.git\Source\ConsoleFrontend && npm run build`
-2) `robocopy ..\ConsoleFrontend\dist ..\Bin\WebApi\wwwroot /MIR & IF %ERRORLEVEL% LSS 8 (exit 0) ELSE (exit %ERRORLEVEL%)`
+1) `cd C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/ConsoleFrontend && npm run build`
+2) `robocopy C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/ConsoleFrontend/dist C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git\Source\bin\WebApi\wwwroot /MIR & IF %ERRORLEVEL% LSS 8 (exit 0) ELSE (exit %ERRORLEVEL%)`
