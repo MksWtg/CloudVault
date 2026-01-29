@@ -1,6 +1,6 @@
 
 
-SAND CCC is used for functionally testing Console changes. New customer systems are orchestrated by default (they have service tasks running). You can see this in the customer creation modal. 
+SAND CCC is used for functionally testing Console changes. New customer systems are orchestrated by default (they have service tasks running). You can see this in the customer creation modal.
 
 ![[Pasted image 20260128111524.png]]
 
