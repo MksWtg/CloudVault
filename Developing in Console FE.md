@@ -8,7 +8,9 @@ Solution:
 - Since actual builds are very short, just do what QGL does (instructions below)
 
 # How QGL Builds Console FE (Not a .NET Project)
-- Runs the following commands
-<Exec Command="cmd /c &quot;cd /d ..\ConsoleFrontend\  &amp;&amp; npm ci  &amp;&amp; npm run check-format  &amp;&amp; npm run build&quot;" Condition="$(ConfigurationName) == RELEASE" />
-<Exec Command="cmd /c &quot;cd /d ..\ConsoleFrontend\  &amp;&amp; npm install  &amp;&amp; npm run format  &amp;&amp; npm run build&quot;" Condition="$(ConfigurationName) == DEBUG" />
-<Exec Command="cmd /c &quot;robocopy ..\ConsoleFrontend\dist ..\Bin\WebApi\wwwroot /MIR &amp; IF %ERRORLEVEL% LSS 8 (exit 0) ELSE (exit %ERRORLEVEL%)&quot;" />
+- Runs the following commands after a build
+
+1) `cmd /c "cd /d ..\ConsoleFrontend\  && npm ci  && npm run check-format  && npm run build"`
+2) `cmd /c "cd /d ..\ConsoleFrontend\  && npm install  && npm run format  && npm run build"`
+3) `cmd /c "robocopy ..\ConsoleFrontend\dist ..\Bin\WebApi\wwwroot /MIR & IF %ERRORLEVEL% LSS 8 (exit 0) ELSE (exit %ERRORLEVEL%)"`
+
