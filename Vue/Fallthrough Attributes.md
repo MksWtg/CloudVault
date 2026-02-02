@@ -44,3 +44,6 @@ const props = defineProps({ modelValue: Number })
 - Parent does not declare modelValue, so it ends up in `$attrs`
 - `$attrs` automatically attaches to the root element
 - Child now receives `modelValue` and can emit `update:modelValue` directly, updating the grandparent
+
+### Docs
+https://vuejs.org/guide/components/attrs#nested-component-inheritance
