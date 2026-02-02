@@ -1,6 +1,6 @@
 
 
-SAND CCC is used for functionally testing Console changes. New customer systems are orchestrated by default (they have service tasks running). You can see this in the customer creation modal.
+The product SAND CCC, accessible at https://cwc-console.sand.wtg.zone/, is used for functionally testing Console changes. New customer systems are orchestrated by default (they have service tasks running). You can see this in the customer creation modal.
 
 ![[Pasted image 20260128111524.png]]
 
@@ -13,12 +13,10 @@ The issue:
 - When PCO tries to spin up a PC, it performs a check to see if the instance it is creating a PC for is registered. This is determined by running a simple TSQL stored procedure. (You can see this here: https://github.com/WiseTechGlobal/CargoWiseCloud.ProcessControllerOrchestrator/blob/93b69b7d5b4a096c9eb9a6023a61ffa7eeb18967/Source/Common/DataLayer/DataAccess.cs#L83).
 - Since the console instance is not registered, it triggers a SCOM alert, because in its eyes something has gone wrong if a non-registered system is asking to be orchestrated.
 
-Solutions:
+Solution Options:
 1. Make console create SAND systems in the non-orchestrated OU (no service tasks, so no registration required). For PROD systems, keep doing what we are doing now- which is Denny's team manually registering them. This solution is not great because we need service tasks for functionally testing Winzor test rigs.
 2. Make console register customer systems on creation (register programmatically like the test rigs). But we are blocked by the CW Installer project. This is to reduce effort/code duplication + separate business logic (i.e., Console shouldn't be making CargoWise changes, CargoWise should).
 3. Just a policy change, have a little popup that asks users to register the instance when they create one.
-
-  
 
 
 Other Info:
