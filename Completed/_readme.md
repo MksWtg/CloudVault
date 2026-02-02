@@ -1,2 +1,2 @@
 - Each week include the list of completed WIs
-- A completed WI is one that has been submit for review
+- A completed WI is one that has been submit for review, all the iterations and stuff don't count
