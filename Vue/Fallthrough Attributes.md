@@ -1,5 +1,6 @@
 
 ### The Problem
+
 In this file: https://github.com/WiseTechGlobal/CargoWiseCloud.Console/blob/master/Source/ConsoleFrontend/src/components/customersystems/wtg-get-customersystems.vue we have the code:
 ```
 <CreateCustomerSystems
@@ -11,7 +12,7 @@ Which passes the bool `createCustomerSystemsVisibility` to the child component `
 
 In the child component: https://github.com/WiseTechGlobal/CargoWiseCloud.Console/blob/master/Source/ConsoleFrontend/src/components/customersystems/wtg-create-customersystems.vue the root element is a single `<WtgModal>` component from the  [SUPPLY](https://design.wtg.zone/?path=/docs/intro--overview) component library.
 
-Problem: where is the grandchild `WtgModal` receiving the information it needs to know whether to display the modal? We know this is provided via `v-model` (bool `createCustomerSystemsVisibility`) in the grandparent, but then what? Also, we never seem to declare this in the child in the form of a `modelValue`. Yet somehow, via empirical testing we know that this setup accurately connects the grandparent and grandchild through the parent. How?
+Problem: where is the grandchild `WtgModal` receiving the information it needs to know whether to display the modal? We know practically that what is really happening is that this data is provided via `v-model` (bool `createCustomerSystemsVisibility`) in the grandparent, but then how does it propagate through the parent into the child? Especially since we never declare this prop in the child in the form of a `modelValue`. Yet somehow, via empirical testing we know that this setup accurately connects the grandparent and grandchild through the parent. How?
 ### Solution: Attribute Fallthrough
 
 If the parent has no declared props and its root element is exactly the child component, Vue automatically passes undeclared props (including `modelValue` and `update:modelValue`), known as attributes, to that child.
