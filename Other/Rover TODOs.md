@@ -1,0 +1,1 @@
+1) Robot agnostic high level orchestration and low level robot specific drive are connected via `cmd_vel` topic. Nav2 publishes to this and we need to subscribe to this and send it to the VESCs
