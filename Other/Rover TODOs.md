@@ -6,4 +6,9 @@
 
 3) Run sim and irl rover that both read from cmd_vel at the same time to get both running at the same time, even if there is drift
 
-4) 
+
+
+
+#### Prompts
+
+lets say i have the following situation when trying to put rgbd cartographer nav2 ros2 humble SLAM into a 1x1x1m rover: i have teleop in sim and irl by connecting xbox controller -> joy node -> convert joy signals to cmd_vel in an adapter node -> vesc node reads cmd_vel signals and sends commands to VESC by publishing to front_left/commands/motor/speed etc. What is the next step, how can i set up cartographer and nav2 with my d435i mounted to the rover (depth camera is not in urdf)
