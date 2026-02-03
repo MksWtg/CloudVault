@@ -1,7 +1,7 @@
 AD Explorer is a RO tool that lets you inspect [[Active Directory]] (AD) without using PS or LDAP queries. The main use case is querying and navigating the AD in an intuitive way. It looks like this:
 ![[Pasted image 20260203145611.png]]
 
-At wtg we have 3 main ADs for the 3 main environments: SAND (for testrigs), CORP (for wtg employees) and PROD (for customers). AD Explorer can be used for all 3 of these.
+At wtg we have 4 main ADs for the 3 main environments: SAND (for testrigs), CORP (for wtg employees) and PROD/TEST (for customers). AD Explorer can be used for all 4 of these.
 
 ### CORP AD
 
@@ -19,4 +19,16 @@ The result:
 Note: every query you make is visible to the sys admins, so don't go stalking other people.
 
 ### SAND AD
+- Domain is `sand.wtg.zone`
+- Username and pword are blank
+
+### PROD AD/TEST AD
+- Domain is `test.wisecloud.zone`
+- TODO: Figure out username and pword, and if I need to be on jump host to access 
+
+### Some Interesting Records
+
+Orchestrated Test Rigs: `OU=OrchestratedSH0,OU=ASPAC,OU=Applications,OU=root,DC===sand==,DC=wtg,DC=zone,==sand==.wtg.zone`
+
+SQL Servers:`OU=SQL,OU=AU2,OU=ASPAC,OU=Servers,OU=Computers,OU=root,DC===sand==,DC=wtg,DC=zone,==sand==.wtg.zone`
 
