@@ -1,1 +1,0 @@
-See [[What is WCA]]
