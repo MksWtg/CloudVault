@@ -11,10 +11,10 @@ Solution:
 ## How QGL Builds Console FE (Not a .NET Project)
 - Runs the following commands after a build
 
-1) `cmd /c "cd /d ..\ConsoleFrontend\  && npm install  && npm run format  && npm run build"`
+1) `cmd /c "cd /d ..\ConsoleFrontend\  && npm install  && npm run format && npm run build"`
 2) `cmd /c "robocopy ..\ConsoleFrontend\dist ..\Bin\WebApi\wwwroot /MIR & IF %ERRORLEVEL% LSS 8 (exit 0) ELSE (exit %ERRORLEVEL%)"`
 
-Or 
+Or
 
 1) `cd C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/ConsoleFrontend && npm run build`
 2) `robocopy C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/ConsoleFrontend/dist C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/bin/WebApi/wwwroot /MIR`
@@ -40,3 +40,10 @@ Or
 3) Access the application at `7170` (backend), all requests that are NOT to controllers are proxied to FE
 
 For development, we want hot reload. Since the QGL method precompiles and serves static files it is impossible to reconcile that method with a live server. So we must go for option 'B'
+
+Problem:
+- Requests made at `7170` to authorized API endpoints are returning HTML, chat GPT reckons this is because there is no NTLM so it falls back to serving XTML
+1) Frontend sends `GET http://localhost:7170/security/authorized-apis`
+2) The browser does not include `Authorization` header
+3) ASPNET sees  unauthenticated request to  protected endpoint
+4) Controller require
