@@ -26,5 +26,15 @@ Or
 2) Navigate to `Source\bin\WebApi` and then run `CargoWiseCloudConsole.WebApi.exe`
 3) Visit `localhost:7170`
 
-- `7170` is the port the backend is accessible from, you can hit any api endpoints from this port and access swagger at `http://localhost:7170/swagger/index.html`
-- The reason the frontend is also served at `7170` is because of the QGL build config in the WebApi csproj
+- `7170` is the port the backend is accessible from, you can hit any API endpoints from this port and access swagger at `http://localhost:7170/swagger/index.html`
+- The reason the frontend is also served at `7170` is because of ASPNET settings
+	- We run the exe from `Source\bin\WebApi`
+	- Content root becomes `Bin/WebApi`
+	- Web root (where static files are served from) becomes `Bin/WebApi/wwwroot`
+	- In program config we have:  `webApplication.UseStaticFiles();` and `webApplication.UseDefaultFiles();`
+	- That directory contains the FE build because the robocopy task put it there
+
+### Debug
+1) Build backend through VS debugger
+2) Run frontend through `npm run dev`
+3) 
