@@ -7,7 +7,7 @@ Problem:
 Solution:
 - Since actual builds are very short, just do what QGL does (instructions below)
 
-# How QGL Builds Console FE (Not a .NET Project)
+## How QGL Builds Console FE (Not a .NET Project)
 - Runs the following commands after a build
 
 1) `cmd /c "cd /d ..\ConsoleFrontend\  && npm install  && npm run format  && npm run build"`
@@ -19,7 +19,6 @@ Or
 2) `robocopy C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/ConsoleFrontend/dist C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/bin/WebApi/wwwroot /MIR`
 
 ## Comparison of Methods of Running CCC
-
 
 ### QGL
 1) Checkout main and QGL full build
@@ -35,6 +34,8 @@ Or
 	- That directory contains the FE build because the robocopy task put it there
 
 ### Debug
-1) Build backend through VS debugger
-2) Run frontend through `npm run dev`
-3) 
+1) Build backend through VS debugger at `7170`
+2) Run frontend through `npm run dev` at `5173`
+3) Access the application at `7170` (backend), all requests that are NOT to controllers are proxied to FE
+
+For development, we want hot reload. Since the QGL method precompiles and serves static files it is impossible to reconcile that method with a live server. So we must go for option 'B'
