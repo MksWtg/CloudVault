@@ -22,6 +22,7 @@ Or
 ## Comparison of Methods of Running CCC
 
 ### QGL
+
 1) Checkout main and QGL full build
 2) Navigate to `Source\bin\WebApi` and then run `CargoWiseCloudConsole.WebApi.exe`
 3) Visit `localhost:7170`
@@ -33,15 +34,15 @@ Or
 	- Web root (where static files are served from) becomes `Bin/WebApi/wwwroot`
 	- In program config we have:  `webApplication.UseStaticFiles();` and `webApplication.UseDefaultFiles();`
 	- That directory contains the FE build because the robocopy task put it there
-
 ### Debug
+
 1) Build backend through VS debugger at `7170`
 2) Run frontend through `npm run dev` at `5173`
 3) Access the application at `7170` (backend), all requests that are NOT to controllers are proxied to FE
 
 For development, we want hot reload. Since the QGL method precompiles and serves static files it is impossible to reconcile that method with a live server. So we must go for option 'B'
-
 ### Authentication Differences
+
 Problem:
 - Requests made at `7170` to authorized API endpoints are returning HTML, chat GPT reckons this is because there is no NTLM so it falls back to serving XTML
 1) Frontend sends `GET http://localhost:7170/security/authorized-apis`
