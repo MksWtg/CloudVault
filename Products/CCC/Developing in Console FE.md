@@ -1,8 +1,9 @@
+
 For some silly reason, the ordinary build process of npm run dev (exposing FE at 5173) and running dotnet build (exposing BE at 7170) does not work. Requests are not proxied correctly. The QGL build method serves the FE and exposes BE at 7170- FE are served as static files from /Bin/WebApi/wwwroot.
 
 Problem:
 - Whenever we make a frontend change, we cannot run npm run dev as it will not connect to backend, requests don't go through
-	- TODO: investigate why
+	- See `Comparison of Methods of Running CCC` for why
 
 Solution:
 - Since actual builds are very short, just do what QGL does (instructions below)
