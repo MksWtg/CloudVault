@@ -25,4 +25,6 @@ Or
 1) Checkout main and QGL full build
 2) Navigate to `Source\bin\WebApi` and then run `CargoWiseCloudConsole.WebApi.exe`
 3) Visit `localhost:7170`
-4) 
+
+- `7170` is the port the backend is accessible from, you can hit any api endpoints from this port and access swagger at `http://localhost:7170/swagger/index.html`
+- The reason the frontend is also served at `7170` is because of the QGL build config in the WebApi csproj
