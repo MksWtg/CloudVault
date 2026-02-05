@@ -63,3 +63,6 @@ help me diagnose a problem. i have a vue frontend and aspnet backend app with nt
 
 Idea:
 `MapFallback`
+
+Command:
+`PS C:\Users\Mukund.Srinivasan\AppData\Roaming\ASP.NET\https> openssl pkcs12 -export -out test.client.pfx -inkey test.client.key -in test.client.pem -passout pass:ConsoleCertPassword`
