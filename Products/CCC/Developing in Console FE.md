@@ -60,3 +60,6 @@ Solution:
 
 Prompts:
 help me diagnose a problem. i have a vue frontend and aspnet backend app with ntlm authentication. backend is served at 7170 and it uses the useSpa middleware to proxy all FE requests to the frontend at 5173 running npm run dev. so i can go to 7170 localhost in browser to see the frontend. however, i am getting issues because any requests that are authorized e.g. GET http://localhost:7170/security/authorized-apis return xml instead of the actual result. help me figure out why and how to fix. 
+
+Idea:
+`MapFallback`
