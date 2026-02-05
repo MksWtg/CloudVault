@@ -46,4 +46,10 @@ Problem:
 1) Frontend sends `GET http://localhost:7170/security/authorized-apis`
 2) The browser does not include `Authorization` header
 3) ASPNET sees  unauthenticated request to  protected endpoint
-4) Controller require
+	1) Controller requires `[Authorize(Policy = RequireViewerOrHigher)]`
+4) ASPNET returns 401
+5) Chrome does not consider the origin trusted for Windows Auth, it sees failed network request
+6) In error interceptor we aren't handling 401, so Axios does rejects the 401, error handler navigates back to "/" which causes the SPA to reload and the dev server (Vite) serves index.html
+
+Solution:
+- Send authentication
