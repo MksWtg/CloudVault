@@ -17,3 +17,12 @@ Or
 
 1) `cd C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/ConsoleFrontend && npm run build`
 2) `robocopy C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/ConsoleFrontend/dist C:/git/GitHub/WiseTechGlobal/CargoWiseCloud.Console.git/Source/bin/WebApi/wwwroot /MIR`
+
+## Comparison of Methods of Running CCC
+
+
+### QGL
+1) Checkout main and QGL full build
+2) Navigate to `Source\bin\WebApi` and then run `CargoWiseCloudConsole.WebApi.exe`
+3) Visit `localhost:7170`
+4) 
