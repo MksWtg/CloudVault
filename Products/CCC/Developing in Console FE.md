@@ -41,6 +41,7 @@ Or
 
 For development, we want hot reload. Since the QGL method precompiles and serves static files it is impossible to reconcile that method with a live server. So we must go for option 'B'
 
+### Authentication Differences
 Problem:
 - Requests made at `7170` to authorized API endpoints are returning HTML, chat GPT reckons this is because there is no NTLM so it falls back to serving XTML
 1) Frontend sends `GET http://localhost:7170/security/authorized-apis`
@@ -50,6 +51,7 @@ Problem:
 4) ASPNET returns 401
 5) Chrome does not consider the origin trusted for Windows Auth, it sees failed network request
 6) In error interceptor we aren't handling 401, so Axios does rejects the 401, error handler navigates back to "/" which causes the SPA to reload and the dev server (Vite) serves index.html
+7) How does the QGL method handle NTLM? frontend files are also being served from ASPNET, so the browser considers this same origin
 
 Solution:
 - Send authentication
