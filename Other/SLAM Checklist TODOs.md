@@ -1,4 +1,10 @@
 
+Rules:
+https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/about/news-and-events/events/2026/australian-rover-challenge/arch-sar-guidelines.pdf.coredownload.pdf
+
+Something we can overlay as text:
+`The rover currently supports open-loop autonomous motion execution and autonomous terrain data collection. While full SLAM and navigation are not yet integrated, the system is capable of executing pre-defined motion primitives while collecting synchronized depth, vision, and odometry data suitable for downstream mapping and navigation pipelines.`
+
 Prompt A:
 i'm part of the rover team and we need to submit a system acceptance review (SAR). first i will give you the sar rules, then ask for help. here are the rules:
 V E R S I O N 1 . 0 2 9 O C T O B E R 2 0 2 5
@@ -217,4 +223,63 @@ Mapping and autonomous task: autonomous rover navigation to a pre-determined loc
 frame) OR evidence of autonomous terrain data collection in support of map generation
 (a map does not need to be generated).
 
-and that this is exemplar evidence. unfortunately, we have nothing in the autonomous section. we have a working rover we can drive via teleop (through ros2 humble), with cameras and a d435i realsense camera mounted, encoders on wheels, etc. We don't have slam working, or nav2, or even a good simulation. Fortunately, the system doesn't need to be 100% complete and working for the SAR. I have one day, so 5-10 hours, to make anything i can for my segment of the SAR. what can i realistically do in 5-10 hours, i want the most bang for my buck. e.g. level 0 might be just giving the rover a command to drive forward for 10 seconds. but i can probably do better in 10 hours. We don't have cmd_vel, instead we publish to 
+and that this is exemplar evidence. unfortunately, we have nothing in the autonomous section. we have a working rover we can drive via teleop (through ros2 humble), with cameras and a d435i realsense camera mounted, encoders on wheels, etc. We don't have slam working, or nav2, or even a good simulation. Fortunately, the system doesn't need to be 100% complete and working for the SAR. I have one day, so 5-10 hours, to make anything i can for my segment of the SAR. what can i realistically do in 5-10 hours, i want the most bang for my buck. e.g. level 0 might be just giving the rover a command to drive forward for 10 seconds. but i can probably do better in 10 hours. We don't have cmd_vel, instead we publish to `front_left/commands/motor/speed`, and it is a float64. We turn by skid steering:
+https://code.research.uts.edu.au/uts-rover/2024-2025-rover/rover_control/-/blob/master/drive_control/src/drive_control.cpp?ref_type=heads
+```
+#include "drive_control.hpp"
+
+drive_control::drive_control() : Node("drive_control") {
+    
+    // Declare parameters for max speeds
+    this->declare_parameter<double>("max_linear_speed", 2000.0);
+    this->declare_parameter<double>("max_angular_speed", 2000.0);
+
+    max_lin_ = this->get_parameter("max_linear_speed").as_double();
+    max_ang_ = this->get_parameter("max_angular_speed").as_double();
+
+    joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
+      "/joy",
+      10,
+      std::bind(&drive_control::joyCallback, this,  std::placeholders::_1)
+    );
+    // Publishers for each wheel's motor speed command
+    fl_pub_ = this->create_publisher<std_msgs::msg::Float64>("front_left/commands/motor/speed", 10);
+    fr_pub_ = this->create_publisher<std_msgs::msg::Float64>("front_right/commands/motor/speed", 10);
+    rl_pub_ = this->create_publisher<std_msgs::msg::Float64>("rear_left/commands/motor/speed", 10);
+    rr_pub_ = this->create_publisher<std_msgs::msg::Float64>("rear_right/commands/motor/speed", 10);
+
+}
+
+void drive_control::joyCallback(const sensor_msgs::msg::Joy::SharedPtr msg){
+        if (msg->axes.size() < 2) {
+            RCLCPP_WARN(this->get_logger(), "Not enough axes in Joy message!");
+            return;
+        }
+
+        // Example: left stick vertical = axes[1], horizontal = axes[0]
+        double lin_input = msg->axes[1];
+        double ang_input = msg->axes[0];
+
+        double lin_speed = lin_input * max_lin_;
+        double ang_speed = ang_input * max_ang_;
+
+        // Skid-steer: left = lin - ang, right = lin + ang
+        double left_speed = lin_speed - ang_speed;
+        double right_speed = lin_speed + ang_speed;
+
+        // Publish to front/rear on each side
+        std_msgs::msg::Float64 fl_msg, fr_msg, rl_msg, rr_msg;
+        fl_msg.data = left_speed;
+        rl_msg.data = left_speed;
+        fr_msg.data = right_speed;
+        rr_msg.data = right_speed;
+
+        fl_pub_->publish(fl_msg);
+        fr_pub_->publish(fr_msg);
+        rl_pub_->publish(rl_msg);
+        rr_pub_->publish(rr_msg);
+}
+```
+
+Prompt C (more info):
+we publish to linear actuators via /motor1A_topic which is an Int32
