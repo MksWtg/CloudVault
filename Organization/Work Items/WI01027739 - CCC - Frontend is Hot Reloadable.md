@@ -15,11 +15,11 @@ TODO:
 
 TODO:
 
-extract 5173 url to a common place
+extract 5173 url to a common place DONE
 
 TODO:
 fix warning
-logger.LogInformation($"Frontend is running live, SPA requests proxied to {viteUri}");
+logger.LogInformation($"Frontend is running live, SPA requests proxied to {viteUri}"); DONE
 
 checklist of things that need to work:
 - running backend wtih debugger
