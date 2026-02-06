@@ -22,7 +22,16 @@ fix warning
 logger.LogInformation($"Frontend is running live, SPA requests proxied to {viteUri}"); DONE
 
 checklist of things that need to work:
-- running backend wtih debugger
-- running exe
-- installing after build as a service
-- hot reload
+- running backend wtih debugger and frontend running vs not vs cypress
+- running exe with frontend running vs not vs cypress
+- installing after build as a service with frontend running vs not vs cypress
+
+Need to test these scenarios
+
+
+|                   | Frontend: npm run dev | Frontend: static | Frontend: cypress |
+| ----------------- | --------------------- | ---------------- | ----------------- |
+| Backend: Debugger |                       |                  |                   |
+| Backend: Exe      |                       |                  |                   |
+| Backend: Service  |                       |                  |                   |
+Also, test npm:startall
