@@ -20,3 +20,9 @@ extract 5173 url to a common place
 TODO:
 fix warning
 logger.LogInformation($"Frontend is running live, SPA requests proxied to {viteUri}");
+
+checklist of things that need to work:
+- running backend wtih debugger
+- running exe
+- installing after build as a service
+- hot reload
