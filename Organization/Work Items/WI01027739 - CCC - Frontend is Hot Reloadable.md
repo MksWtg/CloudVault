@@ -12,3 +12,11 @@ NEW
 
 TODO:
 03:25:57.5638|The WebRootPath was not found: C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Console.git\Source\WebApi\wwwroot. Static files may be unavailable.
+
+TODO:
+
+extract 5173 url to a common place
+
+TODO:
+fix warning
+logger.LogInformation($"Frontend is running live, SPA requests proxied to {viteUri}");
