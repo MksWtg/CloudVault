@@ -1,4 +1,4 @@
-
+**Note**: A lot of the details of this document are updated and made clearer/simpler in the work item:
 For some silly reason, the ordinary build process of npm run dev (exposing FE at 5173) and running dotnet build (exposing BE at 7170) does not work. Requests are not proxied correctly. The QGL build method serves the FE and exposes BE at 7170- FE are served as static files from /Bin/WebApi/wwwroot.
 
 Problem:
