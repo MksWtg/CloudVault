@@ -26,6 +26,7 @@ checklist of things that need to work:
 - running exe with frontend running vs not vs cypress
 - installing after build as a service with frontend running vs not vs cypress
 
+## Functional Testing
 Need to test these scenarios:
 
 |                   | Frontend: npm run dev | Frontend: static | Frontend: cypress |
