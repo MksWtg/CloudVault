@@ -1,2 +1,4 @@
 - Each week include the list of completed WIs
 - A completed WI is one that has been submit for review, all the iterations and stuff don't count
+- The week "starts" from the monday of the week, that is the title of the doc
+- In the table, any days not worked are struck from the week. E.g. if monday is a public holiday, tuesday is off sick and thursday is annual leave, there will only be two rows in the table but the title will still be the monday
