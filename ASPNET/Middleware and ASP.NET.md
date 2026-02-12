@@ -7,38 +7,15 @@ In web development, requests come from the frontend and go the backend. Middlewa
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.UseMiddleware<RequestLoggingMiddleware>(); // Middleware 1: Custom
+app.UseMiddleware<RequestLoggingMiddleware>(); // custom middleware
 
-app.MapControllers(); // Middleware 2: Standard
-
+app.MapControllers();
 app.Run();
 ```
 
 (See the appendix for what a custom middleware might look like)
 
-Whenever a request comes to this app from the frontend, two things happen. First logging middleware runs. This is a custom middleware (code below). Then `MapControllers` (standard ASPNET middleware) runs. This is a bit complicated and honestly I still don't 100% know (TODO: confirm this) but I think it reads all the methods in a controller and when a request comes through "guesses" which method it should map to in a smart way. E.g. consider the following class
-
-```C#
-using Microsoft.AspNetCore.Mvc;
-
-[ApiController]
-[Route("api/[controller]")]
-public class ProductsController : ControllerBase
-{
-    [HttpGet]
-    public IActionResult GetAll()
-    {
-        return Ok(new string[] { "Laptop", "Mouse", "Keyboard" });
-    }
-
-    [HttpGet("{id}")]
-    public IActionResult GetById(int id)
-    {
-        return Ok($"Product ID: {id}");
-    }
-}
-```
-When a request comes through on a URL like `/api/products/5`, `MapControllers` 
+Whenever a request comes to this app from the frontend custom logging middleware runs.
 ## Appendix
 ```C#
 using Microsoft.AspNetCore.Http;
