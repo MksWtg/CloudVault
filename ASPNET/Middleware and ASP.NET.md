@@ -21,7 +21,6 @@ app.Run();
 
 (See the appendix for what a custom middleware might look like).
 
-
 ## Anatomy of a Middleware 
 
 Middleware is built like this:
@@ -31,18 +30,18 @@ app.Use(async (context, next) => {
 	// Code BEFORE next     
 	await next();     
 	// Code AFTER next 
-});`
+});
 ```
-```
+
 There are two parts:
+1) Before `next()` runs on the way in (request phase)
+2) After `next()` runs on the way out (response phase)
 
-1. **Before `next()`** → runs on the way in (request phase)
-    
-2. **After `next()`** → runs on the way out (response phase)
-    
+If you chain multiple middlwares together, the request middleware runs in order while the response middlewares run in reverse order.
 
-That’s why the response flows back through it.
+Note: `next()` is the delegate that calls the next middleware-ASP.NET connects it to the next middleware.
 ## Appendix
+
 ```C#
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
