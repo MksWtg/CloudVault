@@ -1,0 +1,1 @@
+A controller in ASP.NET is a C# class that handles incoming HTTP requests and returns responses, such as JSON (information) or HTML (webpage). Classes in OO are very useful for organizing related code together. Similarly, controllers group related request handling logic. Controllers are invoked by the routing system when a matching URL and HTTP verb is requested.
