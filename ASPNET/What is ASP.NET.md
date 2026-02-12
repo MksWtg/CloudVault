@@ -1,1 +1,0 @@
-ASP.NET is an web application framework to build the backend for web applications. It extends .NET with specialized libraries for building web-specific applications. Some of these libraries are Controllers ([[Controllers in ASP.NET]]), Middleware ([[Middleware and ASP.NET]]) and Dependency Injection.
