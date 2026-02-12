@@ -1,0 +1,1 @@
+In web development, requests come from the frontend and go the backend. Middleware sits between these. Middleware is code that processes 

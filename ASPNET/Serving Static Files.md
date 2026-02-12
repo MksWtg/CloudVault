@@ -1,3 +1,3 @@
 Source: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0
 
-ASPNET is a web development backend (server side) framework. It gives you a bunch of libraries for maki
+Not all URLs actually execute C# code in a controller. If the URL ends in a filename, within the allowed list of media (such as a `.png` or `.jpg`, more information in the source above) and the file exists in a folder called the 'webroot' (usually this folder is named `wwwroot`) then that file will be sent as a response directly and the user will see the file in the web.
