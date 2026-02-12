@@ -18,7 +18,7 @@ All controllers inherit from `ControllerBase` which has a `HttpContext` property
 The main executing method for middleware is passed `HttpContext` as a parameter. The signature is: `public async Task Invoke(HttpContext context)`.
 
 ### Services
-A service is a typically stateless class with a group of methods that are all related, the service class acts as a logical organization tool for the methods. Services in ASP.NET should be registered so that their dependencies can be injected. 
+A service is a class with a group of methods that are all related, the service class acts as a logical organization tool for the methods. Services in ASP.NET should be registered so that their dependencies can be injected. 
 
 To access `HttpContext` within a service, ensure it accepts an `IHttpContextAccessor` object as a dependency in the constructor.
 
