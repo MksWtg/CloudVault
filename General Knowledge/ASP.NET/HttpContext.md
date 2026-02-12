@@ -1,0 +1,1 @@
+HttpContext is a class in ASP.NET. Every time a new request comes into ASP.NET
