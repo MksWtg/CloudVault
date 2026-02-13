@@ -3,7 +3,7 @@ Prerequisites: [[Services in Software]]
 
 The Dependency Inversion Principle is the 5th SOLID principle. It states that high level classes should not depend on low level classes. Both should depend on abstractions (e.g. interfaces, or abstract classes).
 
-## Bad Example
+## Example of Violation
 
 ```C#
 public class HomeController : Controller
