@@ -13,4 +13,8 @@ Variance is a property of type constructors. A type constructor `F` (with type p
 
 Variance describes how one variable varies as another varies. Loosely speaking, if they are positively correlated they are covariant and if they are negatively correlated they are contravariant. If one cannot vary at all while the other varies they are invariant or bivariant depending on which is which. This is the same reasoning behind the 'variant' terminology in other fields, such as this one: https://en.wikipedia.org/wiki/Covariance_matrix.
 
+In the context of programming, the independent variable is the indexing type `T` and the dependent variable is the type `F<T>`
 
+![[Pasted image 20260213162551.png]]
+
+## How Can Types Vary
