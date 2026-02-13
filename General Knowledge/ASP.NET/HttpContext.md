@@ -5,7 +5,7 @@ HttpContext is a class in ASP.NET. Every time a new request comes into ASP.NET, 
 - Information about the authenticated user, session, etc.
 - Client connection information
 
-This is really important and valuable information! So HttpContext is a frequently accessed class.
+This is really important and valuable information! So `HttpContext` is a frequently accessed class.
 
 ## Accessing HttpContext Information
 

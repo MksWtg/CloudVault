@@ -16,7 +16,7 @@ You can search by filtering only relevant results, by class or attribute. For ex
 The result:
 ![[Pasted image 20260203151155.png]]
 
-Note: every query you make is visible to the sys admins, so don't go stalking other people.
+>Note: every query you make is visible to the sys admins, so don't go stalking other people.
 
 ### SAND AD
 - Domain is `sand.wtg.zone`
