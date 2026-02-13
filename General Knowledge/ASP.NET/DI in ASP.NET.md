@@ -73,9 +73,11 @@ The syntax for registering a service is:
 | AddScoped    | In one HTTP request, no matter how many times this service is requested, recycle the same instance. For the next request, a new instance will be make.        | `DbContext`: It obviously can't be a singleton because every request has its own context. It also can't be transient because in a single request, two services might fetch the same entity from separate `DbContext` instances. Since each `DbContext` manages its own transaction implicitly, you can't reliably wrap a single request's operation in one transaction so there may be inconsistencies. |
 | AddSingleton | Same instance for the entire application lifetime.                                                                                                            | Caching: You want the cached data to be available to all users and not recreated every request.                                                                                                                                                                                                                                                                                                         |
 
+
 ### Registering Abstract Classes and Interfaces
 
-We already know that for loose coupling, we might specify our dependency as an interface or abstract class rather than a concrete type. This is very common and the best practice. These can also be handled by the DI container but we must specify the implementation to use when teh 
+We already know that for loose coupling, we might specify our dependency as an interface or abstract class rather than a concrete type. This is very common and the best practice. These can also be handled by the DI container but we must specify the implementation to use when the abstract type is requested. The syntax is as follows: `builder.Services.AddTransient<IEmailSender, SmtpEmailSender>();`. Now when the former type is requested, the latter is provided.
+
 ### Helpers For Common Registration
 
 If you need to you can use these rather than creating custom helpers and boilerplate:
@@ -83,3 +85,6 @@ If you need to you can use these rather than creating custom helpers and boilerp
 - `AddDbContext<MyDbContext>()`: Automatically scoped
 - `AddHttpClient()`: Automatically transient
 - `AddLogging()` Automatically singleton
+
+>Footnote: ASP.NET makes a lot of assumptions. You need to follow the rules to make sure you don't receive errors at runtime. For example, all services required by the controllers need to be registered, and all services required by those services and so on also need to be registered. Also, you cannot register an interface/abstract class alone as they cannot be instantiated.
+
