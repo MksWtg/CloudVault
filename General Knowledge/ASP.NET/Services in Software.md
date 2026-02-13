@@ -34,4 +34,3 @@ public class OrderService
 
 Note how the logging instance is created in the constructor so it can be used in the rest of the class.
 
-As applications grow, services might depend on many other services. To avoid the boilerplate of instantiating a million dependencies every time a developer wants to instantiate a high level class, since instantiating is a fairly robotic process (especially because services are supposed to be stateless), dependencies are automatically provided to services. This process is called "dependency injection".

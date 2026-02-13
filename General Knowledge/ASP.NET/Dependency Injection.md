@@ -36,3 +36,28 @@ public class OrderService
     }
 }
 ```
+
+## Why Dependency Injection?
+
+
+## DI Containers
+As applications grow, services might depend on many other services. To avoid the boilerplate of instantiating a million dependencies every time a developer wants to instantiate a high level class, since instantiating is a fairly robotic process (especially because services are supposed to be stateless), dependencies are automatically provided to services. This is done through a DI library, or 'container'.
+
+Manual DI:
+```C#
+var logger = new LoggerService();       // create dependency
+var orderService = new OrderService(logger); // inject manually
+
+orderService.CreateOrder("Laptop");
+```
+
+Using a Container:
+```C#
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<LoggerService>();  // register dependency
+builder.Services.AddScoped<OrderService>();   // register dependent service
+
+var app = builder.Build();
+
+```
