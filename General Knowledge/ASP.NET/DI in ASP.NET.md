@@ -13,6 +13,8 @@ orderService.CreateOrder("Laptop");
 #### With Container
 Before the DI container can instantiate a dependency, the dependency needs to be registered.
 
+>While services are not specific to ASP.NET and the generic software definition applies to ASP.NET, ASP.NET services are usually subject to specific conventions/patterns. For example, in ASP.NET services should be registered so the DI container can handle them.
+
 Registration:
 ```C#
 var builder = WebApplication.CreateBuilder(args);
@@ -52,8 +54,6 @@ There is no manual instantiation using the `new` keyword, instantiation happens 
 
 ### Registering Services: More Information
 
-While services are not specific to ASP.NET and the generic software definition applies to ASP.NET, ASP.NET services are usually subject to specific conventions/patterns. For example, all ASP.NET services should be registered.
-
 Services are registered in `Program.cs`.
 
 Before you can register a service you need a `WebApplicationBuilder` object. This is typically created using `var builder = WebApplication.CreateBuilder(args);`.
@@ -73,4 +73,13 @@ The syntax for registering a service is:
 | AddScoped    | In one HTTP request, no matter how many times this service is requested, recycle the same instance. For the next request, a new instance will be make.        | `DbContext`: It obviously can't be a singleton because every request has its own context. It also can't be transient because in a single request, two services might fetch the same entity from separate `DbContext` instances. Since each `DbContext` manages its own transaction implicitly, you can't reliably wrap a single request's operation in one transaction so there may be inconsistencies. |
 | AddSingleton | Same instance for the entire application lifetime.                                                                                                            | Caching: You want the cached data to be available to all users and not recreated every request.                                                                                                                                                                                                                                                                                                         |
 
+### Registering Abstract Classes and Interfaces
 
+We already know that for loose coupling, we might specify our dependency as an interface or abstract class rather than a concrete type. This is very common and the best practice. These can also be handled by the DI container but we must specify the implementation to use when teh 
+### Helpers For Common Registration
+
+If you need to you can use these rather than creating custom helpers and boilerplate:
+
+- `AddDbContext<MyDbContext>()`: Automatically scoped
+- `AddHttpClient()`: Automatically transient
+- `AddLogging()` Automatically singleton
