@@ -20,3 +20,20 @@ In the context of programming, the independent variable is the indexing type `T`
 ![[Pasted image 20260213162551.png]]
 
 ## How Can Types Vary
+
+Let's look at some code.
+
+Consider this inheritance chain:
+
+```C#
+class Animal {}
+
+class Canine : Animal {}
+
+class Dog : Canine {}
+
+class Poodle : Dog {}
+```
+
+This creates the poset 
+`{(Poodle, Dog), (Dog, Canine), (Canine, Animal), (Dog, Animal), `
