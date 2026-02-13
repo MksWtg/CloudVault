@@ -50,4 +50,4 @@ Other reasons:
 
 As applications grow, services might depend on many other services. To avoid the boilerplate of instantiating a million dependencies every time a developer wants to instantiate a high level class, since instantiating is a fairly robotic process (especially because services are supposed to be stateless), dependencies are automatically provided to services. This is done through a DI library, or 'container'.
 
-For an example, see DI in ASP.NET.
+For an example, see [[DI in ASP.NET]].
