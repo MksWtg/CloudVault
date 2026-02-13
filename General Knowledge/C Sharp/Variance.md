@@ -78,6 +78,8 @@ public interface IProducer<out T>
 }
 ```
 
-But only interfaces and delegates can be annotated as such, because stateful types are not covariant, contravariant, or bivariantExercise for the reader: explain, with code examples, why).
+But only interfaces and delegates can be annotated as such, because stateful types are not covariant, contravariant, or bivariant. Exercise for the reader: explain, with code examples, why.
+
+Without annotations, all type constructors are invariant by default.
 
 What is an example that is bivariant? Anything not generic, trivially, although C# doesn't officially support annotating generics to denote them as bivariant.
