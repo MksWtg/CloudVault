@@ -9,7 +9,7 @@ This is really important and valuable information! So `HttpContext` is a frequen
 
 ## Accessing HttpContext Information
 
-The process for getting data from `HttpContext` changes depending on where you try to access it. Prerequisites for reading forward: [[Dependency Injection]].
+The process for getting data from `HttpContext` changes depending on where you try to access it. Prerequisites for reading forward: [[Dependency Injection]], [[DI in ASP.NET]], [[Services in Software]], [[Services in ASP.NET]].
 
 ### Controllers
 All controllers inherit from `ControllerBase` which has a `HttpContext` property (not to be confused with the `HttpContext` class). Every request creates a new controller instance (through DI) and a new `HttpContext` instance accessible through the `HttpContext` property.
@@ -18,8 +18,6 @@ All controllers inherit from `ControllerBase` which has a `HttpContext` property
 The main executing method for middleware is passed `HttpContext` as a parameter. The signature is: `public async Task Invoke(HttpContext context)`.
 
 ### Services
-A service is a class with a group of methods that are all related, the service class acts as a logical organization tool for the methods. Services in ASP.NET should be registered so that their dependencies can be injected. 
-
 To access `HttpContext` within a service, ensure it accepts an `IHttpContextAccessor` object as a dependency in the constructor.
 
 ```C#
