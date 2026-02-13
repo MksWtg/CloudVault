@@ -2,7 +2,8 @@ Routing in ASP.NET is a system that matches incoming HTTP requests to endpoints 
 
 ## UseRouting()
 
-TODO
+- Sets `HttpContext.Endpoint`
+- This is executed later by the endpoint middleware
 
 ## UseEndpoints()
 
