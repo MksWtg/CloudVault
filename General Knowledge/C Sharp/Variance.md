@@ -36,4 +36,10 @@ class Poodle : Dog {}
 ```
 
 This creates the poset 
-`{(Poodle, Dog), (Dog, Canine), (Canine, Animal), (Dog, Animal), `
+`{(Poodle, Dog), (Dog, Canine), (Canine, Animal), (Dog, Canine), (Dog, Animal), (Canine, Animal)}`.
+
+We know that $Poodle \le Dog$ for example, because we can compile: `Do
+
+Now fix the type constructor `List`.
+
+Let `
