@@ -52,4 +52,18 @@ List<Dog> b = a;
 
 In other words, does the transformation of the poset $P$ by the functor `List` preserve the poset?
 
-In this case no. Although `Poodle` $\le$ `Dog`, `List<Poodle>` $\nleq$ `List<Dog`. Logically, this is because if we did assign `a` to `List<Dog> b`, we would be able to perform `b.Add(new Doberman());` and treat 
+In this case no. Although `Poodle` $\le$ `Dog`, `List<Poodle>` $\nleq$ `List<Dog`. Logically, this is because if we did assign `a` to `List<Dog> b`, we would be able to perform `b.Add(new Doberman());` and treat `a` as if it really were `b`. Which it isn't. Adding a doberman to a list of poodles violates type safety.
+
+What is an example that is covariant? The `IEnumerable<T>` interface. This code compiles:
+```C#
+IEnumerable<Poodle> a = new List<Poodle>();
+IEnumerable<Dog> b = a;
+```
+
+What is an example that is contravariant? The `Action<T>` delegate. This code compiles:
+```C#
+Action<Dog> a = (x) => new Dog();
+Action<Poodle> b = a;
+```
+
+What is an example that is bivariant? Anything not generic, trivially, although C# doesn't officially support annotating generics with
