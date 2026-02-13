@@ -35,11 +35,19 @@ class Dog : Canine {}
 class Poodle : Dog {}
 ```
 
-This creates the poset 
-`{(Poodle, Dog), (Dog, Canine), (Canine, Animal), (Dog, Canine), (Dog, Animal), (Canine, Animal)}`.
+This creates the poset `{(Poodle, Dog), (Dog, Canine), (Canine, Animal), (Dog, Canine), (Dog, Animal), (Canine, Animal)}`.
 
-We know that $Poodle \le Dog$ for example, because we can compile: `Do
+We know that $Poodle \le Dog$ for example, because we can compile: 
+```C#
+Poodle a = new Poodle();
+Dog b = a;
+```
 
-Now fix the type constructor `List`.
+Now fix the type constructor `List`. Will the following code compile?
 
-Let `
+```C#
+List<Poodle> a = new List<Poodle>();
+List<Dog> b = a;
+```
+
+In other words, if I vary `T` by increasing it, will `F<T>` increase too? In this case no. Just because `Poodle` is less than `Dog` does not mean that `List<Poodle>` is less than `List<Dog>`. Because varying one does not cause the other to change
