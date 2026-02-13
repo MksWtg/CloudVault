@@ -73,6 +73,11 @@ public class HomeController : Controller
 }
 ```
 
-We have achieved loose coupling, the high level module doesn't care about low level details.
+We have achieved loose coupling, the high level module doesn't care about low level details. We have also fixed the problems from before:
+1) ~~To switch the email provider, you need to modify the `HomeController` class, and other classes that use an email provider (tightly coupled)~~ We can swap the implementation of `IEmailSender` when registering the service with `builder.Services.AddTransient`.
+2) ~~Hard to test because you cannot mock `SmtpEmailSender`.~~ We can inject our own mock `IEmailSender` with controlled behaviours rather than using the real thing.
+![[Pasted image 20260213145406.png]]
+
+Both the high level class and the low level class are
 
 >Note: Dependency Inversion is commonly achieved through [[Dependency Injection]]
