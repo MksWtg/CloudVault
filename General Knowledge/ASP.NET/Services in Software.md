@@ -32,5 +32,5 @@ public class OrderService
 }
 ```
 
-Note how the logging instance is created in the constructor so it can be used in the rest of the class.
+>Note: the logging instance is created in the constructor so it can be used in the rest of the class.
 
