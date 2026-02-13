@@ -46,4 +46,15 @@ There is no manual instantiation using the `new` keyword, instantiation happens 
 
 > Note: as a rule of thumb for ASP.NET, and actually all software frameworks, if there is really only one way something can be done then the framework handles it for you. There is no easy way to instantiate controllers and their dependencies without all the plumbing. Since this plumbing would be the same for every webapp, ASP.NET handles it.
 
-In ASP.NET, controllers are created via constructor injection using the DI container. You can control what 
+### Controllers
+
+In ASP.NET, controllers are created via constructor injection using the DI container.
+
+### Registering Services: More Information
+
+Services are registered in `Program.cs`.
+
+Before you can register a service you need a `WebApplicationBuilder` object. This is typically created using `var builder = WebApplication.CreateBuilder(args);`.
+
+
+
