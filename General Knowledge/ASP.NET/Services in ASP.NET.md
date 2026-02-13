@@ -1,3 +1,5 @@
+Prerequisites: [[Services in Software]]
+
 While services are not specific to ASP.NET and the generic software definition applies to ASP.NET, ASP.NET services are usually subject to specific conventions/patterns.
 ### Registering Services
 
@@ -10,5 +12,3 @@ In the `Program.cs` entry point into the ASP.NET app, there will be a `WebApplic
 ### Registering Controllers
 
  Controllers are the highest level of classes. They are stateless, and they require services as dependencies, so they can be treated as services themselves. They don't need to be registered manually, this is handled by ASP.NET.
-
-> Note: as a rule of thumb for ASP.NET, and actually all software frameworks, if there is really only one way something can be done then the framework handles it for you. There is no easy way to instantiate controllers and their dependencies without all the plumbing that would be the same for every webapp, so ASP.NET handles it.

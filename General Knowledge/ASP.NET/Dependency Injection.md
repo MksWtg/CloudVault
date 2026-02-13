@@ -6,7 +6,6 @@ Dependency injection is a design pattern where a class does not create its own d
 ## Example
 
 Without DI:
-
 ```C#
 public class OrderService
 {
@@ -46,47 +45,9 @@ Main reasons:
 Other reasons:
 3) When your app grows, you don't need to do the work of instantiating all dependencies in the class itself (DI Containers are used for this, see below)
 4) Configure how dependencies are treated in one spot (in `Program.cs`, or wherever registration occurs)
+5) Instantiation is not a responsibility of services, logic is. So instantiation should occur somewhere else.
 ## DI Containers
+
 As applications grow, services might depend on many other services. To avoid the boilerplate of instantiating a million dependencies every time a developer wants to instantiate a high level class, since instantiating is a fairly robotic process (especially because services are supposed to be stateless), dependencies are automatically provided to services. This is done through a DI library, or 'container'.
 
-
-#### Without Container
-```C#
-var logger = new LoggerService();       // create dependency
-var orderService = new OrderService(logger); // inject manually
-
-orderService.CreateOrder("Laptop");
-```
-
-#### With Container
-
-Registration:
-```C#
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddScoped<LoggerService>();  // register dependency
-builder.Services.AddScoped<OrderService>();   // register dependent service
-
-var app = builder.Build();
-```
-
-Use:
-```C#
-public class HomeController : Controller
-{
-    private readonly OrderService _orderService;
-
-    public HomeController(OrderService orderService)
-    {
-        _orderService = orderService;
-    }
-
-    public IActionResult Index()
-    {
-        _orderService.CreateOrder("Laptop");
-        return Content("Order created");
-    }
-}
-```
-
-There is no manual instantiation using the `new` keyword, instantiation happens behind the scenes when a HTTP request is made and the controller is instantiated
+For an example, see DI in ASP.NET.
