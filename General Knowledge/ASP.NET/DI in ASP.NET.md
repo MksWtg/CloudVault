@@ -64,11 +64,10 @@ The syntax for registering a service is:
 `RegistrationMethod` can be one of three methods that specifies the 'lifetime' of the dependency, or how long ASP.NET will persist the same instance before making a new one.
 
 
-| Method    | Meaning                                                                                | Use Case |
-| --------- | -------------------------------------------------------------------------------------- | -------- |
-| Transient | Create a new instance every time the dependency is requested. In one HTTP request, if  |          |
-| Scoped    | In one HTTP                                                                            |          |
-| Singleton |                                                                                        |          |
-
+| Method    | Meaning                                                                                                                                                       | Use Case                                                                                       |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Transient | Create a new instance every time the dependency is requested. In one HTTP request, if multiple controllers need this dependency, create a new one every time. | When the service is lightweight and stateless. Most dependencies are transient.                |
+| Scoped    | In one HTTP request, no matter how many times this service is requested, recycle the same instance. For the next request, a new instance will be make.        | `DbContext`: It o                                                                              |
+| Singleton | Same instance for the entire application lifetime.                                                                                                            | Caching: You want the cached data to be available to all users and not recreated every request |
 
 
