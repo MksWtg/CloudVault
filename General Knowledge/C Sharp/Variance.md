@@ -5,7 +5,7 @@ Prerequisites: [[Generics]]
 
 Variance needs two things to exist, without these it doesn't make sense to talk about variance. The first is that the set of types in a programming language need to form a poset. This is the case in C#. 
 
->Let $P$ be the set of all types. There is a partial order $(P, \le)$ where $\le \subseteq P \times P$ given by $a \le b$ if an instance of $a$ can be assigned to an identifier of type $b$.
+>Let $P$ be the set of all types. There is a partial order $(P, \le)$ where $\le \subseteq P \times P$ satisfying reflexivity, transitivity, and antisymmetry, given by $a \le b$ if an instance of $a$ can be assigned to an identifier of type $b$.
 
 The second is that types need to be able to index other types. C# supports this with generics.
 
@@ -52,4 +52,4 @@ List<Dog> b = a;
 
 In other words, does the transformation of the poset $P$ by the functor `List` preserve the poset?
 
-In this case no. Although `Poodle` $\le$ `Dog`,
+In this case no. Although `Poodle` $\le$ `Dog`, `List<Poodle>` $\nleq$ `List<Dog`. Logically, this is because if we did assign `a` to `List<Dog> b`, we would be able to perform `b.Add(new Doberman());` and treat 
