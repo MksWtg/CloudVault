@@ -7,9 +7,9 @@
 
 This is really important and valuable information! So `HttpContext` is a frequently accessed class.
 
-## Accessing HttpContext Information
+## Accessing HttpContext
 
-The process for getting data from `HttpContext` changes depending on where you try to access it. Prerequisites for reading forward: [[Dependency Injection]], [[DI in ASP.NET]], [[Services in Software]]
+The process for getting data from `HttpContext` changes depending on where you try to access it. Prerequisites for reading forward: [[Dependency Injection]], [[DI in ASP.NET]], [[Services in Software]].
 
 ### Controllers
 All controllers inherit from `ControllerBase` which has a `HttpContext` property (not to be confused with the `HttpContext` class). Every request creates a new controller instance (through DI) and a new `HttpContext` instance accessible through the `HttpContext` property.
