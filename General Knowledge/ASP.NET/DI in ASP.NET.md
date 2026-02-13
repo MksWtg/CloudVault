@@ -1,6 +1,6 @@
 Prerequisites: [[Dependency Injection]]
 
-In ASP.NET, instead of manually instantiating dependencies, ASP.NET can handle it for you. The library that does this is called the DI container.
+In ASP.NET, instead of manually instantiating dependencies, ASP.NET can handle it for you. The library that does this is called the DI Container.
 #### Without Container
 ```C#
 var logger = new LoggerService();       // create dependency
