@@ -56,5 +56,19 @@ Services are registered in `Program.cs`.
 
 Before you can register a service you need a `WebApplicationBuilder` object. This is typically created using `var builder = WebApplication.CreateBuilder(args);`.
 
+The syntax for registering a service is:
+`builder.Services.RegistrationMethod<ServiceType>();`.
+
+`ServiceType` is the type of the service you want injected. E.g. `EmailSender`, `LoggerService`, etc.
+
+`RegistrationMethod` can be one of three methods that specifies the 'lifetime' of the dependency, or how long ASP.NET will persist the same instance before making a new one.
+
+
+| Method    | Meaning                                                                                | Use Case |
+| --------- | -------------------------------------------------------------------------------------- | -------- |
+| Transient | Create a new instance every time the dependency is requested. In one HTTP request, if  |          |
+| Scoped    | In one HTTP                                                                            |          |
+| Singleton |                                                                                        |          |
+
 
 
