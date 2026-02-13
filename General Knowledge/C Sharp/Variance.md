@@ -3,4 +3,4 @@ Note that both the linked article and the following note are written in a somewh
 Prerequisites: [[Generics]]
 ## What is Variance
 
-Variance is a property of generic types. A generic type `F` (with type parameter `T`) is described as being 'covariant', 'contravariant', 'invariant' or 'bivariant' in `T`. When there is only one type parameter
+Variance is a property of generic types. A generic type `F` (with type parameter `T`) is described as being one of 'covariant', 'contravariant', 'invariant' or 'bivariant' in `T`. When there is only one type parameter, `T` is implicit when describing the variance of `F`. We simply say `F` is 

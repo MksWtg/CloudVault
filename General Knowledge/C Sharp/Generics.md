@@ -146,4 +146,12 @@ We can reuse the code and preserve type safety.
 
 ## Extension: Multiple Generic Parameters
 
-Types can have multiple generic parameters.
+Types can have multiple generic parameters. E.g.
+```C#
+class MyGeneric<T1, T2>
+{}
+```
+
+The kind of `MyGeneric` is `* -> * -> *`. Another example of a type constructor with this kind is the `Func` type constructor. 
+
+>Note: although I refrain from calling generic types like `List` and `Func` types and refer to them as type constructors instead, most people still call them types.
