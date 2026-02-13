@@ -28,4 +28,5 @@ app.Run();
 
 The `WebApplicationBuilder` object, `builder`, is used to configure how the app will behave.
 
-`AddControllers` registers the controllers- after 
+TODO: what do all these settings do?
+
