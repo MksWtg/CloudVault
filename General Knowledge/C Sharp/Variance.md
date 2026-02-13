@@ -50,4 +50,6 @@ List<Poodle> a = new List<Poodle>();
 List<Dog> b = a;
 ```
 
-In other words, if I vary `T` by increasing it, will `F<T>` increase too? In this case no. Just because `Poodle` is less than `Dog` does not mean that `List<Poodle>` is less than `List<Dog>`. Because varying one does not cause the other to change
+In other words, does the transformation of the poset $P$ by the functor `List` preserve the poset?
+
+In this case no. Although `Poodle` $\le$ `Dog`,
