@@ -39,7 +39,13 @@ public class OrderService
 
 ## Why Dependency Injection?
 
+Main reasons:
+1) Loose coupling: `OrderService` depends on an abstract `ILoggerService`, so we can swap out which concrete implementation of `ILoggerService` we want to use without modifying `OrderService`: they are loosely coupled.
+2) Testing: you can mock dependencies and their behaviours TODO mock and moq article
 
+Other reasons:
+3) When your app grows, you don't need to do the work of instantiating all dependencies in the class itself (DI Containers are used for this, see below)
+4) Configure how dependencies are treated in one spot (in `Program.cs`, or wherever registration occurs)
 ## DI Containers
 As applications grow, services might depend on many other services. To avoid the boilerplate of instantiating a million dependencies every time a developer wants to instantiate a high level class, since instantiating is a fairly robotic process (especially because services are supposed to be stateless), dependencies are automatically provided to services. This is done through a DI library, or 'container'.
 
