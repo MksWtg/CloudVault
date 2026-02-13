@@ -7,13 +7,15 @@ Variance needs two things to exist, without these it doesn't make sense to talk 
 
 >Let $P$ be the set of all types. There is a partial order $(P, \le)$ where $\le \subseteq P \times P$ given by $a \le b$ if an instance of $a$ can be assigned to an identifier of type $b$.
 
+The second is that types need to be able to index other types. C# supports this with generics.
+
 Variance is a property of type constructors. A type constructor `F` (with type parameter `T`) is described as being one of 'covariant', 'contravariant', 'invariant' or 'bivariant' in `T`. When there is only one type parameter, `T` is implicit when describing the variance of `F`. We simply say `F` is covariant, for example.
 
 ### Ok, But What Is It Actually
 
 Variance describes how one variable varies as another varies. Loosely speaking, if they are positively correlated they are covariant and if they are negatively correlated they are contravariant. If one cannot vary at all while the other varies they are invariant or bivariant depending on which is which. This is the same reasoning behind the 'variant' terminology in other fields, such as this one: https://en.wikipedia.org/wiki/Covariance_matrix.
 
-In the context of programming, the independent variable is the indexing type `T` and the dependent variable is the type `F<T>`
+In the context of programming, the independent variable is the indexing type `T` and the dependent variable is the type `F<T>`.
 
 ![[Pasted image 20260213162551.png]]
 
