@@ -71,7 +71,7 @@ Exercise for the reader: explain, with code examples, why.
 
 
 We can annotate generics as covariant or contravariant using the `in` (covariant) and `out` (contravariant) modifiers in the declaration. 
-```C#
+```csharp
 public interface IProducer<out T>
 {
     T Get();
