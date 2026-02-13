@@ -1,4 +1,4 @@
-Prerequisites: [[Dependency Injection]]
+Prerequisites: [[Services in Software]] [[Dependency Injection]]
 
 In ASP.NET, instead of manually instantiating dependencies, ASP.NET can handle it for you. The library that does this is called the DI container.
 #### Without Container
@@ -46,11 +46,13 @@ There is no manual instantiation using the `new` keyword, instantiation happens 
 
 > Note: as a rule of thumb for ASP.NET, and actually all software frameworks, if there is really only one way something can be done then the framework handles it for you. There is no easy way to instantiate controllers and their dependencies without all the plumbing. Since this plumbing would be the same for every webapp, ASP.NET handles it.
 
-### Controllers
+### Registering Controllers
 
-In ASP.NET, controllers are created via constructor injection using the DI container.
+ Controllers are the highest level of classes. They are stateless, and they require services as dependencies, so they can be treated as services themselves. Controllers are created via constructor injection using the DI container. They don't need to be registered manually, this is handled by ASP.NET.
 
 ### Registering Services: More Information
+
+While services are not specific to ASP.NET and the generic software definition applies to ASP.NET, ASP.NET services are usually subject to specific conventions/patterns. For example, all ASP.NET services should be registered.
 
 Services are registered in `Program.cs`.
 
