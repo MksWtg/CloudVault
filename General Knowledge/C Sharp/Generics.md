@@ -107,3 +107,43 @@ We have no way to enforce the types of the objects in `intList`, we surrender th
 
 ### The Solution
 
+Generics solve this issue, they give us reusable code that is also type safe.
+
+```C#
+public class MyList<T>
+{
+    private T[] _items = new T[10];
+    private int _count = 0;
+
+    public void Add(T item)
+    {
+        _items[_count++] = item;
+    }
+
+    public T Get(int index)
+    {
+        return _items[index];
+    }
+}
+```
+
+Usage
+
+```C#
+MyList<int> intList = new MyList<int>();
+intList.Add(5);
+// intList.Add("apple"); <- this won't even compile, type safe
+
+int value1 = intList.Get(0);  // No cast
+
+MyList<int> strList = new MyList<string>(); // code reuse
+intList.Add("apple");
+
+string value2 = strList.Get(0);  // No cast
+```
+
+We can reuse the code and preserve type safety.
+
+## Extension: Multiple Generic Parameters
+
+Types can have multiple generic parameters.
