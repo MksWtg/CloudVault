@@ -12,7 +12,7 @@ This is really important and valuable information! So `HttpContext` is a frequen
 The process for getting data from HttpContext changes depending on where you try to access it. Prerequisites for reading forward: [[Dependency Injection]].
 
 ### Controllers
-All controllers inherit from `ControllerBase` which has a `HttpContext` property (not to be confused with the class name). This property is not dynamically reassigned for each request, it is a 1:1 between controller instances and `HttpContext` instances. This implies a new controller class is instantiated for every request!
+All controllers inherit from `ControllerBase` which has a `HttpContext` property (not to be confused with the `HttpContext` class). Every request creates a new controller instance and a new `HttpContext` instance accessible through the `HttpContext` property.
 
 ### Middleware
 The main executing method for middleware is passed `HttpContext` as a parameter. The signature is: `public async Task Invoke(HttpContext context)`.
