@@ -34,4 +34,11 @@ public class OrderService
 ```
 
 Note how the logging instance is provided in the constructor so it can be used in the rest of the class.
-Specifically in ASP.NET, services need to have their dependencies injected by the built in ASP.NET dependency injection library (called the DI container). To learn more read [[TODO DI in ASP.NET]].
+
+As applications grow, services might depend on many other services. To avoid the boilerplate of instantiating a million dependencies every time a developer wants to instantiate a high level class, since instantiating is a fairly robotic process (especially because services are supposed to be stateless), dependencies are automatically provided to services. This process is called "dependency injection".
+
+### Registering Services
+
+Specifically in ASP.NET, services need to be registered to be considered services. This enables them to have their dependencies injected by the built in ASP.NET dependency injection library (called the DI container). To learn more read [[TODO DI in ASP.NET]].
+
+In the program 
