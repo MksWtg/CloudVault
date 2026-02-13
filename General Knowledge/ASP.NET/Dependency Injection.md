@@ -39,7 +39,7 @@ public class OrderService
 ## Why Dependency Injection?
 
 Main reasons:
-1) Loose coupling: `OrderService` depends on an abstract `ILoggerService`, so we can swap out which concrete implementation of `ILoggerService` we want to use without modifying `OrderService`: they are loosely coupled.
+1) Loose coupling: `OrderService` depends on an abstract `ILoggerService`, so we can swap out which concrete implementation of `ILoggerService` we want to use without modifying `OrderService`. They are loosely coupled.
 2) Testing: you can mock dependencies and their behaviours TODO mock and moq article
 
 Other reasons:
