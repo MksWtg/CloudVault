@@ -41,4 +41,12 @@ As applications grow, services might depend on many other services. To avoid the
 
 Specifically in ASP.NET, services need to be registered to be considered services. This enables them to have their dependencies injected by the built in ASP.NET dependency injection library (called the DI container). To learn more read [[TODO DI in ASP.NET]].
 
-In the program 
+In the `Program.cs` entry point into the ASP.NET app, there will be a `WebApplicationBuilder` object used to configure the app. You can add this code to the `Program.cs` to register a service, and help its dependencies get instantiated:
+
+`builder.Services.AddScoped<OrderService>()`
+
+### Registering Controllers
+
+ Controllers are the highest level of classes, they are stateless, and they require services as dependencies, so they can be treated as services. They also need to be registered:
+ 
+`builder.Services.AddControllers();`
