@@ -59,11 +59,25 @@ What is an example that is covariant? The `IEnumerable<T>` interface. This code 
 IEnumerable<Poodle> a = new List<Poodle>();
 IEnumerable<Dog> b = a;
 ```
+Exercise for the reader: explain, with code examples, why.
+
 
 What is an example that is contravariant? The `Action<T>` delegate. This code compiles:
 ```C#
 Action<Dog> a = (x) => new Dog();
 Action<Poodle> b = a;
 ```
+Exercise for the reader: explain, with code examples, why.
 
-What is an example that is bivariant? Anything not generic, trivially, although C# doesn't officially support annotating generics with
+
+We can annotate generics as covariant or contravariant using the `in` (covariant) and `out` (contravariant) modifiers in the declaration. 
+```C#
+public interface IProducer<out T>
+{
+    T Get();
+}
+```
+
+But only interfaces and delegates can be annotated as such, because stateful types are not covariant, contravariant, or bivariantExercise for the reader: explain, with code examples, why).
+
+What is an example that is bivariant? Anything not generic, trivially, although C# doesn't officially support annotating generics to denote them as bivariant.
