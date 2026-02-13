@@ -43,7 +43,8 @@ public class OrderService
 ## DI Containers
 As applications grow, services might depend on many other services. To avoid the boilerplate of instantiating a million dependencies every time a developer wants to instantiate a high level class, since instantiating is a fairly robotic process (especially because services are supposed to be stateless), dependencies are automatically provided to services. This is done through a DI library, or 'container'.
 
-Manual DI:
+
+#### Without Container
 ```C#
 var logger = new LoggerService();       // create dependency
 var orderService = new OrderService(logger); // inject manually
@@ -51,7 +52,9 @@ var orderService = new OrderService(logger); // inject manually
 orderService.CreateOrder("Laptop");
 ```
 
-Using a Container:
+#### With Container
+
+Registration:
 ```C#
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,5 +62,25 @@ builder.Services.AddScoped<LoggerService>();  // register dependency
 builder.Services.AddScoped<OrderService>();   // register dependent service
 
 var app = builder.Build();
-
 ```
+
+Use:
+```C#
+public class HomeController : Controller
+{
+    private readonly OrderService _orderService;
+
+    public HomeController(OrderService orderService)
+    {
+        _orderService = orderService;
+    }
+
+    public IActionResult Index()
+    {
+        _orderService.CreateOrder("Laptop");
+        return Content("Order created");
+    }
+}
+```
+
+There is no manual instantiation using the `new` keyword, instantiation happens behind the scenes when a HTTP request is made and the controller is instantiated
