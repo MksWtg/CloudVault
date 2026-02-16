@@ -1,4 +1,4 @@
-Generic is something of an umbrella term in programming. Generally, it refers to the ability of the definition of a type to depend on another type. If your programming language allows type definitions to depend on other types, it is generic.
+'Generics' is something of an umbrella term in programming. Generally, it refers to the language feature in C# of the definition of a type to depend on another type (C#'s implementation of parametric polymorphism). If your programming language allows type definitions to depend on other types, it is generic.
 
 ## Non Generic Type
 
