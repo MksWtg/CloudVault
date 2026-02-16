@@ -1,0 +1,1 @@
+A real keyboard/monitor interface, like the VT100
