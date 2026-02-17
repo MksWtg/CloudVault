@@ -3,4 +3,4 @@ Unit testing is a software testing technique where methods are tested in isolati
 ## Purpose
 The purpose of unit testing is to catch bugs early in development before they spread to other parts of the system. It improves code reliability, makes refactoring safer, and helps ensure that future changes do not break existing functionality. 
 
-Typically every class has a test suite. A codebase may have dozens to millions of tests that run every time a developer is ready to check in new code. This is all done to ensure new code does not break old functionality.
+Typically every class has a corresponding test suite. A project with 50 classes may have a sister project with roughly 50 test classes, that are not shipped to production. In total, a codebase may have dozens to millions of tests that run every time a developer is ready to check in new code. Running old tests is done to ensure new code does not break old functionality.
