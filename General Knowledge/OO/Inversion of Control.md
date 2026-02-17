@@ -20,6 +20,12 @@ app.Run();
 
 After `app.Run` executes, you are no longer in control. From this point, here is the flow of control:
 
-`Client Request -> ASP.NET → Your Code`
+`Client Request -> ASP.NET -> Your Code`
 
-It is 
+The framework will call your code.
+
+### What Happens When a Request is Made?
+
+1) Browser sends a request `GET /Home/Index`
+2) ASP.NET processes the request through middleware
+3) ASP
