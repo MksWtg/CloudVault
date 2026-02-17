@@ -2,7 +2,9 @@ Inheritance is one of the four pillars of OO. It is a mechanism to share code an
 
 In OO, a class represents a real world entity- with data representing data that the entity "owns" and methods representing actions that the entity can undertake. For example, a `Dog` class may have a `string` name field, an `int` age in years field, a `string` favourite type of food field, and methods `Speak` to speak and `Eat` to eat.
 
-If you ever have to model another entity that has an 'is-a' relationship to an existing entity, use inheritance. Since the new entity is conceptually a subset of the existing entity, all the logic and data the existing entity owned also applies to the new entity. New logic and data specific to the new entity demands a new container separate to the existing entity's container. We call this a 'subclass'.
+If you ever have to model another entity that has an 'is-a' relationship to an existing entity, use inheritance. Since the new entity is conceptually a subset of the existing entity, all the logic and data the existing entity owned also applies to the new entity. New logic and data specific to the new entity demands a new container separate to the existing entity's container. We call this a 'subclass' or 'child' or 'derived class'. The original class becomes the 'superclass' or the 'parent' or the 'base'.
+
+Examples of 'is-a' relationships are 'A dog is an animal', 'A teacher is a person' and ''
 
 ## Example: Animal
 
@@ -84,4 +86,4 @@ Animal myAnimal = new Dog();
 myAnimal.Speak(); // Calls Dog's Speak()
 ```
 
-Now despite calling `Speak()` on an identifier of type `Animal`, the method that gets called is the one defined in the `Dog` class. This is known as dynamic dispatch.
+Now despite calling `Speak()` on an identifier of type `Animal`, the method that gets called is the one defined in the `Dog` class. This is known as dynamic dispatch ([[Static vs Dynamic Dispatch]]).
