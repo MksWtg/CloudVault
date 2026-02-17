@@ -1,7 +1,7 @@
 
 Prerequisites: [[DI in ASP.NET]]
 
-Inversion of Control (IoC) is an abstract pattern in software.
+Inversion of Control (IoC) is a pattern in software.
 
 Traditionally, your code begins executing through an entrypoint such as a `Main` method or `main` function. Code executes line by line. If you call an external library, or query a DB, or hit an API endpoint, you are in control of execution: you make a request and decide what to do with the response.
 
@@ -11,6 +11,7 @@ IoC is when this pattern is inverted: you trust a framework to handle running th
 
 `Framework -> Your Code`
 
+> IoC is abstract, and sometimes there is argument as to whether or not some code is IoC. Some examples are "more" IoC than others.
 ## Example: ASP.NET and DI
 
 This is the classic IoC example.
@@ -91,7 +92,7 @@ After `Process` executes, the user is no longer in control. Base `DataProcessor`
 
 ## Example: Event Driven IoC
 
-This example may show up in UI.
+This example may show up in UI. It uses events and delegaets.
 
 ```cs
 using System;
@@ -112,7 +113,7 @@ class Program
     {
         var button = new Button();
 
-        // Register a handler — “we’ll call you when click happens”
+        // Register a handler — "we'll call you when click happens"
         button.Click += OnButtonClick;
 
         // Later, the framework/system calls your handler
@@ -124,5 +125,6 @@ class Program
         Console.WriteLine("Button clicked!");
     }
 }
-
 ```
+
+- `Program` (developer) doesn’t control when `OnButtonClick` is invoked. `Button` (the system) controls invocation.
