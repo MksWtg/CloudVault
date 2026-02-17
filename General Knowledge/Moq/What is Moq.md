@@ -1,0 +1,1 @@
+Moq is a popular C# library used for mocking interfaces and methods. Typically mocking occurs in unit tests, not in production code, so moq i used on 
