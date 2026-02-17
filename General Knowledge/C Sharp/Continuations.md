@@ -51,4 +51,18 @@ async Task ExampleAsync()
 The following happen in order:
 1) `GetNumberAsync()` returns a `Task<int>` immediately
 2) `await` pauses the method until the task completes.
-3) The rest of the method (Console.WriteLine(number)) is turned into a continuation that runs when the task finishes.
+3) The rest of the method (`Console.WriteLine(number)`) is turned into a continuation that runs when the task finishes
+
+Under the hood, this looks roughly like:
+
+```csharp
+GetNumberAsync().ContinueWith(t =>
+{
+    int number = t.Result;
+    Console.WriteLine(number);
+});
+```
+
+C# transforms async/await into a state machine. each await point becomes a suspension point, and the remainder of the method after the await is saved as a continuation delegate. When the awaited `Task` completes, the continuation is invoked.
+
+- The `Task` completion notification can come from several sources, like the thread pool worker, IO completion system (like IOCP on)
