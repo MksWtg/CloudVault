@@ -11,7 +11,9 @@ IoC is when this pattern is inverted: you trust a framework to handle running th
 
 `Framework -> Your Code`
 
-## Example: ASP.NET
+## Example: ASP.NET and DI
+
+This is the classic IoC example.
 
 An ASP.NET program starts with a `Main` method. Contained in this method is the standard boilerplate:
 
@@ -85,4 +87,42 @@ var processor = new CsvProcessor();
 processor.Process();
 ```
 
-After `Process` executes, the user is no longer in control. `DataProcessor` runs and gets to determine when the user's code 
+After `Process` executes, the user is no longer in control. Base `DataProcessor` runs and gets to determine when the user's code `ProcessData` should be called.
+
+## Example: Event Driven IoC
+
+This example may show up in UI.
+
+```cs
+using System;
+
+public class Button
+{
+    public event EventHandler Click;
+
+    public void SimulateClick()
+    {
+        Click?.Invoke(this, EventArgs.Empty);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        var button = new Button();
+
+        // Register a handler — “we’ll call you when click happens”
+        button.Click += OnButtonClick;
+
+        // Later, the framework/system calls your handler
+        button.SimulateClick();
+    }
+
+    static void OnButtonClick(object sender, EventArgs e)
+    {
+        Console.WriteLine("Button clicked!");
+    }
+}
+
+```
