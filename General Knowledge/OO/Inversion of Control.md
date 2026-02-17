@@ -67,4 +67,22 @@ public abstract class DataProcessor
 }
 ```
 
-Note how this class is abstract. I provide this method to the client, who will implement a specific processor (by inheriting from `DataProcessor`). As part of this they will be forced to implement `ProcessData`
+Note how this class is abstract. I provide this method to the client, who will implement a specific processor (by inheriting from `DataProcessor`). As part of this they will be forced to implement `ProcessData`.
+
+```cs
+public class CsvProcessor : DataProcessor
+{
+    protected override void ProcessData()
+    {
+        Console.WriteLine("Processing CSV data");
+    }
+}
+```
+
+To invoke it, they may call:
+```cs
+var processor = new CsvProcessor();
+processor.Process();
+```
+
+After `Process` executes, the user is no longer in control. `DataProcessor` runs and gets to determine when the user's code 
