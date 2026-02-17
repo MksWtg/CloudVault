@@ -75,3 +75,6 @@ public class UserServiceTests
 }
 ```
 
+In `Setup`, which runs prior to each test, we instantiate a mock that is dependency-injected into  `UserService`.
+
+In the test, we can control the behaviour of all the public methods in `_mockRepo`. E.g. we can control, or 'mock' `GetUserName` as shown in `_mockRepo.Setup(r => r.GetUserName(1)).Returns("Alice");`. Now whenever a method call gets delegated to 
