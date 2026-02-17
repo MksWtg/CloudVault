@@ -50,7 +50,20 @@ Prerequisites: [[Generics]]
 
 C# provides three delegate types. They are all generic.
 
-[Func](https://learn.microsoft.com/en-us/dotnet/api/system.func-2?view=net-10.0) takes at least one type parameter and returns this type as a result. You could use a `Func` for a function that takes two `int`s and returns one.
+[Func](https://learn.microsoft.com/en-us/dotnet/api/system.func-2?view=net-10.0) takes at least one type parameter. A `Func` instance points to a method that returns this type as a result. Additional type parameters correspond to the types of the arguments provided to the method that `Func` points to.
+
+You could use a `Func` for a function that takes two `int`s and returns one.
 `Func<int, int, int> add = (a, b) => a + b;`
 
-[Action](https://learn.microsoft.com/en-us/dotnet/api/system.action?view=net-10.0) takes no zero or more 
+You could use a `Func` for a function that returns a `string`.
+`public static string GetMessage() { return "Hello world"; }`
+
+[Action](https://learn.microsoft.com/en-us/dotnet/api/system.action?view=net-10.0) takes zero or more type parameters. An `Action` instance points to a method that optionally accepts parameters but has a `void` return type.
+
+You could use an `Action` for a method that prints to the console.
+`Action<string> greet = name => Console.WriteLine("Hi");`
+
+Or one that takes a parameter and prints to the console.
+`Action<string> greet = name => Console.WriteLine("Hi " + name);`
+
+[Predicate]()
