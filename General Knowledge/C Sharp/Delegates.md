@@ -1,4 +1,6 @@
-Delegates are type safe function pointers in C#. A delegate when defined is given a series of input types and an output type. This delegate can now reference any inputs whose inputs match the input type and whose output matches the output type.
+Delegates, like classes, refer to types. But unlike classes that are the types of objects, delegates are the types of methods. A delegate is just a type safe function pointers in C#. 
+
+A delegate when defined is given a series of input types and an output type. This delegate can now reference any methods whose inputs match the input type and whose output matches the output type.
 
 ```csharp
 public delegate int MathOperation(int x, int y);
@@ -44,6 +46,8 @@ notify("Alice");
 // Goodbye Alice
 ```
 
+You can also subtract methods from delegates, even if they have not been added.
+
 ## Built-In Delegates
 
 Prerequisites: [[Generics]]
@@ -66,4 +70,9 @@ You could use an `Action` for a method that prints to the console.
 Or one that takes a parameter and prints to the console.
 `Action<string> greet = name => Console.WriteLine("Hi " + name);`
 
-[Predicate]()
+[Predicate](https://learn.microsoft.com/en-us/dotnet/api/system.predicate-1?view=net-10.0) takes strictly one type parameter and points to a method that takes one argument and returns either `true` or `false` predicated on the argument.
+
+You could use a `Predicate` to determine if an `int` is odd or even.
+`Predicate<int> isEven = x => x % 2 == 0;`
+
+These built-in delegate types have been more than enough for me, but if you need to define your own you can- if you want your code to be self docume
