@@ -53,3 +53,4 @@ C# provides three delegate types. They are all generic.
 [Func](https://learn.microsoft.com/en-us/dotnet/api/system.func-2?view=net-10.0) takes at least one type parameter and returns this type as a result. You could use a `Func` for a function that takes two `int`s and returns one.
 `Func<int, int, int> add = (a, b) => a + b;`
 
+[Action](https://learn.microsoft.com/en-us/dotnet/api/system.action?view=net-10.0) takes no zero or more 
