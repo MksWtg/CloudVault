@@ -53,3 +53,8 @@ class Program
     }
 }
 ```
+
+## Purpose
+We have a situation where there exists a publisher, that knows it is being subscribed to, but not who is subscribing to it. It can send a notification trusting that those listening know what to do.
+
+This is better than just a public delegate, because public delegates are unsafe. Any subscriber can invoke a delegate. But only the owning class can invoke the event.
