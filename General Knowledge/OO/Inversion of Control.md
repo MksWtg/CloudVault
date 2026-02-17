@@ -37,6 +37,34 @@ The framework will call your code.
 
 Since ASP.NET is doing everything when and where it decides, and only calling your code when it sees fit, control has been inverted.
 
-### Example: Template Pattern
+## Example: Template Pattern
 
-ASP.NET is 
+[Source](https://stackoverflow.com/questions/23692298/is-template-method-design-pattern-an-example-of-inversion-of-control)
+
+As the writer of a framework, I may write a general method:
+
+```csharp
+public abstract class DataProcessor
+{
+    public void Process() // Template method
+    {
+        ReadData();
+        ProcessData();   // customizable step
+        SaveData();
+    }
+
+    protected abstract void ProcessData();
+
+    private void ReadData()
+    {
+        Console.WriteLine("Reading data...");
+    }
+
+    private void SaveData()
+    {
+        Console.WriteLine("Saving data...");
+    }
+}
+```
+
+Note how this class is abstract. I provide this method to the client, who will implement a specific processor (by inheriting from `DataProcessor`). As part of this they will be forced to implement `ProcessData`
