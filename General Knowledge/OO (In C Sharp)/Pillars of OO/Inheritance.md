@@ -57,6 +57,7 @@ Prerequisites: [[Access Modifiers]]
 `public` members are inherited
 `protected` members are inherited
 `private` members are not inherited
+`private protected` members are inherited
 
 ## Virtual and Override
 
@@ -131,6 +132,25 @@ class Program
         Dog dog = new Dog("Buddy", "Labrador");
         dog.Eat();  // inherited from Animal
         dog.Bark();
+    }
+}
+```
+
+## Abstract Method
+
+An abstract method is a method declared without a body in an abstract class, which must be implemented by any non-abstract class that derives from it.
+
+```cs
+abstract class Animal
+{
+    public abstract void Speak(); // no implementation here
+}
+
+class Dog : Animal
+{
+    public override void Speak() // must provide implementation, otherwise compile error
+    {
+        Console.WriteLine("Woof!");
     }
 }
 ```
