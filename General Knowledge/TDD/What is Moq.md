@@ -5,7 +5,7 @@ Moq is a popular C# library used for mocking interfaces and methods. Typically m
 
 ## Example
 
-### Setup
+### The Code That is Tested
 
 Here is an interface called `IUserRepository` which defines a method to get a username given an id.
 
@@ -38,7 +38,7 @@ public class UserService
 
 Note how `UserService` accepts the dependency through the constructor as per good practices outlined in [[Dependency Injection]]. This enables swapping out implementations of `IUserRepository` for testing and production, which is what we will do. The real `IUserRepository` will probably query a database, this is too heavy duty and expensive for testing, and not our business anyway as the abstraction was created to allow us to focus on the higher level method solely.
 
-### Test
+### The Test
 
 ```csharp
 using NUnit.Framework;
