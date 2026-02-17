@@ -40,7 +40,7 @@ public class OrderService
 
 Main reasons:
 1) Loose coupling: `OrderService` depends on an abstract `ILoggerService`, so we can swap out which concrete implementation of `ILoggerService` we want to use without modifying `OrderService`. They are loosely coupled.
-2) Testing: you can mock dependencies and their behaviours TODO mock and moq article
+2) Testing: you can mock dependencies and their behaviours (see [[Mocking]] and [[What is Moq]])
 
 Other reasons:
 3) When the number of dependencies grow, you don't need to do the work of instantiating all dependencies in the class itself (DI Containers are used for this, see below)
