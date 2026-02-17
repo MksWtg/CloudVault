@@ -62,8 +62,10 @@ This is better than just a public delegate, because public delegates are unsafe.
 Delegates anyone can invoke, overwrite, or clear.
 Events outsiders cannot invoke or overwrite, they can only add/remove handlers.
 
-## Behind the Scenes
-Every event in C# has underlying accessor methods:
+you can manually mimic what event does by wrapping a delegate in a class or property that exposes only add/remove semantics but hides Invoke. This is essentially what C# does under the hood for events.
+
+Every event in C# has underlying accessor methods.
+
 ```cs
 public event Notify OnNotify
 {
@@ -71,3 +73,4 @@ public event Notify OnNotify
     remove { /* remove the handler from the delegate list */ }
 }
 ```
+
