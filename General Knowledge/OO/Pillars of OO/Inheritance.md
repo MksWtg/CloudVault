@@ -90,4 +90,47 @@ Now despite calling `Speak()` on an identifier of type `Animal`, the method that
 
 ## Constructors
 
-You can call the base constructor using the `base` keyword
+If you want to use a constructor in the superclass that has one or more parameters, do you can do that with the `: base` syntax. For example, the base class `Animal` has a constructor with a parameter (and no constructor-less parameter). A child class therefore needs to invoke the base constructor.
+
+```cs
+class Animal
+{
+    public string Name;
+    public Animal(string name)
+    {
+        Name = name;
+    }
+
+    public void Eat() => Console.WriteLine($"{Name} is eating");
+}
+```
+
+The child invokes the base constructor using `base(name)`. This base constructor runs before the body of the child.
+
+```cs
+class Dog : Animal
+{
+    public string Breed;
+
+    public Dog(string name, string breed) : base(name) // call base constructor
+    {
+        Breed = breed;
+    }
+
+    public void Bark() => Console.WriteLine("Woof!");
+}
+```
+
+Usage:
+
+```cs
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog("Buddy", "Labrador");
+        dog.Eat();  // inherited from Animal
+        dog.Bark();
+    }
+}
+```
