@@ -9,4 +9,5 @@ When you log in to a wisetech developer laptop you enter your username and passw
 	- Wisetech has many domain controllers in case any of them go down. While computers can cache AD results, on the first login the computer needs access to AD to let you in. So whenever domain controllers go down, wisetech is in big trouble as employees get locked out.
 
 At wisetech, being authenticated gives you access to the following apps that are super critical for working here:
-- software
+- software center
+- network access to cargowise, WCA ([[What is WCA]]), and QGL binaries
