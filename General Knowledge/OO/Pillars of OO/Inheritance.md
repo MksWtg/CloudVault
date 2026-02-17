@@ -22,7 +22,8 @@ class Animal
 }
 ```
 
-Say we want to model a dog. As an animal, dogs eat and sleep too. But dogs can do dog specific behaviours, such as barking. S
+Say we want to model a dog. As an animal, dogs eat and sleep too. But dogs can do dog specific behaviours, such as barking. Such logic belongs in a subclass. In C#, subclassing occurs using the `:` syntax.
+
 ```cs
 class Dog : Animal  // Dog inherits from Animal
 {
@@ -32,3 +33,55 @@ class Dog : Animal  // Dog inherits from Animal
     }
 }
 ```
+
+Usage:
+```cs
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog();
+        dog.Eat();   // Inherited from Animal
+        dog.Sleep(); // Inherited from Animal
+        dog.Bark();  // Defined in Dog
+    }
+}
+```
+
+## Access Modifiers
+
+Prerequisites: [[Access Modifiers]]
+
+`public` members are inherited
+`protected` members are inherited
+`private` members are not inherited
+
+## Virtual and Override
+
+A method in the superclass can be annotated with the `virtual` modifier. This enables it to be overridden in the subclass by redeclaring the same method, using the `override` modifier.
+
+```cs
+class Animal
+{
+    public virtual void Speak()
+    {
+        Console.WriteLine("Some sound...");
+    }
+}
+
+class Dog : Animal
+{
+    public override void Speak()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+```
+
+Usage:
+```cs
+Animal myAnimal = new Dog();
+myAnimal.Speak(); // Calls Dog's Speak()
+```
+
+Now despite calling `Speak()` on an identifier of type `Animal`, the method that gets called is the one defined in the `Dog` class. This is known as dynamic dispatch.
