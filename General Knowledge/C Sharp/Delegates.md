@@ -75,4 +75,5 @@ Or one that takes a parameter and prints to the console.
 You could use a `Predicate` to determine if an `int` is odd or even.
 `Predicate<int> isEven = x => x % 2 == 0;`
 
-These built-in delegate types have been more than enough for me, but if you need to define your own you can- if you want your code to be self docume
+These built-in delegate types have been more than enough for me, but if you need to define your own you can- if you want your code to be self documenting, or you want to explicitly annotate types.
+
