@@ -25,3 +25,13 @@ async Task ExampleAsync()
 ```
 
 - `Console.WriteLine("Start")` runs immediately on a thread.
+- `await Task.Delay(3000)` is encountered: The thread is freed immediately. It does not wait 3 seconds. The method itself returns a Task to the caller, representing the future completion.
+- After 3 seconds, the runtime schedules the continuation to run on some available thread
+
+## Why Write Async Code?
+
+The purpose of async code is to allow a program to start long running operations (like IO) without blocking threads, so the application can continue doing other work and finish faster. It improves efficiency and responsiveness. It is used in servers, UI apps, and network operations.
+
+Question: What manages the returning of a thread to the pool and taking a new thread when code resumes?
+
+Answer: 
