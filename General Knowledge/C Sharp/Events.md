@@ -58,3 +58,16 @@ class Program
 We have a situation where there exists a publisher, that knows it is being subscribed to, but not who is subscribing to it. It can send a notification trusting that those listening know what to do.
 
 This is better than just a public delegate, because public delegates are unsafe. Any subscriber can invoke a delegate. But only the owning class can invoke the event.
+
+Delegates anyone can invoke, overwrite, or clear.
+Events outsiders cannot invoke or overwrite, they can only add/remove handlers.
+
+## Behind the Scenes
+Every event in C# has underlying accessor methods:
+```cs
+public event Notify OnNotify
+{
+    add { /* add the handler to the delegate list */ }
+    remove { /* remove the handler from the delegate list */ }
+}
+```
