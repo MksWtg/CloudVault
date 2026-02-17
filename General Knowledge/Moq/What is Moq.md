@@ -69,7 +69,7 @@ public class UserServiceTests
         // Assert: verify result
         Assert.AreEqual("Hello, Alice!", result);
 
-        // Optional: verify the method on the mock was called
+        // Verify the method on the mock was called
         _mockRepo.Verify(r => r.GetUserName(1), Times.Once);
     }
 }
