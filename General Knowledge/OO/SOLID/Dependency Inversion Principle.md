@@ -25,7 +25,7 @@ public class HomeController : Controller
 
 What are the problems with the above?
 1) To switch the email provider, you need to modify the `HomeController` class, and other classes that use an email provider (tightly coupled)
-2) Hard to test because you cannot mock `SmtpEmailSender`.
+2) Hard to test because you cannot mock `SmtpEmailSender` (see [[Mocking]] and [[What is Moq]]).
 
 Current situation visualized: High level class depends on low level class.
 
