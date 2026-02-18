@@ -1,0 +1,1 @@
+A JWT (JSON Web Token) is a string made of 3 parts: `xxxxx.yyyyy.zzzzz`. The first part is the header, the second part is the payload, the third part is the signature.
