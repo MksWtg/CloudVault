@@ -1,5 +1,4 @@
 
-When we build an app, we write code that gets compiled into binaries that can run on a computer- typically on windows. The customer accesses this code in one of several ways.
+Consider the product WCA ([[What is WiseCloud Accessor]]). It runs on customer machines. When they open the app, customers are using their own computing power to run the logic of WCA (or the client portion at least).
 
-For example, the product WCA ([[What is WiseCloud Accessor]]) runs on customer machines. When they open the app they are running it on their computer.
-
+WCA has a se
