@@ -7,11 +7,11 @@ Traditionally, your code begins executing through an entrypoint such as a `Main`
 
 `Your Code -> Library`
 
-IoC is when this pattern is inverted: you trust a framework to handle running the code. *It* decides when to run your code. It is in control. Control has been inverted.
+IoC occurs when ownership of execution, or control, is inverted: you trust a framework to handle running the code. *It* decides when to run your code. It is in control. Control has been inverted.
 
 `Framework -> Your Code`
 
-> IoC is abstract, and sometimes there is argument as to whether or not some code is IoC. Some examples are "more" IoC than others.
+> IoC is abstract, and sometimes it is not clear whether or not some code is IoC. Some examples are "more" IoC than others.
 ## Example: ASP.NET and DI
 
 This is the classic IoC example.
@@ -32,16 +32,19 @@ The framework will call your code.
 
 ### What Happens When a Request is Made?
 
-1) Browser sends a request `GET /Home/Index`
-2) ASP.NET processes the request through middleware
-3) ASP.NET routing system determines which controller to send the request to
+1) Browser sends a request `GET /Home/Index`.
+2) ASP.NET processes the request through middleware.
+3) ASP.NET routing system determines which controller to send the request to.
 4) ASP.NET sees controller signature `public HomeController(IMessageService service)` and requests DI Container to instantiate the controller and the `IMessageService`.
-5) ASP.NET calls the right method in the controller
+5) ASP.NET calls the right method in the controller.
 
-Since ASP.NET is doing everything when and where it decides, and only calling your code when it sees fit, control has been inverted.
+Since ASP.NET is doing everything, and only calls your code when it sees fit, control has been inverted.
+
+> IoC relies heavily on language features like first class functions (higher order functions and delegates) and reflection to achieve automation and control.
 
 ## Example: Template Pattern
 
+Prerequisites: [[Abstract Class]]
 [Source](https://stackoverflow.com/questions/23692298/is-template-method-design-pattern-an-example-of-inversion-of-control)
 
 As the writer of a framework, I may write a general method:
@@ -92,7 +95,9 @@ After `Process` executes, the user is no longer in control. Base `DataProcessor`
 
 ## Example: Event Driven IoC
 
-This example may show up in UI. It uses events and delegaets.
+Prerequisites: [[Delegates]] and [[Events]]
+
+This example may show up in UI. It uses delegates and events.
 
 ```cs
 using System;
