@@ -8,3 +8,15 @@ If you click "Sign in with Google", you are redirected to google. You log in to 
 - The app uses the token to call the provider (google)'s API.
 	- For example, the app requests to read your email, google asks you, you confirm, google generates a token the app can use as an api key to get some of your data from google
 - The access token is proof that the user has granted this app permission to access certain resources. It replaces sharing passwords.
+
+Access tokens are:
+- Short-lived (minutes to hours)
+- Scoped (limited permissions)
+- Revocable
+- Sometimes a JWT, sometimes opaque
+
+These days, everyone uses OAuth 2.0 (OAuth 1.0 was released in 2010 and was difficult to implement. 2.0 is the standard.)
+
+## Sequence Diagram
+![[Pasted image 20260218145422.png]]
+
