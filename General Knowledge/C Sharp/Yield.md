@@ -29,4 +29,10 @@ public class Example
 }
 ```
 
-`GetNumbers()` does not return a list. It returns numbers one at a time. Each time `foreach` asks for the next value, execution resumes after the previous yield return.
+`GetNumbers()` does not return a list. It returns numbers one at a time. Each time `foreach` asks for the next value, execution resumes after the previous `yield return`.
+
+### Behind the Scenes
+The compiler: converts your method into a state machine, and automatically creates an implementation of `IEnumerator`. It manages the iteration state.
+
+So yield saves you from writing a lot of boilerplate iterator code.
+
