@@ -1,5 +1,5 @@
 
-A web app accessible [here](https://cwc-console.sand.wtg.zone/).
+CargoWise Cloud Console (CCC) is a web app. The SAND version is accessible [here](https://cwc-console.sand.wtg.zone/).
 
 ## Why CCC?
 
