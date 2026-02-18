@@ -10,4 +10,4 @@ When you log in to a wisetech developer laptop you enter your username and passw
 
 At wisetech, being authenticated gives you access to the following apps that are super critical for working here:
 - software center
-- network access to cargowise, WCA ([[What is WCA]]), and QGL binaries
+- network access to cargowise, WCA ([[What is WiseCloud Accessor]]), and QGL binaries
