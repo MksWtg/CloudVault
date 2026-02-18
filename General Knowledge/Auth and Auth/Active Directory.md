@@ -10,3 +10,7 @@ Active Directory is a directory (like a dictionary) that stores information abou
 When you log into a work computer, the computer contacts AD to confirm your identity and retrieve your permissions and policies.
 
 Computers that have the AD on them (as there are many copies of AD across many computers in case of failure) are called domain controllers or DCs. When you log on for the first time, this is the server/servers that is/are queried. If they go down, people will lose access to their laptops as they will not be able to authenticate with AD.
+
+## AD Joined
+
+When 
