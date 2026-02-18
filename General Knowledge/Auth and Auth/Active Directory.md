@@ -1,3 +1,6 @@
+
+Prerequisites: [[Authentication vs Authorization]]
+
 Active Directory is a directory (like a dictionary) that stores information about users, computers, and other resources. It controls how they are authenticated and what they are allowed to access.
 
 1. Authentication: It verifies who you are when you log in by checking your username and password.
