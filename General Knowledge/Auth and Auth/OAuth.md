@@ -10,9 +10,9 @@ If you click "Sign in with Google", you are redirected to google. You log in to 
 - The app uses the token to call the provider (google)'s API.
 	- For example, the app requests to read your email, google asks you, you confirm, google generates a token the app can use as an api key to get some of your data from google
 - The access token is proof that the user has granted this app permission to access certain resources. It replaces sharing passwords.
-### Authorization Flow
+### Flow
 
-This set of instructions, some visible that the user sees, and some invisible that happen between the provider and the app, is called an authorization flow.
+This set of instructions, some visible that the user sees, and some invisible that happen between the provider and the app, is called flow. This particular example is called the "authorization code flow". If you are not logged in with google, it will prompt you to log in with google etc.
 
 Access tokens are:
 - Short-lived (minutes to hours)
@@ -21,6 +21,15 @@ Access tokens are:
 - Sometimes a JWT, sometimes opaque
 
 These days, everyone uses OAuth 2.0 (OAuth 1.0 was released in 2010 and was difficult to implement. 2.0 is the standard.)
+
+## OAuth Terminology
+
+Resource owner: the user, that owns the data and your own identity
+Client: The app that wants to access the data or perform actions on behalf of resource owner
+Authorization Server the application that knows the resource owner that the resource owner has an account with e.g. Google
+Resource Server: the API the client wants to user on behalf of the resource owner
+Redirect URI: the URL the authorization server will redirect the resource owner back to after granting permission to the client. Also called the "callback URL"
+
 
 ## Sequence Diagram
 ![[Pasted image 20260218145422.png]]
