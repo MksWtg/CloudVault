@@ -1,1 +1,3 @@
-Auth and 
+Authentication verifies identity. It answers "Are you really who you claim to be?". Logging in is an example of authorization, you claim to be a specific user e.g. `mukund` and the system verifies if this is true, e.g. by hashing the password and comparing it to the hashed password saved in the DB.
+
+Authorization verifies permissions of an authenticated user. It comes after authentication. One user might be an admin and be allowed to delete users. Another user might be a customer, and they can only view their own orders.
