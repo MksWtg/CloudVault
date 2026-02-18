@@ -11,4 +11,3 @@ Console has the option to be built with NTLM or OIDC Authentication.
 	1) It accesses a security token that is generated when you login via a security API called SSPI.
 6) The server verified the encrypted response against AD, which is synced with Entra ID
 	1) If the server can validate it with AD, it sends 200 OK. This is authentication without passwords.
-	2) 
