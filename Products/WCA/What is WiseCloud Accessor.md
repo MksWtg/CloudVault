@@ -8,6 +8,9 @@ Every solution in WiseCloud exists to solve a problem.
 
 ### The Problem
 
-Historically, we 
+TODO: kind of shocking, but i don't really know haha
+Historically, customers accessed cargowise via RDP. But cargowise instances 
 
 ### The Solution
+
+Accessor
