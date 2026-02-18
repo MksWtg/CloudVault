@@ -1,3 +1,8 @@
+
+A web app accessible [here](https://cwc-console.sand.wtg.zone/).
+
+## Why CCC?
+
 Every solution in WiseCloud exists to solve a problem.
 
 ### The Problem
@@ -10,6 +15,7 @@ The process of creating new customer systems  (customer system, customer instanc
 - Many more
 
 So far, this is being managed by GPS (Global Product Support) headed by Denny. This is a non technical team that historically has completed all these steps painstakingly for every new customer system.
+
 ### The Solution
 
 A central webapp that operators can use to spin up new CW systems, that completes these steps automatically. This webapp is the CargoWise Cloud Console (CCC). It is accessible [here](https://cwc-console.sand.wtg.zone/).
