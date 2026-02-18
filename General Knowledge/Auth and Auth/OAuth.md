@@ -51,6 +51,8 @@ Access token: the key the client will use to communicate with the resource serve
 7. The **Authorization Server** verifies the data and responds with an **Access Token**.
 8. The **Client** can now use the **Access Token** to send requests to the **Resource Server** for your contacts.
 
+> The client ID and client secret are generated when the app is created and chooses OAuth providers, this happens before the user comes into the picture.
+
 ## Sequence Diagram
 ![[Pasted image 20260218145422.png]]
 
