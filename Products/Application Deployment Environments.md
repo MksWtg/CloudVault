@@ -33,3 +33,7 @@ Similarly to console there is no need to have a specific version for CORP. We ha
 
 CDU doesn't have a dedicated server that it is run on. So referring to a deployment version as an "environment" is a bit misleading. For CDU, SAND comes from one proget feed and PROD comes from another.
 
+## Proget
+Prerequisites: [[What is Proget]]
+
+
