@@ -1,3 +1,5 @@
+Prerequisites: [[Authentication vs Authorization]]
+
 OAuth (Open Authorization) is an authorization framework that allows a user to give a third-party application limited access to their resources without sharing their password.
 
 ## Example
@@ -29,7 +31,25 @@ Client: The app that wants to access the data or perform actions on behalf of re
 Authorization Server the application that knows the resource owner that the resource owner has an account with e.g. Google
 Resource Server: the API the client wants to user on behalf of the resource owner
 Redirect URI: the URL the authorization server will redirect the resource owner back to after granting permission to the client. Also called the "callback URL"
+Response Type: the type of information the client expects to receive. The most common response type is `code` where the client expects an authorization code
+Scope: the permissions the client wants, such as reading profile, reading contacts, etc.
+Consent: The authorization server takes the scopes the client is requesting and verifies with the resource owner if this is ok
+Client ID: this ID is used to identify the client with the authorization server
+Client secret: a secret password that only the client and authorization server know
+Authorization Code: a code the client gives the authorization server in exchange for an access token
+Access token: the key the client will use to communicate with the resource server.
 
+> Sometimes the "Authorization Server" and the "Resource Server" are the same server. However, there are cases where they will _not_ be the same server or even part of the same organization. For example, the "Authorization Server" might be a third-party service the "Resource Server" trusts.
+
+### Example With Terminology
+1. You, the **Resource Owner**, want to allow "Terrible Pun of the Day," the **Client**, to access your contacts so they can send invitations to all your friends.
+2. The **Client** redirects your browser to the **Authorization Server** and includes with the request the **Client ID**, **Redirect URI**, **Response Type**, and one or more **Scopes** it needs.
+3. The **Authorization Server** verifies who you are, and if necessary prompts for a login.
+4. The **Authorization Server** presents you with a **Consent** form based on the **Scopes** requested by the **Client**. You grant (or deny) permission.
+5. The **Authorization Server** redirects back to **Client** using the **Redirect URI** along with an **Authorization Code**.
+6. The **Client** contacts the **Authorization Server** directly (does not use the **Resource Owner**’s browser) and securely sends its **Client ID**, **Client Secret**, and the **Authorization Code**.
+7. The **Authorization Server** verifies the data and responds with an **Access Token**.
+8. The **Client** can now use the **Access Token** to send requests to the **Resource Server** for your contacts.
 
 ## Sequence Diagram
 ![[Pasted image 20260218145422.png]]
