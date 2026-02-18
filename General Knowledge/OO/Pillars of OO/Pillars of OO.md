@@ -1,0 +1,1 @@
+The four pillars of OOP are [[Encapsulation]], [[Abstraction]], [[Inheritance]], and [[Polymorphism]]. They are principles for creating structured, reusable, and maintainable software. They organize code into objects, enabling data hiding, reducing complexity, promoting code reuse, and allowing flexible, interchangeable, and adaptable code behaviour. Aka they are good.
