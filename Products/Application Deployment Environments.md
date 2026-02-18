@@ -13,4 +13,13 @@ To solve both these problems, we create "deployment environments" known simply a
 The version that WTG employees have access to that has features that are still being tested is known as "WCA CORP" (short for corporation). It runs in the CORP environment, on CORP servers with CORP configs.
 ## SAND
 
-In fact, PROD and CORP are not the only environments. WCA als o
+In fact, PROD and CORP are not the only environments. WCA has yet another version also used internally by devs to access their test rigs, which are also customer instances. This version is called SAND (short for SANDCASTLE? or SANDBOX/SANDPIT?). Just like CORP and PROD, SAND is a "production environment" because there are customers that use the product daily and rely on it.
+
+WCA has yet another environment called SANDTEST which is a testing environment for WCA devs to do a practice deployment.
+
+## Beyond WCA
+
+These deployment environments are not at all specific to WCA. Every one of our products has "deployment targets" configured to allow controlled deployment to all environments. But exactly which environments exist changes from application to application.
+
+### Console
+We don't actively set up more cargowise instances for wisetech, we already have one that we use (TODO: Ediprod?). So console only has a SAND and PROD version.
