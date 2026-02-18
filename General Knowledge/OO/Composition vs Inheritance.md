@@ -82,6 +82,6 @@ The article says the following:
 
 > Composition provides a more stable business domain in the long term as it is less prone to the quirks of the family members. In other words, it is better to compose what an object can do than extend what it is
 
-In fact, modern languages such as Go and Rust are said to have intentionally excluded inheritance for this reason, while supporting contracts.
+In fact, modern languages such as Go and Rust intentionally exclud inheritance for this reason, while supporting contracts.
 
 However, as with anything in software, it is impossible to generalize a rule. Use whatever makes the most sense in the moment and based off what the projected requirements are.

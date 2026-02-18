@@ -22,7 +22,7 @@ You cannot instantiate the abstract class:
 
 `Shape s = new Shape(); // ❌ Error`
 
-Usage:
+You are supposed to instantiate an instance of a class that inherits from the base:
 
 ```cs
 class Circle : Shape
