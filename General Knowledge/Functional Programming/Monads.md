@@ -13,6 +13,24 @@ A monad is anything that implements the monadic interface (or typeclass in haske
 
 ### In Code
 
+Example in haskell:
+
+```haskell
+class Monad m where
+    -- fmap to apply a pure function
+    fmap :: (a -> b) -> m a -> m b
+
+    -- return injects a value into the monadic context
+    return :: a -> m a
+
+    -- bind sequences computations
+    (>>=) :: m a -> (a -> m b) -> m b
+
+    -- fmap can be derived from >>= and return
+    fmap f ma = ma >>= (return . f)
+```
+
+
 
 
 ## Rationale
@@ -25,4 +43,4 @@ Since we are constantly modelling effects with types, we are constantly wrapping
 
 Monads are the framework that enables entering data into the ecosystem (with unit) and chaining actions on wrapped data (with bind).
 
-> * This definition describes a monad that is historically correct and functionally correct. But technically, following the [[FAMP]], Monads in haskell must inherit 
+> * This definition describes a monad that is generally what programmers require for something to be considered a monad. In haskell in particular, which is the only language in which most developers use monads as a formal construct, it is historically correct and functionally correct. But technically, following the [[FAMP]], Monads in haskell must inherit from the `Applicative` typeclass so it is wrong.
