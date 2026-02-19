@@ -13,4 +13,16 @@ Ok... what is going on in this defect?
 4) Zeynep resolves to update documentation to make the access package link clearer, as it currently points to [this link](https://myaccess.microsoft.com/@WiseTechGlobal.onmicrosoft.com#/access-packages/active/c4ed3e49-64b2-4a47-b12d-1802f7602254), which is empty: ![[Pasted image 20260219171746.png]]. Presumably murray had issues as he tried to use this link which is out of date
 5) Zeynep creates WI with the above instructions
 
-DONE: WI links are updated
+### Done Statement
+
+DONE: WCA out of date links are updated
+
+### Steps
+
+1) Query for all md files
+2) Visit all links in all md files
+3) Update all broken links
+
+#### 1)
+`PS C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git> Get-ChildItem -Path "." -Recurse -Filter *.md -File`
+(roughly 40 files)
