@@ -41,7 +41,7 @@ public class Logger
 
 This solution is called the **singleton** pattern. Any of the above problems that require one global instance can basically copy paste this code with some small tweaks and use that as an effective solution.
 
-## Other Examples
+## Other Examples of Patterns
 
 - Factory
 - Abstract Factory
