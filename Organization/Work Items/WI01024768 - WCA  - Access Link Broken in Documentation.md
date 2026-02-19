@@ -5,4 +5,4 @@ Ok... what is going on in this defect?
 	1) Yaakov offers to raise a CR6 and asks for information such as username, time, name of machine they were on (session host)
 	2) Murray says, how can I find the RDP machine they are connected to?
 	3) Yaakov says check the WCA logs for where the user got routed to on their last login before $timestamp
-	4) Zeynep suggests exactly which logs to look for: https://kibana.apac-prod-1.wtg.zone/s/cargowisecloud/app/r/s/Ue25v
+	4) Zeynep suggests exactly which logs to look for: https://kibana.apac-prod-1.wtg.zone/s/cargowisecloud/app/r/s/Ue25v. Searching by WCA username (mfi.eric.fernandez@wisecloud.zone) 
