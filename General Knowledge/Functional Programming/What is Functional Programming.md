@@ -17,5 +17,5 @@ Languages that are not functional but have language features that enable functio
 
 - [[Immutable Data]]: Once a variable is assigned a value, that value cannot change and the variable cannot be reassigned.
 - [[Functions Are First Class]]: Functions can be created and passed around as objects. Functions can take functions as arguments and return functions.
-- Pure Functions: Functions do
+- [[Functions are Pure]]: Functions do not have side effects, and they don't mutate global state. As a
 
