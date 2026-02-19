@@ -6,9 +6,10 @@ Monads are a pattern in functional programming. The aim of a monad is to be able
 
 A monad is anything that implements the monadic interface (or typeclass in haskell). This interface requires the following:
 
-- A type constructor `T` of kind `* -> *`
+- A type constructor `T` of kind `* -> *` representing an embedding of a type into a context.
 - A generic function `fmap` that takes inputs of type `a -> b` and returns an instance of `T[a] -> T[b]`
-- 
+- A way to enter an instance of `a` into the ecosystem and get back `T[a]`. This method is called return.
+- A way to take data in context (an instance of `T[a]`), a function that sends maps data and embeds it in context (an instance of `a -> T[b]`) and get back 
 
 ## Rationale
 
