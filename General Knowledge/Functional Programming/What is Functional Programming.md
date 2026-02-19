@@ -17,4 +17,5 @@ Languages that are not strictly functional but have language features that enabl
 - [[Immutable Data]]: Once a variable is assigned a value, that value cannot change and the variable cannot be reassigned.
 - [[Functions Are First Class]]: Functions can be created and passed around as objects. Functions can take functions as arguments and return functions.
 - [[Functions are Pure]]: Functions do not have side effects, AKA they do not mutate global state. Functions return results of computations instead. As a result, calling the same function twice will always return the same thing.
+- Declarative: Code focuses on what to solve (expressions) rather than how to solve it (imperative statements)
 
