@@ -1,0 +1,1 @@
+Source: https://wiki.haskell.org/Functor-Applicative-Monad_Proposal
