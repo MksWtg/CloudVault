@@ -26,3 +26,44 @@ DONE: WCA out of date links are updated
 #### 1)
 `PS C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git> Get-ChildItem -Path "." -Recurse -Filter *.md -File`
 (roughly 40 files)
+
+```
+[DONE] C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\README.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\.github\pull_request_template.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\CLI Commands.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\DeploymentGuide.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\NewServerSetup.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\README.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\Server List.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\New Deployment\Architecture.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\New Deployment\Server List.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\BackwardsCompatibilityTesting.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\ClientInstallerDelivery.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\GetClientIpAddress.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\InternationalFailover.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\README.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\Parameter Signing\CW1 Parameter Signing.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\Parameter Signing\Updating WCA parameter signing keys.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\AppManagerRemoval.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\BackwardsCompatibilityTesting.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\DeploymentProcessUplift.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\ServerMSIPackaging.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Automated Integration Testing.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Dev Dependencies to Install.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Functional Testing.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Load Testing.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Local Testing.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\README.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\README.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\Logging\README.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\BackEndPasswordScomResolution.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\BackEndScomResolution.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\Discovery.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\FrontEndScomResolution.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\Resolution.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\TerminalServerScomResolution.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Requirements\README.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Source\Deployment.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Source\README.md
+C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Source\bin\all\Deployment\CargoWiseCloudDeployment.1.0.0.362\README.md
+```
