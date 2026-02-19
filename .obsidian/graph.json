@@ -5,18 +5,40 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
-  "collapse-display": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"General Knowledge\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16385285
+      }
+    },
+    {
+      "query": "path:Organization  ",
+      "color": {
+        "a": 1,
+        "rgb": 5984992
+      }
+    },
+    {
+      "query": "path:Products  ",
+      "color": {
+        "a": 1,
+        "rgb": 11206400
+      }
+    }
+  ],
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.8507704709196332,
-  "close": true
+  "nodeSizeMultiplier": 1.04100346020761,
+  "lineSizeMultiplier": 2.63477508650519,
+  "collapse-forces": false,
+  "centerStrength": 0.482698961937716,
+  "repelStrength": 8.26989619377163,
+  "linkStrength": 0.475778546712803,
+  "linkDistance": 184,
+  "scale": 1.1927656501622474,
+  "close": false
 }
