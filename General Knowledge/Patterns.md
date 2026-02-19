@@ -1,4 +1,4 @@
-A pattern is essentially a reusable solution to a common problem.
+A pattern is a reusable solution to a common problem.
 
 ## Example
 
