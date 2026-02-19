@@ -2,7 +2,8 @@ In software, a service is a class with a group of methods that are all related. 
 
 ### Services Have Dependencies
 
-Since services have clear concerns, any work that needs to be done that requires data or logic that the service does not have access to is handled by 'dependencies'. An instance of the class that does have the power/permission/data to execute an operation (typically another service) is owned by service class. This object is known as a dependency, as the primary service *depends* on it to function. The primary service now has the ability to invoke specific functionalities through the specialized dependency.
+Since services have clear concerns, any work that needs to be done that requires data or logic that the service does not have access to is handled by 'dependencies'. An instance of the class that does have the power/permission/data to execute an operation (typically another service) is owned by service class. This object is known as a dependency, as the primary service *depends* on it to function. The primary service now has the abilit
+y to invoke specific functionalities through the specialized dependency.
 
 As an example, here is a 'low level' logging class that has the 'power' to log things:
 ```C#
