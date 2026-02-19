@@ -4,7 +4,7 @@ Monads are a pattern in functional programming. The aim of a monad is to be able
 
 ## What is a Monad
 
-A monad is anything that implements the monadic interface (or typeclass in haskell). This interface requires the following*:
+A monad is anything that implements the monadic interface (or typeclass in haskell). This interface requires the following:
 
 - A type constructor `T` of kind `* -> *` representing an embedding of a type into a context.
 - A way to enter an instance of `a` into the ecosystem and get back `T[a]`. This action is called return.
@@ -20,7 +20,10 @@ class Monad m where
     (>>=) :: m a -> (a -> m b) -> m b
 ```
 
-This mona 
+The above definition is what 90% of developers would accept as a monad, but there is an argument to be made that this is not technically correct. 
+
+1) Firstly see * for how monads are defined in haskell.
+2) Secondly, this definition leverages [[Higher-Kinded Types]] to be generic- `m a` can be `List<int>` or `Maybe<string>` or anything of kind `* -> *` 
 
 
 ## Rationale
@@ -33,4 +36,4 @@ Since we are constantly modelling effects with types, we are constantly wrapping
 
 Monads are the framework that enables entering data into the ecosystem (with unit) and chaining actions on wrapped data (with bind).
 
-> * This definition describes a monad that is generally what programmers require for something to be considered a monad. In haskell in particular, which is the only language in which most developers use monads as a formal construct, it is historically correct and functionally correct. But technically, following the [[FAMP]], Monads in haskell must inherit from the `Applicative` typeclass so it is wrong.
+> * In haskell, which is the only language in which most developers use monads as a formal construct, the given definition is historically correct and functionally correct. But technically, following the [[FAMP]], Monads in haskell must inherit from the `Applicative` typeclass.
