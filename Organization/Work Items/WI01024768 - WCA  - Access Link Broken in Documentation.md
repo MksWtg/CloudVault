@@ -55,10 +55,10 @@ DONE: WCA out of date links are updated
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Local Testing.md
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\README.md
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\README.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\Logging\README.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\BackEndPasswordScomResolution.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\BackEndScomResolution.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\Discovery.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\Logging\README.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\BackEndPasswordScomResolution.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\BackEndScomResolution.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\Discovery.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\FrontEndScomResolution.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\Resolution.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\TerminalServerScomResolution.md
