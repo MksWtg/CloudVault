@@ -38,7 +38,7 @@ DONE: WCA out of date links are updated
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\New Deployment\Architecture.md
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\New Deployment\Server List.md
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\BackwardsCompatibilityTesting.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\ClientInstallerDelivery.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\ClientInstallerDelivery.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\GetClientIpAddress.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\InternationalFailover.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\README.md
