@@ -45,7 +45,7 @@ DONE: WCA out of date links are updated
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\Parameter Signing\CW1 Parameter Signing.md
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\Parameter Signing\Updating WCA parameter signing keys.md
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\AppManagerRemoval.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\BackwardsCompatibilityTesting.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\BackwardsCompatibilityTesting.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\DeploymentProcessUplift.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\ServerMSIPackaging.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Automated Integration Testing.md
