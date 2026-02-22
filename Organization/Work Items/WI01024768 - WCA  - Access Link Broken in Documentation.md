@@ -48,13 +48,13 @@ DONE: WCA out of date links are updated
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\BackwardsCompatibilityTesting.md
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\DeploymentProcessUplift.md
 [DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\WorkInProgress\ServerMSIPackaging.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Automated Integration Testing.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Dev Dependencies to Install.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Functional Testing.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Load Testing.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Local Testing.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\README.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\README.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Automated Integration Testing.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Dev Dependencies to Install.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Functional Testing.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Load Testing.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\Local Testing.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Development\README.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\README.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\Logging\README.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\BackEndPasswordScomResolution.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Monitoring\SCOM\BackEndScomResolution.md
