@@ -28,14 +28,14 @@ DONE: WCA out of date links are updated
 (roughly 40 files)
 
 ```
-[DONE] C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\README.md
-[DONE] C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\.github\pull_request_template.md
-[DONE] C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\CLI Commands.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\DeploymentGuide.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\NewServerSetup.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\README.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\Server List.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\New Deployment\Architecture.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\README.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\.github\pull_request_template.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\CLI Commands.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\DeploymentGuide.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\NewServerSetup.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\README.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\Server List.md
+[DONE]C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\New Deployment\Architecture.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\New Deployment\Server List.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\BackwardsCompatibilityTesting.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Design\ClientInstallerDelivery.md
