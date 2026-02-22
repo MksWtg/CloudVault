@@ -29,8 +29,8 @@ DONE: WCA out of date links are updated
 
 ```
 [DONE] C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\README.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\.github\pull_request_template.md
-C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\CLI Commands.md
+[DONE] C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\.github\pull_request_template.md
+[DONE] C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\CLI Commands.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\DeploymentGuide.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\NewServerSetup.md
 C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Accessor.git\Documentation\Deployment\README.md
