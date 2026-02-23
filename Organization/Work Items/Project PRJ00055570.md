@@ -3,7 +3,8 @@ We are trying to find out what went wrong with doc util, then we fix it and be h
 Error: migration_status column does not exist fuck why do they have incorrect schemas
 
 Situation:
-When document utility is called with the `restore` command, we first check to see if `RptDt_S3MigrationReconciliation` exists.
+When this tool called document utility ([[What is CargoWise Document Utility]]) is called with the `restore` command, we first check to see if `RptDt_S3MigrationReconciliation` exists.
+If it does exist, we fetch a list of all 
 
 error:
 ```
