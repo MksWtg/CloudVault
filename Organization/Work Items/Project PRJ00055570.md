@@ -2,6 +2,9 @@ We are trying to find out what went wrong with doc util, then we fix it and be h
 
 Error: migration_status column does not exist fuck why do they have incorrect schemas
 
+Situation:
+When document utility is called with the `restore` command, we first check to see if `RptDt_S3MigrationReconciliation` exists.
+
 error:
 ```
 **ESN 16-Feb-26 16:28 GMT+11:00:**
