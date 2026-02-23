@@ -10,7 +10,9 @@ FROM {DatabaseName}.dbo.{MigrationReconcilliationTableName}
 WHERE migration_status = 4 -- 4 is the number for missing
 ```
 
-Now, this worked at least once.
+The migration status mapping comes from the `Internal Tools` repo collection from the `CargoWiseCloudS3` repo
+Where did we get this schema? From internal tools:
+Now, this worked at least once. 
 
 
 error:
