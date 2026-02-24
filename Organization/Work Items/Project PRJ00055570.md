@@ -1,9 +1,9 @@
 We are trying to find out what went wrong with doc util, then we fix it and be happy.
 
-Error: migration_status column does not exist fuck why do they have incorrect schemas
+Error: migration_status column does not exist why do they have incorrect schemas
 
 Situation:
-When this tool called document utility ([[What is CargoWise Document Utility]]) is called with the `restore` command, we first check to see if `RptDt_S3MigrationReconciliation` exists. This table is supposed to record missing edocs if they exist. If the table does exist, we fetch a list of all missing edocs with the query:
+When this tool called document utility ([[What is CargoWise Document Utility]]) is called with the `restore` command, we first check to see if `RptDt_S3MigrationReconciliation` exists. This table is supposed to record missing eDocs if they exist. If the table does exist, we fetch a list of all missing eDocs with the query:
 ```SQL
 SELECT SC_PK
 FROM {DatabaseName}.dbo.{MigrationReconcilliationTableName}
@@ -16,6 +16,8 @@ The migration status mapping comes from the `Internal Tools` repo collection fro
 Where did we get this schema to know to reference `migration_status` column? From same repo as before:
 
 
+
+The issue is, these databases were never meant to be accurate references for 
 Now, this worked at least once. 
 
 
