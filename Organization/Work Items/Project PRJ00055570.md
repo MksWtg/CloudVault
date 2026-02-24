@@ -13,13 +13,19 @@ WHERE migration_status = 4 -- 4 is the number for missing
 The migration status mapping comes from the `Internal Tools` repo collection from the `CargoWiseCloudS3` repo:
 ![[Pasted image 20260223225836.png]]
 
-Where did we get this schema to know to reference `migration_status` column? From same repo as before:
+Where did we get this schema to know to reference `migration_status` column? From same repo as before. For example:
+![[Pasted image 20260225091345.png]]
 
 
 
-The issue is, these databases were never meant to be accurate references for 
-Now, this worked at least once. 
+The issue is, these databases were never meant to be used programmatically to perform logic. So the dbs were spun up ad hoc. Some have been removed etc.
 
+Now, the initial change to use this db as a lookup worked at least once.
+
+But now we have discovered at least one customer which does not adhere to this schema (CLEMEL):
+![[Pasted image 20260225091519.png]]
+
+The lack of the `migration_status` table is consistent with observed behaviour.
 
 error:
 ```
