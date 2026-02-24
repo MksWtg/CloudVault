@@ -1,4 +1,5 @@
 
+Product: [[What is Console]]
 
 The product SAND CCC, accessible at https://cwc-console.sand.wtg.zone/, is used for functionally testing Console changes. New customer systems are orchestrated by default (they have service tasks running). You can see this in the customer creation modal.
 
