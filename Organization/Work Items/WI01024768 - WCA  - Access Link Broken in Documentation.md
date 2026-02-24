@@ -1,4 +1,5 @@
 
+Product: [[What is WiseCloud Accessor]]
 Ok... what is going on in this defect?
 
 1) Murray reports that a customer is experiencing weird issues and getting kicked off cargowise. [Murray Grant: Assistance Request: CargoWise "crash" for customer | Product-Development (all staff) > General | Microsoft Teams](https://teams.microsoft.com/l/message/19:9ebf2b2fa75e4a728d27674ca62554b8@thread.skype/1769746297192?tenantId=8b493985-e1b4-4b95-ade6-98acafdbdb01&groupId=c9fbec07-f470-451e-a107-255c9b777d30&parentMessageId=1769746297192&teamName=Product-Development%20\(all%20staff\)&channelName=General&createdTime=1769746297192 "https://teams.microsoft.com/l/message/19:9ebf2b2fa75e4a728d27674ca62554b8@thread.skype/1769746297192?tenantId=8b493985-e1b4-4b95-ade6-98acafdbdb01&groupId=c9fbec07-f470-451e-a107-255c9b777d30&parentMessageId=1769746297192&teamName=Product-Development%20(all%20staff)&channelName=General&createdTime=1769746297192")
