@@ -1,3 +1,8 @@
 Hi Louise very sorry I was not able to ask this question in person.
 
-In the FAQs it says that performance and remuneration are paused. Presumably this is because most developers are  is it possible for title changes to occur without the accompanying renumeration change.since it is just policy and doesn't actually cost the company anything (assuming the reason for the salary freezes is cost cutting)
+In the FAQs it says that performance and remuneration are paused. Presumably this is because most developers are primarily interested in salary/stock options, and titles are usually accompanied by salary/stock options.
+
+While most poeple are unhappy iwth this, it is probably hard to 
+
+While 
+for  is it possible for title changes to occur without the accompanying renumeration change.since it is just policy and doesn't actually cost the company anything (assuming the reason for the salary freezes is cost cutting)
