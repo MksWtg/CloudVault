@@ -1,4 +1,4 @@
-
+Prerequisites: [[What is Console]], [[Authentication vs Authorization]]
 Console has the option to be built with NTLM or OIDC Authentication.
 
 ## NTLM
