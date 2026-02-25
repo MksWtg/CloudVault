@@ -16,10 +16,8 @@ for  is it possible for title changes to occur without the accompanying renumera
 
 Hi Louise very sorry I was not able to ask this question in person.
 
-In the FAQs it says that performance and remuneration are paused. I understand that this may be due to the financial impact involved, since promotions are often tied to salary or stock option adjustments.
+In the FAQs it says that performance and remuneration are paused. I understand that this may be due to the financial impact involved, since promotions are usually tied to salary or stock option adjustments.
 
-That said, I wanted to ask whether it might be possible to consider title only reviews during this period, even if remuneration adjustments need to remain paused. While compensation is important, I’d personally be willing to forgo any immediate salary change if it meant being considered for title progression.
+That said, I wanted to ask whether it might be possible to consider title only reviews, even if remuneration adjustments need to remain paused. While compensation is important, I’d personally be willing to forgo any immediate salary change if it meant being considered for a promotion. From what I understand, promotions from SWE to Senior SWE tend to have limitations (such as only being able to promote one dev to senior at a time) that do not affect associates. Correct me if I am wrong but I believe the education team (as opposed to individual teams) should have a say in this policy since most associates are EaL.
 
-From what I understand, promotions from SWE to Senior SWE tend to have limitations (such as only being able to promote one dev to senior at a time) that do not affect associates. Correct me if I am wrong but i believe the education team has a huge say in this process since most associates are EaL.
-
-Being promoted to SWE would be a significant professional milestone for me, and I believe it would still provide meaningful recognition and motivation even without an accompanying pay adjustment. I am not sure how others feel. Would it be reasonable to make this case to upper management?
+Being promoted to SWE would be a milestone for me, and would provide recognition/motivation. I am not sure how others feel. Would it be reasonable to make this case to upper management?
