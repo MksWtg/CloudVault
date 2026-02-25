@@ -37,7 +37,7 @@ There are two parts:
 1) Before `next()` runs on the way in (request phase)
 2) After `next()` runs on the way out (response phase)
 
-If you chain multiple middlwares together, the request middleware runs in order while the response middlewares run in reverse order.
+If you chain multiple middlewares together, the request middleware runs in order while the response middlewares run in reverse order.
 
 >Note: `next()` is the delegate that calls the next middleware- ASP.NET connects it to the next middleware.
 ## Appendix
