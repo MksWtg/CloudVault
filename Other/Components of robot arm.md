@@ -11,4 +11,6 @@ This list ignores any upskilling needed
 	2) Motors
 	3) Gearboxes
 	4) Belts
-4) 
+4) Pi
+	1) High level control code, inverse kinematics for arm
+	2) Runs web server that exposes web interface (can do joint control or end effector pose) and displays robot visualization
