@@ -25,4 +25,4 @@ Interfaces:
 1) A keyed clamp goes on the end of the shaft and has 4 mounting holes
 2) Electrical interface: USB C
 3) Software interface: users input a usb stick that has a file called "main.cpp" in it. This file can read: joint states, the usb device ls0 or whatever (representing the custom device they are plugging into the port), current controller readings from xbox controller and have access to the action client api to send the end effector to a post (including selecting which solution if there are many) or can write to the joint position/velocities. Can also read from web interface (see point #4).
-4) Web interface: Can define custom html/css/js elements that get put into the web interface (TODO investigate a good interface for this to fit neatly into the UI, might make a basic component library).
+4) Web interface: Can define custom html/css/js elements that get put into the web interface (TODO investigate a good interface for this to fit neatly into the UI, might make a basic component library). E.g. a custom button called "SCAN" and when users hit this button it searches for an object, scans it and generates an STL to print.
