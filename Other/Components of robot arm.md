@@ -1,7 +1,7 @@
 This list ignores any upskilling needed
 1) Power distribution board
 	1) Power in from wall (no battery)
-	2) Power out to drivers, pi
+	2) Power out to drivers, pi, lights
 	3) Voltage, current and temperature sensors that feed to pi
 	4) Slots for fuses
 2) Closed loop drivers
