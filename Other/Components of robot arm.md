@@ -4,10 +4,11 @@ This list ignores any upskilling needed
 	2) Power out to drivers, pi, lights
 	3) Voltage, current and temperature sensors that feed to pi
 	4) Slots for fuses
-2) Closed loop drivers
+2) Closed loop drivers (FOC or not?)
 	1) CAN for daisy chaining
 	2) Built in absolute encoder
 	3) STM chip for firmware
+	4) Enables microstepping and closed loop control
 3) Physical arm
 	1) 3d printed links
 	2) Motors
