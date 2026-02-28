@@ -1,0 +1,1 @@
+Matter is anything you can see that has mass and takes up space (has volume).
