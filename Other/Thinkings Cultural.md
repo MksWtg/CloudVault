@@ -5,3 +5,7 @@ best cultural exchange program. requirements:
 - ideally 2-3 weeks. strictly less than 4 weeks
 - in europe, anywhere ideally
 - in english
+
+https://summerschool.pte.hu/programs/european-studies-summer-school-0
+
+https://www.whu.edu/en/programs/short-term-programs/bachelor-european-summer-program/?utm_source=chatgpt.com
