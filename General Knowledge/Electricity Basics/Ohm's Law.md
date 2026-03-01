@@ -14,4 +14,8 @@ $R$ is resistance
 
 ## The Relationship
 
-In a circuit with a fixed potential difference, 
+In a circuit with a fixed potential difference (energy per charge), increasing the resistance (how much the material resists the current) will decrease the current that flows (number of charges per second). Decreasing the resistance will increase the current.
+
+It doesn't make sense to talk about increasing/decreasing the current as we can't manually alter the number of charges that flow and then expect the resistance of the circuit to change. Typically current is a dependent variable.
+
+In a circuit with a fixed medium (resistance) increasing the voltage increases the current. While the material resisting the electrons is fixed
