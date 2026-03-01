@@ -1,4 +1,4 @@
-Prerequisites: [[Magnets]], [[Magnetic Field]], [[Magnetic Moment]]
+Prerequisites: [[Magnets]], [[Magnetic Field]], [[Magnetic Moment]], [[Induced Magnetic Field]]
 
 In diamagnetic materials the atomic magnetic moments cancel out, but a tiny magnetic moment is induced in the opposite direction of an applied field.
 
