@@ -1,4 +1,4 @@
-Prerequisites: [[Electric Charge]]
+Prerequisites: [[Electric Charge]], [[Electric Potential Energy]]
 
 Electric charges can flow through a medium. For example, since electrons have negative charge, electrons can flow through a medium is an example of electric charges moving through a medium
 
