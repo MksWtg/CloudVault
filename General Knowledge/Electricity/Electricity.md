@@ -9,8 +9,9 @@ There are two types of electricity.
 ## Static Electricity
 
 Static electricity is the presence of electric charge that is not moving through a medium.
+> In most contexts, static electricity is normally charge stuck on surfaces or insulators
 
 ## Current Electricity
 
-Current electricity is the flow of electric charge through a medium. Electrons flow from negatively charged objects to positive ones.
+Current electricity is the flow of electric charge through a medium.
 
