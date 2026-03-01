@@ -8,4 +8,8 @@ A resistor is an electronic component. When added to a circuit, the resistor inc
 ![[Pasted image 20260301142812.png]]
 In the above circuit, the load, which is a light bulb, may have some internal resistance (any substance that electricity flows through has resistance). This resistance is very low. The wire also has almost no resistance. 
 
-Because resistance is very low, for a given voltage current will be very high.
+Because resistance is very low, for a given voltage current will be very high. This will damage the bulb.
+
+Solution: Add a resistor. When resistance increases, current decreases. The current will be uniform across the circuit.
+
+Problem:
