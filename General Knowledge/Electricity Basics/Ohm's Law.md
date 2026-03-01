@@ -1,0 +1,1 @@
+Prerequisites: [[Circuit]], [[Voltage]], [[Current]], [[Resistance]]
