@@ -35,6 +35,8 @@ Effects, like writing to a file or printing to a console are modelled using retu
 
 Since we are constantly modelling effects with types, we are constantly wrapping results in containers.
 
-Monads are the framework that enables entering data into the ecosystem (with unit) and chaining actions on wrapped data (with bind).
+Monads are the framework that enables entering data into the ecosystem of the container (with unit) and chaining actions on wrapped data (with bind).
+
+It is a really simple framework. Like the most basic set of methods ever.
 
 > * In haskell, which is the only language in which most developers use monads as a formal construct, the given definition is historically correct and functionally correct. But technically, following the [[FAMP]], Monads in haskell must inherit from the `Applicative` typeclass.
