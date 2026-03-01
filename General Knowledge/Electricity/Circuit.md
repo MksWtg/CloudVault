@@ -1,4 +1,4 @@
-Prerequisites: [[Electricity]]
+Prerequisites: [[Electricity]], [[Electrostatic Induction]]
 
 A circuit is the path that electricity flows along.
 
