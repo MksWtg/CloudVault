@@ -8,3 +8,5 @@ Protons have a positive charge, neutrons have a neutral charge and electrons hav
 - If an object has equal protons and neutrons it has a neutral charge.
 - If an object has more protons that electrons, it has a net positive charge
 - If an object has more electrons that protons it has a net negative charge
+
+Like charges repel and opposite charges attract. E.g. two electrons acting on each other without any other forces will repel.
