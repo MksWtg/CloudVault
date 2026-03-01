@@ -12,4 +12,4 @@ Because resistance is very low, for a given voltage current will be very high. T
 
 Solution: Add a resistor. When resistance increases, current decreases. The current will be uniform across the circuit.
 
-Problem:
+In the above circuit, the difference in potential between `+` and `-` is 9V.
