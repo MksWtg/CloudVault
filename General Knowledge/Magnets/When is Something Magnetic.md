@@ -6,11 +6,9 @@ Materials are not magnetic by default. This means they cannot be moved by magnet
 - they cancel out
 
 Materials that are magnetic are one of the following:
-- [[Ferromagnet]]
-- Dimagnetic
-- Paramagnetic
-
-
+- [[Ferromagnetism]]
+- [[Diamagnetism]]
+- [[Paramagnetism]]
 
 ## Coercivity
 

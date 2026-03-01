@@ -1,3 +1,4 @@
+Prerequisites: [[Magnets]], [[Magnetic Field]], [[Magnetic Moment]]
 
 Ferromagnets have spontaneous magnetization and can become permanent magnets.
 
