@@ -10,4 +10,4 @@ The area underneath the cloud becomes positive, as the electrons in this area ar
 
 The electrons move away from the negative cloud and towards the positive ground.
 
-While circuits don't need to be formed by the flow of electrons (an)
+While circuits don't need to be formed by the flow of electrons (any charge will do) we typically talk about electric circuits and electrons. So unless otherwise stated, assume the circuit involves electrons.

@@ -18,4 +18,4 @@ In a circuit with a fixed potential difference (energy per charge), increasing t
 
 It doesn't make sense to talk about increasing/decreasing the current as we can't manually alter the number of charges that flow and then expect the resistance of the circuit to change. Typically current is a dependent variable.
 
-In a circuit with a fixed medium (resistance) increasing the voltage increases the current. While the material resisting the electrons is fixed
+In a circuit with a fixed medium (resistance) increasing the voltage increases the current. While the material resisting the electrons is fixed, we have given each charge more energy, so more charges can flow across a given point per unit time. Decreasing voltage decreases current.
