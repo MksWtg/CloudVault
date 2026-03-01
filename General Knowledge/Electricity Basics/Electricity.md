@@ -13,5 +13,5 @@ Static electricity is the presence of electric charge that is not moving through
 
 ## Current Electricity
 
-Current electricity is the flow of electric charge through a medium. Electricity flows from the side with 
+Current electricity is the flow of electric charge through a medium. Electricity flows from the side with higher potential (.e.g 5B 
 
