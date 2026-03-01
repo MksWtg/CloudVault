@@ -13,7 +13,9 @@ Static electricity is the presence of electric charge that is not moving through
 
 ## Current Electricity
 
-Current electricity is the flow of electric charge through a medium. Electricity flows from the side with higher potential (e.g. 5V) to the side with lower potential (e.g. 3V).
+Current electricity is the flow of electric charge through a medium. Electric current flows from the side with higher potential (e.g. 5V) to the side with lower potential (e.g. 3V).
 
-In some textbooks/diagrams, you may see current flowing the other way (from the positive side to the negative side). This is known as conventional current. It describes the direction a positive charge would move.
+The side with more electrons has a negative charge and lower voltage. The side with fewer electrons has a relatively positive charge and higher voltage.
+
+Electrons flow from negative to positive side. BUT by convention, we describe the current as flowing from the positive side to the negative side- this is the direction a positive charge would go in. The idea of current flowing the other way to the electron is known as **conventional current**.
 
