@@ -1,11 +1,11 @@
-Prerequisites: [[Circuit]]
+Prerequisites: [[Circuit Example]]
 
-Circuits that we use to power devices and make machines work are made in more or less standard ways.
+Circuits that we use in day to day life to power devices and make machines work are built in the following way:
 
 The substance that electrons flow through is a metal, usually a wire or a trace.
 
-Power either comes from a [[Battery]] or from the wall (mains).
+Power either comes from a [[Battery]] or from the wall (Mains).
 
-The pieces that control the behavior of a circuit to make it desirable are standard building blocks known as electronic components.
+The pieces that control the behavior of a circuit to make it do usable things are standard building blocks known as **electronic components**.
 
-Electronic components typically contain two ends
+Electronic components typically contain two ends, and are not symmetrical (so there is a positive end and a negative end). To use it in a circuit, you cut the wire where you want to inser
