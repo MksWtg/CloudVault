@@ -2,12 +2,14 @@ Prerequisites: [[Matter]], [[Atom]]
 
 Recall that every atom can have a different number of protons, neutrons and electrons.
 
+Recall that matter is made of many atoms.
+
 Electric charge is a property that matter has.
 
 Protons have a positive charge, neutrons have a neutral charge and electrons have a negative charge.
-- If an object has equal protons and neutrons it has a neutral charge.
+- If an object has equal protons and neutrons, it has a neutral charge.
 - If an object has more protons that electrons, it has a net positive charge
-- If an object has more electrons that protons it has a net negative charge
+- If an object has more electrons that protons, it has a net negative charge
 
 Like charges repel and opposite charges attract. E.g. two electrons acting on each other without any other forces will repel.
 
