@@ -12,4 +12,4 @@ Because resistance is very low, for a given voltage current will be very high. T
 
 Solution: Add a resistor. When resistance increases, current decreases. The current will be uniform across the circuit.
 
-In the above circuit, the difference in potential between `+` and `-` is 9V.
+In the above circuit, the difference in potential between `+` and `-` is 9V. After both the bulb and resistor, there is a voltage "drop" when the potential decreases. It is the amount of energy per charge used to push the charge through the component. $V_{bulb} + V_{resistor} = 9$.
