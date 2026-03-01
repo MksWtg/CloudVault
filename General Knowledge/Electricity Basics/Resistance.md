@@ -1,0 +1,1 @@
+Resistance is a measure of how much a material opposes the flow of electric current.
