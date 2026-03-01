@@ -1,3 +1,6 @@
-A magnet is any material that can create a magnetic field. A magnetic field is a region that applies a force to ferromagnetic materials and other magnets.
+Prerequisites: [[Electric Charge]], [[Magnetic Field]]
 
-Every magnet has a north pole, a south pole.
+A magnet is a physical object, made of a material whose internal electric charges are arranged so that they produce a magnetic field.
+
+![[Pasted image 20260301152646.png]]
+Inside matter electrons have charge. Movi
