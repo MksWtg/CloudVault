@@ -9,3 +9,5 @@ best cultural exchange program. requirements:
 https://summerschool.pte.hu/programs/european-studies-summer-school-0
 
 https://www.whu.edu/en/programs/short-term-programs/bachelor-european-summer-program/?utm_source=chatgpt.com
+
+https://www.european-study.eu/res/data/File/26_EU_August_Schedule.pdf
