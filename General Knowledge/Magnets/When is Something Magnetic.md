@@ -8,9 +8,6 @@ Materials are not magnetic by default. This means they cannot be moved by magnet
 Materials that are magnetic are made of ferromagnetic materials
 - [[Ferromagnetism]]
 
+Some materials respond weakly/only in the presence of a field, they are not considered inherently magnetic but instead we say that magnetism is induced in strong magnetic fields.
 - [[Diamagnetism]]
 - [[Paramagnetism]]
-
-## Coercivity
-
-## Retentivity
