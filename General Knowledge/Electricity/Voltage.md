@@ -1,6 +1,6 @@
 Prerequisites: [[Electric Potential Energy]]
 
-Voltage is the difference in electric potential between two points.
+Voltage is a quantity measuring electric potential energy. The units are volts.
 
 Analogy: Think of voltage like water pressure in a pipe: the higher the pressure difference, the more water (charges) wants to flow.
 
