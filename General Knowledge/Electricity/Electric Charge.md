@@ -13,4 +13,4 @@ Like charges repel and opposite charges attract. E.g. two electrons acting on ea
 
 A coulomb (C) is the unit of electric charge.
 
-1 coulomb is the amount of charge carried by approximately 6.242 × 10¹⁸ electrons
+1 coulomb is the amount of charge carried by approximately 6.242 × 10¹⁸ electrons.
