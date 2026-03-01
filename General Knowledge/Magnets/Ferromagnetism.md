@@ -1,5 +1,6 @@
 Prerequisites: [[Magnets]], [[Magnetic Field]], [[Magnetic Moment]]
 
+## Spontaneous Magneti
 Ferromagnets have spontaneous magnetization and can become permanent magnets.
 
 > Spontaneous magnetization is the natural alignment of atomic magnetic moments in a ferromagnetic material without any external magnetic field, resulting in a net magnetic moment inside each magnetic domain.

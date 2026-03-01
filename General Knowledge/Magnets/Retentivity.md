@@ -1,12 +1,9 @@
-Retentivity is > The **residual magnetization** a material retains **after the external magnetizing field is removed**.
+Retentivity is the residual magnetization a material retains after the external magnetizing field is removed.
 
-**In simpler terms:**
+In simpler terms: it measures how strongly a material stays magnetized.
 
-- Measures how **strongly a material stays magnetized**.
-    
-- High retentivity → material keeps a lot of magnetization → strong permanent magnet.
-    
-- Low retentivity → material loses most magnetization → temporary magnet.
-    
+High retentivity means the material keeps a lot of magnetization, so it is a strong permanent magnet.
 
-**Units:** Tesla (T) or Gauss (G).
+Low retentivity means the material loses most magnetization so it is a good temporary magnet.
+
+Units: Tesla (T) or Gauss (G).
