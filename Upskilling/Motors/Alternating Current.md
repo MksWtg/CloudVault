@@ -1,0 +1,1 @@
+In all the content previously discussed, current has been flowing in one direction while electrons flow the other way. Polar
