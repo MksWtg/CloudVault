@@ -1,6 +1,6 @@
-Prerequisites: [[Electricity]], [[Electrostatic Induction]]
+Prerequisites: [[Electricity]], [[Electrostatic Induction]], [[Electric Potential Energy]]
 
-A circuit is the path that electricity flows along.
+For electricity to flow, there needs to be a potential difference between two points and a path between the two points for the electricity to flow along. This path is called a circuit.
 
 When lightning strikes, the lightning cloud is the source of electric charges (electrons).
 
