@@ -1,1 +1,0 @@
-An electron is a particle.
