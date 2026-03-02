@@ -26,7 +26,7 @@ Interfaces:
 1) A keyed clamp goes on the end of the shaft and has 4 mounting holes
 2) Electrical interface: USB C
 3) Software interface: users input a usb stick that has a file called "main.cpp" in it. This file can read: joint states, the usb device ls0 or whatever (representing the custom device they are plugging into the port), current controller readings from xbox controller and have access to the action client api to send the end effector to a post (including selecting which solution if there are many) or can write to the joint position/velocities. Can also read from web interface (see point #4).
-4) Web interface: Can define custom html/css/js elements that get put into the web interface (TODO investigate a good interface for this to fit neatly into the UI, might make a basic component library). E.g. a custom button called "SCAN" and when users hit this button it searches for an object, scans it and generates an STL to print.
+4) Web interface: Can define custom html/css/js elements that get put into the web interface (TODO investigate a good interface for this to fit neatly into the UI, might make a basic component library). E.g. a custom button called "SCAN" and when users hit this button it searches for an object, scans it and generates an STL to print. web interface also provides 1) a way to connect to a network and 2) a way to get data, logs, 
 
 i need a medium quality gearbox reducer. here are my requirements:
 - must be dual shaft, or otherwise be easy to adjust to make it dual shaft
@@ -35,4 +35,5 @@ i need a medium quality gearbox reducer. here are my requirements:
 - ratio roughly 30 : 1 - backlash less than 10 arcmin
 
 Interface prompt:
-im making a robot arm for a client and want to give the client full complete customization of any end effector they want, that is controllable both data and signal through the main computer. but they cant program the main computer directly. there has to be some ioc/other setup so the user can do whatever hardware and software they want to write code to control both the arm and read/write from the end effector
+im making a robot arm for a client and want to give the client full complete customization of any end effector they want, that is controllable both data and signal through the main computer. but they cant program the main computer directly. there has to be some ioc/other setup so the user can do whatever hardware and software they want to write code to control both the arm and read/write from the end effector.
+
