@@ -1,0 +1,1 @@
+Optimistic Concurrency Control (OCC) is a database management technique that allows multiple transactions to proceed simultaneously without locking data resources, assuming conflicts are rare. Instead of locking upfront, it validates for conflicts at commit time; if a conflict (e.g., modified data) exists, the transaction aborts and typically retries.

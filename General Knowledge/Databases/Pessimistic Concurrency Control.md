@@ -1,0 +1,1 @@
+Pessimistic concurrency control is a database technique that prevents conflicts by locking data records the moment they are read or updated, holding the lock until the transaction finishes. It assumes high contention (multiple users updating the same data), ensuring data integrity by forcing other transactions to wait.
