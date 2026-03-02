@@ -24,3 +24,9 @@ https://www.european-study.eu/en/content/es_payment_fees_july_august
 | Schedule                           | Looks like the most fun thing in the world, every day there are cool activities and I won't have to look to entertain myself. |                                                    |                                                 |
 | Credit                             | 6 ECTS                                                                                                                        | 9 ECTS                                             | 9 ECTS (? Unsure)                               |
 | Difficulty/Syllabus                | We get graded just by showing up?                                                                                             | More work: probably similar to this other SS       | More work: ![[Pasted image 20260302112152.png]] |
+Questions for them:
+1) Can I enroll in a subject, then get this subject waived during a cultural short exchange?
+	1) if so, what subject?
+2) eligible for scholarships doing concurrent study? e.g.
+3) for germany, because we are a partner university can i get fees waived?
+4) what subject to en
