@@ -14,10 +14,10 @@ https://www.european-study.eu/res/data/File/26_EU_August_Schedule.pdf
 
 
 
-| Metric   | Hungary           | Germany        |
-| -------- | ----------------- | -------------- |
-| Duration | 3 Weeks (perfect) | 5 Weeks (long) |
-| Timing   |                   |                |
-|          |                   |                |
-|          |                   |                |
-|          |                   |                |
+| Metric                | Hungary   | Germany |
+| --------------------- | --------- | ------- |
+| Duration              | 14 Days   | 24 Days |
+| Cost (Fees + Accommo) | 1050 Euro |         |
+|                       |           |         |
+|                       |           |         |
+|                       |           |         |
