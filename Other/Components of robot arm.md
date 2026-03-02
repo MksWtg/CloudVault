@@ -35,4 +35,4 @@ i need a medium quality gearbox reducer. here are my requirements:
 - ratio roughly 30 : 1 - backlash less than 10 arcmin
 
 Interface prompt:
-im making a robot arm for a client and want to give the client full complete customization of any end effector they want, that is controllable data and signal through the main computer. but they cant program the main computer directly. there has to be some ioc/other setup so the user can do whatever hardware and software they want to write code to control the arm and effector and get sensor data
+im making a robot arm for a client and want to give the client full complete customization of any end effector they want, that is controllable both data and signal through the main computer. but they cant program the main computer directly. there has to be some ioc/other setup so the user can do whatever hardware and software they want to write code to control both the arm and read/write from the end effector
