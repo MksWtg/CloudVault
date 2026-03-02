@@ -52,3 +52,5 @@ This solution is called the **singleton** pattern. Any of the above problems tha
 - Facade
 - Proxy
 - Composite
+
+In each of these cases, the solution can be formulated once and reused.

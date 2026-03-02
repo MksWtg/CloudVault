@@ -1,3 +1,4 @@
+Prerequisites: [[Relation]]
 Relational algebra is a formal system of operations on relations (tables) that forms the mathematical foundation of relational databases. It defines a set of operators, such as selection, projection, union, difference, and join, which take one or more relations as input and produce a new relation as output.
 
 By working exclusively with relations and producing relations, relational algebra provides a closed, set-theoretic framework for querying and manipulating data. It ensures predictable, consistent results and underlies practical query languages like SQL, while also guiding database design principles, normalization, and optimization.
