@@ -49,3 +49,19 @@ i dont like the python specific or cpp specific methods because the user example
 ```
 lets say on boot i have a main method run that does homing. this method also has a state machine etc. and monitoring, if anything bad happens this should resume control. how can i run the user's code "inside" my code. also allowing the user to call my api?
 ```
+
+```
+please confirm yes/no to each:
+- on boot main method starts, homing happens
+- AFTER that, it spins up docker container. docker container can see the usb device end effector, regardless of what type it is, and therefore user code can query it to do things. if anything bad happens, docker container is shut down by main method. docker container can also talk to robot api server via tcp.
+- user code sends api requests to robot, queries usb device.
+- when user code finishes, it emits some signal and main method shuts down container
+
+```
+
+```
+1) how to configure docker to see usb device regardless of whta device, and see the robot api
+2) are the robot api and the main method the same program or different programs or up to me?
+3) how to shut down container from main method (pseudocode)
+
+```
