@@ -85,5 +85,19 @@ what can i expect in terms of ram, storage, cpu? i want to minimize everything a
 	- how to build and end effector
 - end effector examples
 	- 1) realsense scanner
-	- 2) simple cam (if advanced, cnc)
+	- 2) simple cam
 	- 3) ai cam with gripper
+- main control loop
+- high level IK code
+- telemetry
+	- visualization
+	- optional widgets
+		- file explorer to see where code is for debugging
+		- process explorer to see docker container idk
+		- wifi widget to connect to internet idk
+		- colour of robot lights
+	- telemetry (e.g. current, voltage from power board, maybe even current, voltage, temp from FOC. Also position from FOC for visualization.)
+
+## Maybe test
+- baby foc
+- baby 6dof IK
