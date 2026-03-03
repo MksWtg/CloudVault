@@ -26,3 +26,9 @@ EndEffector -> Base:  Sends Latest Sensor Data
 Base -> EndEffector: Go To Pose X
 
 benefits:
+- since all compute is happening on the base, 
+	- 1) have access to compute module on base
+	- 2) you have access to base data e.g. web interface, wifi- note technically we could also expose this through the base via api, but i feel like there is something wrong about using the base as a proxy and manually forwarding all method calls through via a custom framework. like the end effector (EE) shouldnt have to make http requests through the base.
+
+cons:
+- mcu is not high bandwidth, cannot send lots of data to base for processing e.g. depth camera
