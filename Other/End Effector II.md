@@ -37,3 +37,11 @@ i dont understand. lets say:
 
 what instructions should i give the user so they can prepare themselves to run code on the arm
 ```
+
+```
+i dont like the python specific or cpp specific methods because the user example might not be python or cpp specific. I think this is best: docker container, they can have any esoteric dependencies installed on it. three questions:
+
+1) if it is running on a pi, do they need to do a specific arm build for the image
+2) can they run the image off the usb instead of copying it over to the pi
+3) can they call my api from the pi? actually this last part is the most complex, because they dont have control over the code. my arm starts up, does homing, and then hands control to them. or using ioc, calls the client's main method. so im not sure if this works
+```
