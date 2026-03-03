@@ -23,3 +23,17 @@ EITHER 1) the end effector is supported by linux by default driver, like usb web
 
 how can i handle all three of these cases
 ```
+
+```
+i dont understand. lets say:
+
+1) the user code is guaranteed to call my robot API which exists off the usb, on my base
+
+2) the user code is provided to robot on base via usb stick
+
+3) when robot powers on, it starts executing from the base
+
+4) the user code has some dependencies e.g. on realsense sdk
+
+what instructions should i give the user so they can prepare themselves to run code on the arm
+```
