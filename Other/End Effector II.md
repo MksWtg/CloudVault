@@ -75,3 +75,15 @@ so i have the following processes:
 
 what can i expect in terms of ram, storage, cpu? i want to minimize everything and keep it as lightweight as possible
 ```
+
+## Repo List (Production Only)
+
+- FOC
+	- big driver and small driver if different, should both use the same repo
+- docs on arm
+	- how it works
+	- how to build and end effector
+- end effector examples
+	- 1) realsense scanner
+	- 2) simple cam (if advanced, cnc)
+	- 3) ai cam with gripper
