@@ -45,3 +45,7 @@ i dont like the python specific or cpp specific methods because the user example
 2) can they run the image off the usb instead of copying it over to the pi
 3) can they call my api from the pi? actually this last part is the most complex, because they dont have control over the code. my arm starts up, does homing, and then hands control to them. or using ioc, calls the client's main method. so im not sure if this works
 ```
+
+```
+lets say on boot i have a main method run that does homing. this method also has a state machine etc. and monitoring, if anything bad happens this should resume control. how can i run the user's code "inside" my code. also allowing the user to call my api?
+```
