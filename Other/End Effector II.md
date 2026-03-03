@@ -1,3 +1,8 @@
+My arm priorities:
+- smooth motion and accuracy
+- small
+- good support for devs/usability
+
 ```
 context: i have built a robot arm and now i have to give instructions to clients to build end effectors for it. limitation: i can only expose one usb port for the end effector. now if it were a custom gripper, they would be able to control both the gripper and the arm via an api that i could write. but if it were a depth camera for example the single port would get used up by the camera with no room for code to control the arm. so my strategy is the base station controls the arm. the user controls the arm and end effector by putting a usb stick with code onto it onto the arm that calls the high level api. but it is not clear if the driver needs to be packaged with the usb, and if the computer can be set up to read the driver from the usb or if the appraoch will change based on the actual end effect e.g. custom gripper or off the shelf depth camera. does this make sense?
 ```
