@@ -95,8 +95,10 @@ what can i expect in terms of ram, storage, cpu? i want to minimize everything a
 		- file explorer to see where code is for debugging
 		- process explorer to see docker container idk
 		- wifi widget to connect to internet idk
-		- colour of robot lights
-	- telemetry (e.g. current, voltage from power board, maybe even current, voltage, temp from FOC. Also position from FOC for visualization.)
+		- colour of robot lights- could have a controller for this (new repo maybe)
+	- telemetry (e.g. current, voltage from power board, maybe even current, voltage, temp from FOC. Also position from FOC for visualization.), logs
+	- custom pages for sending actions, e.g. camera page, scan page
+
 
 ## Maybe test
 - baby foc
