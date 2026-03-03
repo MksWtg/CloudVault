@@ -65,3 +65,13 @@ please confirm yes/no to each:
 3) how to shut down container from main method (pseudocode)
 
 ```
+
+```
+so i have the following processes:
+- html css js static telemetry web server
+- lightweight custom high level code that i will write in c/cpp for inverse kinematics and api
+- main controller/state machine (also lightweight c process)
+- docker container (can include anything and everything that the client puts in, but i can kindly request that they keep it to a certain size).
+
+what can i expect in terms of ram, storage, cpu? i want to minimize everything and keep it as lightweight as possible
+```
