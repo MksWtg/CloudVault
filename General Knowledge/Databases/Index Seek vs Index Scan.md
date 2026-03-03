@@ -1,3 +1,3 @@
-Index Seek Jumps directly to matching rows (fast when filtering on indexed columns)
+An Index Seek occurs when SQL Server uses the index to efficiently navigate the B-tree and directly retrieve only the rows that match the query predicate. Only the relevant index pages and table rows are accessed.
 
-Index Scan Reads most or all index pages (can be slower for large tables)
+An Index Scan happens when SQL Server reads all pages of an index (or the entire table if no index exists) to find the matching rows. This accesses more data than necessary and is usually less efficient, especially for large tables.
