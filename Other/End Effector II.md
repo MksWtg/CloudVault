@@ -8,6 +8,7 @@ context: i have built a robot arm and now i have to give instructions to clients
 ```
 
 
+```
 so the bottom line is there is no truly perfect way to do this, because the user could just plug in a dongle or some other usb in as end effector which effectively doesn't do anything.
 
 additionally, the user might have an end effector that exposes some API through usb, and the user might call api endpoints with bad params that dont make sense.
@@ -16,4 +17,9 @@ lets assume the user is doing the best they can.
 
 EITHER 1) the end effector is supported by linux by default driver, like usb webcam. we must support this and allow programmatic access as linux would normally, which should be easy
 
-2) the user is using an off the shelf device like rgbd realsense with it's own driver.
+2) the user is using an off the shelf device like rgbd realsense with its own library. they have the lib, and give it to us so we can let them use it because their code needs it. note that this section could also apply to a driver, but i cant think of any end effector usb devices that need their own driver.
+
+3) a usb CDC device that has defined methods running on the mcu to read/write and they call these.
+
+how can i handle all three of these cases
+```
