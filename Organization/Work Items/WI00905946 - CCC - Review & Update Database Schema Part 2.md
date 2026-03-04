@@ -36,5 +36,4 @@ Here is a list of the changes that need to happen (at least):
 - We need migrations for these changes "dotnet ef migrations add {YourMigrationName} --context CloudConsoleAuditingDbContext"
 - We need tests for the migrations and for the model changes
 - After this change, we can remove these structures from the frontend and instead have an endpoint call that pulls the licence type/data centre details for the create and search dropdowns.
-
-After this 
+- Please verify 
