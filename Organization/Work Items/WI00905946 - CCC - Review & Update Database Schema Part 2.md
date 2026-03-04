@@ -38,3 +38,6 @@ Here is a list of the changes that need to happen (at least):
 - We need tests for the migrations and for the model changes
 - After this change, we can remove these structures from the frontend and instead have an endpoint call that pulls the licence type/data centre details for the create and search dropdowns.
 - Please verify all these steps are possible and suitable for a schema refactor, and no additional steps are needed in this codebase
+
+Prompted copilot with this and it gave its answer:
+- 
