@@ -32,5 +32,9 @@ Here is a list of the changes that need to happen (at least):
 	-  LicenceType: Id, Created, Modified, Name, DomainId.
     - Region: Id, Created, Modified, Name.
     - Domain: Id, Created, Modified, Name.
-- We need migrations for these changes
+    - To do this we may need to update the models inside folder "ConsoleDatabase\Entities" AND/OR update the schema inside CloudConsoleDbContext.cs.
+- We need migrations for these changes "dotnet ef migrations add {YourMigrationName} --context CloudConsoleAuditingDbContext"
 - We need tests for the migrations and for the model changes
+- After this change, we can remove these structures from the frontend and instead have an endpoint call that pulls the licence type/data centre details for the create and search dropdowns.
+
+After this 
