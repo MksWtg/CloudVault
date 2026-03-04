@@ -8,4 +8,5 @@ If a particle with electric charge $q$ moves with velocity $v$ through a field $
 $$F = q v \times B$$
 
 Translating charges (like charges moving through a wire) generate a magnetic field.
-Perm
+
+Charges moving in a circle (like in a coil of wire) generate a magnetic field.
