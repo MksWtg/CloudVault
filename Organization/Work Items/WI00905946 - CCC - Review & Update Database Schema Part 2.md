@@ -45,4 +45,6 @@ Prompted copilot with this and it gave its answer as 3 questions
 3) Guid vs int ID
 
 Answers:
-1) Lets do these changes one at a time- first make just the datacentre and regionId change, do not worry a
+1) Lets do these changes one at a time- first make just the datacentre and regionId change, do not worry about the licensetype and domainId. Also i prefer to keep the model name the same (DanaCentre without code).
+2) That logic is mapping from string to enum. We still need this mapping, but in the form of a db query now fetching the options from the db rather than a static lookup.
+3) Copy existing convention, use int Id like country.
