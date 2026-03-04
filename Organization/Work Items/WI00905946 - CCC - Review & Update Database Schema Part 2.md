@@ -48,3 +48,19 @@ Answers:
 1) Lets do these changes one at a time- first make just the datacentre and regionId change, do not worry about the licensetype and domainId. Also i prefer to keep the model name the same (DanaCentre without code).
 2) That logic is mapping from string to enum. We still need this mapping, but in the form of a db query now fetching the options from the db rather than a static lookup.
 3) Copy existing convention, use int Id like country.
+
+Combined:
+
+we need to create new models for the new types `LicenseType` and `DataCenter` and replace these columns in existing tables such as `CustomerSystem` and `ActivationDatabaseBackupPath`. To support these we need additional tables for `Region` and `Domain`.
+	- `DataCenter` should have these columns: Id (int), Created, Modified, Name, Obsolete, RegionId (foreign key to region)
+	-  LicenceType: Id, Created, Modified, Name, DomainId.
+    - Region: Id, Created, Modified, Name.
+    - Domain: Id, Created, Modified, Name.
+    - To do this we may need to update the models inside folder "ConsoleDatabase\Entities" AND/OR update the schema inside CloudConsoleDbContext.cs.
+    - Add some sample data for each of these
+- Then every reference to data center and licentyp
+- We need migrations for these changes "dotnet ef migrations add {YourMigrationName} --context CloudConsoleAuditingDbContext"
+- We need tests for the migrations and for the model changes
+- After this change, we can remove these structures from the frontend and instead have an endpoint call that pulls the licence type/data centre details for the create and search dropdowns.
+- Please verify all these steps are possible and suitable for a schema refactor, and no additional steps are needed in this codebase
+- 
