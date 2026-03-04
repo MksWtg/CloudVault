@@ -30,4 +30,4 @@ Here is a list of the changes that need to happen (at least):
 - we need to create new models for the new types `LicenseType` and `DataCenter` and replace these columns in existing tables such as `CustomerSystem` and `ActivationDatabaseBackupPath`.
 	- `DataCenter` should have these columns: Id (uuid), Created, Modified, Name, Obsolete, RegionId
 - We need migrations for these changes
-- We need tests for the migrations and for the methods
+- We need tests for the migrations and for the model changes
