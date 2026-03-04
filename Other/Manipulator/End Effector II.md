@@ -98,6 +98,8 @@ what can i expect in terms of ram, storage, cpu? i want to minimize everything a
 		- colour of robot lights- could have a controller for this (new repo maybe)
 	- telemetry (e.g. current, voltage from power board, maybe even current, voltage, temp from FOC. Also position from FOC for visualization.), logs
 	- custom pages for sending actions, e.g. camera page, scan page
+- sdk for development- provide API that connects to simulation and the simulation itself- can share visualization module with telemetry.
+	- question: how do we connect 
 
 
 ## Maybe test
