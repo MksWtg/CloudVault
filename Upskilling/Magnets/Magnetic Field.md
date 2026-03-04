@@ -6,3 +6,6 @@ A physical property of space that determines the force experienced by a moving e
 
 If a particle with electric charge $q$ moves with velocity $v$ through a field $B$ it experiences a force $F$:
 $$F = q v \times B$$
+
+Translating charges (like charges moving through a wire) generate a magnetic field.
+Perm
