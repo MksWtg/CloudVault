@@ -32,14 +32,14 @@
       "query": "path:Products  ",
       "color": {
         "a": 1,
-        "rgb": 1120273
+        "rgb": 16777215
       }
     },
     {
       "query": "path:Upskilling  ",
       "color": {
         "a": 1,
-        "rgb": 6084269
+        "rgb": 641160
       }
     }
   ],
