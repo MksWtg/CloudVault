@@ -58,7 +58,7 @@ we need to create new models for the new types `LicenseType` and `DataCenter` an
     - Domain: Id, Created, Modified, Name.
     - To do this we may need to update the models inside folder "ConsoleDatabase\Entities" AND/OR update the schema inside CloudConsoleDbContext.cs.
     - Add some sample data for each of these
-- Then every reference to data center and licentyp
+- Then every reference to DataCenter and LicenceType
 - We need migrations for these changes "dotnet ef migrations add {YourMigrationName} --context CloudConsoleAuditingDbContext"
 - We need tests for the migrations and for the model changes
 - After this change, we can remove these structures from the frontend and instead have an endpoint call that pulls the licence type/data centre details for the create and search dropdowns.
