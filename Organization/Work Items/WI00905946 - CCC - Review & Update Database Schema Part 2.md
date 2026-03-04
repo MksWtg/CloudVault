@@ -39,5 +39,10 @@ Here is a list of the changes that need to happen (at least):
 - After this change, we can remove these structures from the frontend and instead have an endpoint call that pulls the licence type/data centre details for the create and search dropdowns.
 - Please verify all these steps are possible and suitable for a schema refactor, and no additional steps are needed in this codebase
 
-Prompted copilot with this and it gave its answer:
-- 
+Prompted copilot with this and it gave its answer as 3 questions
+1) datacentrecode/licensetypecode is the cleanest, but it is a large change. should these be one PR or kept separate?
+2) Licenstype enum has complex logic (haproxy hostnames, gmsa logins, web version config) this logic should stay on the renamed enum. 
+3) Guid vs int ID
+
+Answers:
+1) Lets do these changes one at a time- first make just the datacentre and regionId change, do not worry a
