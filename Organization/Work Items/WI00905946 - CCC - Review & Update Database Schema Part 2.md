@@ -24,3 +24,7 @@ The tasks with **no strikethough** are completed in this WI. The others should h
     - Region: Id, Created, Modified, Name.
     - Domain: Id, Created, Modified, Name.
 - ~~Country in CustomerSystem should be a foreign key, there should be a Country table with the primary key being the two-character country id and a unique name field with the full country name. After this change, we can remove the Country structure from the frontend and instead have an endpoint call that pulls the country details for the create system dropdowns.~~
+
+
+Here is a list of the changes that need to happen (at least):
+- we need to create new models  for the new types
