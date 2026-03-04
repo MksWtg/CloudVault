@@ -58,9 +58,11 @@ we need to create new models for the new types `LicenseType` and `DataCenter` an
     - Domain: Id, Created, Modified, Name.
     - To do this we may need to update the models inside folder "ConsoleDatabase\Entities" AND/OR update the schema inside CloudConsoleDbContext.cs.
     - Add some sample data for each of these
-- Then every reference to DataCenter and LicenceType
-- We need migrations for these changes "dotnet ef migrations add {YourMigrationName} --context CloudConsoleAuditingDbContext"
-- We need tests for the migrations and for the model changes
+- Then every reference to DataCenter and LicenceType should be updated from an enum to this custom datatype, across the solution.
+- We need migrations for these changes "dotnet ef migrations add {YourMigrationName} --context CloudConsoleAuditingDbContext". I want to add this manually.
+- We need tests for the migrations and for the model changes (consistent with what already exists).
 - After this change, we can remove these structures from the frontend and instead have an endpoint call that pulls the licence type/data centre details for the create and search dropdowns.
-- Please verify all these steps are possible and suitable for a schema refactor, and no additional steps are needed in this codebase
+- since this PR change is huge, first just do the LicenseType and Domain models- leave DataCenter and Region
+- Previous logic for the enum e.g. extension methods should be updated to pull data from the db rather than use static maps
+- Please verify all these steps are possible and suitable for a schema refactor, and no additional steps are needed in this codebase. ask any questions.
 - 
