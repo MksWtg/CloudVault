@@ -69,3 +69,17 @@ we need to create new models for the new types `LicenseType` and `DataCenter` an
 
 Verification steps:
 ![[Pasted image 20260305190315.png]]
+
+```
+● Operation cancelled by user
+
+ Total usage est:        4 Premium requests
+ API time spent:         1h 7m 59s
+ Total session time:     8h 40m 14s
+ Total code changes:     +701 -252
+ Breakdown by AI model:
+  claude-sonnet-4.6       37.4m in, 300.3k out, 35.3m cached (Est. 4 Premium requests)
+
+ Resume this session with copilot --resume=ff070ba5-4981-4e31-be9b-2173c141fb58
+PS C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Console.git>
+```
