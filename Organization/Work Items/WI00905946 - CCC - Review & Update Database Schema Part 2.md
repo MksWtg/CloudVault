@@ -65,3 +65,7 @@ we need to create new models for the new types `LicenseType` and `DataCenter` an
 - since this PR change is huge, first just do the LicenseType and Domain models- leave DataCenter and Region
 - Previous logic for the enum e.g. extension methods should be updated to pull data from the db rather than use static maps
 - Please verify all these steps are possible and suitable for a schema refactor, and no additional steps are needed in this codebase. ask any questions.
+
+
+Verification steps:
+![[Pasted image 20260305190315.png]]
