@@ -88,11 +88,13 @@ what can i expect in terms of ram, storage, cpu? i want to minimize everything a
 	- 2) simple cam
 	- 3) ai cam with gripper
 - main control loop
-- high level IK code
+	- spin up, state machine, calibrate, launch container, etc.
+- high level IK code + API for this
 - telemetry
 	- visualization
 	- optional widgets
 		- file explorer to see where code is for debugging
+			- device explorer to see when end effector is plugged in e.g. CDC serial, UVC camera, custom usb thing maybe, HID devices
 		- process explorer to see docker container idk
 		- wifi widget to connect to internet idk
 		- colour of robot lights- could have a controller for this (new repo maybe)
