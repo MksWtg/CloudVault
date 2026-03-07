@@ -3,6 +3,7 @@
 
 - End effector cannot contain compute module only mcu
 - It is equally easy to make both modules into APIs
+	- this means turning the client into an API (e.g. open gripper close gripper) and turning the base into an API (go to pose, get pose) are just as easy
 ## Option 1: Arm is a Service, End Effector Controls
 
 *End Effector Reads Data and Calculates Pose*
@@ -12,6 +13,7 @@ EndEffector -> Base: Go To Pose X
 benefits:
 - easy architecturally
 - easy for client (they write a main method, read data from their own hardware)
+	- they only have to make one thing, the end effector
 
 cons:
 - mcu is not high bandwidth, cannot send lots of data to base for processing e.g. depth camera
