@@ -13,5 +13,5 @@ Conductivity can be controlled by adding small amounts of impurities, called dop
 
 Doping controls conductivity.
 
-
-n-type: adds extra electrons (negative charge carriers)
+- n-type: adds extra electrons (negative charge carriers)
+- p-type: creates “holes” (positive charge carriers)
