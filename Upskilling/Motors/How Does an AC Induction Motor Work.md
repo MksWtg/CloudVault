@@ -9,7 +9,10 @@ An AC induction motor works by converting electrical energy into mechanical ener
 
 It has two main parts: the stator and the rotor.
 
-The stator is the stationary part and has windings connected to an AC power supply, which can be single-phase or three-phase. When AC flows through the stator windings, it produces a magnetic field that changes direction or rotates depending on the number of phases. In a three-phase motor, the three currents are 120 degrees out of phase, producing a rotating magnetic field.
+The stator is the stationary part and has windings connected to an AC power supply. For a three phase motor, this power supply delivers 3 separate voltages 120 degrees out of phase. 
+
+Even though the 
+When AC flows through the stator windings, it produces a magnetic field that changes direction or rotates depending on the number of phases. In a three-phase motor, the three currents are 120 degrees out of phase, producing a rotating magnetic field.
 
 ![[Pasted image 20260308183644.png]]
 
