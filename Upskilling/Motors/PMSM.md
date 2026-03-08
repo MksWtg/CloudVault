@@ -1,3 +1,3 @@
 Prerequisites: [[How Does an AC Synchronous Motor Work]]
 
-A PMSM is a type of synchronous motor where the rotor specifically uses permanent magnets instead of a DC-excited winding. This makes it more efficient and simpler because it doesn’t need a separate DC supply for the rotor.
+A PMSM is a type of synchronous motor where the rotor specifically uses permanent magnets.
