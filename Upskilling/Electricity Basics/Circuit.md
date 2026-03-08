@@ -2,6 +2,8 @@ Prerequisites: [[Electricity]], [[Electrostatic Induction]], [[Electric Potentia
 
 For electricity to flow, there needs to be a potential difference between two points and a path between the two points for the electricity to flow along. This path is called a circuit.
 
+## Example
+
 When lightning strikes, the lightning cloud is the source of electric charges (electrons).
 
 The air is the path that electricity flows along.

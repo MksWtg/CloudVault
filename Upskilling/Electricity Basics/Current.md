@@ -12,3 +12,5 @@ Formula: $$I = \frac{Q}{t}$$
 $I$ = current
 $Q$ = charge
 $t$ = time
+
+When you create a simple circuit with a positive and negative end with 
