@@ -4,5 +4,5 @@ The Generator Effect is the process by which moving a conductor in a magnetic fi
 
 It’s how generators produce electricity.
 
-When a wire or coil moves in a magnetic field, the magnetic flux through the conductor changes.
+When a wire or coil moves in a magnetic field, the magnetic flux through the conductor changes. This induces a current.
 
