@@ -1,7 +1,7 @@
 
-Prerequisites: [[Magnetic Field]], [[Current]]
+Prerequisites: [[Magnetic Field]], [[Current]], [[The Motor Effect]], [[Generator Effect]]
 
-Fleming's rules are mnemonics for figuring out how force, direction of current and direction of magnetic field behave when
+Fleming's rules are mnemonics for figuring out how force, direction of current and direction of magnetic field behave when a current is induced in a moving conductor or a magnetic field is induced in a current carrying conductor in another magnetic field.
 ## Fleming's Right Hand Rule
 
 Fleming's Right-Hand Rule determines the direction of induced current in a conductor (like a generator coil) moving within a magnetic field
