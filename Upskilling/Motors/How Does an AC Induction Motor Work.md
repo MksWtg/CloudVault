@@ -5,3 +5,4 @@ Prerequisites: [[Magnetic Field]], [[How Does a DC Motor Work]]
 
 ![[Pasted image 20260308175413.png]]
 
+Lets say the motor has 3 current
