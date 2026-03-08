@@ -13,4 +13,5 @@ $I$ = current
 $Q$ = charge
 $t$ = time
 
-When you create a simple circuit with a positive and negative end, current moves in one direction (from `+` to `-`). Another name for this "simple current" is "Direct Current" in contrast with curr
+## Direct Current
+When you create a simple circuit with a positive and negative end, current moves in one direction (from `+` to `-`). Another name for this "simple current" is "Direct Current" in contrast with current that behaves in more complex ways that are not discussed here.
