@@ -27,8 +27,13 @@ This electric field:
 it opposes further diffusion.
 
 
+![[Pasted image 20260308155528.png]]
 
-When the negative end of a battery is connected to the p-type (now negative) side and the positive to the n-type (now positive), the gap between the p and n expands.
+
+
+When the negative end of a battery is connected to the p-type (now negative) side and the positive to the n-type (now positive), the gap between the p and n widens as more electrons join the p side. More holes are filles, the number of mobile carriers near junction is lessened. This is called reverse bias.
+
+Forward bias is the opposite.
 
 ![[Pasted image 20260308153416.png]]
 
