@@ -15,10 +15,20 @@ A diode is made from a p-type semiconductor (has holes as positive charge carrie
 
 ![[Pasted image 20260308150324.png]]
 
-At the place where n and p meet, the p-n junction, there is some recombination (`+` and `-` cancel out).
+At the place where n and p meet, the p-n junction, there is some recombination (the free electrons move over and fill up the holes, leaving the ionized atoms behind).
+
+The ionized atoms (positive on the n type side and negative on the p type side) create an electric field pointing towards the p type side.
+
+This electric field:
+
+- Pushes electrons back toward the n-side
+- Pushes holes back toward the p-side
+
+it opposes further diffusion.
 
 
-When the negative end of a battery is connected to the p-type (positive) side, the gap between the p and n expands.
+
+When the negative end of a battery is connected to the p-type (now negative) side and the positive to the n-type (now positive), the gap between the p and n expands.
 
 ![[Pasted image 20260308153416.png]]
 
