@@ -13,7 +13,8 @@ A diode works by allowing electric current to flow in one direction only because
 A diode is made from a p-type semiconductor (has holes as positive charge carriers) and an n-type semiconductor (has free electrons as negative charge carriers) joined together to form a p-n junction.
 
 
-At the junction where they meet, some electrons from the n-side fill holes on the p-side, creating a depletion region: an area with no free charge carriers. This is like an insulator.
+![[Pasted image 20260308150324.png]]
 
-If you connect the p-side to positive and the n-side to negative of a battery:
+
+
 
