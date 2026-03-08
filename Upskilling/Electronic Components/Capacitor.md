@@ -12,6 +12,18 @@ This continues until the plates reach a state of equilibrium- the `+` plate stop
 
 The energy is stored in the electric field between the plates, not in the electrons themselves. After reaching a state of equilibrium, when the battery is removed, the energy will remain in the EF.
 
+## The Dielectric
+
+The dielectric is the insulating material placed between the two plates of a capacitor.
+
+Its main purposes are:
+- Prevent direct current flow between plates (so electrons don’t just jump across).
+- Increase capacitance without changing the plate area or spacing too much.
+
+Technically, a capacitor can work with air or vacuum as the dielectric, but the capacitance is smaller.
+
+- The dielectric polarizes in the electric field: it reduces the
+- This allows the capacitor to store more charge at the same voltage, effectively increasing capacitance:
 ## How Long Does it Take to Reach Equilibrium
 
 The charging follows an exponential equation:
