@@ -8,12 +8,12 @@ A coupling capacitor passes AC signals from one stage to another while blocking 
 
 ## Decoupling
 
-Prerequisites: [[Shunting]], [[Noise]], [[MCU]], IC
+Prerequisites: [[Shunting]], [[Noise]], [[MCU]], [[IC]]
 
 A decoupling capacitor keeps the power supply voltage stable at a particular IC or circuit node by absorbing spikes and drops. It is placed between power and ground near the device to shunt high-frequency noise. It is commonly used with digital ICs or microcontrollers. Decoupling and bypass capacitors are often used interchangeably for high-frequency noise.
 
 
-
+![[Pasted image 20260308172432.png]]
 ## Bypass
 
 ## Bulk
