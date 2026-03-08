@@ -1,4 +1,4 @@
-Prerequisites: 
+Prerequisites: [[EM Wave]]
 
 EMI stands for Electromagnetic Interference, which is unwanted electromagnetic energy that disrupts the operation of electronic devices or circuits.
 
