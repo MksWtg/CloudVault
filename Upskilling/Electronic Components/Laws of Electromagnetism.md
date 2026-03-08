@@ -1,0 +1,1 @@
+The laws of electromagnetism describe how electric charges and magnetic fields interact.
