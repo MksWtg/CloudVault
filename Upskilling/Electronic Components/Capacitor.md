@@ -14,5 +14,12 @@ The energy is stored in the electric field between the plates, not in the electr
 
 ## How Long Does it Take to Reach Equilibrium
 
+The charging follows an exponential equation:
+
+$$V_C​(t)=V_{battery}​(1−e^{−t/RC})$$
+
+$$I_C{T} = \frac{V_{battery}}{R}e^{-t/RC}$$
+
+Technically, the capacitor never reaches 100% in finite time, because the exponential only approaches the battery voltage asymptotically
 
 
