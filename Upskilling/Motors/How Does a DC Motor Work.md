@@ -31,3 +31,14 @@ Here is how it works:
 - After the coil has rotated exactly 90 degrees, the (previously) left side of the commutator now touches the right brush and vice versa. This causes the current to be reversed, and the force to be reversed. So the armature keeps spinning. It always tries to put negative to positive and positive to negative in the two magnetic fields, but whenever it gets close the current switches, induced field switches and therefore a force continues pushing the motor.
 
 The torque for the motor will look like $abs(\sin(t))$.
+
+![[Pasted image 20260308133149.png]]
+
+To prevent this situation where the brushes get stuck between the halves of the split ring and short, and to also smooth out the torque, we sometimes add more armature coils.
+
+![[Pasted image 20260308133306.png]]
+The above example has two armature coils.
+
+Real image of a hobby DC motor with 3 armature coils (also known as poles):
+
+![[Pasted image 20260308133602.png]]
