@@ -10,5 +10,5 @@ If the secondary coil has more turns than the primary, the voltage increases (st
 
 Some things to be wary of:
 - this process generates a lot of heat. transformer cores need to be laminated
-- we transform because power loss is proportional to current squared, so we want to lower current
-- transforming only wokrs
+- we transform because power loss is proportional to current squared, so we want to lower current.
+- transforming only works for AC current
