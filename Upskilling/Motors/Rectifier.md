@@ -12,3 +12,9 @@ A rectifier allows current to flow in only one direction, producing DC output.
 
 
 ## Full Wave Rectifier
+
+![[Pasted image 20260308131729.png]]
+
+The circuit looks like this:
+
+![[Pasted image 20260308131757.png]]
