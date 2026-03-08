@@ -9,4 +9,7 @@ When current flows through a coil of wire, the moving charges generate a magneti
 
 Because the currents in opposite sides of the coil flow in opposite directions, the two sides of the coil experience opposite forces. This has a turning effect (torque) that makes the coil rotate.
 
-A component called a commutator reverses the direction of the current every half turn. After the coil hasThis keeps the forces acting in a way that continues the rotation in the same direction, allowing the motor to spin continuously. 
+A component called a commutator reverses the direction of the current every half turn. Here is how it works:
+
+
+After the coil hasThis keeps the forces acting in a way that continues the rotation in the same direction, allowing the motor to spin continuously. 
