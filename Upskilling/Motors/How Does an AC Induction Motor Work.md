@@ -18,3 +18,7 @@ The rotor is the rotating part, usually a squirrel-cage design, and it is placed
 ![[Pasted image 20260308183722.png]]
 
 The rotor never reaches exactly the speed of the rotating magnetic field; the difference in speed is called slip and is necessary to maintain induction. The rotor continues to turn, and this rotation is used to do mechanical work, such as driving a pump, fan, or conveyor.
+
+## Use Cases
+
+Asynchronous or induction motors are simple, rugged, and low cost. They are self-starting, do not require brushes or special excitation, and are widely used in fans, pumps, compressors, conveyors, and household appliances. Their speed varies slightly with load, which is acceptable in most general-purpose applications. In short, synchronous motors are chosen for precise speed or power factor benefits, while induction motors are chosen for simplicity, reliability, and general-purpose use.
