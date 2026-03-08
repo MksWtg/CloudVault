@@ -8,5 +8,7 @@ A rectifier allows current to flow in only one direction, producing DC output.
 
 ## Half Wave Rectifier
 
+![[Pasted image 20260308130117.png]]
 
-## Full Wave R
+
+## Full Wave Rectifier
