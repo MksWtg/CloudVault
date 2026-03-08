@@ -11,8 +11,9 @@ It has two main parts: the stator and the rotor.
 
 The stator is the stationary part and has windings connected to an AC power supply. For a three phase motor, this power supply delivers 3 separate voltages 120 degrees out of phase. 
 
-Even though the 
-When AC flows through the stator windings, it produces a magnetic field that changes direction or rotates depending on the number of phases. In a three-phase motor, the three currents are 120 degrees out of phase, producing a rotating magnetic field.
+Even though the wires are all connected, because they connect in a 'Y' at a junction, the currents are different.
+
+When AC flows through the stator windings, it produces a magnetic field that changes direction or rotates (RMF).
 
 ![[Pasted image 20260308183644.png]]
 
@@ -24,4 +25,7 @@ The rotor never reaches exactly the speed of the rotating magnetic field; the di
 
 ## Use Cases
 
-Asynchronous or induction motors are simple, rugged, and low cost. They are self-starting, do not require brushes or special excitation, and are widely used in fans, pumps, compressors, conveyors, and household appliances. Their speed varies slightly with load, which is acceptable in most general-purpose applications. In short, synchronous motors are chosen for precise speed or power factor benefits, while induction motors are chosen for simplicity, reliability, and general-purpose use.
+Asynchronous or induction motors are simple, rugged, and low cost. They are self-starting, do not require brushes or special excitation, and are widely used in fans, pumps, compressors, conveyors, and household appliances. Their speed varies slightly with load, which is acceptable in most general-purpose applications. 
+
+
+Induction motors are chosen for simplicity, reliability, and general-purpose use.
