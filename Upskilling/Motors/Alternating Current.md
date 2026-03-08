@@ -9,7 +9,7 @@ The `+` and `-` alternate rapidly at 50-60 times per second. This is known as al
 Both voltage and current alternate direction together at the same frequency.
 ![[Pasted image 20260308130135.png]]
 
-AC is used mainly because it is much more efficient for transmitting electricity over long distances.
+Alternating current (AC) is used mainly because it is much more efficient for transmitting electricity over long distances.
 
 ## Where Does AC Come From?
 
