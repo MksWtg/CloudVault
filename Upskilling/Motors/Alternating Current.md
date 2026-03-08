@@ -12,4 +12,4 @@ AC is used mainly because it is much more efficient for transmitting electricity
 
 AC is generated mainly using electric generators at power plants. In a typical generator, mechanical energy from a turbine driven by steam, water, wind, or another energy source rotates a coil of wire inside a magnetic field, or rotates a magnet around a stationary coil. As the coil rotates, the magnetic field through the coil continuously changes, which induces a voltage according to electromagnetic induction. Because the orientation of the coil relative to the magnetic field keeps reversing during rotation, the direction of the induced voltage and current also reverses, producing alternating current.
 
-![[Pasted image 20260305172524.png]]
+![[Pasted image 20260308125835.png]]
