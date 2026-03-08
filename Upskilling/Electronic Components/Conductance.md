@@ -1,3 +1,5 @@
+Prerequisites: [[Current]], [[Resistance]]
+
 Conductance is a measure of how easily electric current can flow through a material. It’s the inverse of resistance.
 
 Symbol: G
