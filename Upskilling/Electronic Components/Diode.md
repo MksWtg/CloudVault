@@ -15,6 +15,8 @@ A diode is made from a p-type semiconductor (has holes as positive charge carrie
 
 ![[Pasted image 20260308150324.png]]
 
+At the place where n and p meet, the p-n junction, there is some recombination (`+` and `-` cancel out).
+
 
 When the negative end of a battery is connected to the p-type (positive) side, the gap between the p and n expands.
 
