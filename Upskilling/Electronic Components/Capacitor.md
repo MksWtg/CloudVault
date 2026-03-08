@@ -22,8 +22,9 @@ Its main purposes are:
 
 Technically, a capacitor can work with air or vacuum as the dielectric, but the capacitance is smaller.
 
-- The dielectric polarizes in the electric field: it reduces the
-- This allows the capacitor to store more charge at the same voltage, effectively increasing capacitance:
+- The dielectric polarizes in the electric field: all the molecules rotate so the `+` ends align with negative and `-` with positive
+- This internal field opposes the field from the plates
+- So the net field is smaller than it would have been, so charge is fixed and voltage decreases so capacitance increases.
 ## How Long Does it Take to Reach Equilibrium
 
 The charging follows an exponential equation:
