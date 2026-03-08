@@ -1,6 +1,7 @@
 
 Prerequisites: [[Magnetic Field]], [[Current]]
 
+Fleming's rules are mnemonics for figuring out how force, direction of current and direction of magnetic field behave when
 ## Fleming's Right Hand Rule
 
 Fleming's Right-Hand Rule determines the direction of induced current in a conductor (like a generator coil) moving within a magnetic field
@@ -17,4 +18,12 @@ Middle finger → Direction of the induced current
 
 ## Fleming's Left Hand Rule
 
-The left hand rule is for the motor effect (direction of force given current in magne)
+The left hand rule is for the motor effect (direction of force given current in magnetic field):
+
+Used for the motor effect (force on a current-carrying wire in a magnetic field).
+
+Thumb → Motion/Force
+
+Index finger → Magnetic field (N → S)
+
+Middle finger → Current direction
