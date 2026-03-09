@@ -8,4 +8,7 @@ This is because as the rotor spins up, the coils rotating act like an inductor. 
 
 > The current will be high at the start while net EMF is high. This is called inrush current and is unavoidable.
 
+**Why use EMF when it is just a voltage?**
+Using EMF emphasizes that it is not applied by the supply, but induced by the motion of the rotor
+
 ![[Pasted image 20260309113728.png]]
