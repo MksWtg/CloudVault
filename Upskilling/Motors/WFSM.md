@@ -2,7 +2,7 @@ Prerequisites: [[AC Synchronous Motor]], [[Excitation]], [[Electromagnet]]
 
 Also known as electrically excited synchronous motor.
 
-A wound field synchronous motor has two main parts: the stator and the rotor.
+A wound field synchronous motor is a type of AC synchronous motor. It has two main parts: the stator and the rotor.
 
 The rotor contains field windings (coils of wire) instead of permanent magnets. These windings are supplied with DC current. The DC current produces a steady magnetic field in the rotor, creating north and south magnetic poles. The DC usually reaches the rotor either through slip rings and brushes or through a brushless exciter system.
 
