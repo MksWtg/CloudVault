@@ -22,3 +22,6 @@ This servo is based on a BLDC and provides feedback.
 High torque, rated for 3Nm, 7A, 1kW. It also uses a BLDC.
 
 Industrial servos are just the motor + encoder. They require a separate servo drive/amplifier (like Beckhoff AX series) that performs the control loops and commutation.
+
+An industrial servo motor like the Beckhoff AM1000 is basically a high-quality 3-phase brushless motor (BLDC/PMSM) with an encoder attached. By itself it does not perform control. The external servo drive handles commutation, current control, and the closed-loop position/speed control.
+
