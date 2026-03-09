@@ -8,3 +8,6 @@ PWM, or Pulse Width Modulation, is a technique used to control the amount of pow
 
 ![[Pasted image 20260309132822.png]]
 
+Typical PWM duty cycle can be anywhere from 0 to 100
+
+Typical PWM frequencies (number of pulses per second) range from 100Hz for lighting to 200kHz+ for motors.
