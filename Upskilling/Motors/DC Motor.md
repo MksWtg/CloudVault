@@ -30,6 +30,8 @@ Here is how it works:
 - The forces on either side of the armature moving in different directions creates a rotating/spinning force. This force acts on the armature- the wire along with the commutator, which is the little circle at the bottom. This is the principle of a motor.
 - After the coil has rotated exactly 90 degrees, the (previously) left side of the commutator now touches the right brush and vice versa. This causes the current to be reversed, and the force to be reversed. So the armature keeps spinning. It always tries to put negative to positive and positive to negative in the two magnetic fields, but whenever it gets close the current switches, induced field switches and therefore a force continues pushing the motor.
 
+> Because brushes are needed to provide current, we call these simple DC motors "Brushed DC motors". Other motors don't use DC and some other motors use DC but don't use brushes.
+
 The torque for the motor will look like $abs(\sin(t))$.
 
 ![[Pasted image 20260308133149.png]]
