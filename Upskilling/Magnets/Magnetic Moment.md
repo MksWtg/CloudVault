@@ -2,7 +2,11 @@ Prerequisites: [[Magnetic Field]]
 
 A magnetic moment is a quantity that determines the strength and direction of the torque an object experiences in a magnetic field.
 
-It is like a tiny bar
+It is like a tiny bar magnet, it has a strength and a direction.
+
+## Magnetic Moment vs Magnetic Field
+
+A magnetic moment describes the source of magnetism, while a magnetic field describes the space around that source.
 
 ## Atomic Magnetic Moments
 
