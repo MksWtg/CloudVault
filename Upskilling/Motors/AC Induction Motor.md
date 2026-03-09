@@ -17,14 +17,16 @@ When AC flows through the stator windings, it produces a magnetic field that cha
 
 ![[Pasted image 20260308183644.png]]
 
-> The speed of the rotating magnetic field depends on the 
+> The speed of the rotating magnetic field depends on the frequency of the AC. In a country since all AC has the same Hz, all AC devices have a magnetic field that rotates at the same speed (unless they modify this manually).
 
 
-The rotor is the rotating part, usually a squirrel-cage design, and it is placed inside the stator’s magnetic field. The changing or rotating magnetic field induces a current in the rotor according to Faraday’s law of induction. This induced current in the rotor creates its own magnetic field that interacts with the stator field, producing torque that causes the rotor to turn.
+The rotor is the rotating part, usually a squirrel-cage design, and it is placed inside the stator’s magnetic field. The changing or rotating magnetic field induces a current in the rotor according to Faraday’s law of induction. This induced current in the rotor creates its own magnetic field (rotating currents induce magnetic fields) that interacts with the stator field, producing torque that causes the rotor to turn.
 
 ![[Pasted image 20260308183722.png]]
 
 The rotor never reaches exactly the speed of the rotating magnetic field; the difference in speed is called slip and is necessary to maintain induction. The rotor continues to turn, and this rotation is used to do mechanical work, such as driving a pump, fan, or conveyor.
+
+> We can increase or decrease the speed of the rotor by increasing the strength of the RMF, e.g. by increasing stator voltage, or varying the supply frequency.
 
 ## Use Cases
 
