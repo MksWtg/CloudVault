@@ -1,7 +1,6 @@
-Prerequisites: [[DC Motor]], [[Back EMF in DC Motors]]
+Prerequisites: [[DC Motor]], [[Back EMF in DC Motors]], [[Current]]
 
 How does the current vary in DC motors?
-
 ## Start
 
 We know due to [[Back EMF in DC Motors]] that there is a large spike at $t= 0$ that decays exponentially as back EMF builds.
@@ -18,4 +17,6 @@ If a mechanical load is applied, the rotor slows slightly, reducing the back EMF
 
 If the load changes suddenly, the rotor speed can drop abruptly, which immediately reduces the back EMF. The net voltage rises, causing a brief spike in current to supply the torque needed to resist the sudden load. The motor then accelerates toward a new steady speed, and the current drops to the new steady-state level for that load.
 
+## Load Removed
 
+If the load on a DC motor is abruptly removed, the situation reverses compared to adding a load. The rotor suddenly has much less torque resisting its motion, so it tends to accelerate rapidly. As the speed increases, the back EMF rises quickly because back EMF is proportional to rotor speed. This higher back EMF reduces the net voltage across the windings, which in turn causes the current to drop sharply, often to a value lower than the no-load current before the load was applied.

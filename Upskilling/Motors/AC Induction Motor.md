@@ -1,5 +1,5 @@
 
-Prerequisites: [[Magnetic Field]], [[DC Motor]]
+Prerequisites: [[Magnetic Field]], [[DC Motor]], Alternating
 
 (Also known as asynchronous AC motor).
 
