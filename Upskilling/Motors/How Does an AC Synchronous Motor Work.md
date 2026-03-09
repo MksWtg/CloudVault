@@ -12,6 +12,10 @@ Because the rotor is locked to the stator field, the motor can provide precise s
 
 Synchronous motors require some method to bring the rotor up to near synchronous speed before it can lock in with the rotating field, such as an external prime mover or auxiliary motor.
 
+There are two main types of synchronous motors:
+- Wound Field/Electrically excited
+- Permanent Magnet
+
 ## Use Case
 
 Synchronous motors are used when precise constant speed is required because the rotor rotates at the same speed as the stator’s magnetic field. They are used in applications like clocks, timers, robotics, conveyors, and in industrial plants for power factor correction. They are efficient at constant speed but require a special method to start the rotor near synchronous speed.

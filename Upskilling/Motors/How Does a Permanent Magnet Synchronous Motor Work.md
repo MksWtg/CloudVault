@@ -1,4 +1,4 @@
-Prerequisites: [[How Does an AC Synchronous Motor Work]], Excitation
+Prerequisites: [[How Does an AC Synchronous Motor Work]]
 
 A PMSM is a type of synchronous motor where the rotor specifically uses permanent magnets.
 
