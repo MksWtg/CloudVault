@@ -1,4 +1,4 @@
-Prerequisite: [[PMSM]]
+Prerequisite: [[PMSM]], [[Back EMF]]
 
 
 A BLDC motor, or Brushless DC motor, is very similar to a PMSM because it also has permanent magnets on the rotor and three-phase windings in the stator. But there are differences as it runs on DC.
