@@ -1,4 +1,4 @@
-Prerequisites: [[AC Synchronous Motor]], [[Excitation]]
+Prerequisites: [[AC Synchronous Motor]], [[Excitation]], [[Electromagnet]]
 
 Also known as electrically excited synchronous motor.
 

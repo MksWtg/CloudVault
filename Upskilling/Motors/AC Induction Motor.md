@@ -30,6 +30,10 @@ The rotor never reaches exactly the speed of the rotating magnetic field; the di
 
 > Three-phase induction motors are inherently self-starting due to the rotating magnetic field (RMF) produced by the 3-phase supply.
 
+ It’s Self-Correcting
+- If the rotor lags too much: Relative motion increases → larger induced currents → stronger rotor field → more torque pulling it forward.
+- If the rotor catches up a little: Relative motion decreases → smaller induced currents → less torque → rotor naturally stabilizes at a small lag (slip).
+
 ## Use Cases
 
 Asynchronous or induction motors are simple, rugged, and low cost. They are self-starting, do not require brushes or special excitation, and are widely used in fans, pumps, compressors, conveyors, and household appliances. Their speed varies slightly with load, which is acceptable in most general-purpose applications. 

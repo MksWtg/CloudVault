@@ -7,5 +7,7 @@ An electromagnet is a device that produces a magnetic field when an electric cur
 The strength of an electromagnet can be increased by coiling the wire, and can be increased even more by placing an a soft iron core inside it.
 
 ![[Pasted image 20260301165305.png]]
+
 Use case:
 - Cranes that lift scrap metal
+- motors e.g. WFSM

@@ -13,4 +13,3 @@ In a BLDC motor, the controller (a physical electronic device that manages the c
 
 This usually produces trapezoidal or square-shaped currents. In a PMSM, the controller drives the stator with smooth sinusoidal currents, producing a continuously rotating magnetic field.
 
-The rotor in both cases follows the stator field, but the motion and torque ripple can be smoother in a PMSM. Many modern motors called BLDC are physically similar to PMSM motors; the distinction is mostly in the drive electronics and the shape of the current and back-EMF. BLDC motors are common in computer fans, drones, e-bikes, and small appliances, while PMSMs are common in electric vehicles, industrial servo drives, and robotics.

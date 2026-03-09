@@ -12,6 +12,12 @@ When the motor starts and the rotor locks in with the rotating field of the stat
 
 Because the rotor is locked to the stator field, the motor can provide precise speed, which is useful for applications like clocks, generators, or timing devices.
 
+> Since the motor locks with the stator RMF, how do we control speed since the stator RMF depends on AC frequency?
+
+Speed Is Controlled Using a Variable Frequency Drive (VFD) to change the frequency
+
+A VFD converts fixed-frequency AC (50 Hz or 60 Hz) into variable-frequency AC.
+
 Synchronous motors require some method to bring the rotor up to near synchronous speed before it can lock in with the rotating field, such as an external prime mover or auxiliary motor.
 
 There are two main types of synchronous motors:
