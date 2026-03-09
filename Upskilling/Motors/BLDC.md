@@ -20,7 +20,11 @@ Think of it like donkey and carrot, the donkey (rotor) keeps trying to reach the
 
 ![[Pasted image 20260309131147.png]]
 
-This can be improved by passing the same polarity current through the coil behind the coil where the rotor is to "push" it from behind with repulsion.
+This can be improved by energizing the coil behind to push the rotor while the one in front pulls. the coil in line with the rotor is not energized. this improves torque.
+
+![[Pasted image 20260309131606.png]]
+
+This improves the torque since every 60 degrees, while one coil is being deenergized, one coil remains energized and continues pushing (no loss of torque during switch).
 
 ![[Pasted image 20260309123734.png]]
 
