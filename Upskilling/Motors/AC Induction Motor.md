@@ -1,5 +1,5 @@
 
-Prerequisites: [[Magnetic Field]], [[How Does a DC Motor Work]]
+Prerequisites: [[Magnetic Field]], [[DC Motor]]
 
 (Also known as asynchronous AC motor).
 

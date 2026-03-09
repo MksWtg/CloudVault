@@ -1,4 +1,4 @@
-Prerequisites: [[How Does a DC Motor Work]]
+Prerequisites: [[DC Motor]]
 
 In a DC motor, the stator is the stationary part of the motor that produces the magnetic field.
 

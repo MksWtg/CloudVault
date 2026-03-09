@@ -1,4 +1,4 @@
-Prerequisites: [[How Does an AC Induction Motor Work]]
+Prerequisites: [[AC Induction Motor]]
 
 A synchronous motor is an AC motor in which the rotor rotates at the same speed as the rotating magnetic field of the stator, so there is no slip.
 

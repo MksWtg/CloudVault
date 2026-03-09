@@ -8,7 +8,7 @@ A generator relies on there being a source of mechanical energy- either a human 
 
 ## DC Generator
 
-Prerequisites: [[How Does a DC Motor Work]]
+Prerequisites: [[DC Motor]]
 
 A DC generator produces direct current, meaning the current flows in one direction only. It uses a split-ring commutator to reverse the current in the coil every half-turn so the external current always flows in the same direction. Its main components are the rotor (armature), stator (magnetic field), commutator, and brushes. The output is relatively steady DC voltage, sometimes with small ripples. Examples include dynamos for battery charging.
 

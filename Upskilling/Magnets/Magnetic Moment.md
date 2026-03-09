@@ -2,6 +2,8 @@ Prerequisites: [[Magnetic Field]]
 
 A magnetic moment is a quantity that determines the strength and direction of the torque an object experiences in a magnetic field.
 
+It is like a tiny bar
+
 ## Atomic Magnetic Moments
 
 An atomic magnetic moment is the total magnetic strength and orientation of an atom, resulting from the combined orbital motion and intrinsic spin of its electrons.
