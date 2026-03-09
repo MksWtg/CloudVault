@@ -5,10 +5,12 @@ A motor is an device that converts electrical energy into mechanical energy (mot
 
 They can run on DC
 - [[DC Motor]]
-- [[BLDC]]
 
 Or AC
 - [[AC Induction Motor]]
 - [[AC Synchronous Motor]]
-- [[PMSM]]
-- [[WFSM]]
+	- [[PMSM]]
+		- Variants of PMSM run on DC like [[BLDC]]
+	- [[WFSM]]
+
+TODO: insert picture of family tree, especially if adding more motors
