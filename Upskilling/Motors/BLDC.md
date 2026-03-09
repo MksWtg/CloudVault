@@ -30,5 +30,5 @@ This improves the torque since every 60 degrees, while one coil is being deenerg
 
 This usually produces trapezoidal or square-shaped currents. In a PMSM, the controller drives the stator with smooth sinusoidal currents, producing a continuously rotating magnetic field.
 
-> Even though a BLDC is a DC motor, it behaves like an AC motor internally because the magnetic field in the stator is alternating (rotating).
+> Even though a BLDC is a DC motor, it behaves like an AC motor internally because the magnetic field in the stator is alternating (rotating). By comparison, brushed DC motors use mechanical commutation to keep torque continuous, not a rotating stator field.
 

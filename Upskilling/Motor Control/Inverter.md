@@ -6,10 +6,8 @@ In motor control, an inverter usually takes a DC voltage from a battery or power
 
 Inverters are used in many applications:
 
-Electric vehicles – converting the battery’s DC to AC for the motor
-
-Solar power systems – converting solar panel DC to AC for the grid
-
-Variable frequency drives – controlling AC induction motors in industry
+- Electric vehicles: converting the battery’s DC to AC for the motor
+- Solar power systems: converting solar panel DC to AC for the grid
+- Variable frequency drives: controlling AC induction motors in industry
 
 In short, an inverter is what allows DC power to drive AC motors and enables precise motor control by adjusting the waveform.
