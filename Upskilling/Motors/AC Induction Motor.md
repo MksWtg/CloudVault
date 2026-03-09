@@ -24,7 +24,7 @@ The rotor is the rotating part, usually a squirrel-cage design, and it is placed
 
 ![[Pasted image 20260308183722.png]]
 
-The rotor never reaches exactly the speed of the rotating magnetic field; the difference in speed is called slip and is necessary to maintain induction. The rotor continues to turn, and this rotation is used to do mechanical work, such as driving a pump, fan, or conveyor.
+The rotor never reaches exactly the speed of the rotating magnetic field; the difference in speed is called slip and is necessary to maintain induction- if they moved in sync, without a difference in speed, there would be no induction (no relative change in flux). The rotor continues to turn, and this rotation is used to do mechanical work, such as driving a pump, fan, or conveyor.
 
 > We can increase or decrease the speed of the rotor by increasing the strength of the RMF, e.g. by increasing stator voltage, or varying the supply frequency.
 

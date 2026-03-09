@@ -2,11 +2,13 @@ Prerequisites: [[AC Induction Motor]]
 
 A synchronous motor is an AC motor in which the rotor rotates at the same speed as the rotating magnetic field of the stator, so there is no slip.
 
-Like an induction motor, it has a stator with windings connected to an AC supply, often three-phase, which produces a rotating magnetic field (also )
+Like an induction motor, it has a stator with windings connected to an AC supply, often three-phase, which produces a rotating magnetic field (also depending on the AC frequency).
 
 The rotor, unlike an induction motor, has either permanent magnets or electromagnets supplied with DC current to create a constant magnetic field.
 
 When the motor starts and the rotor locks in with the rotating field of the stator, it turns at the same speed as the stator’s magnetic field, known as the synchronous speed. Rather than relying on the induced field caused by induced currents
+
+> The rotor magnetic field is already there (from the magnets), so it can “follow” the RMF precisely. As opposed to induction motors.
 
 Because the rotor is locked to the stator field, the motor can provide precise speed, which is useful for applications like clocks, generators, or timing devices.
 
