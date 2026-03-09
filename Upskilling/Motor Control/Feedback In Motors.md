@@ -7,3 +7,8 @@ Common feedback types include encoders (measure rotation or position), tachomete
 
 ## Open Loop vs Closed Loop Control
 
+- Open-loop control drives the motor without monitoring its output; the controller assumes the motor follows the input commands, so speed or position can vary under load.
+- Closed-loop control uses feedback from sensors to adjust the input continuously, keeping the motor at the desired speed or position.
+
+- Open-loop is simpler and cheaper but less precise.
+- Closed-loop is more complex and costly but ensures accurate and stable performance.
