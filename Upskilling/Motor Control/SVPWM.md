@@ -1,0 +1,1 @@
+Prerequisites: PMSM, BLDC, 

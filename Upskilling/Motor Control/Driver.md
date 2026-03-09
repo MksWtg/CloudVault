@@ -10,4 +10,4 @@ Drivers deal with switching power and so usually need heat sinks to release it.
 
 ![[Pasted image 20260309135510.png]]
 
-The following is the circuit diagram and image of a h bridge driver, with a heat sink for a Brusged DC motor.
+The following is the circuit diagram and image of a h bridge driver, with a heat sink for a Brushed DC motor.
