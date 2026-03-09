@@ -7,7 +7,7 @@ A BLDC motor, or Brushless DC motor, is very similar to a PMSM because it also h
 
 The main difference is in how it is controlled.
 
-In a BLDC motor, the controller switches current through the stator phases in a stepwise sequence based on rotor position, creating a magnetic field that moves in discrete steps.
+In a BLDC motor, the controller (a physical electronic device that manages the currents going into the motor’s stator windings) switches current through the stator phases in a stepwise sequence based on rotor position, creating a magnetic field that moves in discrete steps.
 
 This usually produces trapezoidal or square-shaped currents. In a PMSM, the controller drives the stator with smooth sinusoidal currents, producing a continuously rotating magnetic field.
 
