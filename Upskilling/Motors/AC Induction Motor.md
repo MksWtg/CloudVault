@@ -28,6 +28,8 @@ The rotor never reaches exactly the speed of the rotating magnetic field; the di
 
 > We can increase or decrease the speed of the rotor by increasing the strength of the RMF, e.g. by increasing stator voltage, or varying the supply frequency.
 
+> Three-phase induction motors are inherently self-starting due to the rotating magnetic field (RMF) produced by the 3-phase supply.
+
 ## Use Cases
 
 Asynchronous or induction motors are simple, rugged, and low cost. They are self-starting, do not require brushes or special excitation, and are widely used in fans, pumps, compressors, conveyors, and household appliances. Their speed varies slightly with load, which is acceptable in most general-purpose applications. 
