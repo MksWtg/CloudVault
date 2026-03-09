@@ -1,4 +1,4 @@
-Prerequisites: [[Voltage]], [[Magnetic Flux]], [[Circuit]], [[Lenz's Law]]
+Prerequisites: [[Voltage]], [[Magnetic Flux]], [[Circuit]], [[Lenz's Law]], [[Electrostatic Induction]]
 
 The voltage induced in a circuit is proportional to the rate of change of magnetic flux through the circuit.
 
