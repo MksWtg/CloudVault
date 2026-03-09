@@ -11,6 +11,14 @@ The feedback system is contained within the servo- it is not provided to the cli
 ![[Pasted image 20260309134812.png]]
 
 ## Brushless Servo
+
 ![[Pasted image 20260309140034.png]]
 
-This servo is based on a BLDC
+This servo is based on a BLDC and provides feedback.
+
+## Industrial Servo
+
+![[Pasted image 20260309151954.png]]
+High torque, rated for 3Nm, 7A, 1kW. It also uses a BLDC.
+
+Industrial servos are just the motor + encoder. They require a separate servo drive/amplifier (like Beckhoff AX series) that performs the control loops and commutation.
