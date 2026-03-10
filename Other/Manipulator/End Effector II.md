@@ -88,7 +88,7 @@ what can i expect in terms of ram, storage, cpu? i want to minimize everything a
 	- 2) simple cam
 	- 3) ai cam with gripper
 - main control loop
-	- spin up, state machine, calibrate, launch container, etc., propagates signals to 
+	- spin up, state machine, calibrate, launch container, etc., propagates signals from 
 - high level IK code + API for this
 - telemetry (this has to be separate from main control loop because we give telemetry to users to test, along with SDK).
 	- visualization
