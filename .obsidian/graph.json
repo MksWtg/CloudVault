@@ -6,53 +6,17 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [
-    {
-      "query": "path:Other  ",
-      "color": {
-        "a": 1,
-        "rgb": 14048348
-      }
-    },
-    {
-      "query": "path:Organization  ",
-      "color": {
-        "a": 1,
-        "rgb": 6054102
-      }
-    },
-    {
-      "query": "path:\"General Knowledge\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 11206400
-      }
-    },
-    {
-      "query": "path:Products  ",
-      "color": {
-        "a": 1,
-        "rgb": 16777215
-      }
-    },
-    {
-      "query": "path:Upskilling  ",
-      "color": {
-        "a": 1,
-        "rgb": 641160
-      }
-    }
-  ],
+  "colorGroups": [],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": 3,
-  "nodeSizeMultiplier": 0.97318339100346,
-  "lineSizeMultiplier": 1.63442906574394,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 1,
-  "repelStrength": 0,
-  "linkStrength": 0.917879417879418,
-  "linkDistance": 282,
-  "scale": 0.7478319600331199,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.5334101872564713,
   "close": false
 }
