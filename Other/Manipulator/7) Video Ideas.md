@@ -11,4 +11,6 @@ Finals:
 	3) attach the interfaces
 		1) hardware
 		2) software
-		3) 
+		3) electrical
+	4) show programming backend
+	5) show compile into
