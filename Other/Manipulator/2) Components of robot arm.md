@@ -17,7 +17,7 @@ This list ignores any upskilling needed
 4) Pi
 	1) High level control code, inverse kinematics for arm
 	2) Runs web server that exposes web interface (can do joint control or end effector pose) and displays robot visualization
-5) Custom end effectors (see [[End Effector Options]])
+5) Custom end effectors (see [[6) End Effector Options]])
 	1) gripper
 	2) camera with gripper
 	3) depth cam with scanning software
