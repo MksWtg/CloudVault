@@ -12,4 +12,4 @@ A regular customer system
 A special prod system for wisetech, this is the "central" prod system and is used for many things
 
 ## TEST
-A production system that customers use to 
+A production system that customers use to test (e.g. it might not have aws s3 buckets).
