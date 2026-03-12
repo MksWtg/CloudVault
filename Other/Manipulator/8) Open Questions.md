@@ -10,3 +10,6 @@
 
 
 ![[Pasted image 20260312185518.png]]
+note that in this image, REST API is not a physical component it is a logical component representing the interface.
+
+Also the caller can be a controller (teleop)
