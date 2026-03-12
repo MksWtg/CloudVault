@@ -5,5 +5,8 @@
 	2) while we want strong typing, this contradicts requirement #1
 	3) we want it to be capable of 100hz+
 	4) we know IPC is allowed since they run next to each other
-	5) between http endpoint and rpc
+	5) probably going with json rpc over UDS
 3) lets say i make an sdk. this would be the core control logic. we want to ship this with a telemetry server i guess
+
+
+![[Pasted image 20260312185518.png]]
