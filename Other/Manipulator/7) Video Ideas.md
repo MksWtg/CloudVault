@@ -20,15 +20,16 @@ Finals:
 	1) gearboxes, motors, drivers, link lengths, payload, statics, dynamics, FEA, simulation if necessary how a harmonic reducer works
 4) How it works: electrical & firmware
 	1) electrical- power distribution board, dirver wtih can, microstepping, encoder, foc, etc, code for driver, lights, pi, power from wall and transform to DC, how foc works
-5) How it works: low level software
+5) How it works: low level software + high level software
 	1) software- IK and collision detection, control with controller
-6) How it works: high level software
-	1) architecture of base, containerization, DooD, IoC, telemetyr server
-7) Camera EE
+	2) architecture of base, containerization, DooD, IoC, telemetyr server
+7) How it works: interface design [OPTIONAL]: end effector hardware software electrical, IoC, frontend plugin system, sdk
+8) Camera EE
 	1) web rtc server, physical mount
-8) AI EE
+9) AI EE
 	1) training AI, functional languages and processing data, state machines
-9) RGBD
+10) RGBD
 	1) Scanners, imu, aggregation idk
-10) glove with triple gripper
+11) glove with triple gripper
 	1) wifi
+	2) imus
