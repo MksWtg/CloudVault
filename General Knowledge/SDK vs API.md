@@ -13,3 +13,5 @@ Examples of APIs:
 
 Examples of SDK:
 - realsense sdk: `https://www.realsenseai.com/developers/sdk-2/` (wraps the low level hardware api, e.g. reading data streams and usb devices)
+
+an SDK is also bigger than a library. It is the library that abstracts over the API + additional tools
