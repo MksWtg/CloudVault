@@ -21,6 +21,6 @@ Separately:
 	1) Same for Stepper FOC
 
 Then:
-8) Practice uploading code to STM32 (do all of these for both dev board and for custom PCB STM)
-Next:
-9) Read through all the code sn
+8) Practice uploading code to STM32 and writing STM32 code (follow [[10) STM32 Upskilling]])
+9) Macro keypad (STM32 + custom PCB): A small 3–6 button keypad that sends programmable shortcuts to your PC.
+10) 
