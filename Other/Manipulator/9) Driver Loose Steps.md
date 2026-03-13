@@ -60,3 +60,7 @@ ALSO list of hardware we should have gotten:
 2) heatsinks for driver (duh)
 3) reflow board + reflow paste
 4) new soldering iron and solder maybe
+
+Important things you need to figure out by the end:
+- where is the startup sequence for homing in penguin's code
+- UWU
