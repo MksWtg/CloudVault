@@ -23,4 +23,11 @@ Separately:
 Then:
 8) Practice uploading code to STM32 and writing STM32 code (follow [[10) STM32 Upskilling]])
 9) Macro keypad (STM32 + custom PCB): A small 3–6 button keypad that sends programmable shortcuts to your PC.
-10) 
+10) CAN: read and understand basics of the protocol, look at samples
+11) ARDUINO CAN:
+	1) Initialize CAN controller
+	2) Listen for all CAN frames
+	3) Print them to serial
+12) STM32 CAN messager
+	1) Create two STM32 boards communicating over CAN where one sends sensor data and the other receives it.
+	2) Read temperature or potentiometer via ADC and Send CAN message every 100 ms
