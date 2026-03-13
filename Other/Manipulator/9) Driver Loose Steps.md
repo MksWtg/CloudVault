@@ -12,7 +12,7 @@ Separately:
 	4) Simple ESC driver (open loop)
 	5) Simple closed loop driver for ESC
 	6) Lighting ring (with control/device pass through maybe)
-	7) Microcontroller with usb port
+	7) Microcontroller with USB port
 	8) Air pressure sensor from demo video
 	9) IMU data from PCB
 6) Draft list of hardware components and their roles based off my limited understanding for closed loop BLDC FOC
@@ -40,6 +40,8 @@ Now onto FOC:
 	2) Then VESC (for BLDCs, supports sensorless)
 	3) Then Odrive (sensored)
 	4) Then XDrive (what penguin used)
+	5) Penguin's firmware and gerber himself
+		1) Now that we understand PCBs and firwmare, read the rest of his PCBs and make a list of what they are for. He said to include an extra one for redundancy and 
 
 Finally:
 14) Make the actual controller. Requirements:
