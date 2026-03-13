@@ -64,3 +64,18 @@ ALSO list of hardware we should have gotten:
 Important things you need to figure out by the end:
 - where is the startup sequence for homing in penguin's code
 - UWU
+
+Soldering hardware
+
+Current:
+- bad solder
+- bad iron
+
+Want:
+- good solder
+- good iron
+- flux
+- fume hood
+- reflow plate
+- solder paste
+
