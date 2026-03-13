@@ -35,6 +35,13 @@ Then:
 	2) Read temperature or potentiometer via ADC and Send CAN message every 100 ms
 
 Now onto FOC:
-13) Read ALL FOC repos and make list of hardware components (by looking at pcb files) to better understand what is involved
-	1) Start with simple FOC (for BLDCs)
-	2) Then VESC
+13) Read ALL FOC repos (firmware) and make list of hardware components (by looking at pcb files) to better understand what is involved
+	1) Start with simple FOC (for BLDCs and steppers, sensored)
+	2) Then VESC (for BLDCs, supports sensorless)
+	3) Then Odrive (sensored)
+	4) Then XDrive
+
+Finally:
+13) Make the actual controller. Includer:
+	1) Encoder
+	2) Microstepping (ideally 1/64)
