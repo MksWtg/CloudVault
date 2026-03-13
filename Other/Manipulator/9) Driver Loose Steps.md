@@ -41,7 +41,8 @@ Now onto FOC:
 	3) Then Odrive (sensored)
 	4) Then XDrive (what penguin used)
 	5) Penguin's firmware and gerber himself
-		1) Now that we understand PCBs and firwmare, read the rest of his PCBs and make a list of what they are for. He said to include an extra one for redundancy and 
+		1) Now that we understand PCBs and firwmare, read the rest of his PCBs and make a list of what they are for. He said to include extra pcbs for redundancy and speed, so make sure we figure out what he meant. For example, what is going on  here:
+		![[Pasted image 20260313115626.png]]
 
 Finally:
 14) Make the actual controller. Requirements:
@@ -52,3 +53,9 @@ Finally:
 	5) Daisy chain control and power
 	6) Pass back current and voltage and temperature
 	7) [OPTIONAL] Pass back position and velocity
+
+ALSO list of hardware we should have gotten:
+1) clear PLA for printing cases for driver
+2) heatsinks for driver (duh)
+3) reflow board + reflow paste
+4) new soldering iron and solder maybe
