@@ -63,7 +63,7 @@ ALSO list of hardware we should have gotten:
 
 Important things you need to figure out by the end:
 - where is the startup sequence for homing in penguin's code
-- UWU
+- does he home j0 and j5?
 
 Soldering hardware
 
