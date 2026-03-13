@@ -16,9 +16,11 @@ Separately:
 	8) Air pressure sensor from demo video
 	9) IMU data from PCB
 6) Draft list of hardware components and their roles based off my limited understanding for closed loop BLDC FOC
-	1) Same for Stepper FOC
+	1) Same for microstepping Stepper
+	2) Same for Stepper FOC
 7) Draft list of firmware components and their roles based off my limited understanding for closed loop BLDC FOC
-	1) Same for Stepper FOC
+	1) Same for microstepping stepper
+	2) Same for Stepper FOC
 
 Then:
 8) Practice uploading code to STM32 and writing STM32 code (follow [[10) STM32 Upskilling]])
@@ -33,4 +35,6 @@ Then:
 	2) Read temperature or potentiometer via ADC and Send CAN message every 100 ms
 
 Now onto FOC:
-13) Read ALL FOC repos and make list of hardware components (by looking at pcb files) to better understand 
+13) Read ALL FOC repos and make list of hardware components (by looking at pcb files) to better understand what is involved
+	1) Start with simple FOC (for BLDCs)
+	2) Then VESC
