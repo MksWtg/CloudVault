@@ -31,3 +31,6 @@ Then:
 12) STM32 CAN messager
 	1) Create two STM32 boards communicating over CAN where one sends sensor data and the other receives it.
 	2) Read temperature or potentiometer via ADC and Send CAN message every 100 ms
+
+Now onto FOC:
+13) Read ALL FOC repos and make list of hardware components (by looking at pcb files) to better understand 
