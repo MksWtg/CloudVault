@@ -1,11 +1,11 @@
 
-1) Formalize rough requirements
+1) ~~Formalize rough requirements~~
 2) Properly understand FOC algorithm
 3) Understand high level driver steps for BLDC FOC
 4) Understand high level driver steps for NEMA stepper FOC
 
 Separately:
-5) Practice making circuits:
+5) Practice making circuits. Send to reddit for review.
 	1) USB powered LED flashlight
 	2) Power distribution board
 	3) Basic H bridge driver for brushed
@@ -39,9 +39,14 @@ Now onto FOC:
 	1) Start with simple FOC (for BLDCs and steppers, sensored)
 	2) Then VESC (for BLDCs, supports sensorless)
 	3) Then Odrive (sensored)
-	4) Then XDrive
+	4) Then XDrive (what penguin used)
 
 Finally:
-13) Make the actual controller. Includer:
-	1) Encoder
+14) Make the actual controller. Requirements:
+	1) Magnetic absolute encoder
 	2) Microstepping (ideally 1/64)
+	3) FOC control
+	4) CAN communication
+	5) Daisy chain control and power
+	6) Pass back current and voltage and temperature
+	7) [OPTIONAL] Pass back position and velocity
