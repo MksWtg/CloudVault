@@ -46,3 +46,5 @@ Solution
     - only create EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName} logins that not exist on sql server and set corresponding permission with random password
     - only add EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName} logins logins that not exist on database level and set corresponding permission
 ```
+
+- CP2T restores UserRepository db and preserves schema ownership (the database principle that owned the production DB schema also owns the test DB schema). Instead it should reassign schemas to the relevant one.

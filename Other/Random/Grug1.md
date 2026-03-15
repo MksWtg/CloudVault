@@ -1,1 +1,0 @@
-Please modify this image and create a grug book cover for a book called "grug on train" featuring grug on a train. keep the style please
