@@ -44,4 +44,3 @@ If a motor has 200 full steps per revolution and you use 1/16 microstepping, the
 ## Limitations:
 
 - microsteps have less holding torque than full steps
-- real positional accuracy does not scale perfectly with the number of microsteps

@@ -1,4 +1,4 @@
-
+ 
 1) ~~Formalize rough requirements~~
 2) Properly understand FOC algorithm
 3) Understand high level driver steps for BLDC FOC
@@ -55,12 +55,6 @@ Finally:
 	6) Pass back current and voltage and temperature
 	7) [OPTIONAL] Pass back position and velocity
 
-ALSO list of hardware we should have gotten:
-1) clear PLA for printing cases for driver
-2) heatsinks for driver (duh)
-3) reflow board + reflow paste
-4) new soldering iron and solder maybe
-
 Important things you need to figure out by the end:
 - where is the startup sequence for homing in penguin's code
 - does he home j0 and j5?
@@ -78,4 +72,5 @@ Want:
 - fume hood
 - reflow plate
 - solder paste
-
+- microscope
+- clear PLA

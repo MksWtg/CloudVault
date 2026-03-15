@@ -1,13 +1,11 @@
-Prerequisites: [[PMSM]], [[BLDC]], [[PWM]], [[Inverter]]
+Prerequisites: [[PMSM]], [[BLDC]], [[PWM]], [[Inverter]], [[SPWM]]
 
-SVPWM, or Space Vector Pulse Width Modulation, is a method for generating the PWM signals used to drive three-phase motors, mainly permanent magnet synchronous motors (PMSM) and brushless DC (BLDC) motors.
+SVPWM, is a method for converting a steady state DC signal into AC. It is like SPWM but better.
 
-It works by representing the three-phase voltages as a vector in a two-dimensional plane and approximating the desired sinusoidal voltages by switching the inverter in a precise sequence.
+SPWM generates PWM signals to approximate an AC sinusoidal waveform for all 3 phases.
 
-This produces smoother currents, higher voltage utilization, lower torque ripple, and better efficiency compared to simple sinusoidal PWM.
+SVPWM computes the final vector representing the net sum of the three phases. Then it does the pwm for this waveform.
 
-## Use Case
+Remember how effectiveness (torque) comes from current and current comes from voltage. And voltage is a differential. For SPWM this differential is at a max $\frac{\sqrt{3}}{2}$ which is $0.866$ or 85%. SVPWM does some shifting of the waveform to make it more efficient.
 
-SVPWM is typically used in field-oriented control for PMSM and BLDC motors.
-
-It is not generally used for brushed DC motors, traditional stepper motors, or simple AC induction motors without vector control.
+~~The thing is, sum(pwm(phases)) should equal pwm(sum(phases)) as the quality of pwm increases. So these techniques should be exactly the same. So there is a fallacy.~~
