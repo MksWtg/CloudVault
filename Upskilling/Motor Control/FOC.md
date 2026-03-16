@@ -15,3 +15,7 @@ We start by reading the three phase current actual value. We convert it to alpha
 We then read theta (angle of rotor) from the magnetic encoder. We rotate the actual current on alpha beta axis by the theta to get the actual direct and quadrature currents.
 
 Pass through low pass filter to remove high frequency noise.
+
+Now we have Iq and Iq ref
+We have Id and Id ref (0, or negative if using field weakening)
+
