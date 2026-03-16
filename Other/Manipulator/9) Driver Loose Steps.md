@@ -37,10 +37,11 @@ Then:
 Now onto FOC:
 13) Read ALL FOC repos (firmware) and make list of hardware components (by looking at pcb files) to better understand what is involved
 	1) Start with simple FOC (for BLDCs and steppers, sensored)
-	2) Then VESC (for BLDCs, supports sensorless)
-	3) Then Odrive (sensored)
-	4) Then XDrive (what penguin used)
-	5) Penguin's firmware and gerber himself
+	2) Then the guy who makes custom stepper drivers (things by j)
+	3) Then VESC (for BLDCs, supports sensorless)
+	4) Then Odrive (sensored)
+	5) Then XDrive (what penguin used)
+	6) Penguin's firmware and gerber himself
 		1) Now that we understand PCBs and firwmare, read the rest of his PCBs and make a list of what they are for. E.g. REF unit. He said to include extra pcbs for redundancy and speed, so make sure we figure out what he meant. For example, what is going on  here:
 		2) Looks like there are three: ![[Pasted image 20260313120431.png]]
 		![[Pasted image 20260313115626.png]]
