@@ -245,4 +245,6 @@ Options:
 2) Custom UDS Binary protocol
 	1) Pros:
 		1) fast
-		2) supports a
+		2) supports almost any language that can reasonably call another program
+	2) Cons:
+		1) more work to write the methods
