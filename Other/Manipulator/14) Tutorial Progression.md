@@ -3,21 +3,21 @@ We want to include some kind of programming tutorial for the dev, in the form of
 
 SIM
 - setting up SDK
-- reading state using SIM
+- starting + navigating tel server
+- reading state/pose using SIM
 - commanding robot to a pose using UI for SIM
 - reading state and commanding robot to a pose using SDK for sim
 	- steps for installing deps (docker, anything you need e.g. py)
 	- steps for packaging e.g. making ros zip
 	- steps for testing
-- adding a frontend component
+- adding a frontend component + using it
 
 Prerequisites:
 - Reading manipulator state (powering on (not sure if needed, while caps are precharging before calibration started), calibrating, error, user controller, finished)
-- telemetry server: how to read it graphs to diagnose problems, how to look at arm pose
 
 Practice
-- commanding robot to a pose using UI
-- commanding robot to a location using SIM
+- commanding real robot to a pose using UI
+- commanding real robot to a pose using SDK
 
 Advanced
 - trajectories
@@ -50,7 +50,40 @@ int MoveJointsBlocking float[] positions float speed
 int MoveLinear float x float y float z float rx float ry float rz
 int MoveLinearRelative float dx float dy float dz float drx float dry float drz (moves in a straight line if possible)
 
---- 
+---
+
+int StopMotion
+int PauseMotion
+int ResumeMotion
+int IsMoving
+
+---
+
+int SetMaxJointSpeed float speed
+int SetMaxJointAcceleration float accel
+
+int SetCartesianSpeed float speed
+int SetCartesianAcceleration float accel
+
+---
+
+int Home
+int IsHomed
+int Calibrate
+
+---
+
+int ForwardKinematics float[] joints float[] pose
+int InverseKinematics float[] pose float[] joints
+
+---
+
+int StartTrajectory
+int AddTrajectoryPoint float[] joints float time
+int ExecuteTrajectory
+int ClearTrajectory
+
+---
 
 
 
