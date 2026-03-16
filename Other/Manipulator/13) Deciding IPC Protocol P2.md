@@ -231,3 +231,7 @@ Do you want me to do that?
 ```
 even though i like the binary UDS being fast, having no dependencies (this is the biggest plus in my opinion), and working with every language, i don't like the fact users need to define their own methods using the interface spec. It is much nicer being able to generate the RPC methods using a single command. I don't like the bloat of RPC and the fact it doesn't work with C. is there any method that solves all the issues with these two? remember that 200Hz is modest and most methods are faster than this. also, while lightweight is good, some bloat is tolerable.
 ```
+
+Options:
+1) gRPC
+2) Custom UDS
