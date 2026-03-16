@@ -234,4 +234,15 @@ even though i like the binary UDS being fast, having no dependencies (this is th
 
 Options:
 1) gRPC
+	1) Pros:
+		1) fast
+		2) methods generated for you
+		3) supports almost any language
+	2) Cons:
+		1) requires grpc support (not every language)
+		2) bloats with runtime, e.g. for `C#` is 150mb
+		3) not as fast as UDS
 2) Custom UDS Binary protocol
+	1) Pros:
+		1) fast
+		2) supports a
