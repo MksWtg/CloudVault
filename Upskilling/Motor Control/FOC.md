@@ -32,3 +32,16 @@ the svpwm is just the control signal, it still needs to go to a physical inverte
 | Voltage        | Current (higher voltage -> higher current)       |
 | Current        | Torque (Higher current -> higher torque)         |
 | Speed RPM      | Frequency of stator's RMF, also comes from SVPWM |
+|                |                                                  |
+
+## SVPWM Torque
+
+Low torque: smaller voltage → lower duty cycle → smaller sine wave amplitude
+
+High torque: higher voltage → higher duty cycle → larger sine wave amplitude
+
+## SVPWM Speed
+
+Low RPM: AC waveform changes slowly → longer period → slower rotating field
+
+High RPM: AC waveform changes faster → shorter period → faster rotating field
