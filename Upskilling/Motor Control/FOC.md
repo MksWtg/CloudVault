@@ -21,6 +21,8 @@ We have Id and Id ref (0, or negative if using field weakening)
 
 we use two PI controllers (TODO: why no D?) to calculate the voltages (TODO: this is voltage right? since voltage drives current) we need (Ud and Uq). Then we pass it back through the inverse park and inverse clarke transform to figure out the voltage we need for the three phases.
 
+> I'm like 75% sure we dont need inverse clarke. We don’t need an explicit inverse Clarke because SVPWM directly converts the αβ voltages from the inverse Park transform into the three-phase PWM signals for the inverter. The mapping from αβ → ABC is handled internally by the SVPWM algorithm, so a separate inverse Clarke step is unnecessary.
+
 We use SVPWM to convert this voltage into the waveform the BLDC can use -> higher PWM frequency means higher resolution. Higher duty cycle means more voltage (comes from inverse clarke).
 
 the svpwm is just the control signal, it still needs to go to a physical inverter circuit to power bldc.
