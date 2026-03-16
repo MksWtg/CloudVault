@@ -251,3 +251,49 @@ Benefits:
 
 Cons:
 1) more work to write the methods
+
+```
+i am writing a server in C and other devs will write a client that runs alongside the server on the same machine (my machine, an ARM ubuntu raspberry pi). my server will have methods such as T GetValue(A, B); and SetValue(A, B, C); A, B and C are only int, string, float and bool nothing complex. This will be done over UDS socket. methods in clients might look like:
+
+import socket
+
+import struct
+
+SOCKET_PATH = "/tmp/my_ipc_socket"
+
+CMD_GET = 1
+
+CMD_SET = 2
+
+def get_value(a, b):
+
+with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as sock:
+
+sock.connect(SOCKET_PATH)
+
+sock.sendall(struct.pack("=Bii", CMD_GET, a, b))
+
+return struct.unpack("=i", sock.recv(4))[0]
+
+def set_value(a, b, c):
+
+with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as sock:
+
+sock.connect(SOCKET_PATH)
+
+sock.sendall(struct.pack("=Biii", CMD_SET, a, b, c))
+
+return struct.unpack("=i", sock.recv(4))[0]
+
+set_value(1, 2, 42)
+
+print("Value at (1,2) =", get_value(1, 2))
+
+this is really good, the only problem is users having to write their own methods to communicate. i want to save this by:
+
+1) writing a .rpc file with the list of methods in an easily parsable format
+
+2) a script (maybe bash, something usable on all unix systems) where i can implement a simple translator that reads .rpc file and generates method headers. i would implement support for 5-10 common languages. IDL style.
+
+is this possible? please show me .rpc file and what my translator might look like.
+```
