@@ -15,7 +15,7 @@ SIM
 Prerequisites:
 - Reading manipulator state (powering on (not sure if needed, while caps are precharging before calibration started), calibrating, error, user controller, finished)
 
-Practice
+Basic
 - commanding real robot to a pose using UI
 - commanding real robot to a pose using SDK
 
@@ -84,7 +84,5 @@ int ExecuteTrajectory
 int ClearTrajectory
 
 ---
-
-
 
 ```
