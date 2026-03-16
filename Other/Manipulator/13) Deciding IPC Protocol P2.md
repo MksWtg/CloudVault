@@ -234,4 +234,4 @@ even though i like the binary UDS being fast, having no dependencies (this is th
 
 Options:
 1) gRPC
-2) Custom UDS
+2) Custom UDS Binary protocol
