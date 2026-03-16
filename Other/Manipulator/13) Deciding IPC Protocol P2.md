@@ -232,19 +232,22 @@ Do you want me to do that?
 even though i like the binary UDS being fast, having no dependencies (this is the biggest plus in my opinion), and working with every language, i don't like the fact users need to define their own methods using the interface spec. It is much nicer being able to generate the RPC methods using a single command. I don't like the bloat of RPC and the fact it doesn't work with C. is there any method that solves all the issues with these two? remember that 200Hz is modest and most methods are faster than this. also, while lightweight is good, some bloat is tolerable.
 ```
 
-Options:
-1) gRPC
-	1) Pros:
-		1) fast
-		2) methods generated for you
-		3) supports almost any language
-	2) Cons:
-		1) requires grpc support (not every language)
-		2) bloats with runtime, e.g. for `C#` is 150mb
-		3) not as fast as UDS
-2) Custom UDS Binary protocol
-	1) Pros:
-		1) fast
-		2) supports almost any language that can reasonably call another program
-	2) Cons:
-		1) more work to write the methods
+## Option 1: gRPC
+
+Benefits:
+1) fast
+2) methods generated for you- just pass user a .proto file and instructions to generate the method headers locally
+3) supports almost any language
+
+Cons
+1) requires grpc support (not every language), they need to include the proto lib
+2) bloats with runtime, e.g. for `C#` is 150mb
+
+## Option 2: Custom UDS Binary Protocol
+
+Benefits:
+1) fast
+2) supports almost any language that can reasonably call another program
+
+Cons:
+1) more work to write the methods
