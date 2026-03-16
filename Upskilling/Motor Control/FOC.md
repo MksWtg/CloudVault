@@ -19,3 +19,4 @@ Pass through low pass filter to remove high frequency noise.
 Now we have Iq and Iq ref
 We have Id and Id ref (0, or negative if using field weakening)
 
+we use two PI controllers (TODO: why no D?) to calculate the voltages we need (Ud and Uq). Then we pass it back through the inverse park and inverse clarke transform to figure out the voltage we need for 
