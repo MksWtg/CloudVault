@@ -86,3 +86,11 @@ int ClearTrajectory
 ---
 
 ```
+
+## How to get docsite? Use MkDocs
+
+```
+i want to write a short guide. i want to publish this guide on a static site gneerator docsite github pages, write it in markdown. i also want to be able to generate an a5 little book from this so i can print it out. preferably with the same formatting/colour scheme. does such a tool exist?
+```
+
+Ans: Mkdocs with pdf generator plugin
