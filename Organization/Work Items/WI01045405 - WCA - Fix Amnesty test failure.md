@@ -87,9 +87,8 @@ Also removed:
 
 ## Questions:
 
+Are these two methods doing the same thing (apart from the change matching strategy)
 ```cs
-X509Certificate2 FindCertifiateWithLongestExpiry(string certificateName)
-	{
 		using var certificateStore = new X509Store(StoreName.My, StoreLocation.LocalMachine);
 		certificateStore.Open(OpenFlags.ReadOnly);
 		var validCertificates = certificateStore.Certificates
@@ -106,5 +105,24 @@ X509Certificate2 FindCertifiateWithLongestExpiry(string certificateName)
 		}
 
 		return certificateWithLongestExpiry;
-	}
+```
+
+AFTER
+```cs
+		using var certificateStore = new X509Store(StoreName.My, StoreLocation.LocalMachine);
+		certificateStore.Open(OpenFlags.ReadOnly);
+		var exactSubject = $"CN={certificateName}";
+		X509Certificate2 certificateWithLongestExpiry = null;
+		foreach (var cert in certificateStore.Certificates)
+		{
+			if (!string.Equals(cert.Subject, exactSubject, StringComparison.OrdinalIgnoreCase))
+				continue;
+			if (!cert.EnhancedKeyUsageList.Any(eku => eku.Value == "1.3.6.1.5.5.7.3.1"))
+				continue;
+			if (certificateWithLongestExpiry == null ||
+				certificateWithLongestExpiry.NotAfter < cert.NotAfter)
+			{
+				certificateWithLongestExpiry = cert;
+			}
+		}
 ```
