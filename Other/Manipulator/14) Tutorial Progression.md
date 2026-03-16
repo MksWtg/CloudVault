@@ -94,3 +94,9 @@ i want to write a short guide. i want to publish this guide on a static site gne
 ```
 
 Ans: Mkdocs with pdf generator plugin
+
+Theme: use mkdocs with material
+
+```
+https://squidfunk.github.io/mkdocs-material/getting-started/
+```
