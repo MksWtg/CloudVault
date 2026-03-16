@@ -29,4 +29,6 @@ the svpwm is just the control signal, it still needs to go to a physical inverte
 | Thing          | Responsible for                              |
 | -------------- | -------------------------------------------- |
 | PWM/SPWM/SVPWM | %Voltage. SVPWM is more efficient than SPWM. |
-|                |                                              |
+| Voltage        | Current (higher voltage -> higher current)   |
+| Current        | Torque (Higher current -> higher torque)     |
+| Speed RPM      |                                              |
