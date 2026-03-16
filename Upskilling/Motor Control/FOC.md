@@ -25,3 +25,8 @@ We use SVPWM to convert this voltage into the waveform the BLDC can use -> highe
 
 the svpwm is just the control signal, it still needs to go to a physical inverter circuit to power bldc.
 
+
+| Thing          | Responsible for                              |
+| -------------- | -------------------------------------------- |
+| PWM/SPWM/SVPWM | %Voltage. SVPWM is more efficient than SPWM. |
+|                |                                              |
