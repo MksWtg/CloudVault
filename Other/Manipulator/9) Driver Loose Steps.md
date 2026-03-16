@@ -37,7 +37,7 @@ Then:
 Now onto FOC:
 13) Read ALL FOC repos (firmware) and make list of hardware components (by looking at pcb files) to better understand what is involved
 	1) Start with simple FOC (for BLDCs and steppers, sensored)
-	2) Then the guy who makes custom stepper drivers (things by j)
+	2) Then the guy who makes custom stepper drivers (things by josh- ook for frank ocean song in youtube shorts to find him)
 	3) Then VESC (for BLDCs, supports sensorless)
 	4) Then Odrive (sensored)
 	5) Then XDrive (what penguin used)
