@@ -236,10 +236,10 @@ even though i like the binary UDS being fast, having no dependencies (this is th
 
 Benefits:
 1) fast
-2) methods generated for you- just pass user a .proto file and instructions to generate the method headers locally
+2) methods generated for you- just pass user a `.proto` file and instructions to generate the method headers locally
 3) supports almost any language
 
-Cons
+Cons:
 1) requires grpc support (not every language), they need to include the proto lib
 2) bloats with runtime, e.g. for `C#` is 150mb
 
