@@ -32,10 +32,10 @@ Perfect! Here’s a **cross-language IPC client reference** for your server, sho
 - **Message Structure:**
     
 
-|Command|Format|Response|
-|---|---|---|
-|GetValue|`[1 byte CMD][4 byte A][4 byte B]`|`[4 byte T]`|
-|SetValue|`[1 byte CMD][4 byte A][4 byte B][4 byte C]`|`[4 byte ack]`|
+| Command  | Format                                       | Response       |
+| -------- | -------------------------------------------- | -------------- |
+| GetValue | `[1 byte CMD][4 byte A][4 byte B]`           | `[4 byte T]`   |
+| SetValue | `[1 byte CMD][4 byte A][4 byte B][4 byte C]` | `[4 byte ack]` |
 
 - **Ack Values:** `0 = success`, any other int = error
     
