@@ -83,3 +83,28 @@ foreach (var cert in certificateStore.Certificates)
 Also removed:
 - Diagnostic `Assert.Fail` and `StringBuilder` logging from `AssertSSLCertification`
 - Redundant duplicate call to `FindCertifiateWithLongestExpiry`
+
+
+## Questions:
+
+```cs
+X509Certificate2 FindCertifiateWithLongestExpiry(string certificateName)
+	{
+		using var certificateStore = new X509Store(StoreName.My, StoreLocation.LocalMachine);
+		certificateStore.Open(OpenFlags.ReadOnly);
+		var validCertificates = certificateStore.Certificates
+			.Find(X509FindType.FindBySubjectName, certificateName, validOnly: false)
+			.Find(X509FindType.FindByApplicationPolicy, "1.3.6.1.5.5.7.3.1", validOnly: false);
+		X509Certificate2 certificateWithLongestExpiry = null;
+		foreach (var validCertificate in validCertificates)
+		{
+			if (certificateWithLongestExpiry == null ||
+				certificateWithLongestExpiry.NotAfter < validCertificate.NotAfter)
+			{
+				certificateWithLongestExpiry = validCertificate;
+			}
+		}
+
+		return certificateWithLongestExpiry;
+	}
+```
