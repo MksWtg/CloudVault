@@ -297,3 +297,5 @@ this is really good, the only problem is users having to write their own methods
 
 is this possible? please show me .rpc file and what my translator might look like.
 ```
+
+Answer: yes use a bash script
