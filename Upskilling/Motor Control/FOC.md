@@ -26,9 +26,9 @@ We use SVPWM to convert this voltage into the waveform the BLDC can use -> highe
 the svpwm is just the control signal, it still needs to go to a physical inverter circuit to power bldc.
 
 
-| Thing          | Responsible for                              |
-| -------------- | -------------------------------------------- |
-| PWM/SPWM/SVPWM | %Voltage. SVPWM is more efficient than SPWM. |
-| Voltage        | Current (higher voltage -> higher current)   |
-| Current        | Torque (Higher current -> higher torque)     |
-| Speed RPM      | Frequency of stator's RMF                    |
+| Thing          | Responsible for                                  |
+| -------------- | ------------------------------------------------ |
+| PWM/SPWM/SVPWM | %Voltage. SVPWM is more efficient than SPWM.     |
+| Voltage        | Current (higher voltage -> higher current)       |
+| Current        | Torque (Higher current -> higher torque)         |
+| Speed RPM      | Frequency of stator's RMF, also comes from SVPWM |
