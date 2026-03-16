@@ -1,3 +1,3 @@
-Prerequisites: Loss, Power, MOSFET, Voltage
+Prerequisites: Loss, Power, MOSFET, [[Voltage]], [[Current]]
 
 Switching loss refers to the power dissipated as heat in a semiconductor switch (like a MOSFET or IGBT) when it transitions between ON and OFF states. Because these devices cannot switch instantaneously, they briefly pass through a linear region where high voltage and high current exist simultaneously, causing power loss proportional to switching frequency.
