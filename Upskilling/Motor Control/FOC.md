@@ -1,4 +1,4 @@
-Prerequisites: [[SVPWM]], [[Motors Summary]] 
+Prerequisites: [[SVPWM]], [[Motors Summary]], [[Current]], [[PWM]], [[BLDC]]
 
 Also known as Vector control.
 
