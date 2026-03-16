@@ -1,6 +1,6 @@
  
 1) ~~Formalize rough requirements~~
-2) Properly understand FOC algorithm
+2) ~~Properly understand FOC algorithm~~
 3) Understand high level driver steps for BLDC FOC
 4) Understand high level driver steps for NEMA stepper FOC
 
