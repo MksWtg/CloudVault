@@ -21,4 +21,4 @@ We have Id and Id ref (0, or negative if using field weakening)
 
 we use two PI controllers (TODO: why no D?) to calculate the voltages (TODO: this is voltage right? since voltage drives current) we need (Ud and Uq). Then we pass it back through the inverse park and inverse clarke transform to figure out the voltage we need for the three phases.
 
-We use SVPWM to 
+We use SVPWM to convert this voltage into the waveform the BLDC can use -> higher PWM frequency means higher resolution. Higher duty cycle
