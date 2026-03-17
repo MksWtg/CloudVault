@@ -50,6 +50,5 @@ Solution
 - CP2T restores UserRepository db and preserves schema ownership (the database principle that owned the production DB schema also owns the test DB schema). Instead it should reassign schemas to the relevant one.
 
 
-## Questions for Cart
-
+## Questions
 Is DBBR just a wrapper around SQL Server backup??
