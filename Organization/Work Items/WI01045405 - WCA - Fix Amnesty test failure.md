@@ -1,4 +1,4 @@
-amnesty
+Amnesty for [[What is WiseCloud Accessor]]
 
 # Fix: Intermittent SSL Certificate Hash Mismatch in TestInstallIsSuccessful
 
