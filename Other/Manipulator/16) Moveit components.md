@@ -1,1 +1,13 @@
-- you send goal 
+- you send goal via moveit action
+- `move_group` node builds a planning request with current state, goal constraints, allowed planning time, planner settings
+- Get current joint state by querying `/joint_states` publisehd by ros driver or gazebo
+- [FIRST BIG THING] inverse kinematics handled by IK plugin
+	- KDL/TRAC-IK/IKFast
+- Build planning problem (different to planning request?) includes goal state, joint limits, velocity limits, acc limits.
+- Collision world setup with environment objects and *self collision matrix*
+- Path planning handled by OMPL e.g.
+	- RRTConnect
+	- PRM
+	- The path planner calls FCL
+		- FCL uses AABB/BVH for the braod phase and GJK/EPA/SAT for narrow phase
+		- 
