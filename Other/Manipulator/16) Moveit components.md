@@ -1,5 +1,5 @@
 - you send goal via moveit action
-- `move_group` node builds a planning request with current state, goal constraints, allowed planning time, planner settings
+- `move_group` node builds a planning request with current state, goal constraints, allowed planning time, planner settings,
 - Get current joint state by querying `/joint_states` publisehd by ros driver or gazebo
 - [FIRST BIG THING] inverse kinematics handled by IK plugin
 	- KDL/TRAC-IK/IKFast
@@ -8,6 +8,10 @@
 - Path planning handled by OMPL e.g.
 	- RRTConnect
 	- PRM
-	- The path planner calls FCL
+	- The path planner calls FCL (or bullet)
 		- FCL uses AABB/BVH for the braod phase and GJK/EPA/SAT for narrow phase
-		- 
+	- Planner returns collision free path that is not smooth or time parametrized
+	- Path simplificaiton handled by OMPL such as shortcutting or smoothing
+	- Time parametrization handled by moveit (path -> timing)
+		- Iterative parabolic time parametrization or time optimal trajectory generation
+	- moveit sends trajectory to follow joint trajectory action server.
