@@ -21,5 +21,5 @@ These are all open source, so here is the code:
 - OMPL (plans path): https://github.com/ompl/ompl
 	- Interface: https://github.com/moveit/moveit2/tree/main/moveit_planners/ompl
 - FCL (collision detection): https://github.com/flexible-collision-library/fcl
-- KDL (IK solving): 
-	- I
+- KDL (IK solving): https://github.com/orocos/orocos_kinematics_dynamics
+	- Interface: https://github.com/moveit/moveit2/blob/main/moveit_kinematics/kdl_kinematics_plugin/src/kdl_kinematics_plugin.cpp
