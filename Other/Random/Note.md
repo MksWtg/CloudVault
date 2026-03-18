@@ -1,0 +1,1 @@
+1. The expected distance for 1D random walk after n steps is ≈2n/π−−−−√ for large number of steps.
