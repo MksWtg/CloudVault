@@ -69,3 +69,6 @@ Reproduce and Manual test
 - Backup it with DBBR
 - Restore with CP2T to another database name, you can see the corresponding login related to the database you just restore does not exist
 ```
+
+Run this command to run cargowise connecting to `Odyssey` DB:
+`C:\git\GitHub\WiseTechGlobal\CargoWise\Bin\CargoWiseOneAnyCpu.exe . Odyssey2`
