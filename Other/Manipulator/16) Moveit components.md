@@ -15,3 +15,11 @@
 	- Time parametrization handled by moveit (path -> timing)
 		- Iterative parabolic time parametrization or time optimal trajectory generation
 	- moveit sends trajectory to follow joint trajectory action server.
+
+These are all open source, so here is the code:
+- Moveit (time parametrizes path): https://github.com/ros-planning/moveit2
+- OMPL (plans path): https://github.com/ompl/ompl
+	- Interface: https://github.com/moveit/moveit2/tree/main/moveit_planners/ompl
+- FCL (collision detection): https://github.com/flexible-collision-library/fcl
+- KDL (IK solving): 
+	- I
