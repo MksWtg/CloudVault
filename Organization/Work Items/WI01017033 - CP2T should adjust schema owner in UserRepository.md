@@ -97,3 +97,12 @@ Reproduce and Manual test
 - Restore with CP2T to another database name, you can see the corresponding login related to the database you just restore does not exist
 
 I don't understand this. Can you explain 1) what the problem is, 2) how I can verify this for the production and test database with an SQL query?
+
+## Technical Terms
+
+Principal: A security identity (user, role, or application) in SQL Server that can be granted permissions to access database objects.
+
+Login: A server-level account used to authenticate and allow access to a SQL Server instance.
+
+Schema Owner: The principal that owns a schema and has full control over all objects within that schema.
+
