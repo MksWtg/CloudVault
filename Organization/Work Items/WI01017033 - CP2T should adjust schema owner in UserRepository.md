@@ -108,5 +108,5 @@ Users: Database level
 
 Schema Owner: The principal that owns a schema and has full control over all objects within that schema.
 
-Database owner: server level login that owns the datbaase
+Database owner: server level login that owns the database. In the database this appears as the dbo user.
 
