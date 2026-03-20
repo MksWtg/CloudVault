@@ -65,9 +65,9 @@ Reproduce and Manual test
 - Open CargoWise with the database you just create, wait for upgrade, this will take a while [DONE]
 - Create a new staff with IsDatabaseDevelpoer ticked [DONE]
 - Close CargoWise [DONE]
-- Insert a Production License to {DatabaseNameYouPrefer}.dbo.StmData
-- Backup it with DBBR
-- Restore with CP2T to another database name, you can see the corresponding login related to the database you just restore does not exist
+- Insert a Production License to {DatabaseNameYouPrefer}.dbo.StmData [DONE]
+- Backup it with DBBR [DONE]
+- Restore with CP2T to another database name, [DONE] you can see the corresponding login related to the database you just restore does not exist [???]
 ```
 
 Run this command to run cargowise connecting to `Odyssey` DB:
