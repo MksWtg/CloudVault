@@ -104,5 +104,9 @@ Principal: A security identity (user, role, or application) in SQL Server that c
 
 Login: A server-level account used to authenticate and allow access to a SQL Server instance.
 
+Users: Database level
+
 Schema Owner: The principal that owns a schema and has full control over all objects within that schema.
+
+Database owner: server level login that owns the datbaase
 
