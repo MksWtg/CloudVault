@@ -72,3 +72,28 @@ Reproduce and Manual test
 
 Run this command to run cargowise connecting to `Odyssey` DB:
 `C:\git\GitHub\WiseTechGlobal\CargoWise\Bin\CargoWiseOneAnyCpu.exe . Odyssey2`
+
+
+## Reframing
+
+CP2T (copy production to test, a subset of the DbBackupAndRestore tool) restores the UserRepository database and preserves schema ownership (user mapped to login); however, it should reassign schema owners otherwise we end up with schemas owned by non-existent/out-of-scope users.
+
+EnsureDbLoginsCorrectlyMappedToAllDatabases() (a method in cargowise, outside of this repo) currently helps create/match logins/users but it does not alter schema ownership.
+
+
+- CP2T restore those logins settings directly from User Repository backup but didn't create and adjust to corresponding restored database name to EnterpriseDbUser logins.
+- SQL Server logins for EnterpriseDbUser of new test Customer System is not exists after we copy production to the test customer system
+
+Reproduce and Manual test
+
+- Use CWTool to download the latest version of CargoWise
+- Open a powershell and Change dir to C:\git\GitHub\WiseTechGlobal\CargoWise\Bin\net8.0\
+- Run .\Generator.exe . {DatabaseNameYouPrefer} -restoredb
+- Open CargoWise with the database you just create, wait for upgrade, this will take a while
+- Create a new staff with IsDatabaseDevelpoer ticked
+- Close CargoWise
+- Insert a Production License to {DatabaseNameYouPrefer}.dbo.StmData
+- Backup it with DBBR
+- Restore with CP2T to another database name, you can see the corresponding login related to the database you just restore does not exist
+
+I don't understand this. Can you explain 1) what the problem is, 2) how I can verify this for the production and test database with an SQL query?
