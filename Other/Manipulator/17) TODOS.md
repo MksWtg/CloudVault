@@ -18,6 +18,9 @@ Do pole maths for control theory, transfer functions
 From easiest to hardest
 
 
-|                 | Firmware | Hardware |
-| --------------- | -------- | -------- |
-| SimpleFOC board |          |          |
+|                     | Firmware | Hardware | Daisy chaining |     |
+| ------------------- | -------- | -------- | -------------- | --- |
+| SimpleFOC board     |          |          |                |     |
+| Penguin with XDRIVE |          |          |                |     |
+| Things by josh      |          |          |                |     |
+| VESC                |          |          |                |     |
