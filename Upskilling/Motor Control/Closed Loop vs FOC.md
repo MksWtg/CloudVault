@@ -10,3 +10,5 @@ Closed loop and FOC are both methods of control. What is the difference?
 know the rotor electrical angle
 measure phase currents
 control the current (using PID) relative to that angle so that the current vector is oriented correctly with respect to the rotor field
+
+- whether that is though SVPWM, SPWM, some other method, that is ok.
