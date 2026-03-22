@@ -153,3 +153,129 @@ Solution
     - only create EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName} logins that not exist on sql server and set corresponding permission with random password
     - only add EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName} logins logins that not exist on database level and set corresponding permission
 ```
+
+# Solutions
+
+### Goals:
+For new testing customer system
+    - delete logins not matched for each database
+    - create `EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName}` logins on SQL server level and set corresponding permission with random password
+    - add `EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName}` logins on database level and set corresponding permission
+- For existing testing customer system
+    - only create `EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName}` logins that not exist on SQL server and set corresponding permission with random password
+    - only add `EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName}` logins logins that not exist on database level and set corresponding permission
+
+## Yash's OG PR
+
+https://github.com/WiseTechGlobal/CargoWise/pull/33986
+
+### Changes:
+
+Add the following methods
+
+```
+void FixSchemaOwnershipForUserRepositoryDatabase(AdminConnection mainDbConnection, DbRestoreSettings dbRestoreSettings)
+		{
+			if (!dbRestoreSettings.RestoreUserRepositoryDatabase)
+			{
+				return;
+			}
+
+			var userRepoDbNames = dbRestoreSettings.RestoreDbFiles
+				.Cast<DbFileInfo>()
+				.Where(f => f.Visible)
+				.Where(f => f.DbType == DbFileInfo.DbTypeUserRepository)
+				.Select(f => GetActualDatabaseName(dbRestoreSettings.TargetDbName, f))
+				.Distinct(StringComparer.OrdinalIgnoreCase)
+				.ToList();
+
+			foreach (var dbName in userRepoDbNames)
+			{
+				FixSchemaOwnershipForUserRepositoryDb(mainDbConnection.ServerName, dbName);
+			}
+		}
+
+		void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userRepositoryDbName)
+		{
+			try
+			{
+				using (Db.DisableSchemaVersionCheck())
+				using (var connection = Db.NewAdminConnection(serverName, userRepositoryDbName))
+				{
+					if (!connection.DatabaseExists(userRepositoryDbName))
+					{
+						FireOnShowInfoMessage($"Skipping schema ownership fix. Database does not exist: {userRepositoryDbName}");
+						return;
+					}
+
+					var targetAppPrincipal = ResolveTargetApplicationDbPrincipal(connection, userRepositoryDbName);
+					if (string.IsNullOrWhiteSpace(targetAppPrincipal))
+					{
+						FireOnShowInfoMessage($"Schema ownership: skip (target app principal not found) for {userRepositoryDbName}");
+						return;
+					}
+
+					FireOnSubtaskStarted($"Normalising UserRepository schemas to '{targetAppPrincipal}' in {userRepositoryDbName}", 0);
+					NormaliseEnterpriseDbUserSchemaOwners(connection, targetAppPrincipal);
+				}
+			}
+			catch (Exception ex) when (!ex.IsCriticalException())
+			{
+				LogDetailedError(ex, $"Schema ownership: failed for {userRepositoryDbName}");
+			}
+		}
+
+		static string ResolveTargetApplicationDbPrincipal(AdminConnection conn, string userRepositoryDbName)
+		{
+			// TEMPORARY - ideally, the target principal should be determined based on the actual application pool identity used to connect to the User Repository database in the test environment, but for now, we resolve it based on the existing principals in the database.
+			// Need to look into CargoWise.Data code to find a more reliable way to determine the target principal that should own the schemas in the User Repository database in test environments.
+
+			const string sql = @"
+SELECT TOP (1) dp.name
+FROM sys.database_principals dp
+JOIN sys.server_principals sp ON sp.sid = dp.sid
+WHERE dp.type IN ('S','U')
+  AND dp.name LIKE 'EnterpriseDbUser[_]%' ESCAPE '\'
+ORDER BY dp.name;";
+
+			return conn.ExecuteScalar<string>(sql);
+		}
+
+		static void NormaliseEnterpriseDbUserSchemaOwners(AdminConnection conn, string targetAppPrincipal)
+		{
+			const string sql = @"
+DECLARE @Target sysname = @TargetUser;
+DECLARE @Sql nvarchar(max) = N'';
+
+;WITH SchemasToFix AS
+(
+	SELECT s.name AS SchemaName, dp.name AS OwnerName
+	FROM sys.schemas s
+	JOIN sys.database_principals dp ON dp.principal_id = s.principal_id
+	WHERE s.name NOT IN ('dbo','guest','INFORMATION_SCHEMA','sys','cdc')Expand commentComment on line R1118Resolved
+	  AND s.schema_id < 16384
+)
+SELECT @Sql = @Sql + N'
+ALTER AUTHORIZATION ON SCHEMA::' + QUOTENAME(SchemaName) + N' TO ' + QUOTENAME(@Target) + N';'
+FROM SchemasToFix
+WHERE OwnerName LIKE 'EnterpriseDbUser[_]%' ESCAPE '\'
+  AND OwnerName <> @Target;
+
+IF (@Sql <> N'')
+BEGIN
+	EXEC sp_executesql @Sql;
+END
+";
+			conn.ExecuteNonQuery(sql, cmd => cmd.AddParameter("@TargetUser", SqlDbType.NVarChar, 128, targetAppPrincipal));
+		}
+```
+
+Methods added:
+- `FixSchemaOwnershipForUserRepositoryDatabase`
+- `FixSchemaOwnershipForUserRepositoryDb`
+- `ResolveTargetApplicationDbPrincipal`
+- `NormaliseEnterpriseDbUserSchemaOwners`
+- 
+## New PR
+
+
