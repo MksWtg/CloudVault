@@ -6,6 +6,8 @@ The rotor is on the inside (windings).
 The commutator is the split ring.
 The commutation mechanism is brushes.
 
+![[Pasted image 20260322173417.png]]
+
 ## Brushless
 
 ![[Pasted image 20260322173353.png]]
@@ -17,5 +19,7 @@ The commutator does not exist, commutation happens electronically.
 ## Same
 Stator doesn't move.
 Rotor moves.
-Windings on inside.
-Magnets on outside.
+
+## Different
+Windings on stator vs windings on rotor.
+Permanent magnets on stator vs permanent magnets on rotor.
