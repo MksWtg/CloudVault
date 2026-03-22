@@ -22,8 +22,8 @@ From easiest to hardest
 | ------------------- | -------- | --- | ------ | -------- | -------------- | ---- |
 | SimpleFOC board     | ✅        | ✅   |        |          |                |      |
 | Penguin with XDRIVE | ✅        | ✅   |        |          |                |      |
-| MKS Servo C         | ✅        |     |        |          |                |      |
-| Things by josh      | ✅        |     |        |          |                |      |
-| ODrive              | ✅        |     |        |          |                |      |
-| VESC + Simple focer | ✅        |     |        |          |                |      |
+| MKS Servo C         | ✅        | ✅   |        |          |                |      |
+| Things by josh      | ✅        | ❌   |        |          |                |      |
+| ODrive              | ✅        | ✅   |        |          |                |      |
+| VESC + Simple focer | ✅        | ✅   |        |          |                |      |
 I saw a driver somewhere that referenced `bldc` presumably vesc bldc.
