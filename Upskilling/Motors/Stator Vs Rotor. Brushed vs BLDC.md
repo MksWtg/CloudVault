@@ -8,8 +8,10 @@ The commutation mechanism is brushes.
 
 ## Brushless
 
-In a brushless motor, the stator is on the inside (windings).
-The rotor is on the outside (permanent magnets).
+![[Pasted image 20260322173353.png]]
+
+In a brushless motor, the stator can be on the inside or outside (windings).
+The rotor can also be inside or outside (permanent magnets).
 The commutator does not exist, commutation happens electronically.
 
 ## Same
