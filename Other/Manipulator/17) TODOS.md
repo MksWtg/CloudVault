@@ -23,10 +23,10 @@ From easiest to hardest
 
 |                     | Firmware | FOC | Driver  | Hardware | Daisy chaining | Link                                             |
 | ------------------- | -------- | --- | ------- | -------- | -------------- | ------------------------------------------------ |
-| SimpleFOC board     | ✅        | ✅   |         |          | ❌              |                                                  |
-| Penguin with XDRIVE | ✅        | ✅   |         |          | ✅              |                                                  |
-| MKS Servo C         | ✅        | ✅   |         |          | ✅              |                                                  |
-| Things by josh      | ✅        | ❌   | TMC2209 |          | ❌              | https://github.com/joshr120/PD-Stepper/tree/main |
-| ODrive              | ✅        | ✅   |         |          | ❌              |                                                  |
-| VESC + Simple focer | ✅        | ✅   |         |          | ❌              |                                                  |
+| SimpleFOC board     | ✅        | ✅   |         | ✅        | ❌              |                                                  |
+| Penguin with XDRIVE | ✅        | ✅   |         | ✅        | ✅              |                                                  |
+| MKS Servo C         | ✅        | ✅   |         | ✅        | ✅              |                                                  |
+| Things by josh      | ✅        | ❌   | TMC2209 | ✅        | ❌              | https://github.com/joshr120/PD-Stepper/tree/main |
+| ODrive              | ✅        | ✅   |         | ✅        | ❌              |                                                  |
+| VESC + Simple focer | ✅        | ✅   |         | ✅        | ❌              |                                                  |
 I saw a driver somewhere that referenced `bldc` presumably vesc bldc.
