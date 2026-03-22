@@ -15,4 +15,5 @@ The commutator does not exist, commutation happens electronically.
 ## Same
 Stator doesn't move.
 Rotor moves.
-Windings on
+Windings on inside.
+Magnets on outside.
