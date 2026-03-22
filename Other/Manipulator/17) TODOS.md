@@ -23,4 +23,6 @@ From easiest to hardest
 | SimpleFOC board     |          |          |                |     |
 | Penguin with XDRIVE |          |          |                |     |
 | Things by josh      |          |          |                |     |
-| VESC                |          |          |                |     |
+| ODrive              |          |          |                |     |
+| VESC + Simple focer |          |          |                |     |
+I saw
