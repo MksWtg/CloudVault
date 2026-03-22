@@ -15,3 +15,9 @@ Do pole maths for control theory, transfer functions
 
 ## Driver List
 
+From easiest to hardest
+
+
+|                 | Firmware | Hardware |
+| --------------- | -------- | -------- |
+| SimpleFOC board |          |          |
