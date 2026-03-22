@@ -1,0 +1,2 @@
+
+An encoder is a sensor that converts motion (like rotation or position) into electrical signals (it encodes into a signal). It’s commonly used in motors to measure speed, direction, or position for control systems.

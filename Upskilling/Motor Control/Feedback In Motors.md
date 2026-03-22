@@ -1,4 +1,4 @@
-Prerequisites: [[Motors Summary]]
+Prerequisites: [[Motors Summary]], [[Encoder]]
 
 Feedback in motors is information sent from the motor back to the controller about its current state, like speed, position, or torque.
 
