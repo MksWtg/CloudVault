@@ -13,4 +13,4 @@ Prerequisites: [[SVPWM]], [[SPWM]]
 |                                                               | Open Loop | Closed Loop |
 | ------------------------------------------------------------- | --------- | ----------- |
 | 6 Stage (voltage is block/square wave, back EMF is trapezoid) |           |             |
-| Sinusoidal (SPWM or advanced SVPWM)                           |           |             |
+| Sinusoidal (SPWM or advanced SVPWM) (FOC)                     |           |             |
