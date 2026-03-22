@@ -18,12 +18,12 @@ Do pole maths for control theory, transfer functions
 From easiest to hardest
 
 
-|                           | Firmware | Hardware | Daisy chaining |     |
-| ------------------------- | -------- | -------- | -------------- | --- |
-| SimpleFOC board           |          |          |                |     |
-| Penguin with XDRIVE       |          |          |                |     |
-| Things by josh            |          |          |                |     |
-| ODrive                    |          |          |                |     |
-| VESODriveC + Simple focer |          |          |                |     |
-| VESC + Simple focer       |          |          |                |     |
+|                     | Firmware | Hardware | Daisy chaining |     |
+| ------------------- | -------- | -------- | -------------- | --- |
+| SimpleFOC board     |          |          |                |     |
+| Penguin with XDRIVE |          |          |                |     |
+| MKS Servo C         |          |          |                |     |
+| Things by josh      |          |          |                |     |
+| ODrive              |          |          |                |     |
+| VESC + Simple focer |          |          |                |     |
 I saw a driver somewhere that referenced `bldc` presumably vesc bldc.
