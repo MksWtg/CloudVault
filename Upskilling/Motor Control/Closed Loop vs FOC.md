@@ -8,7 +8,7 @@ Closed loop and FOC are both methods of control. What is the difference?
 
 
 
-|         | Open Loop | Closed Loop |
-| ------- | --------- | ----------- |
-| 6 Stage |           |             |
-|         |           |             |
+|            | Open Loop | Closed Loop |
+| ---------- | --------- | ----------- |
+| 6 Stage    |           |             |
+| Sinusoidal |           |             |
