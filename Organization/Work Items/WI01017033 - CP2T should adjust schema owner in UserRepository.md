@@ -100,15 +100,17 @@ I don't understand this. Can you explain 1) what the problem is, 2) how I can ve
 
 ## Technical Terms
 
-Principal: A security identity (user, role, or application) in SQL Server that can be granted permissions to access database objects.
+**Principal**: A security identity (user, role, or application) in SQL Server that can be granted permissions to access database objects.
 
-Login: A server-level account used to authenticate and allow access to a SQL Server instance.
+**Login**: A server-level account used to authenticate and allow access to a SQL Server instance.
 
-Users: Database level
+**Users**: Database level
 
-Schema Owner: The principal that owns a schema and has full control over all objects within that schema.
+**Schema Owner**: The principal that owns a schema and has full control over all objects within that schema.
 
-Database owner: server level login that owns the database. In the database this appears as the dbo user.
+**Database owner**: server level login that owns the database. In the database this appears as the dbo user.
+
+**dbo**: in sql server, this stands for database owner and is a special built in user account. it is also the default schema for all new objects in a database.
 
 
 Few loose work items:
