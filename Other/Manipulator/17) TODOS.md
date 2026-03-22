@@ -20,8 +20,8 @@ From easiest to hardest
 
 |                     | Firmware | FOC | Driver | Hardware | Daisy chaining | Link |
 | ------------------- | -------- | --- | ------ | -------- | -------------- | ---- |
-| SimpleFOC board     | ✅        |     |        |          |                |      |
-| Penguin with XDRIVE | ✅        |     |        |          |                |      |
+| SimpleFOC board     | ✅        | ✅   |        |          |                |      |
+| Penguin with XDRIVE | ✅        | ✅   |        |          |                |      |
 | MKS Servo C         | ✅        |     |        |          |                |      |
 | Things by josh      | ✅        |     |        |          |                |      |
 | ODrive              | ✅        |     |        |          |                |      |
