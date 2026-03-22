@@ -25,4 +25,4 @@ From easiest to hardest
 | Things by josh      |          |          |                |     |
 | ODrive              |          |          |                |     |
 | VESC + Simple focer |          |          |                |     |
-I saw
+I saw a driver somewhere that referenced `bldc` presumably vesc bldc.
