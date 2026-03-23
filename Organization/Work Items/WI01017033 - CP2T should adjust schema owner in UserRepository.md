@@ -326,6 +326,13 @@ ORDER BY name;
 
 For: `Odyssey2` we have: `EnterpriseDbUser_Odyssey2_mukund1234` (corresponds to created db person staff in CW)
 
+For `Odyssey2_UserRepository` we have: `EnterpriseDbUser_Odyssey2_mukund1234` (same)
+
 For: `O2_RestoredDb` we have: `EnterpriseDbUser_Odyssey2_mukund1234` (same)
 
 For: `O2_RestoredDb_UserRepository` we have: `EnterpriseDbUser_Odyssey2_mukund1234` (same)
+
+---
+
+But we don't want this, we want (for example) `EnterpriseDbUser_O2_RestoredDb_mukund1234`.
+
