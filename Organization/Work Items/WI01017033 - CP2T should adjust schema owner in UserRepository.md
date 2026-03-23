@@ -305,3 +305,7 @@ rotected virtual void PerformCopyProductionToTestPostRestoreSteps(AdminConnectio
 ## New PR
 
 
+
+# Important Note
+
+In SQL Server, schemas are owned by U
