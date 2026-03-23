@@ -151,6 +151,7 @@ Solution
     - delete logins not matched for each database
     - create EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName} logins on sql server level and set corresponding permission with random password
     - add EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName} logins on database level and set corresponding permission
+      
 - For existing testing customer system
     - only create EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName} logins that not exist on sql server and set corresponding permission with random password
     - only add EnterpriseDbUser_{TestCustomerSystemMainDatabaseName}_{UserName} logins logins that not exist on database level and set corresponding permission
@@ -335,4 +336,6 @@ For: `O2_RestoredDb_UserRepository` we have: `EnterpriseDbUser_Odyssey2_mukund12
 ---
 
 But we don't want this, we want (for example) `EnterpriseDbUser_O2_RestoredDb_mukund1234`.
+
+**Question**: Is this just a naming error or does it actually prevent anything?
 
