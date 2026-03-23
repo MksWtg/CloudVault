@@ -308,4 +308,24 @@ rotected virtual void PerformCopyProductionToTestPostRestoreSteps(AdminConnectio
 
 # Important Note
 
-In SQL Server, schemas are owned by U
+In SQL Server, schemas are owned by USERS, this is a per database thing (not per server).
+
+Here is query to find all users for a db:
+
+```
+SELECT 
+    name AS user_name,
+    type_desc AS user_type,
+    authentication_type_desc,
+    create_date,
+    modify_date
+FROM sys.database_principals
+WHERE type IN ('S', 'U', 'G', 'E', 'X')  -- SQL user, Windows user, group, external user/group
+ORDER BY name;
+```
+
+For: `Odyssey2` we have: `EnterpriseDbUser_Odyssey2_mukund1234` (corresponds to created db person staff in CW)
+
+For: `O2_RestoredDb` we have: `EnterpriseDbUser_Odyssey2_mukund1234` (same)
+
+For: `O2_RestoredDb_UserRepository` we have: `EnterpriseDbUser_Odyssey2_mukund1234` (same)
