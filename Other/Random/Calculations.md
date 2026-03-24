@@ -17,3 +17,32 @@ Torque: 10Nm
 Speed: 120rpm
 Cost: Under $100
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+With 
+
+
+
+
+
+
+
