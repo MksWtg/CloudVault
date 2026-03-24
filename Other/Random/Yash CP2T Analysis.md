@@ -50,3 +50,6 @@ void FixSchemaOwnershipForUserRepositoryDatabase(AdminConnection mainDbConnectio
 	}
 }
 ```
+
+If someone CP2T restores to the same name, the method returns early (by design). But orphaned schemas still 
+exist
