@@ -59,7 +59,7 @@ void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userReposit
 		{
 			try
 			{
-				using (Db.DisableSchemaVersionCheck())
+				using (Db.DisableSchemaVersionCheck()) //After the object is disposed it enables the schema version check
 				using (var connection = Db.NewAdminConnection(serverName, userRepositoryDbName))
 				{
 					if (!connection.DatabaseExists(userRepositoryDbName))
