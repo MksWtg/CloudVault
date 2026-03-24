@@ -69,7 +69,7 @@ void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userReposit
 						return;
 					}
 
-					
+					// target principal is the new login/user we want to make?
 					var targetAppPrincipal = ResolveTargetApplicationDbPrincipal(connection, userRepositoryDbName);
 					if (string.IsNullOrWhiteSpace(targetAppPrincipal))
 					{
@@ -85,5 +85,26 @@ void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userReposit
 			{
 				LogDetailedError(ex, $"Schema ownership: failed for {userRepositoryDbName}");
 			}
+		}
+```
+
+What does resolve target application db principal do?
+
+FOR CONTEXT: in the original sql server we had a login, and in the original user repository we had a user with the same name (`EnterpriseDbUser_Odyssey2_mukund1234`). This was created by us through cargowise.
+```csharp
+static string ResolveTargetApplicationDbPrincipal(AdminConnection conn, string userRepositoryDbName)
+		{
+			// TEMPORARY - ideally, the target principal should be determined based on the actual application pool identity used to connect to the User Repository database in the test environment, but for now, we resolve it based on the existing principals in the database.
+			// Need to look into CargoWise.Data code to find a more reliable way to determine the target principal that should own the schemas in the User Repository database in test environments.
+
+			const string sql = @"
+SELECT TOP (1) dp.name
+FROM sys.database_principals dp
+JOIN sys.server_principals sp ON sp.sid = dp.sid
+WHERE dp.type IN ('S','U')
+  AND dp.name LIKE 'EnterpriseDbUser[_]%' ESCAPE '\'
+ORDER BY dp.name;";
+
+			return conn.ExecuteScalar<string>(sql);
 		}
 ```
