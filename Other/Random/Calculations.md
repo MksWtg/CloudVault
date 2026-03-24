@@ -38,7 +38,13 @@ Cost: Under $100
 
 
 
-With 
+If each heavy motor weighs 300g, each light motor weighs 150g and each gearbox weighs 150g, there are 2 heavy motors, 2 light motors and 2 gearboxes above J1
+
+that is 300 + 300 + 150 + 150 + 150 + 150 = 1.2kg. Moving this weight at 50cm = 6Nm of force.
+
+This excludes payload and links
+
+Add 500g for links, 200g for payload
 
 
 
