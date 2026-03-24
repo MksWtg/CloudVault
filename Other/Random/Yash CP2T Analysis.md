@@ -131,6 +131,8 @@ DECLARE @Sql nvarchar(max) = N'';
 	WHERE s.name NOT IN ('dbo','guest','INFORMATION_SCHEMA','sys','cdc')
 	  AND s.schema_id < 16384
 )
+^ all schemas owned by the special user
+
 SELECT @Sql = @Sql + N'
 ALTER AUTHORIZATION ON SCHEMA::' + QUOTENAME(SchemaName) + N' TO ' + QUOTENAME(@Target) + N';'
 FROM SchemasToFix
