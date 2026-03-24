@@ -53,3 +53,6 @@ void FixSchemaOwnershipForUserRepositoryDatabase(AdminConnection mainDbConnectio
 
 If someone CP2T restores to the same name, the method returns early (by design). But orphaned schemas still 
 exist
+
+- Schema owned by a user with the same name as the schema
+- Source/target DB names are identical
