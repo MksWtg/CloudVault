@@ -69,7 +69,7 @@ void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userReposit
 						return;
 					}
 
-					// target principal is the new login/user we want to make?
+					// target principal is the old database user
 					var targetAppPrincipal = ResolveTargetApplicationDbPrincipal(connection, userRepositoryDbName);
 					if (string.IsNullOrWhiteSpace(targetAppPrincipal))
 					{
@@ -78,6 +78,8 @@ void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userReposit
 					}
 
 					FireOnSubtaskStarted($"Normalising UserRepository schemas to '{targetAppPrincipal}' in {userRepositoryDbName}", 0);
+					
+					// then we call this function which im guessing makes the new login
 					NormaliseEnterpriseDbUserSchemaOwners(connection, targetAppPrincipal);
 				}
 			}
@@ -106,6 +108,40 @@ WHERE dp.type IN ('S','U')
   AND dp.name LIKE 'EnterpriseDbUser[_]%' ESCAPE '\'
 ORDER BY dp.name;";
 
+// what does it do? It returns the alphabetically first database user whose name starts with `EnterpriseDbUser_` and is correctly mapped to an existing server login (via matching SID).
+
 			return conn.ExecuteScalar<string>(sql);
+		}
+```
+
+Finally, the method that actually creates the database principal
+
+```csharp
+static void NormaliseEnterpriseDbUserSchemaOwners(AdminConnection conn, string targetAppPrincipal)
+		{
+			const string sql = @"
+DECLARE @Target sysname = @TargetUser;
+DECLARE @Sql nvarchar(max) = N'';
+
+;WITH SchemasToFix AS
+(
+	SELECT s.name AS SchemaName, dp.name AS OwnerName
+	FROM sys.schemas s
+	JOIN sys.database_principals dp ON dp.principal_id = s.principal_id
+	WHERE s.name NOT IN ('dbo','guest','INFORMATION_SCHEMA','sys','cdc')Expand commentComment on line R1118Resolved
+	  AND s.schema_id < 16384
+)
+SELECT @Sql = @Sql + N'
+ALTER AUTHORIZATION ON SCHEMA::' + QUOTENAME(SchemaName) + N' TO ' + QUOTENAME(@Target) + N';'
+FROM SchemasToFix
+WHERE OwnerName LIKE 'EnterpriseDbUser[_]%' ESCAPE '\'
+  AND OwnerName <> @Target;
+
+IF (@Sql <> N'')
+BEGIN
+	EXEC sp_executesql @Sql;
+END
+";
+			conn.ExecuteNonQuery(sql, cmd => cmd.AddParameter("@TargetUser", SqlDbType.NVarChar, 128, targetAppPrincipal));
 		}
 ```
