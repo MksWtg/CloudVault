@@ -26,7 +26,7 @@
 		}
 ```
 
-What occurs in fix schema ownership?
+What occurs in `FixSchemaOwnershipForUserRepositoryDatabase`?
 
 ```csharp
 void FixSchemaOwnershipForUserRepositoryDatabase(AdminConnection mainDbConnection, DbRestoreSettings dbRestoreSettings)
