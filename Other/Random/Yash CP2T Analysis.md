@@ -128,7 +128,7 @@ DECLARE @Sql nvarchar(max) = N'';
 	SELECT s.name AS SchemaName, dp.name AS OwnerName
 	FROM sys.schemas s
 	JOIN sys.database_principals dp ON dp.principal_id = s.principal_id
-	WHERE s.name NOT IN ('dbo','guest','INFORMATION_SCHEMA','sys','cdc')Expand commentComment on line R1118Resolved
+	WHERE s.name NOT IN ('dbo','guest','INFORMATION_SCHEMA','sys','cdc')
 	  AND s.schema_id < 16384
 )
 SELECT @Sql = @Sql + N'
