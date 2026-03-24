@@ -52,7 +52,7 @@ void FixSchemaOwnershipForUserRepositoryDatabase(AdminConnection mainDbConnectio
 }
 ```
 
-Then that calls this:
+Then that calls this for each db file in user repository, again not sure what a db file is but i presume .mdf and .ndf and .ldf:
 
 ```csharp
 void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userRepositoryDbName)
