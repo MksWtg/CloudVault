@@ -64,10 +64,12 @@ void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userReposit
 				{
 					if (!connection.DatabaseExists(userRepositoryDbName))
 					{
+					// If user repository does not exist
 						FireOnShowInfoMessage($"Skipping schema ownership fix. Database does not exist: {userRepositoryDbName}");
 						return;
 					}
 
+					
 					var targetAppPrincipal = ResolveTargetApplicationDbPrincipal(connection, userRepositoryDbName);
 					if (string.IsNullOrWhiteSpace(targetAppPrincipal))
 					{
