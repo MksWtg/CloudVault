@@ -27,6 +27,7 @@
 ```
 
 What occurs in `FixSchemaOwnershipForUserRepositoryDatabase`?
+- we need to be restoring the user repository database
 
 ```csharp
 void FixSchemaOwnershipForUserRepositoryDatabase(AdminConnection mainDbConnection, DbRestoreSettings dbRestoreSettings)
