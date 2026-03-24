@@ -52,8 +52,36 @@ void FixSchemaOwnershipForUserRepositoryDatabase(AdminConnection mainDbConnectio
 }
 ```
 
-If someone CP2T restores to the same name, the method returns early (by design). But orphaned schemas still 
-exist
+Then that calls this:
 
-- Schema owned by a user with the same name as the schema
-- Source/target DB names are identical
+```csharp
+void FixSchemaOwnershipForUserRepositoryDb(string serverName, string userRepositoryDbName)
+		{
+			try
+			{
+				using (Db.DisableSchemaVersionCheck())
+				using (var connection = Db.NewAdminConnection(serverName, userRepositoryDbName))
+				{
+					if (!connection.DatabaseExists(userRepositoryDbName))
+					{
+						FireOnShowInfoMessage($"Skipping schema ownership fix. Database does not exist: {userRepositoryDbName}");
+						return;
+					}
+
+					var targetAppPrincipal = ResolveTargetApplicationDbPrincipal(connection, userRepositoryDbName);
+					if (string.IsNullOrWhiteSpace(targetAppPrincipal))
+					{
+						FireOnShowInfoMessage($"Schema ownership: skip (target app principal not found) for {userRepositoryDbName}");
+						return;
+					}
+
+					FireOnSubtaskStarted($"Normalising UserRepository schemas to '{targetAppPrincipal}' in {userRepositoryDbName}", 0);
+					NormaliseEnterpriseDbUserSchemaOwners(connection, targetAppPrincipal);
+				}
+			}
+			catch (Exception ex) when (!ex.IsCriticalException())
+			{
+				LogDetailedError(ex, $"Schema ownership: failed for {userRepositoryDbName}");
+			}
+		}
+```
