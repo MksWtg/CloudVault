@@ -97,7 +97,7 @@ static string ResolveTargetApplicationDbPrincipal(AdminConnection conn, string u
 			// TEMPORARY - ideally, the target principal should be determined based on the actual application pool identity used to connect to the User Repository database in the test environment, but for now, we resolve it based on the existing principals in the database.
 			// Need to look into CargoWise.Data code to find a more reliable way to determine the target principal that should own the schemas in the User Repository database in test environments.
 
-// two tables: database_principals has the users and server_principals has the logins. We select the name from the database principals where they have the same SID
+// two tables: database_principals has the users and server_principals has the logins. We select the name from the database principals where they have the same SID. S is an SQL user, U is a windows user. S
 			const string sql = @"
 SELECT TOP (1) dp.name
 FROM sys.database_principals dp
