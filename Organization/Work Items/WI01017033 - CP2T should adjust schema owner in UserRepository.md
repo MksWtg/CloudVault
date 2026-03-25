@@ -351,3 +351,6 @@ https://github.com/WiseTechGlobal/CargoWise/pull/33986
 Mks:
 https://github.com/WiseTechGlobal/CargoWise/pull/43392
 
+Good afternoon
+
+Fixed failing tests and resubmit for a WCA defect
