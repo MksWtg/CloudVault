@@ -351,6 +351,16 @@ https://github.com/WiseTechGlobal/CargoWise/pull/33986
 Mks:
 https://github.com/WiseTechGlobal/CargoWise/pull/43392
 
+```
+-- EXEC xp_cmdshell 'dir \\uat-backups.wtg.zone\SQL_Backup\CargoWiseCloud\DBBR\WI01017033';
+-- EXEC xp_cmdshell 'ipconfig';
+-- EXEC xp_cmdshell 'ping uat-backups.wtg.zone';
+-- EXEC xp_cmdshell 'mkdir C:\temp\WI01017033';
+
+-- EXEC xp_cmdshell 'copy /Y \\uat-backups.wtg.zone\SQL_Backup\CargoWiseCloud\DBBR\WI01017033\* C:\temp\WI01017033\';
+-- EXEC xp_cmdshell 'dir C:\temp\WI01017033\'
+```
+
 Good afternoon
 
 Fixed failing tests and resubmit for a WCA defect
