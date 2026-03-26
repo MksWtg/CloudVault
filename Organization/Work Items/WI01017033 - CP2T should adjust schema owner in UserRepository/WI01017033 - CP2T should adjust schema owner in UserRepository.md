@@ -365,10 +365,13 @@ If i take an SQL server database backup with the DB schema owned by a user, and 
 
 
 ```SQL
+-- declare a variable named @Target and set the data type to sysname and initialize it with the value of @TargetUser
 DECLARE @Target sysname = @TargetUser;
+
+-- declare a variable named @Sql and set the data type to nvarchar(max) and initialize it with the value of N'' (empty unicode string)
 DECLARE @Sql nvarchar(max) = N'';
 
-;WITH SchemasToFix AS
+;WITH SchemasToFix AS -- named result set, selects all schema names that are 
 (
 	SELECT s.name AS SchemaName, dp.name AS OwnerName
 	FROM sys.schemas s
