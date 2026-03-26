@@ -383,6 +383,11 @@ DECLARE @Sql nvarchar(max) = N'';
 )
 
 -- this part modifies the sql we actually want to execute
+schemas to fix is a list of schemas right
+we concat a bunch of alter authorization commands, one for each schema name (where schema owner is like enterprise db user and owner is not target)
+each atler sets thew new schema owner to target
+
+for each we change 
 SELECT @Sql = @Sql + N'
 ALTER AUTHORIZATION ON SCHEMA::' + QUOTENAME(SchemaName) + N' TO ' + QUOTENAME(@Target) + N';'
 FROM SchemasToFix
