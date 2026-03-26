@@ -371,7 +371,7 @@ DECLARE @Target sysname = @TargetUser;
 -- declare a variable named @Sql and set the data type to nvarchar(max) and initialize it with the value of N'' (empty unicode string)
 DECLARE @Sql nvarchar(max) = N'';
 
-;WITH SchemasToFix AS -- named result set, selects all schema names that are 
+;WITH SchemasToFix AS -- named result set, selects all the schemas (from sys schemas) and owners (from database principles) where the schema owner matches database principle, excluing the default schemas
 (
 	SELECT s.name AS SchemaName, dp.name AS OwnerName
 	FROM sys.schemas s
