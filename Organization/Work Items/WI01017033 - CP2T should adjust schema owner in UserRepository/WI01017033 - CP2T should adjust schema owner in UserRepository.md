@@ -361,4 +361,30 @@ https://github.com/WiseTechGlobal/CargoWise/pull/43392
 -- EXEC xp_cmdshell 'dir C:\temp\WI01017033\'
 ```
 
-If i take an sql server database backup with the db schema owned by a user, and the user corresponding to a login in that server, and then i restore the db to antoher server that is missing the login, what will happen to the login, user and schema?
+If i take an SQL server database backup with the DB schema owned by a user, and the user corresponding to a login in that server, and then i restore the db to another server that is missing the login, what will happen to the login, user and schema?
+
+
+```SQL
+DECLARE @Target sysname = @TargetUser;
+DECLARE @Sql nvarchar(max) = N'';
+
+;WITH SchemasToFix AS
+(
+	SELECT s.name AS SchemaName, dp.name AS OwnerName
+	FROM sys.schemas s
+	JOIN sys.database_principals dp ON dp.principal_id = s.principal_id
+	WHERE s.name NOT IN ('dbo','guest','INFORMATION_SCHEMA','sys','cdc')
+		AND s.schema_id < 16384
+)
+
+SELECT @Sql = @Sql + N'
+ALTER AUTHORIZATION ON SCHEMA::' + QUOTENAME(SchemaName) + N' TO ' + QUOTENAME(@Target) + N';'
+FROM SchemasToFix
+WHERE OwnerName LIKE 'EnterpriseDbUser[_]%' ESCAPE '\'
+	AND OwnerName <> @Target;
+
+IF (@Sql <> N'')
+BEGIN
+	EXEC sp_executesql @Sql;
+END
+```
