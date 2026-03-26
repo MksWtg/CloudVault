@@ -372,6 +372,8 @@ DECLARE @Target sysname = @TargetUser;
 DECLARE @Sql nvarchar(max) = N'';
 
 ;WITH SchemasToFix AS -- named result set, selects all the schemas (from sys schemas) and owners (from database principles) where the schema owner matches database principle, excluing the default schemas
+
+-- in english: the schemas we want to moify are all those that are not default
 (
 	SELECT s.name AS SchemaName, dp.name AS OwnerName
 	FROM sys.schemas s
