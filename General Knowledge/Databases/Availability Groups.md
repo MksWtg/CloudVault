@@ -6,4 +6,13 @@ AG: logical container, group of databases that need to be replicated together e.
 
 Replica: A server participating in the AG that has copies of all DBs
 
-Listener: The common endpoint that you connect to- it makes a connection to the current primary
+Listener: The common endpoint that you connect to- it makes a connection to the current primary, so if a db goes down when you try to make a connection it will point you to the right primary.
+- a listener is a virtual network name (DNS)
+
+Windows Server Failover Clustering (WSFC) is the underlying system that makes Availability Groups work- it tracks replicas (each replica in an AG is a cluster node in WSFC) and WSFC monitors their health. 
+
+A cluster is basically a group of servers that work together as a single system to provide high availability and fault tolerance.
+
+A virtual network name (VNN) is a DNS name (a word that resolves to an IP). The VNN is tied to a virtual IP inside the cluster. The VIP can be any node (server) in the cluster. WSFC updates teh network stack on the old servers
+
+If the pimary fails, WSFC detects htis and promotes a secondary to primary, it moves the listener IP to the new primary.
