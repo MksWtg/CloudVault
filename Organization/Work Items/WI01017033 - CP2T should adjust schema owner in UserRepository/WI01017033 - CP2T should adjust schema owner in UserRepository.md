@@ -373,7 +373,7 @@ DECLARE @Sql nvarchar(max) = N'';
 
 ;WITH SchemasToFix AS -- named result set, selects all the schemas (from sys schemas) and owners (from database principles) where the schema owner matches database principle, excluing the default schemas
 
--- in english: the schemas we want to moify are all those that are not default
+-- in english: the schemas we want to modify are all those that are not default
 (
 	SELECT s.name AS SchemaName, dp.name AS OwnerName
 	FROM sys.schemas s
@@ -382,6 +382,7 @@ DECLARE @Sql nvarchar(max) = N'';
 		AND s.schema_id < 16384
 )
 
+-- this part modifies the sql we actually want to execute
 SELECT @Sql = @Sql + N'
 ALTER AUTHORIZATION ON SCHEMA::' + QUOTENAME(SchemaName) + N' TO ' + QUOTENAME(@Target) + N';'
 FROM SchemasToFix
