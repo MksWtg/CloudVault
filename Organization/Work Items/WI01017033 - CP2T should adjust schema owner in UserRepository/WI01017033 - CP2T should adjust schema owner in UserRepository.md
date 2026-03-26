@@ -361,6 +361,4 @@ https://github.com/WiseTechGlobal/CargoWise/pull/43392
 -- EXEC xp_cmdshell 'dir C:\temp\WI01017033\'
 ```
 
-Good afternoon
-
-Fixed failing tests and resubmit for a WCA defect
+If i take an sql server database backup with the db schema owned by a user, and the user corresponding to a login in that server, and then i restore the db to antoher server that is missing the login, what will happen to the login, user and schema?
