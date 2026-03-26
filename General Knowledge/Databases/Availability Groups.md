@@ -13,6 +13,4 @@ Windows Server Failover Clustering (WSFC) is the underlying system that makes Av
 
 A cluster is basically a group of servers that work together as a single system to provide high availability and fault tolerance.
 
-A virtual network name (VNN) is a DNS name (a word that resolves to an IP). The VNN is tied to a virtual IP inside the cluster. The VIP can be any node (server) in the cluster. WSFC updates teh network stack on the old servers
-
-If the pimary fails, WSFC detects htis and promotes a secondary to primary, it moves the listener IP to the new primary.
+A virtual network name (VNN) is a DNS name (a word that resolves to an IP). The VNN is tied to a virtual IP inside the cluster. The VIP can be any node (server) in the cluster. WSFC releases VIP from old primary and assigns it to new primary node. Clients see the same DNS name.
