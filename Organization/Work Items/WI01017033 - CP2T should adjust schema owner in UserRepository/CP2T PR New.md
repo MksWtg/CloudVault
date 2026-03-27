@@ -38,4 +38,4 @@ protected virtual void RestorePrimaryReplica(List<DatabaseDetails> dbDetailsList
 }
 ```
 
-What does this change do? After restoring all dbs
+What does this change do? After restoring all dbs without recovery, restoring all dbs with recovery, giving db rights to all dbs, altering db authorization
