@@ -343,7 +343,7 @@ But we don't want this, we want (for example) `EnterpriseDbUser_O2_RestoredDb_mu
 In SQL Server, a **principal** is any security identity—such as a login, database user, or role—that can own objects or be granted permissions.
 ```
 
-To see PR comparison, look at [[CP2T PR Comparison]]
+To see PR comparison, look at [[CP2T PR New]]
 
 Yash:
 https://github.com/WiseTechGlobal/CargoWise/pull/33986
