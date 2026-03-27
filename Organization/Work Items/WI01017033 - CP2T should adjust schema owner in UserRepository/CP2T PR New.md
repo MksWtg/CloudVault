@@ -37,3 +37,5 @@ protected virtual void RestorePrimaryReplica(List<DatabaseDetails> dbDetailsList
 	}
 }
 ```
+
+What does this change do? After restoring all dbs
