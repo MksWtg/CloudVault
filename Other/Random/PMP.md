@@ -38,3 +38,5 @@ If you want, I can also:
 - Help you justify these choices (in case your tutor asks), or
     
 - Improve wording to sound more “HD-level” / professional tone.
+
+Ok guys all submit. for next time: everyone's formatting is really bad. I have to go through everything and basically reformat it. Please make sure your formatting is consistent with everyone else's since we get marked on it. otherwise great job team. This includes updated the version control table when you make edits and updating the doc version when you make edits.
