@@ -1,5 +1,5 @@
 
-1) in the method that does the main CP2T operation, add the following command
+1) in the method that does the main CP2T operation (post restoration), add the following command
 
 ```csharp
 		protected virtual void PerformCopyProductionToTestPostRestoreSteps(AdminConnection connection, DbRestoreSettings dbRestoreSettings, string vaultAuxDbName, bool isNewTestDb)
