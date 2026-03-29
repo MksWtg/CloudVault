@@ -1,4 +1,4 @@
-
+https://github.com/WiseTechGlobal/CargoWise/pull/33986
 1) in the method that does the main CP2T operation (post restoration), add the following command
 
 ```csharp
@@ -131,10 +131,13 @@ DECLARE @Sql nvarchar(max) = N'';
 	WHERE s.name NOT IN ('dbo','guest','INFORMATION_SCHEMA','sys','cdc')
 	  AND s.schema_id < 16384
 )
-^ all schemas owned by the special user
+^ all schemas and owners that are not the default ones
 
 SELECT @Sql = @Sql + N'
 ALTER AUTHORIZATION ON SCHEMA::' + QUOTENAME(SchemaName) + N' TO ' + QUOTENAME(@Target) + N';'
+
+^ set owner to targetAppPrincipal if the schema owner starts with 'EnterpriseDbUser'
+
 FROM SchemasToFix
 WHERE OwnerName LIKE 'EnterpriseDbUser[_]%' ESCAPE '\'
   AND OwnerName <> @Target;
