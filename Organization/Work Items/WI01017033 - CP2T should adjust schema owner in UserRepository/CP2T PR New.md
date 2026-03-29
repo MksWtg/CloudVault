@@ -1,4 +1,7 @@
+https://github.com/WiseTechGlobal/CargoWise/pull/43392
+
 Top level function call: change happens EARLIER than it used to:
+
 
 ```csharp
 protected virtual void RestorePrimaryReplica(List<DatabaseDetails> dbDetailsList, DbRestoreSettings dbRestoreSettings)
@@ -38,4 +41,4 @@ protected virtual void RestorePrimaryReplica(List<DatabaseDetails> dbDetailsList
 }
 ```
 
-What does this change do? After restoring all dbs without recovery, restoring all dbs with recovery, giving db rights to all dbs, altering db authorization
+What does this change do? After restoring all dbs without recovery, restoring all dbs with recovery, giving db rights to all dbs, altering db authorization, it invokes doing the remapping.
