@@ -137,7 +137,7 @@ SELECT @Sql = @Sql + N'
 ALTER AUTHORIZATION ON SCHEMA::' + QUOTENAME(SchemaName) + N' TO ' + QUOTENAME(@Target) + N';'
 
 **^ set owner to targetAppPrincipal if the schema owner starts with 'EnterpriseDbUser'**
-The thing is, the target app principal is just the first enterprise db user haha, so all we have done is set all the owner of all schemas owned by enterprise db user  to the first enterprise db user
+The thing is, the target app principal is just the first enterprise db user haha, so all we have done is set all the owner of all schemas owned by enterprise db user to the first enterprise db user
 
 FROM SchemasToFix
 WHERE OwnerName LIKE 'EnterpriseDbUser[_]%' ESCAPE '\'

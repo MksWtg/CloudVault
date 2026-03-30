@@ -41,4 +41,43 @@ protected virtual void RestorePrimaryReplica(List<DatabaseDetails> dbDetailsList
 }
 ```
 
-What does this change do? After restoring all dbs without recovery, restoring all dbs with recovery, giving db rights to all dbs, altering db authorization, it invokes doing the remapping.
+What does this change do? After restoring all dbs without recovery, restoring all dbs with recovery, giving rights to all dbs, altering db authorization, **it invokes doing the remapping.**
+
+How does the remapping actually work?
+
+```csharp
+internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<DatabaseDetails> dbDetailsList, DbRestoreSettings dbRestoreSettings)
+{
+	var targetMainDbName = dbRestoreSettings.TargetDbName; //O2_Restore
+	var sourceMainDbName = GetSourceDatabaseNameFromBackup(dbRestoreSettings); //Odyssey2
+	if (string.IsNullOrEmpty(sourceMainDbName) || sourceMainDbName.Equals(targetMainDbName, StringComparison.OrdinalIgnoreCase))
+	{
+		return;
+	}
+
+	var sourceLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(sourceMainDbName); //EnterpriseDbUser_dbname_ string
+	var targetLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(targetMainDbName);
+
+	foreach (var dbDetail in dbDetailsList)
+	{
+		try
+		{
+			FireOnSubtaskStarted(
+				$"Reassigning schema owners in {{{nameof(dbDetail.DatabaseName)}}}",
+				1,
+				(nameof(dbDetail.DatabaseName), dbDetail.DatabaseName));
+
+			using (var connection = Db.NewAdminConnection(dbDetail.ServerConfig.ServerName, Db.SqlMasterDb))
+			{
+				ReassignSchemaOwnersInDatabase(connection, dbDetail.DatabaseName, sourceLoginPrefix, targetLoginPrefix);
+			}
+		}
+		catch (Exception ex) when (!ex.IsCriticalException())
+		{
+			FireOnShowInfoMessage(
+				$"Warning: Failed to reassign schema owners in {{{nameof(dbDetail.DatabaseName)}}}: {{{nameof(ex)}}}",
+				(nameof(dbDetail.DatabaseName), dbDetail.DatabaseName), (nameof(ex), ex.Message));
+		}
+	}
+}
+```
