@@ -82,3 +82,26 @@ internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<Databas
 	}
 }
 ```
+
+```csharp
+// generic method to do this in a database i am sure we can reduce this to only work for user repository
+void ReassignSchemaOwnersInDatabase(AdminConnection connection, string databaseName, string sourceLoginPrefix, string targetLoginPrefix)
+{
+	var schemasOwnedBySourceUsers = GetSchemasOwnedByEnterpriseDbUsers(connection, databaseName, sourceLoginPrefix);
+	if (schemasOwnedBySourceUsers.Count == 0)
+	{
+		return;
+	}
+
+	foreach (var (schemaName, sourceUserName) in schemasOwnedBySourceUsers)
+	{
+		var staffSuffix = sourceUserName.Substring(sourceLoginPrefix.Length);
+		var targetLoginFullName = targetLoginPrefix + staffSuffix;
+		var targetLoginName = targetLoginFullName.Length > 128 ? targetLoginFullName.Substring(0, 128) : targetLoginFullName;
+
+		EnsureServerLoginExists(connection, targetLoginName);
+		EnsureDatabaseUserExists(connection, databaseName, targetLoginName);
+		AlterSchemaAuthorization(connection, databaseName, schemaName, targetLoginName);
+	}
+}
+```
