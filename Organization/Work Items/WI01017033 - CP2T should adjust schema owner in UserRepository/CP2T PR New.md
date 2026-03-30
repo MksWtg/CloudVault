@@ -105,3 +105,31 @@ void ReassignSchemaOwnersInDatabase(AdminConnection connection, string databaseN
 	}
 }
 ```
+
+This method returns for example "Schema1, mukund", "schema2, otheruser" etc.
+```csharp
+static List<(string SchemaName, string OwnerName)> GetSchemasOwnedByEnterpriseDbUsers(AdminConnection connection, string databaseName, string sourceLoginPrefix)
+{
+	var result = new List<(string SchemaName, string OwnerName)>();
+	var quotedDbName = databaseName.QuoteName();
+	var sql = Invariant($@"
+SELECT s.name AS SchemaName, dp.name AS OwnerName
+FROM {quotedDbName}.sys.schemas s
+JOIN {quotedDbName}.sys.database_principals dp ON s.principal_id = dp.principal_id
+WHERE dp.name LIKE @sourceLoginPrefix + N'%'
+AND s.name <> dp.name");
+
+	var command = connection.Command(sql);
+	command.AddParameter("@sourceLoginPrefix", SqlDbType.NVarChar, 128, DataUtils.ReplaceSqlLikeWildcard(sourceLoginPrefix));
+	using (var reader = command.ExecuteReader())
+	{
+		while (reader.Read())
+		{
+			result.Add(((string)reader["SchemaName"], (string)reader["OwnerName"]));
+		}
+	}
+
+	return result;
+}
+```
+
