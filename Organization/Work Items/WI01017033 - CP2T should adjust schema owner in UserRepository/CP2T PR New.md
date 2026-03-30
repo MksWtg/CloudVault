@@ -69,6 +69,7 @@ internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<Databas
 
 			using (var connection = Db.NewAdminConnection(dbDetail.ServerConfig.ServerName, Db.SqlMasterDb))
 			{
+				// reassigns the schema owner for each database, we might be able to reduce this to purely the user repository database
 				ReassignSchemaOwnersInDatabase(connection, dbDetail.DatabaseName, sourceLoginPrefix, targetLoginPrefix);
 			}
 		}
