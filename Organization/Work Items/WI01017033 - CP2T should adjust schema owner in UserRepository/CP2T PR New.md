@@ -41,7 +41,7 @@ protected virtual void RestorePrimaryReplica(List<DatabaseDetails> dbDetailsList
 }
 ```
 
-What does this change do? After restoring all dbs without recovery, restoring all dbs with recovery, giving rights to all dbs, altering db authorization, **it invokes doing the remapping.**
+What does this change do? After restoring all dbs without recovery, restoring all dbs with recovery, giving rights to all dbs, altering db authorization, **it invokes doing the reassigning.**
 
 How does the remapping actually work?
 
@@ -49,7 +49,7 @@ How does the remapping actually work?
 internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<DatabaseDetails> dbDetailsList, DbRestoreSettings dbRestoreSettings)
 {
 	var targetMainDbName = dbRestoreSettings.TargetDbName; // O2_Restore, this comes directly from the DBBR settings
-	var sourceMainDbName = GetSourceDatabaseNameFromBackup(dbRestoreSettings); //Odyssey2, htis co
+	var sourceMainDbName = GetSourceDatabaseNameFromBackup(dbRestoreSettings); //Odyssey2, this comes from the main file from the main database inside
 	if (string.IsNullOrEmpty(sourceMainDbName) || sourceMainDbName.Equals(targetMainDbName, StringComparison.OrdinalIgnoreCase))
 	{
 		return;
