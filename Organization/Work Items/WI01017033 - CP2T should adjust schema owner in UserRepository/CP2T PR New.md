@@ -48,8 +48,8 @@ How does the remapping actually work?
 ```csharp
 internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<DatabaseDetails> dbDetailsList, DbRestoreSettings dbRestoreSettings)
 {
-	var targetMainDbName = dbRestoreSettings.TargetDbName; // O2_Restore
-	var sourceMainDbName = GetSourceDatabaseNameFromBackup(dbRestoreSettings); //Odyssey2
+	var targetMainDbName = dbRestoreSettings.TargetDbName; // O2_Restore, this comes directly from the DBBR settings
+	var sourceMainDbName = GetSourceDatabaseNameFromBackup(dbRestoreSettings); //Odyssey2, htis co
 	if (string.IsNullOrEmpty(sourceMainDbName) || sourceMainDbName.Equals(targetMainDbName, StringComparison.OrdinalIgnoreCase))
 	{
 		return;
