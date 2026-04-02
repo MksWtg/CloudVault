@@ -23,45 +23,32 @@ public class SubOrchestratorCommonComponent
     public override async Task<Empty> RegisterAgent(
         RegisterAgentRequest request, ServerCallContext context)
     {
-  var certificate = context.AuthContext?.FindClaimValue("x509_cert");
-  if (certificate == null) 
-  {
-   throw new RpcException(new Status(StatusCode.Internal, "Error processing client certificate"));
-  }
-  var certificateFingerprint = request.certificateFingerprint;
-  var expectedCertificateFingerprint = GetCertificateFingerprint(cert);
-
-  if (!certificateFingerprint.Equals(expectedCertificateFingerprint, StringComparison.OrginalIgnoreCase))
-  {
-   throw new RpcException(new Status(StatusCode.PermissionDenied, "Client certificate fingerprint does not match expected fingerprint"));
-  }
-
-  var cargoWiseHost = new CargoWiseHost
-  {
-   FullyQualifiedDomainName = request.fqdn,
-   DomainName = request.domainName,
-   HostName = request.hostName,
-   DataCentre = request.dataCentre,
-   LastHeartBeat = DateTime.NowUtc,
-  };
-        this.cargoWiseHostInstalledVersions[host] = new HashSet<Version>();
-
-        return new Empty();
-    }
-
-    public override async Task<Empty> ReportInstalledVersions(
-        ReportInstalledVersionsRequest request, ServerCallContext context)
-    {
-  // check if the host is registered as a known host first
-        var registeredHost = this.cargoWiseHostInstalledVersions.Keys.FirstOrDefault(host => host.FullyQualifiedDomainName.Equals(request.fqdn, StringComparison.OrdinalIgnoreCase);
-  if (registeredHost == null) 
-  {
-   throw new RpcException(new Status(StatusCode.NotFound, "Unregistered Host"));
-  }
-  
-        this.cargoWiseHostInstalledVersions[registeredHost].AddRange(request.installedVersions);
-            
-  return new Empty();
+		  var cargoWiseHost = new CargoWiseHost
+		  {
+		   FullyQualifiedDomainName = request.fqdn,
+		   DomainName = request.domainName,
+		   HostName = request.hostName,
+		   DataCentre = request.dataCentre,
+		   LastHeartBeat = DateTime.NowUtc,
+		  };
+		        this.cargoWiseHostInstalledVersions[host] = new HashSet<Version>();
+		
+		        return new Empty();
+		    }
+		
+		    public override async Task<Empty> ReportInstalledVersions(
+		        ReportInstalledVersionsRequest request, ServerCallContext context)
+		    {
+		  // check if the host is registered as a known host first
+		        var registeredHost = this.cargoWiseHostInstalledVersions.Keys.FirstOrDefault(host => host.FullyQualifiedDomainName.Equals(request.fqdn, StringComparison.OrdinalIgnoreCase);
+		  if (registeredHost == null) 
+		  {
+		   throw new RpcException(new Status(StatusCode.NotFound, "Unregistered Host"));
+		  }
+		  
+		        this.cargoWiseHostInstalledVersions[registeredHost].AddRange(request.installedVersions);
+		            
+		  return new Empty();
     }
 
     public bool TryGetHostVersions(string hostFqdn, out IEnumerable<Version> hostVersions)
@@ -94,15 +81,6 @@ public class SubOrchestratorCommonComponent
         return hosts.Length > 0;
     } 
  
- static string GetCertificateFingerprint(string certificateData)
- {
-  using (var sha256 = SHA256.Create()) 
-  {
-   byte[] certBytes = Convert.FromBase64String(certificateData);
-   byte[] hash = sha256.ComputeHash(certBytes);
-   return BitConverter.ToString(hash).Replace("-", ":");
-  }
- }
 }
 // -------------
 
