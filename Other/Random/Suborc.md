@@ -1,10 +1,10 @@
 
 ```csharp
-// the interface that suborchs need to inject for implementation.
+// the interface that suborchs need to inject for implementation- does this talk to the agent?
 public interface ISubOrchestratorCommonComponentVersionCache
 {
-    bool TryGetHostVersions(string hostFqdn, out IEnumerable<Version> hostVersions);
-    bool TryGetHostsWithVersion(Version targetVersion, out IEnumerable<CargoWiseHost> hosts);
+    bool TryGetHostVersions(string hostFqdn, out IEnumerable<Version> hostVersions); //gets all versions on a single host
+    bool TryGetHostsWithVersion(Version targetVersion, out IEnumerable<CargoWiseHost> hosts); //Gets all hosts with verison x
 }
 
 // This is the common component in the case that we have in-memory caching with dictionary.
