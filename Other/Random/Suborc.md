@@ -6,7 +6,9 @@ public interface ISubOrchestratorCommonComponentVersionCache
     bool TryGetHostVersions(string hostFqdn, out IEnumerable<Version> hostVersions); //gets all versions on a single host
     bool TryGetHostsWithVersion(Version targetVersion, out IEnumerable<CargoWiseHost> hosts); //Gets all hosts with verison x
 }
+```
 
+```csharp
 // This is the common component in the case that we have in-memory caching with dictionary.
 public class SubOrchestratorCommonComponent
     : OrchestratorCommonService.OrchestratorCommonServiceBase, ISubOrchestratorCommonComponentVersionCache
