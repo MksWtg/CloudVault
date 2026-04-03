@@ -25,7 +25,7 @@ Well this maps to all points on the line with gradient 1.
 
 | C2  |                                | Each point is z0, z1 are complex numbers            |
 | --- | ------------------------------ | --------------------------------------------------- |
-| S3  |                                | Take only the unit vectors from above               |
+| C2  |                                | Take only the unit vectors from above               |
 | CP1 | All points where z0 : z1 is 1  | Complex projective line- C plus a point at infinity |
 | S2  | (1, 0, 0) or lat = 0, long = 0 | Sphere                                              |
 |     |                                |                                                     |
