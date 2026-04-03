@@ -8,4 +8,6 @@ Think of it as wrapping the plane into a ball and joining it at a point.
 ![[Pasted image 20260403114100.png]]
 
 
-Every point in C2 belongs to a line through the origin
+Every point in C2 belongs to a line through the origin. This is a map C2 -> CP1
+
+replace C2 with 
