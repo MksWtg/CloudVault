@@ -30,3 +30,5 @@ Well this maps to all points on the line with gradient 1.
 | CP1 | All points where z0 : z1 is 1                                                                                                                                                                                       | Complex projective line- C plus a point at infinity |
 | S2  | (1, 0, 0) or lat = 0, long = 0                                                                                                                                                                                      | Sphere                                              |
 |     |                                                                                                                                                                                                                     |                                                     |
+Start with two complex points z0, z1 and assume the norm of (z0, z1) is 1.
+Now z0/z1 is a complex number.
