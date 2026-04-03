@@ -23,9 +23,9 @@ What is the circle this maps to?
 Well this maps to all points on the line with gradient 1.
 
 
-| C2  |                                | Each point is z0, z1 are complex numbers |
-| --- | ------------------------------ | ---------------------------------------- |
-| S3  |                                | Take only the unit vectors from above    |
-| CP1 |                                | Complex projective line                  |
-| S2  | (1, 0, 0) or lat = 0, long = 0 |                                          |
-|     |                                |                                          |
+| C2  |                                | Each point is z0, z1 are complex numbers            |
+| --- | ------------------------------ | --------------------------------------------------- |
+| S3  |                                | Take only the unit vectors from above               |
+| CP1 |                                | Complex projective line- C plus a point at infinity |
+| S2  | (1, 0, 0) or lat = 0, long = 0 |                                                     |
+|     |                                |                                                     |
