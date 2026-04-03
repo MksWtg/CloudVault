@@ -23,7 +23,7 @@ What is the circle this maps to?
 Well this maps to all points on the line with gradient 1.
 
 
-| S3  | The norm square                                              | Take only the unit vectors from above               |
+| S3  | The norm \|\|(z0, z1))\|\|  =sqrt(norm(zo)^2 + )             | Take only the unit vectors from above               |
 | --- | ------------------------------------------------------------ | --------------------------------------------------- |
 | C2  | The diagonal line in C- $\lambda(1, 1)$ where lambda is in C | Each point is z0, z1 are complex numbers            |
 | CP1 | All points where z0 : z1 is 1                                | Complex projective line- C plus a point at infinity |
