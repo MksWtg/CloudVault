@@ -10,4 +10,4 @@ Think of it as wrapping the plane into a ball and joining it at a point.
 
 Every point in C2 belongs to a line through the origin. This is a map C2 -> CP1
 
-replace C2 with S3 
+replace C2 with S3 (considering only the unit vectors) and replace CP1 with S2 (the stereographic projection). We get a map S3 -> S2
