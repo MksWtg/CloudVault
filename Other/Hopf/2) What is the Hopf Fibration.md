@@ -14,4 +14,9 @@ replace C2 with S3 (considering only the unit vectors) and replace CP1 with S2 (
 
 It maps each point on S2 to a circle on S3.
 
-Consider 
+Consider (x = 0, y = 0, z = 1)
+
+In the sphere above, 1 is x, i is y and infinity is z.
+
+What is the circle this maps to?
+
