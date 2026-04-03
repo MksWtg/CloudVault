@@ -21,3 +21,11 @@ In the sphere above, 1 is x, i is y and infinity is z.
 What is the circle this maps to?
 
 Well this maps to all points on the line with gradient 1.
+
+
+| C2  |     |
+| --- | --- |
+|     |     |
+|     |     |
+|     |     |
+|     |     |
