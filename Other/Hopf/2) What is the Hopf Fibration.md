@@ -31,4 +31,4 @@ Well this maps to all points on the line with gradient 1.
 | S2  | (1, 0, 0) or lat = 0, long = 0                                                                                                                                                                                      | Sphere                                              |
 |     |                                                                                                                                                                                                                     |                                                     |
 Start with two complex points z0, z1 and assume the norm of (z0, z1) is 1.
-Now z0/z1 is a complex number.
+Now z0/z1 is a complex number. Take the equivalence class of all such points with the same ration. these form a circle. This ratio, a complex number w, is a point on the complex plane. use stereo projection to make it a point on S2.
