@@ -23,9 +23,9 @@ What is the circle this maps to?
 Well this maps to all points on the line with gradient 1.
 
 
-| C2  |     |
-| --- | --- |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
+| C2  |                                |
+| --- | ------------------------------ |
+| S3  |                                |
+| CP1 |                                |
+| S2  | (1, 0, 0) or lat = 0, long = 0 |
+|     |                                |
