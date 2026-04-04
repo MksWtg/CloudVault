@@ -6,7 +6,7 @@ Our definition of the circle in agda:
 ```haskell
 data S¹ : Type where
   base : S¹ -- this constructor produces an S1
-  loop : base ≡ base -- triple equals is a dependent type constructor. indexed by an element x of type A and produces a Type. The data constructor is refl, and calling refl with the element x will produce the type 'x = x
+  loop : base ≡ base -- triple equals is a dependent type constructor. indexed by an element x of type A and produces a Type. The data constructor is refl, and calling refl with the element x will produce the type 'x = x'.
 ```
 
 ```haskell
