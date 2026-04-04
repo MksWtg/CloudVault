@@ -31,3 +31,4 @@ data S¹ : Type₀ where
 
 #### Type0 Definition
 
+`Type₀`

@@ -3,9 +3,7 @@
 
 
 
-Codata\M\itree.agda:34:tree-S E R = (R ⊎ (Σ[ A ∈ Type₀ ] (E A))) , (λ { (inl _) -> ⊥* ; (inr (A , e))
--> Lift _ A } )
-Codata\M\itree.agda:36:tree : (E : Type₀ -> Type₁) (R : Type₀) -> Type₁
+
 Codata\M\itree.agda:50:itree-S : ∀ (E : Type₀ -> Type₁) (R : Type₀) -> Container (ℓ-suc ℓ-zero)
 Codata\M\itree.agda:51:itree-S E R = ((Unit ⊎ R) ⊎ (Σ[ A ∈ Type₀ ] (E A))) , (λ { (inl (inl _)) ->
 Unit* ; (inl (inr _)) -> ⊥* ; (inr (A , e)) -> Lift _ A } )
