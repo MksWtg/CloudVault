@@ -13,3 +13,10 @@ Off the bat so many questions.
 1) What is the Sort `Type`
 2) What is the equality `≡`
 3) How is the equality in #2 able to produce an value of type `S1`
+
+
+## Source Code Useful Bits
+
+Here are some relevant pieces of source code to make sense of the above parts.
+
+This is actually a really easy and helpful step- all we do is loo
