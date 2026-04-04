@@ -52,3 +52,5 @@ infix 4 _[_≡_] -- precedence
 _[_≡_] : ∀ {ℓ} (A : I → Type ℓ ) → A i0 → A i1 → Type ℓ
 _[_≡_] = PathP
 ```
+
+for universe `l`, 
