@@ -6,5 +6,7 @@ data Vec (A : Set) : Nat → Set where
   _::_ : {n : Nat} → A → Vec A n → Vec A (suc n)
 ```
 
-`n` indexes `Vec`
+`n` indexes `Vec`.
+
+Determines which constructors are allowed; changes the "shape".
 
