@@ -9,6 +9,12 @@ data S¹ : Type where
   loop : base ≡ base -- triple equals is the type constructor? takes a single element and produces an element of the type a = a
 ```
 
+```haskell
+data _≡_ {A : Set} (x : A) : A → Set where  
+refl : x ≡ x
+```
+
+
 Off the bat so many questions.
 1) What is the Sort `Type`
 2) What is the equality `≡`
