@@ -6,7 +6,7 @@ Our definition of the circle in agda:
 ```haskell
 data S¹ : Type where
   base : S¹ -- this constructor produces an S1
-  loop : base ≡ base -- triple equals is a dependent type constructor. indexed by an element x of type A and produces a Type. The data constructor is refl, and calling refl with the element x will produce the type 'x = x'.
+  loop : base ≡ base -- triple equals is a dependent type constructor. indexed by an element x of type A and produces a Type. The data constructor is refl, and calling refl with the element x will produce the type 'x = x'. remember in 'zero : Nat' zero is an element of type Nat. Here refl is an element of type 'x ≡ x'.
 ```
 
 ```haskell
@@ -47,8 +47,9 @@ renaming ( lzero to ℓ-zero
            ; Setω  to Typeω )
 ```
 
-so Type₀ is just Set₀, which is Set0
+so `Type₀` is just `Set₀`, which is `Set0`.
 
+#### ≡ Definition
 
 What about `_≡_`?
 
@@ -59,4 +60,4 @@ _[_≡_] : ∀ {ℓ} (A : I → Type ℓ ) → A i0 → A i1 → Type ℓ
 _[_≡_] = PathP
 ```
 
-for universe `l`, 
+for universe `l`,  We giv
