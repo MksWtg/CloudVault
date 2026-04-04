@@ -96,5 +96,5 @@ Similarly to the above
 ```
 
 ```haskell
-(builtinIZero                            |-> BuiltinDataCons tinterval)
+(builtinIOne                             |-> BuiltinDataCons tinterval)
 ```
