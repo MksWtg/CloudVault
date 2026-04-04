@@ -10,3 +10,11 @@ data Vec (A : Set) : Nat → Set where
 
 Determines which constructors are allowed; changes the "shape".
 
+```haskell
+data Expr : Set → Set where
+  Lit  : {A : Set} → A → Expr A
+  Add  : Expr Nat → Expr Nat → Expr Nat
+  Pair : {A B : Set} → Expr A → Expr B → Expr (A × B)
+```
+
+Here `Expr` is indexed by a type, it controls the constructors that can be used.
