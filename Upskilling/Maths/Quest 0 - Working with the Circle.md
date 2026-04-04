@@ -62,4 +62,8 @@ _[_≡_] = PathP
 
 for universe `l`,  We explicitly give a function from the unit interval `I` to any universe `Type` (so a type, a type of types etc.) Then two types `A i0` so the type given by indexing `A` by `i0` and `A i1`. This returns a new type- the type that `A i0` and `A i1` are equal? A path from `A i0` to `A i1`? And there is one constructor, which has the same name as the type, and it invokes `PathP` O.o. Gotta figure out what this is. This new method of equality (contrasted against the old method given below) has to, in the s1 definition, produce an s1. So despite being delegated to PathP it has to do the same
 
-So now we need to figure out where `I`, `i0`, `i1`, and PathP come from.
+So now we need to figure out where `I`, `i0`, `i1`, and `PathP` come from.
+
+#### PathP
+
+`PathP` is a type constructor.
