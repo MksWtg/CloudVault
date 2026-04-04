@@ -103,5 +103,6 @@ Ok, back to the questions at hand
 1) What is the Sort `Type`
 	1) An alias for `Set`
 2) What is the equality `≡`
-	1) 
+	1) magic function `∀ {ℓ} (A : I → Set ℓ) → A i0 → A i1 → Set ℓ`
 3) How is the equality in #2 able to produce an value of type `S1`
+	1) 
