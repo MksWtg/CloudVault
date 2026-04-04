@@ -84,4 +84,17 @@ PathP : ∀ {ℓ} (A : I → Set ℓ) → A i0 → A i1 → Set ℓ
 
 #### `I`, `i0`, `i1`
 
+Similarly to the above
 
+```haskell
+ (builtinInterval |-> BuiltinData (requireCubical CWithoutGlue >>
+	 return (sort IntervalUniv)) [builtinIZero,builtinIOne])
+```
+
+```haskell
+(builtinIZero                            |-> BuiltinDataCons tinterval)
+```
+
+```haskell
+(builtinIZero                            |-> BuiltinDataCons tinterval)
+```
