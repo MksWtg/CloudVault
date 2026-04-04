@@ -5,8 +5,8 @@ Our definition of the circle in agda:
 
 ```haskell
 data S¹ : Type where
-  base : S¹
-  loop : base ≡ base
+  base : S¹ -- this constructor produces an S1
+  loop : base ≡ base -- triple equals is the type constructor? takes a single element and produces an element of the type a = a
 ```
 
 Off the bat so many questions.
