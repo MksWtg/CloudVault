@@ -41,4 +41,7 @@ renaming ( lzero to ℓ-zero
            ; Setω  to Typeω )
 ```
 
-so Type₀ is just Set₀
+so Type₀ is just Set₀, which is Set0
+
+
+What about 
