@@ -60,4 +60,6 @@ _[_≡_] : ∀ {ℓ} (A : I → Type ℓ ) → A i0 → A i1 → Type ℓ
 _[_≡_] = PathP
 ```
 
-for universe `l`,  We explicitly give a function from the unit interval `I` to any universe `Type` (so a type, a type of types etc.) Then two types `A i0` so the type given by indexing `A` by `i0`
+for universe `l`,  We explicitly give a function from the unit interval `I` to any universe `Type` (so a type, a type of types etc.) Then two types `A i0` so the type given by indexing `A` by `i0` and `A i1`.
+
+So now we need to figure out where `I`, `i0`, `i1`, 
