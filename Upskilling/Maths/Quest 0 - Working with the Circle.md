@@ -32,3 +32,13 @@ data S¹ : Type₀ where
 #### Type0 Definition
 
 `Type₀`
+
+```
+renaming ( lzero to ℓ-zero
+           ; lsuc  to ℓ-suc
+           ; _⊔_   to ℓ-max
+           ; Set   to Type
+           ; Setω  to Typeω )
+```
+
+so Type₀ is just Set₀
