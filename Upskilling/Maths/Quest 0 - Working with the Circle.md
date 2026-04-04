@@ -69,9 +69,19 @@ So now we need to figure out where `I`, `i0`, `i1`, and `PathP` come from.
 `PathP` is a type constructor. The source code is in haskell
 
 ```haskell
-(builtinPathP           |-> builtinPostulateC CWithoutGlue (hPi "a" (el primLevel) $
+(builtinPathP |-> builtinPostulateC CWithoutGlue (hPi "a" (el primLevel) $
   nPi "A" (tinterval --> return (sort $ varSort 0)) $
   (El (varSort 1) <$> varM 0 <@> primIZero) -->
   (El (varSort 1) <$> varM 0 <@> primIOne) -->
   return (sort $ varSort 1)))
 ```
+
+The important thing to know is it has declaration
+
+```haskell
+PathP : ∀ {ℓ} (A : I → Set ℓ) → A i0 → A i1 → Set ℓ
+```
+
+#### `I`, `i0`, `i1`
+
+
