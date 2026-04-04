@@ -85,17 +85,6 @@ Data\FinSet\Binary\Small\Properties.agda:70:  lemma : ∀(B : Type₀) → ∥ B
 El b ≃ B
 Data\Graph\Examples.agda:42:data Adj : ℕ → ℕ → Type₀ where
 Data\Graph\Examples.agda:73:data AdjFin : ∀ {k} → Fin k → Fin k → Type₀ where
-Data\InfNat\Base.agda:9:data ℕ+∞ : Type₀ where
-Data\Int\Base.agda:15:data ℤ : Type₀ where
-Data\Int\Order.agda:19:_≤_ : ℤ → ℤ → Type₀
-Data\Int\Order.agda:22:_<_ : ℤ → ℤ → Type₀
-Data\Int\Order.agda:25:_≥_ : ℤ → ℤ → Type₀
-Data\Int\Order.agda:28:_>_ : ℤ → ℤ → Type₀
-Data\Int\Order.agda:31:data Trichotomy (m n : ℤ) : Type₀ where
-Data\Int\Properties.agda:387:  T : ℤ → Type₀
-Data\Int\Properties.agda:394:  T : ℤ → Type₀
-Data\Int\Properties.agda:401:  T : ℤ → Type₀
-Data\Int\Properties.agda:408:  T : ℤ → Type₀
 Data\Int\Properties.agda:518:ind-comm : {A : Type₀} (_∙_ : A → A → A) (f : ℕ → A) (g : A → A)
 Data\Int\Properties.agda:535:ind-assoc : {A : Type₀} (_·_ : A → A → A) (f : ℕ → A)
 Data\Int\MoreInts\BiInvInt\Base.agda:33:data BiInvℤ : Type₀ where
@@ -136,28 +125,6 @@ Data\Rationals\MoreRationals\QuoQ\Base.agda:31:ℚ : Type₀
 Data\Rationals\MoreRationals\SigmaQ\Base.agda:18:ℚ : Type₀
 Data\SumFin\Base.agda:18:Fin : ℕ → Type₀
 Data\Unit\Properties.agda:94:isContr→≡Unit : {A : Type₀} → isContr A → A ≡ Unit
-Experiments\FunExtFromUA.agda:89:  data ℕ : Type₀ where
-Experiments\Generic.agda:21:There : Type₀ → Type₀
-Experiments\Generic.agda:24:Database : Type₀
-Experiments\Generic.agda:55:Address : Type₀
-Experiments\Generic.agda:58:Name : Type₀
-Experiments\Generic.agda:61:data Person : Type₀ where
-Experiments\Generic.agda:64:data Salary (A : Type₀) : Type₀ where
-Experiments\Generic.agda:67:data Employee (A : Type₀) : Type₀ where
-Experiments\Generic.agda:70:Manager : Type₀ → Type₀
-Experiments\Generic.agda:75:  data Dept (A : Type₀) : Type₀ where
-Experiments\Generic.agda:78:  data SubUnit (A : Type₀) : Type₀ where
-Experiments\Generic.agda:82:data Company (A : Type₀) : Type₀ where
-Experiments\HInt.agda:29:data ℤ : Type₀ where
-Experiments\HoTT-UF.agda:65:  data ℕ : Type₀ where
-Experiments\Problem.agda:17:ptType = Σ Type₀ \ A → A
-Experiments\HAEquivInt\Base.agda:7:data HAEquivInt : Type₀ where
-Experiments\IsoInt\Base.agda:22:data IsoInt : Type₀ where
-Experiments\NatMinusTwo\Base.agda:8:record ℕ₋₂ : Type₀ where
-Experiments\ZCohomologyOld\Base.agda:24:coHomK : (n : ℕ) → Type₀
-Experiments\ZCohomologyOld\KcompPrelims.agda:55:    P : (a b : S₊ (2 + n)) → Type₀
-Experiments\ZCohomologyOld\KcompPrelims.agda:100:  Code : (y : Susp S2+n) → north ≡ y → Type₀
-Experiments\ZCohomologyOld\Properties.agda:506:Unit' : Type₀
 Foundations\HLevels.agda:29:HLevel : Type₀
 HITs\Delooping\Two\Base.agda:8:data Bℤ₂ : Type₀ where
 HITs\Delooping\Two\Properties.agda:50:  El : Bℤ₂ → Type₀
@@ -180,70 +147,10 @@ HITs\Modulo\FinEquiv.agda:26:  ResiduePath : ℕ → Type₀
 HITs\RPn\Base.agda:45:data RP² : Type₀ where
 HITs\RPn\Base.agda:52:2-EltType₀    = TypeEqvTo    ℓ-zero Bool -- Σ[ X ∈ Type₀ ] ∥ X ≃ Bool ∥
 HITs\RPn\Base.agda:53:2-EltPointed₀ = PointedEqvTo ℓ-zero Bool -- Σ[ X ∈ Type₀ ] X × ∥ X ≃ Bool ∥
-HITs\RPn\Base.agda:55:Bool* : 2-EltType₀
-HITs\RPn\Base.agda:93:module ⊕* (X : 2-EltType₀) where
-HITs\RPn\Base.agda:108:  elim : ∀ {ℓ'} (P : (A : Type₀) (_⊕'_ : A → A → Bool) → Type ℓ') (propP : ∀ A
-_⊕'_ → isProp (P A _⊕'_))
-HITs\RPn\Base.agda:115:          R₂ : (B : Type₀) → B ≃ Bool → B → B → Bool
-HITs\RPn\Base.agda:145:RP  : ℕ₋₁ → Type₀
-HITs\RPn\Base.agda:146:cov⁻¹ : (n : ℕ₋₁) → RP n → 2-EltType₀ -- (see Cubical.Functions.Bundle)
-HITs\S1\Base.agda:22:data S¹ : Type₀ where
-HITs\S1\Base.agda:36:helix : S¹ → Type₀
-HITs\S1\Base.agda:40:ΩS¹ : Type₀
-HITs\S1\Base.agda:149:basedΩS¹ : (x : S¹) → Type₀
-HITs\S2\Base.agda:6:data S² : Type₀ where
-HITs\S3\Base.agda:7:data S³ : Type₀ where
-HITs\Sn\Base.agda:12:S : ℕ₋₁ → Type₀
-HITs\Sn\Base.agda:16:S₊ : ℕ → Type₀
-HITs\Susp\Base.agda:90:SuspBool : Type₀
-HITs\Susp\Base.agda:132:SuspS¹ : Type₀
-HITs\Susp\Base.agda:176:SuspS² : Type₀
-HITs\Torus\Base.agda:22:data Torus : Type₀ where
-HITs\Torus\Base.agda:61:Loop : {A : Type₀} (p : A) → Type₀
-HITs\Torus\Base.agda:64:ΩTorus : Type₀
-HITs\Torus\Base.agda:100:data Torus' : Type₀ where
-Homotopy\Hopf.agda:386:  Border : (x : S¹) → (j : I) → Partial (j ∨ ~ j) (Σ Type₀ (λ T → T ≃ S¹))
-Homotopy\Hopf.agda:391:  HopfSuspS¹ : SuspS¹ → Type₀
-Homotopy\Hopf.agda:398:  HopfS² : S² → Type₀
-Homotopy\Hopf.agda:407:  HopfS²' : S² → Type₀
-Homotopy\Hopf.agda:415:  TotalHopf : Type₀
-Homotopy\Hopf.agda:447:  fibℤ : S¹ → S¹ → Type₀
-Homotopy\Hopf.agda:450:  S¹→HSet : (A : Type₀) (p : isSet A) (F : S¹ → A) (x : S¹) → F base ≡ F x
-Homotopy\Hopf.agda:473:  discretefib : (F : S¹ → S¹ → Type₀) → Type₀
-Homotopy\Hopf.agda:558:  PseudoHopf : Type₀
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:43:join∙ : Pointed₀ → Type₀ → Pointed₀
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:50:mapΩrefl : {A : Pointed₀} {B : Type₀} (f : A .fst →
-B) → Ω A .fst → Ω (B , f (pt A)) .fst
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:53:mapΩ²refl : {A : Pointed₀} {B : Type₀} (f : A .fst →
-B) → Ω² A .fst → Ω² (B , f (pt A)) .fst
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:56:mapΩ³refl : {A : Pointed₀} {B : Type₀} (f : A .fst →
-B) → Ω³ A .fst → Ω³ (B , f (pt A)) .fst
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:68:connectionBoth : {A : Type₀} {a : A} (p : Path A a
-a) → PathP (λ i → Path A (p i) (p i)) p p
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:79:data PostTotalHopf : Type₀ where
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:110:fibΩ : {B : Pointed₀} (P : B .fst → Type₀) → P (pt
-B) → Ω B .fst → Type₀
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:113:fibΩ² : {B : Pointed₀} (P : B .fst → Type₀) → P (pt
-B) → Ω² B .fst → Type₀
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:116:fibΩ³ : {B : Pointed₀} (P : B .fst → Type₀) → P (pt
-B) → Ω³ B .fst → Type₀
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:119:Ω³Hopf : Ω³ S²∙ .fst → Type₀
-Homotopy\Group\Pi4S3\BrunerieExperiments.agda:201:tHopf³ : S³ → Type₀
-Structures\Auto.agda:7:  autoDesc (λ (X : Type₀) → X → X × ℕ)   ↦   function+ var (var , constant ℕ)
-Structures\Auto.agda:9:We prefer to use the constant structure whenever possible, e.g., [autoDesc (λ
-(X : Type₀) → ℕ → ℕ)]
-Structures\Relational\Auto.agda:7:  autoDesc (λ (X : Type₀) → X → X × ℕ)   ↦   function+ var (var ,
-constant ℕ)
-Structures\Relational\Auto.agda:9:We prefer to use the constant structure whenever possible, e.g.,
-[autoDesc (λ (X : Type₀) → ℕ → ℕ)]
-Tactics\CommRingSolver\Examples.agda:26:    making the user aware that the problem is, that 'Type₀'
-Tactics\CommRingSolver\Examples.agda:31:  _ = solve Type₀
-ZCohomology\Base.agda:26:coHomK : (n : ℕ) → Type₀
-ZCohomology\GroupStructure.agda:800:Unit' : Type₀
-ZCohomology\Properties.agda:312:  Code : (n : ℕ) →  coHomK (2 + n) → Type₀
-ZCohomology\Properties.agda:316:    Code' : (S₊ (2 + n)) → Type₀
-ZCohomology\Groups\CP2.agda:299:  cupIsEquiv : {A B : Type₀}
-ZCohomology\Groups\Prelims.agda:232:         helperFun2 : {A : Type₀} {0A a b : A} (main : 0A ≡ 0A)
-(start : b ≡ b) (p : a ≡ a) (q : a ≡ b) (r : b ≡ 0A) (Q : a ≡ 0A)
-ZCohomology\Groups\Prelims.agda:251:         congFunct₃ : ∀ {A B : Type₀} {a b c d : A} (f : A → B)
-(p : a ≡ b) (q : b ≡ c) (r : c ≡ d)
+
+
+
+
+
+
+
