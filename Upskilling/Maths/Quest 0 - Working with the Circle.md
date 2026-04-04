@@ -44,4 +44,11 @@ renaming ( lzero to ℓ-zero
 so Type₀ is just Set₀, which is Set0
 
 
-What about 
+What about `_≡_`?
+
+```haskell
+infix 4 _[_≡_] -- precedence
+
+_[_≡_] : ∀ {ℓ} (A : I → Type ℓ ) → A i0 → A i1 → Type ℓ
+_[_≡_] = PathP
+```
