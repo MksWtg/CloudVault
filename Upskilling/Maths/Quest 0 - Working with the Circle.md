@@ -19,4 +19,15 @@ Off the bat so many questions.
 
 Here are some relevant pieces of source code to make sense of the above parts.
 
-This is actually a really easy and helpful step- all we do is loo
+This is actually a really easy and helpful step- all we do is look at the bits we want that we don't have (equality, type).
+
+#### S1 Definition
+
+```haskell
+data S¹ : Type₀ where
+  base : S¹
+  loop : base ≡ base
+```
+
+#### Type0 Definition
+
