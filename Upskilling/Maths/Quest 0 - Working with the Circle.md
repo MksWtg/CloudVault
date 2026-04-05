@@ -99,6 +99,9 @@ Similarly to the above
 (builtinIOne                             |-> BuiltinDataCons tinterval)
 ```
 
+- We have a universe `IUniv`
+- A member of this universe `I`
+- 
 
 
 Ok, back to the questions at hand
