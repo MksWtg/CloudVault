@@ -116,5 +116,7 @@ Ok, back to the questions at hand
 
 ## Ok Starting Fresh
 
-Goal: prove $Refl \cong loop \to 
+Goal: prove $Refl \equiv loop \to \bot$ 
+
+Refl is a path from base to base. Loop is also a path from base to base. They both have type 
 
