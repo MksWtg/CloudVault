@@ -16,3 +16,7 @@ $F' : X \times [0, 1] \to E$ such that
 $F'(-, 0) = f$
 $p \circ F' = F$
 
+![[Pasted image 20260405135125.png]]
+
+Any homotopy in B can be lifted to one in E
+
