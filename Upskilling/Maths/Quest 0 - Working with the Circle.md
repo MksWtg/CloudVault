@@ -132,7 +132,7 @@ let there be a function `doubleCover : S1 -> Type`
 Lets say we send the point `base : S1` to `Bool : Type`
 and `loop : S1` to `Bool \equiv Bool : Type`
 
-and loop : S1 to non trivial (it flips) path called flippath in type.
+doubleCover loop is non trivial, so it does something 
 
 By function applicaiton, 
 
