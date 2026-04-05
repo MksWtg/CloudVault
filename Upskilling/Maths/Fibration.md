@@ -20,4 +20,4 @@ $p \circ F' = F$
 
 Any homotopy in B can be lifted to one in E
 
-1) starting with any function X to E, applying 
+1) starting with any function X to E, applying F' to transform it into another function and applying p is the same as applying 
