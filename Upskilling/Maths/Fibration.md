@@ -30,4 +30,4 @@ Cylinder projection
 
 Let $E$ be $S^1 \times [0, 1]$ and $B = [0, 1]$. $p$ is the projection onto the second coordinate, maps cylinder to interval.
 
-Each fibre $p^{-1}(t) = S^1 \times 
+Each fibre $p^{-1}(t) = S^1 \times \{t\} \cong S^1$
