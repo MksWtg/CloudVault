@@ -110,4 +110,5 @@ Ok, back to the questions at hand
 2) What is the equality `≡`
 	1) magic function `∀ {ℓ} (A : I → Set ℓ) → A i0 → A i1 → Set ℓ`
 3) How is the equality in #2 able to produce an value of type `S1`
-	1) 
+	1) who knows, it is internal magic
+
