@@ -124,5 +124,9 @@ How to prove refl equiv loop to bot?
 
 We make a path $p : true \equiv false$ from $h : refl \equiv loop$ 
 
-Make a 
+Make a path from a path? that doesn't make sense O.o
+
+I think we just show that we can move refl equiv loop to true equiv false. since true not equiv false, tehre is a contradiciton. so refl not equiv loop.
+
+Lets say we send the point base : S1 to 
 
