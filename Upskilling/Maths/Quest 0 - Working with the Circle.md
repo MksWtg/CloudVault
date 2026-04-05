@@ -132,7 +132,9 @@ let there be a function `doubleCover : S1 -> Type`
 Lets say we send the point `base : S1` to `Bool : Type`
 and `loop : S1` to `Bool \equiv Bool : Type`
 
-`doubleCover loop` is non trivial, so it does something 
+`doubleCover loop` is non trivial
+
+`doubleCover x` is the fibre of `doubleCover` over `x`
 
 
 
