@@ -129,8 +129,8 @@ Make a path from a path? that doesn't make sense O.o
 I think we just show that we can move refl equiv loop to true equiv false. since true not equiv false, tehre is a contradiciton. so refl not equiv loop.
 
 let there be a function `doubleCover : S1 -> Type`
-Lets say we send the point `base : S1` to `Bool : type`
-and `loop : `
+Lets say we send the point `base : S1` to `Bool : Type`
+and `loop : S1` to `Bool \equiv Bool : Type`
 
 and loop : S1 to non trivial (it flips) path called flippath in type.
 
