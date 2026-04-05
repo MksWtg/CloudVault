@@ -101,7 +101,7 @@ Similarly to the above
 
 - We have a universe `IUniv`
 - A member of this universe `I`
-- 
+- `i0` and `i1` of type `I`
 
 
 Ok, back to the questions at hand
