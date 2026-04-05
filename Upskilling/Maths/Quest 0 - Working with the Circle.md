@@ -112,3 +112,9 @@ Ok, back to the questions at hand
 3) How is the equality in #2 able to produce an value of type `S1`
 	1) who knows, it is internal magic
 
+---
+
+## Ok Starting Fresh
+
+Goal: prove $Refl \cong loop \to 
+
