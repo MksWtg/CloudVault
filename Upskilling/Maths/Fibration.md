@@ -28,4 +28,6 @@ Any homotopy in B can be lifted to one in E
 
 Cylinder projection
 
-Let $E$ be $S^1 \times [0, 1]
+Let $E$ be $S^1 \times [0, 1]$ and $B = [0, 1]$. $p$ is the projection onto the second coordinate, maps cylinder to interval.
+
+Each fibre $p^{-1}(t) = S^1 \times 
