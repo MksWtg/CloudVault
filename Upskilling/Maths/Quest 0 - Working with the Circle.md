@@ -138,6 +138,6 @@ and `loop : S1` to `Bool \equiv Bool : Type`
 
 We will get a path from true to false ( a contradiction, since these are not equal) by lifting the homotopy `h : Refl = loop`
 
-Refl 
+Refl will stay constant after lifting, while doubleCover will map true to false
 
 
