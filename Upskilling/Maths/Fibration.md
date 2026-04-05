@@ -30,4 +30,6 @@ Cylinder projection
 
 Let $E$ be $S^1 \times [0, 1]$ and $B = [0, 1]$. $p$ is the projection onto the second coordinate, maps cylinder to interval.
 
-Each fibre $p^{-1}(t) = S^1 \times \{t\} \cong S^1$
+
+
+Say $f : X \to E$ given by $f : S^1 \to E$, $f(\phi) = (\phi, 0)$
