@@ -118,5 +118,9 @@ Ok, back to the questions at hand
 
 Goal: prove $Refl \equiv loop \to \bot$ 
 
-Refl is a path from base to base. Loop is also a path from base to base. They both have type 
+Refl is a path from base to base. Loop is also a path from base to base. They both have type base \equiv base.
+
+How to prove refl equiv loop to bot?
+
+We make a path true \equiv false from Refl \equiv loop
 
