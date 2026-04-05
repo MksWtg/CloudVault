@@ -134,7 +134,10 @@ and `loop : S1` to `Bool \equiv Bool : Type`
 
 `doubleCover loop` is non trivial
 
-`doubleCover x` is the fibre of `doubleCover` over `x`
+`doubleCover x` is the fibre of `doubleCover` over `x`.
 
+We will get a path from true to false ( a contradiction, since these are not equal) by lifting the homotopy `h : Refl = loop`
+
+Refl 
 
 
