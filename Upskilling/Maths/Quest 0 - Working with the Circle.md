@@ -122,5 +122,7 @@ Refl is a path from base to base. Loop is also a path from base to base. They bo
 
 How to prove refl equiv loop to bot?
 
-We make a path true \equiv false from Refl \equiv loop
+We make a path $p : true \equiv false$ from $h : refl \equiv loop$ 
+
+Make a 
 
