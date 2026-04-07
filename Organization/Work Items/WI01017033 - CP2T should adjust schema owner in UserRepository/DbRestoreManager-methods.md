@@ -1,4 +1,4 @@
-# DbRestoreManager — Method Call Graph
+# DbRestoreManager Method Call Graph
 Prerequisites: [[WI01017033 - CP2T should adjust schema owner in UserRepository]], [[What is Copy Production to Test]]
 
 ```mermaid

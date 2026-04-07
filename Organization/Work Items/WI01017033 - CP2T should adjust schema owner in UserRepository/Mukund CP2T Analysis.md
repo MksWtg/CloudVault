@@ -57,7 +57,7 @@ internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<Databas
 		return;
 	}
 
-	var sourceLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(sourceMainDbName); //EnterpriseDbUser_dbname_ string
+	var sourceLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(sourceMainDbName); //EnterpriseDbUser_{sourceMainDbName}_ string
 	var targetLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(targetMainDbName);
 
 	foreach (var dbDetail in dbDetailsList) //this must be a list of database files e.g. odyssey, edocs, user repository (unsure)
