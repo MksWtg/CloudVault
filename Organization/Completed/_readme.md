@@ -1,3 +1,4 @@
+
 - Each week include the list of completed WIs
 - A completed WI is one that has been submit for review, all the iterations and stuff don't count
 - The week "starts" from the monday of the week, that is the title of the doc
