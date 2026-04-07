@@ -97,9 +97,9 @@ void ReassignSchemaOwnersInDatabase(AdminConnection connection, string databaseN
 
 	foreach (var (schemaName, sourceUserName) in schemasOwnedBySourceUsers)
 	{
-		var staffSuffix = sourceUserName.Substring(sourceLoginPrefix.Length);
-		var targetLoginFullName = targetLoginPrefix + staffSuffix;
-		var targetLoginName = targetLoginFullName.Length > 128 ? targetLoginFullName.Substring(0, 128) : targetLoginFullName;
+		var staffSuffix = sourceUserName.Substring(sourceLoginPrefix.Length); //just the staffname e.g. mukund1234 from EnterpriseDbUser_Odyssey2_mukund1234
+		var targetLoginFullName = targetLoginPrefix + staffSuffix; //new staff name EnterpriseDbUser_{targetdbname}_mukund1234
+		var targetLoginName = targetLoginFullName.Length > 128 ? targetLoginFullName.Substring(0, 128) : targetLoginFullName; //take first 128 chars, not sure why
 
 		EnsureServerLoginExists(connection, targetLoginName);
 		EnsureDatabaseUserExists(connection, databaseName, targetLoginName);
@@ -135,3 +135,20 @@ AND s.name <> dp.name");
 }
 ```
 
+
+```csharp
+static void EnsureServerLoginExists(AdminConnection connection, string loginName)
+{
+	var checkSql = "SELECT COUNT(*) FROM sys.server_principals WHERE name = @loginName"; //there may be multiple 
+	var checkCommand = connection.Command(checkSql);
+	checkCommand.AddParameter("@loginName", SqlDbType.NVarChar, 128, loginName);
+	var exists = (int)checkCommand.ExecuteScalar() > 0;
+
+	if (!exists)
+	{
+		var password = GenerateRandomPassword();
+		var createSql = Invariant($"CREATE LOGIN {loginName.QuoteName()} WITH PASSWORD = N'{password}', DEFAULT_DATABASE = [master], CHECK_POLICY = OFF, CHECK_EXPIRATION = OFF");
+		connection.ExecuteNonQuery(createSql);
+	}
+}
+```
