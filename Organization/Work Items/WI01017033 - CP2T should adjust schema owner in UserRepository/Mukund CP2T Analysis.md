@@ -58,7 +58,7 @@ internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<Databas
 	}
 
 	var sourceLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(sourceMainDbName); //EnterpriseDbUser_{sourceMainDbName}_ string
-	var targetLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(targetMainDbName);
+	var targetLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(targetMainDbName); //EnterpriseDbUser_{targetMainDbName}_ -> note this is the prefix, the real login would have the user after this 
 
 	foreach (var dbDetail in dbDetailsList) //this must be a list of database files e.g. odyssey, edocs, user repository (unsure)
 	{
@@ -108,7 +108,7 @@ void ReassignSchemaOwnersInDatabase(AdminConnection connection, string databaseN
 }
 ```
 
-This method returns for example "Schema1, mukund", "schema2, otheruser" etc.
+This method returns for example "Schema1, EnterpriseDbUser_Odyssey2_mukund1234", "schema2, otheruser" etc.
 ```csharp
 static List<(string SchemaName, string OwnerName)> GetSchemasOwnedByEnterpriseDbUsers(AdminConnection connection, string databaseName, string sourceLoginPrefix)
 {
