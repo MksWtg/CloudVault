@@ -1,4 +1,5 @@
-Prerequisites: [[WI01017033 - CP2T should adjust schema owner in UserRepository]]
+Prerequisites: [[WI01017033 - CP2T should adjust schema owner in UserRepository]], [[What is Copy Production to Test]]
+
 https://github.com/WiseTechGlobal/CargoWise/pull/43392
 
 Top level function call: change happens EARLIER than it used to:

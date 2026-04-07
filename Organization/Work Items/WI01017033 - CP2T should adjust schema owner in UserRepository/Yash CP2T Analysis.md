@@ -1,5 +1,5 @@
 
-Prerequisites: [[WI01017033 - CP2T should adjust schema owner in UserRepository]]
+Prerequisites: [[WI01017033 - CP2T should adjust schema owner in UserRepository]], [[What is Copy Production to Test]]
 https://github.com/WiseTechGlobal/CargoWise/pull/33986
 1) in the method that does the main CP2T operation (post restoration), add the following command
 
