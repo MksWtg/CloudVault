@@ -50,8 +50,8 @@ How does the remapping actually work?
 ```csharp
 internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<DatabaseDetails> dbDetailsList, DbRestoreSettings dbRestoreSettings)
 {
-	var targetMainDbName = dbRestoreSettings.TargetDbName; // O2_Restore, this comes directly from the DBBR settings
-	var sourceMainDbName = GetSourceDatabaseNameFromBackup(dbRestoreSettings); //Odyssey2, this comes from the main file from the main database inside
+	var targetMainDbName = dbRestoreSettings.TargetDbName; // O2_Restore, this comes directly from the DBBR user facing settings
+	var sourceMainDbName = GetSourceDatabaseNameFromBackup(dbRestoreSettings); //Odyssey2, this comes from the main file from the main database inside the .bak
 	if (string.IsNullOrEmpty(sourceMainDbName) || sourceMainDbName.Equals(targetMainDbName, StringComparison.OrdinalIgnoreCase))
 	{
 		return;
@@ -60,7 +60,7 @@ internal virtual void ReassignSchemaOwnersForUserRepositoryDatabase(List<Databas
 	var sourceLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(sourceMainDbName); //EnterpriseDbUser_dbname_ string
 	var targetLoginPrefix = DbUserRepository.GetStaffDbLoginFullPrefix(targetMainDbName);
 
-	foreach (var dbDetail in dbDetailsList)
+	foreach (var dbDetail in dbDetailsList) //this must be a list of database files e.g. odyssey, edocs, user repository
 	{
 		try
 		{
