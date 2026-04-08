@@ -101,7 +101,7 @@ void ReassignSchemaOwnersInDatabase(AdminConnection connection, string databaseN
 		var targetLoginFullName = targetLoginPrefix + staffSuffix; //new staff name EnterpriseDbUser_{targetdbname}_mukund1234
 		var targetLoginName = targetLoginFullName.Length > 128 ? targetLoginFullName.Substring(0, 128) : targetLoginFullName; //take first 128 chars, not sure why
 
-		EnsureServerLoginExists(connection, targetLoginName); // want to make sure there is a server princpa
+		EnsureServerLoginExists(connection, targetLoginName); // want to make sure there is a server principal with the name EnterpriseDbUser_{targetdbname}_mukund1234
 		EnsureDatabaseUserExists(connection, databaseName, targetLoginName);
 		AlterSchemaAuthorization(connection, databaseName, schemaName, targetLoginName);
 	}
@@ -137,17 +137,38 @@ AND s.name <> dp.name");
 
 
 ```csharp
-static void EnsureServerLoginExists(AdminConnection connection, string loginName)
+static void EnsureServerLoginExists(AdminConnection connection, string loginName) // param EnterpriseDbUser_{targetdbname}_mukund1234
 {
 	var checkSql = "SELECT COUNT(*) FROM sys.server_principals WHERE name = @loginName"; //there may be multiple 
 	var checkCommand = connection.Command(checkSql);
 	checkCommand.AddParameter("@loginName", SqlDbType.NVarChar, 128, loginName);
-	var exists = (int)checkCommand.ExecuteScalar() > 0; // maybe 
+	var exists = (int)checkCommand.ExecuteScalar() > 0; // maybe a user with the name EnterpriseDbUser_{targetdbname}_mukund1234 already exists
 
 	if (!exists)
 	{
 		var password = GenerateRandomPassword();
 		var createSql = Invariant($"CREATE LOGIN {loginName.QuoteName()} WITH PASSWORD = N'{password}', DEFAULT_DATABASE = [master], CHECK_POLICY = OFF, CHECK_EXPIRATION = OFF");
+		connection.ExecuteNonQuery(createSql);
+		// TODOs- why is check policy off, why is check expiration off, why is default database master
+		// TODO: how does the user login if their password is random
+	}
+}
+```
+
+This part of the code does not make sense
+```csharp
+static void EnsureDatabaseUserExists(AdminConnection connection, string databaseName, string loginName) //we kn
+{
+	var quotedDbName = databaseName.QuoteName();
+	var quotedLoginName = loginName.QuoteName();
+	var checkSql = Invariant($"SELECT CASE WHEN EXISTS (SELECT 1 FROM {quotedDbName}.sys.database_principals WHERE name = @loginName) THEN 1 ELSE 0 END");
+	var checkCommand = connection.Command(checkSql);
+	checkCommand.AddParameter("@loginName", SqlDbType.NVarChar, 128, loginName);
+	var exists = (int)checkCommand.ExecuteScalar() == 1;
+
+	if (!exists)
+	{
+		var createSql = Invariant($"USE {quotedDbName}; CREATE USER {quotedLoginName} FOR LOGIN {quotedLoginName}");
 		connection.ExecuteNonQuery(createSql);
 	}
 }
