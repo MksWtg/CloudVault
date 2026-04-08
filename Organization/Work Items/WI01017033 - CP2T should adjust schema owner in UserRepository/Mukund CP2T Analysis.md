@@ -161,7 +161,7 @@ static void EnsureDatabaseUserExists(AdminConnection connection, string database
 {
 	var quotedDbName = databaseName.QuoteName();
 	var quotedLoginName = loginName.QuoteName();
-	var checkSql = Invariant($"SELECT CASE WHEN EXISTS (SELECT 1 FROM {quotedDbName}.sys.database_principals WHERE name = @loginName) THEN 1 ELSE 0 END");
+	var checkSql = Invariant($"SELECT CASE WHEN EXISTS (SELECT 1 FROM {quotedDbName}.sys.database_principals WHERE name = @loginName) THEN 1 ELSE 0 END"); // we are looking for a db user with the name loginname - this is going to be the new user 
 	var checkCommand = connection.Command(checkSql);
 	checkCommand.AddParameter("@loginName", SqlDbType.NVarChar, 128, loginName);
 	var exists = (int)checkCommand.ExecuteScalar() == 1;
