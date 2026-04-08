@@ -155,9 +155,9 @@ static void EnsureServerLoginExists(AdminConnection connection, string loginName
 }
 ```
 
-This part of the code does not make sense
+
 ```csharp
-static void EnsureDatabaseUserExists(AdminConnection connection, string databaseName, string loginName) //we kn
+static void EnsureDatabaseUserExists(AdminConnection connection, string databaseName, string loginName) //we know databaseName
 {
 	var quotedDbName = databaseName.QuoteName();
 	var quotedLoginName = loginName.QuoteName();
