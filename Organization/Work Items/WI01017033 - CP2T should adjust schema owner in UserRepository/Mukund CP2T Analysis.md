@@ -101,7 +101,7 @@ void ReassignSchemaOwnersInDatabase(AdminConnection connection, string databaseN
 		var targetLoginFullName = targetLoginPrefix + staffSuffix; //new staff name EnterpriseDbUser_{targetdbname}_mukund1234
 		var targetLoginName = targetLoginFullName.Length > 128 ? targetLoginFullName.Substring(0, 128) : targetLoginFullName; //take first 128 chars, not sure why
 
-		EnsureServerLoginExists(connection, targetLoginName);
+		EnsureServerLoginExists(connection, targetLoginName); // want to make sure there is a server princpa
 		EnsureDatabaseUserExists(connection, databaseName, targetLoginName);
 		AlterSchemaAuthorization(connection, databaseName, schemaName, targetLoginName);
 	}
@@ -142,7 +142,7 @@ static void EnsureServerLoginExists(AdminConnection connection, string loginName
 	var checkSql = "SELECT COUNT(*) FROM sys.server_principals WHERE name = @loginName"; //there may be multiple 
 	var checkCommand = connection.Command(checkSql);
 	checkCommand.AddParameter("@loginName", SqlDbType.NVarChar, 128, loginName);
-	var exists = (int)checkCommand.ExecuteScalar() > 0;
+	var exists = (int)checkCommand.ExecuteScalar() > 0; // maybe 
 
 	if (!exists)
 	{
