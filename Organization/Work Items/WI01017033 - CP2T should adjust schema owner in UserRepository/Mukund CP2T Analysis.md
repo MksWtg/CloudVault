@@ -157,7 +157,7 @@ static void EnsureServerLoginExists(AdminConnection connection, string loginName
 
 
 ```csharp
-static void EnsureDatabaseUserExists(AdminConnection connection, string databaseName, string loginName) //we know databaseName
+static void EnsureDatabaseUserExists(AdminConnection connection, string databaseName, string loginName) //we know databaseName is the name of the db we are migrating e.g. UserRepository (this can be fixed to the constant user repository)
 {
 	var quotedDbName = databaseName.QuoteName();
 	var quotedLoginName = loginName.QuoteName();
