@@ -8,3 +8,7 @@ data List (A : Set) : Set where
 
 `A` is a parameter.
 
+We can use `nil` with `A` being `Bool`, we can use `cons` with `A` being `Bool`.
+
+
+

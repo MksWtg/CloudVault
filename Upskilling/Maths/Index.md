@@ -17,4 +17,4 @@ data Expr : Set → Set where
   Pair : {A B : Set} → Expr A → Expr B → Expr (A × B)
 ```
 
-Here `Expr` is indexed by a type, it controls the constructors that can be used.
+Here `Expr` is indexed by a type, it controls the constructors that can be used. If we try `Expr Bool` there is only one constructor we can use, `Lit`.
