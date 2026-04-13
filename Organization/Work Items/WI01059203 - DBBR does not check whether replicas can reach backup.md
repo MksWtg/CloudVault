@@ -86,6 +86,9 @@ Functional regression testing
 - put the .bak on the network share
 - restore should work properly
 
+What I have done:
+- created both
+
 Is this functional testing plan ok?
 
 Edit: have added edits
