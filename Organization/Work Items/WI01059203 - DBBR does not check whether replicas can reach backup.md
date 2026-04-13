@@ -65,14 +65,23 @@ We want this to cascade up the call stack until it hits some sort of dialog box.
 ## Prompt
 
 I want to do the following test.
-Defect: my backup tool (wrapper around sql server backup and restore) does not check if database backups are reachable by all servers in the AG cluster.
-I have made the fix, I need to functionally test it.
+
+Context:
+- Defect: my backup tool (wrapper around sql server backup and restore) does not check if database backups are reachable by all servers in the AG cluster.
+- I have made the fix, I need to functionally test it.
 
 Setup
 - make three VMs, two of them sql server hosts and one of them as a network file share
-- put a .bak onto the file share
-- tr
-- try
 
+Reproducing defect
+- put a .bak onto one of the SQL server hosts but not the other (so the backup is only accessible from one)
+- try use the tool, expect a crash/error logs mid run after restoring the first DB
+
+Testing fix:
+- try again with the new tool, this time an error dialog pops up before restore starts (no partial restore)
+
+Functional regression testing
+- put the .bak on the network share
+- restore should work properly
 
 Is this functional testing plan ok?
