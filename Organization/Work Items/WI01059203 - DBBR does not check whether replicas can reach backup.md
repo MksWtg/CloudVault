@@ -1,3 +1,5 @@
+PR: [https://github.com/WiseTechGlobal/CargoWise/pull/46286/changes#r3055083627](https://github.com/WiseTechGlobal/CargoWise/pull/46286/changes#r3055083627)
+
 Description:
 
 ```
@@ -39,4 +41,22 @@ Maybe the recommended approach was to have the network share on the primary repl
 How to functional test?
 
 1) Reproduce defect
-	1) Create 3 VMs- two SQL server hosts and 1 domain contro
+	1) Create 3 VMs- two SQL server hosts and 1 domain controller and network share
+	2) Create cluster
+	3) Have backup on local first VM, try the restore, expect a failure mid way (ask patrick for logs, look for logs in the old system)
+2) For the fix
+	1) Try running the dbbr tool with the fix code, there should be an error
+
+```csharp
+if (inaccessible.Count > 0)
+			{
+				throw new DbBackupAndRestoreException(
+					string.Format(CultureInfo.InvariantCulture,
+						"The following secondary replicas cannot access the backup file:\r\n{0}\r\nEnsure the backup file is on a network share accessible by all secondary SQL Server service accounts.",
+						string.Join("\r\n", inaccessible)));
+			}
+```
+
+What should this error do?
+
+We want this to cascade up the call stack until it hits some sort of fire and forget type of dialog box.
