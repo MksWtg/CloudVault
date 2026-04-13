@@ -56,5 +56,19 @@ We'll need a new field in Customer System 'Has Service tasks'. In SAND, default 
 We'll also need a webAPI endpoint that DAT can call to modify this field, and the Console should move the CW1 AD entry accordingly
 ```
 
-What did we do?
+What did we do (changes made):
+
+```
+ Add a PUT /CustomerSystem/updateServiceTask WebAPI endpoint that moves a CW1 Active Directory entry
+  between the orchestrated and non-orchestrated OUs, controlling whether CargoWise runs service tasks for that
+  instance. Updates the stored ADPath in the database to reflect the new OU. Includes unit tests covering move, no-op
+  (already in correct OU), and not-found scenarios.
+```
+
+PR:
+
+https://github.com/WiseTechGlobal/CargoWiseCloud.Console/pull/209/changes
+
+Detailed summary:
+Files changes: 10
 
