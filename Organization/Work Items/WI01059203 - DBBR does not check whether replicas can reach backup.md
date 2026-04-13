@@ -90,3 +90,7 @@ Is this functional testing plan ok?
 
 Edit: have added edits
 
+## Creds
+
+unam: `Administrator`
+pwod: `DBBRtest123!`
