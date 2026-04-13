@@ -75,10 +75,12 @@ Setup
 
 Reproducing defect
 - put a .bak onto one of the SQL server hosts but not the other (so the backup is only accessible from one)
+	- this was the cause of the initial incident, you can do more robust testing with path exists but permission denied, path exists but network unreachable timeout, path accessible from primary but not secondary and vice versa
 - try use the tool, expect a crash/error logs mid run after restoring the first DB
 
 Testing fix:
 - try again with the new tool, this time an error dialog pops up before restore starts (no partial restore)
+	- we can make this condition more explicit and verifiable with "no db created on any node", can check `sys.databases`
 
 Functional regression testing
 - put the .bak on the network share
