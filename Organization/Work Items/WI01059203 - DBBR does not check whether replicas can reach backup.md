@@ -87,3 +87,6 @@ Functional regression testing
 - restore should work properly
 
 Is this functional testing plan ok?
+
+Edit: have added edits
+
