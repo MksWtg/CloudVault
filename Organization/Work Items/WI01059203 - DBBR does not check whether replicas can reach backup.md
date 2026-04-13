@@ -60,3 +60,19 @@ if (inaccessible.Count > 0)
 What should this error do?
 
 We want this to cascade up the call stack until it hits some sort of dialog box.
+
+
+## Prompt
+
+I want to do the following test.
+Defect: my backup tool (wrapper around sql server backup and restore) does not check if database backups are reachable by all servers in the AG cluster.
+I have made the fix, I need to functionally test it.
+
+Setup
+- make three VMs, two of them sql server hosts and one of them as a network file share
+- put a .bak onto the file share
+- tr
+- try
+
+
+Is this functional testing plan ok?
