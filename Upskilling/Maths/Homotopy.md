@@ -13,5 +13,6 @@ $H(x, 1) = g(x)$ for all $x \in X$
 
 E.g. take a point $x_0$ in $X$, and $0.5$, it maps to somewhere in $Y$.
 
+We say maps are homotopic if there exists a homotopy between them.
 
 
