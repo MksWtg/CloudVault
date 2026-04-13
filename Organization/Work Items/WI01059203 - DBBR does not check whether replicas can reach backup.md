@@ -35,3 +35,8 @@ After adding support for AGs we never updated this. The way to use DBBR for AG (
 
 Maybe the recommended approach was to have the network share on the primary replica machine, i'm not sure. (optional: do some investigation into DBBR history to confirm this, although this may be a waste of time since the commits go back 20 years so use your discretion).
 ```
+
+How to functional test?
+
+1) Reproduce defect
+	1) Create 3 VMs- two SQL server hosts and 1 domain contro
