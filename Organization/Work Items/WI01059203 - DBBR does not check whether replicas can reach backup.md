@@ -59,4 +59,4 @@ if (inaccessible.Count > 0)
 
 What should this error do?
 
-We want this to cascade up the call stack until it hits some sort of fire and forget type of dialog box.
+We want this to cascade up the call stack until it hits some sort of dialog box.
