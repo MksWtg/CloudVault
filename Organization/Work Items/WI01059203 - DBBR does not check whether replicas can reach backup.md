@@ -236,3 +236,11 @@ FROM FILE = 'C:\Certs\NODE1_Cert.cer';
 
 GRANT CONNECT ON ENDPOINT::Hadr_endpoint TO NODE1_Login;
 ```
+
+#### Firewall down:
+
+allowing AG to run
+```bash
+netsh advfirewall firewall add rule name="AG Endpoint" dir=in action=allow protocol=TCP localport=5022
+```
+
