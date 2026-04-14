@@ -98,6 +98,8 @@ Edit: have added edits
 unam: `Administrator`
 pwod: `DBBRtest123`
 
+Sql server admin: `SqlServerAdmin` (username is `sa`)
+
 ![[Pasted image 20260413143726.png]]
 ![[Pasted image 20260413144710.png]]
 
