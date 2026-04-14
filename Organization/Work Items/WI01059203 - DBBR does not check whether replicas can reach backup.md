@@ -103,6 +103,7 @@ unam: `Administrator`
 pwod: `DBBRtest123`
 
 Sql server admin: `SqlServerAdmin` (username is `sa`)
+Creating cert: `YourStrongPassword1!`
 
 ![[Pasted image 20260413143726.png]]
 ![[Pasted image 20260413144710.png]]
