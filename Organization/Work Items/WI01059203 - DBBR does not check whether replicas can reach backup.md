@@ -110,6 +110,8 @@ Sql server admin: `SqlServerAdmin` (username is `sa`)
 `WIN-82Q6UCMNIK0`
 
 ## Node 1
+
+hostname: `sqlnode1`
 ![[Pasted image 20260414103323.png]]
 
 ![[Pasted image 20260414103408.png]]
