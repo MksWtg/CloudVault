@@ -87,8 +87,8 @@ Functional regression testing
 - restore should work properly
 
 What I have done:
-- created an sql server VM with sql server
-- created a fileshare VM with a fileshare
+- created an sql server hyper V VM with sql server
+- created a fileshare hyper V VM with a fileshare folder
 - I have the .bak on my host laptop that the VMs are on
 - What do i need to do the first test
 ---
