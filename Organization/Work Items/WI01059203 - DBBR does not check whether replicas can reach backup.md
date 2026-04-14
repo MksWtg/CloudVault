@@ -249,3 +249,9 @@ allowing AG to run
 netsh advfirewall firewall add rule name="AG Endpoint" dir=in action=allow protocol=TCP localport=5022
 ```
 
+#### Moving Backups
+
+```
+xcopy "C:\Users\Mukund.Srinivasan\Documents\O2_Backup" "\\172.25.48.12\fileshare\O2_Backup\" /E /I
+```
+
