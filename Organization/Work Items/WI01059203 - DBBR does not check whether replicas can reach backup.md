@@ -108,3 +108,7 @@ Sql server admin: `SqlServerAdmin` (username is `sa`)
 ![[Pasted image 20260413144710.png]]
 
 `WIN-82Q6UCMNIK0`
+
+Node 1
+![[Pasted image 20260414103323.png]]
+
