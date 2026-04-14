@@ -135,6 +135,26 @@ remember the hostname for sqlnode1 is `sqlnode1` and for sqlnode2 it is `SqlNode
 
 to move the certs:
 
+run this on node 1
+
+**push the cert**
 ```
-copy C:\Certs\NODE1_Cert.cer \\fileshareVM\fileshare\NODE1_Cert.cer
+copy C:\Certs\NODE1_Cert.cer \\WIN-82Q6UCMNIK0\fileshare\NODE1_Cert.cer
+```
+
+**pull the cert**
+```
+copy \\WIN-82Q6UCMNIK0\fileshare\NODE2_Cert.cer C:\Certs\NODE2_Cert.cer
+```
+
+run this on node 2
+
+**push the cert**
+```
+copy C:\Certs\NODE2_Cert.cer \\WIN-82Q6UCMNIK0\fileshare\NODE2_Cert.cer
+```
+
+**pull the cert**
+```
+copy \\WIN-82Q6UCMNIK0\fileshare\NODE1_Cert.cer C:\Certs\NODE1_Cert.cer
 ```
