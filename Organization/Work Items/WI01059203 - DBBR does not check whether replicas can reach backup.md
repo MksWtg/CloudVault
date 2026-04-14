@@ -121,7 +121,7 @@ hostname: `sqlnode1`
 ![[Pasted image 20260414105120.png]]
 ![[Pasted image 20260414105312.png]]
 
-## Fileshare
+## FileshareVM
 
 hostname: `Fileshare`
 Settings
