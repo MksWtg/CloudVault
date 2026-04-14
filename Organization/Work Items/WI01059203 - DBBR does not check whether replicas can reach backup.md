@@ -120,3 +120,12 @@ hostname: `sqlnode1`
 
 ![[Pasted image 20260414105120.png]]
 ![[Pasted image 20260414105312.png]]
+
+## Fileshare
+
+hostname: `Fileshare`
+Settings
+
+![[Pasted image 20260414110558.png]]
+
+remember the hostname for sqlnode1 is `sqlnode1` and for sqlnode2 it is `SqlNode2`
