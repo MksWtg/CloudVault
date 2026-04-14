@@ -158,3 +158,81 @@ copy C:\Certs\NODE2_Cert.cer \\Fileshare\fileshare\NODE2_Cert.cer
 ```
 copy \\Fileshare\fileshare\NODE1_Cert.cer C:\Certs\NODE1_Cert.cer
 ```
+
+## Query Catalogue
+
+To create certs:
+
+on node 1
+```SQL
+-- Create master key
+USE master;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1!';
+
+-- Create certificate
+CREATE CERTIFICATE NODE1_Cert
+WITH SUBJECT = 'NODE1 AG Certificate',
+EXPIRY_DATE = '2030-01-01';
+
+-- Create the hadr endpoint using the cert
+CREATE ENDPOINT Hadr_endpoint
+STATE = STARTED
+AS TCP (LISTENER_PORT = 5022)
+FOR DATABASE_MIRRORING (
+    AUTHENTICATION = CERTIFICATE NODE1_Cert,
+    ROLE = ALL
+);
+
+-- Back up the cert so Node2 can trust it
+BACKUP CERTIFICATE NODE1_Cert
+TO FILE = 'C:\NODE1_Cert.cer';
+```
+
+on node 2
+```SQL
+USE master;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword2!';
+
+CREATE CERTIFICATE NODE2_Cert
+WITH SUBJECT = 'NODE2 AG Certificate',
+EXPIRY_DATE = '2030-01-01';
+
+CREATE ENDPOINT Hadr_endpoint
+STATE = STARTED
+AS TCP (LISTENER_PORT = 5022)
+FOR DATABASE_MIRRORING (
+    AUTHENTICATION = CERTIFICATE NODE2_Cert,
+    ROLE = ALL
+);
+
+BACKUP CERTIFICATE NODE2_Cert
+TO FILE = 'C:\NODE2_Cert.cer';
+```
+
+#### Trusting
+
+```SQL
+USE master;
+
+CREATE LOGIN NODE2_Login WITH PASSWORD = 'YourStrongPassword2!';
+CREATE USER NODE2_User FOR LOGIN NODE2_Login;
+
+CREATE CERTIFICATE NODE2_Cert
+AUTHORIZATION NODE2_User
+FROM FILE = 'C:\Certs\NODE2_Cert.cer';
+
+GRANT CONNECT ON ENDPOINT::Hadr_endpoint TO NODE2_Login;
+```
+
+```SQL
+USE master;
+
+CREATE LOGIN NODE1_Login WITH PASSWORD = 'YourStrongPassword1!';
+CREATE USER NODE1_User FOR LOGIN NODE1_Login;
+
+CREATE CERTIFICATE NODE1_Cert
+AUTHORIZATION NODE1_User
+FROM FILE = 'C:\Certs\NODE1_Cert.cer';
+
+GRANT CONNECT ON ENDPOINT::Hadr_endpoint TO NODE1_Login;
+```
