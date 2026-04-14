@@ -239,6 +239,11 @@ GRANT CONNECT ON ENDPOINT::Hadr_endpoint TO NODE1_Login;
 
 #### Firewall down:
 
+disables windows firewall completely:
+```bash
+netsh advfirewall set allprofiles state off
+```
+
 allowing AG to run
 ```bash
 netsh advfirewall firewall add rule name="AG Endpoint" dir=in action=allow protocol=TCP localport=5022
