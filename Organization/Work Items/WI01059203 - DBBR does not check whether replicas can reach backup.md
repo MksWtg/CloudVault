@@ -112,3 +112,4 @@ Sql server admin: `SqlServerAdmin` (username is `sa`)
 Node 1
 ![[Pasted image 20260414103323.png]]
 
+![[Pasted image 20260414103408.png]]
