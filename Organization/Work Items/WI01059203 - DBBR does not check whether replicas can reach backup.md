@@ -130,3 +130,11 @@ Settings
 ![[Pasted image 20260414110558.png]]
 
 remember the hostname for sqlnode1 is `sqlnode1` and for sqlnode2 it is `SqlNode2`
+
+## Helpful commands
+
+to move the certs:
+
+```
+copy C:\Certs\NODE1_Cert.cer \\fileshareVM\fileshare\NODE1_Cert.cer
+```
