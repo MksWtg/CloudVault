@@ -255,3 +255,15 @@ netsh advfirewall firewall add rule name="AG Endpoint" dir=in action=allow proto
 xcopy "C:\Users\Mukund.Srinivasan\Documents\O2_Backup" "\\172.25.48.12\fileshare\O2_Backup\" /E /I
 ```
 
+
+## Day 2
+
+![[Pasted image 20260415172023.png]]
+
+Username:
+`sqlservice`
+
+Password:
+`DBBRtest123!`
+
+note that the above includes the exclam
