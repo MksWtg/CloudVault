@@ -31,3 +31,4 @@ It also records a point in the transaction log so recovery knows where to start
 1) FULL- simplest, it keeps everything
 2) SIMPLE- after a checkpoint happens, we write the new database rows/data to disk from buffer, and we truncate the logs (so that part of the ldf can be overwritten later)
 3) BULK- In Bulk-Logged recovery mode, normal transactions are fully logged like in Full recovery, but during bulk operations (such as bulk inserts or index rebuilds), SQL Server uses minimal logging, meaning it records only the allocation of data pages rather than every row change
+4) 
