@@ -1,5 +1,5 @@
 
-These two terms often confuse people. The definition is a bit blurry, but if there is a difference here it is:
+These two terms often confuse me. The definition is a bit blurry, but if there is a difference here it is:
 
 1) SDK is language specific (like a C# library) while API is language agnostic (like an endpoint)
 2) SDK is delivered as a package/library; API is delivered as a service/endpoint
