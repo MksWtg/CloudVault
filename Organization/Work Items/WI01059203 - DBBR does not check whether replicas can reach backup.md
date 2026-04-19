@@ -269,3 +269,35 @@ Password:
 note that the above includes the exclam
 
 we made the account on sqlnode1 and dbbr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
