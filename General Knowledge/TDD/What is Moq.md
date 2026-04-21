@@ -83,6 +83,8 @@ In the test, we can control the behaviour of all the public methods in `_mockRep
 
 `_service.GreetUser(1)` returns `Alice`, precisely because we set it up.
 
-in `_mockRepo.Verify`, `Verify` is called on the mock object and not the mocked instance- this method verifies that the mocked method on the mocked instance
+in `_mockRepo.Verify`, `Verify` is called on the mock object and not the mocked instance- this method verifies that the mocked method on the mocked instance was called- presumably if we set it up we would have expected it to be used, and it is sometimes desirable to confirm this using `Verify` (control flow and exceptions may have caused this to not be called).
+
+#### Summary: Moq as an Abstraction tool
 
 In unit tests, we mock lower level interface members (lower level meaning that other, higher level classes and interfaces need it as a dependency). This is because any implementation of an interface may behave differently. The only guarantees are that the inputs to the member if it is a method and the outputs (if it completes) match the right "shape" hence the word interface. This allows us to literally mock the behaviour of the real object without having to do what the real object does (e.g. query a DB) and just the return the result we expect. This abstracts over all possible implementations of the interface if there are many and simply gives us a reasonable result.
