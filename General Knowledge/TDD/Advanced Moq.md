@@ -39,7 +39,7 @@ public interface IMyService
 }
 ```
 
-Castle generates a proxy:
+Castle generates a proxy (it creates a new type at runtime and emits the IL for this type to look like the below, making the cs file would be too slow).
 
 ```csharp
 public class MyServiceProxy : IMyService
