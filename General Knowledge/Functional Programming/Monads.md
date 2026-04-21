@@ -1,5 +1,9 @@
 Prerequisites: [[What is Functional Programming]], [[Patterns]]
 
+For a better, more full explanation (although one that can definitely use edits) see this link:
+https://mukundks2004.github.io/BetweenBooks/posts/monads/
+
+
 Monads are a pattern in functional programming. The aim of a monad is to be able to sequence computations.
 
 ## What is a Monad
