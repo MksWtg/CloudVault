@@ -1,7 +1,7 @@
 
 Prerequisites: [[What is Nunit]], [[Mocking]]
 
-Moq is a popular C# library used for mocking interfaces and methods. Typically mocking occurs in unit tests, not in production code, so moq i used on top of a testing framework such as Nunit.
+Moq is a popular C# library used for mocking interfaces and methods. Typically mocking occurs in unit tests, not in production code, so moq is used on top of a testing framework such as Nunit.
 
 ## Example
 
@@ -36,7 +36,7 @@ public class UserService
 }
 ```
 
-Note how `UserService` accepts the dependency through the constructor as per good practices outlined in [[Dependency Injection]]. This enables swapping out implementations of `IUserRepository` for testing and production, which is what we will do. The real `IUserRepository` will probably query a database, this is too heavy duty and expensive for testing, and not our business anyway as the abstraction was created to allow us to focus on the higher level method solely.
+Note how `UserService` accepts the dependency through the constructor as per good practices outlined in [[Dependency Injection]]. This enables swapping out implementations of `IUserRepository` for testing and production, which is what we will do. The real `IUserRepository` will probably query a database, this is too heavy duty and expensive for testing, and not our business anyway as the abstraction was created to allow us to focus on the higher level method solely, assuming the lower level part works.
 
 ### The Test
 
@@ -75,7 +75,7 @@ public class UserServiceTests
 }
 ```
 
-In `Setup`, which runs prior to each test, we instantiate a mock that is dependency-injected into  `UserService` in `UserService(_mockRepo.Object)`. It is important to remember that `_mockRepo` is the `Mock` object that we use to setup the behaviour of the mocked instance, `_mockRepo.Object`. It is `_mockRepo.Object` that actually implements `IUserRepository` and is substitutable .
+In `Setup`, which runs prior to each test, we instantiate a mock that is dependency-injected into `UserService` in `UserService(_mockRepo.Object)`. From this it is evident that `_mockRepo.Object` must be an implementation of `IUserRepository` for this code to compile. It is important to remember that `_mockRepo` is the `Mock` object that we use to setup the behaviour of the mocked instance, `_mockRepo.Object`. It is `_mockRepo.Object` that actually implements `IUserRepository` and is substitutable .
 
 In the test, we can control the behaviour of all the public methods in `_mockRepo`. E.g. we can control, or 'mock' `GetUserName` as shown in `_mockRepo.Setup(r => r.GetUserName(1)).Returns("Alice");`. Now whenever a method call gets delegated to `_repository` within `UserService`, our controlled/mocked code executes.
 
