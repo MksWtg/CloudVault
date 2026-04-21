@@ -18,4 +18,4 @@ class Proxy_IMyService : IMyService
 
 When you write `mock.Setup(x => x.GetData()).Returns("hello");`
 
-Moq does not actually execute `GetData` in the class.
+Moq does not just store the lambda/delegate instance, it stores the expression tree of the code.
