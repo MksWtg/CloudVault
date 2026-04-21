@@ -32,6 +32,7 @@ protected virtual void RestorePrimaryReplica(List<DatabaseDetails> dbDetailsList
 			AlterDbAuthorisation(dbDetail);
 		}
 		
+		// THIS IS THE IMPORTANT ONE!!!!
 		ReassignSchemaOwnersForUserRepositoryDatabase(dbDetailsList, dbRestoreSettings);
 	}
 
