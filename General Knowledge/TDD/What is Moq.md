@@ -75,8 +75,12 @@ public class UserServiceTests
 }
 ```
 
-In `Setup`, which runs prior to each test, we instantiate a mock that is dependency-injected into `UserService` in `UserService(_mockRepo.Object)`. From this it is evident that `_mockRepo.Object` must be an implementation of `IUserRepository` for this code to compile. It is important to remember that `_mockRepo` is the `Mock` object that we use to setup the behaviour of the mocked instance, `_mockRepo.Object`. It is `_mockRepo.Object` that actually implements `IUserRepository` and is substitutable .
+In `Setup`, which runs prior to each test, we instantiate a mock that is dependency-injected into `UserService` in `UserService(_mockRepo.Object)`. From this it is evident that `_mockRepo.Object` must be an implementation of `IUserRepository` for this code to compile.
+
+> It is important to remember that `_mockRepo` is the `Mock` object that we use to setup the behaviour of the mocked instance, `_mockRepo.Object`. It is `_mockRepo.Object` that actually implements `IUserRepository` and is injectable.
 
 In the test, we can control the behaviour of all the public methods in `_mockRepo`. E.g. we can control, or 'mock' `GetUserName` as shown in `_mockRepo.Setup(r => r.GetUserName(1)).Returns("Alice");`. Now whenever a method call gets delegated to `_repository` within `UserService`, our controlled/mocked code executes.
 
 `_service.GreetUser(1)` returns `Alice`, precisely because we set it up.
+
+In unit tests, we mock lower level interface members. This is because any implementation of an interface may behave differently. The only guarantees are that the inputs to the member if it is a method and the outputs (if it completes) match the right "shape" hence the word interface. This allows us to literally mock the behaviour of the real object without having to do what the real object does (e.g. query a DB)
