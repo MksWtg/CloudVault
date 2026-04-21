@@ -53,3 +53,5 @@ public class MyServiceProxy : IMyService
     }
 }
 ```
+
+When you call `var result = mock.Object.GetData();` you are calling the proxy, which contains an interceptor. The proxy invokes `Intercept(...)` which goes to moq (remember that moq defined this interceptor). Moq records the call for `Verify`, searches for a matching setup that is built from an exception tree (or has a default) and runs that.
