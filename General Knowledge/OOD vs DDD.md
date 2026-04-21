@@ -13,4 +13,4 @@ DDD refers to just the first part- making real world things into objects.
 
 This means you can write DDD code in functional languages like F# or scala. Or you can write it with C# and make your DDD app via OO.
 
-Also: DDD came like 20 years after OO had been in industyr.
+Also: DDD came like 20 years after OO had been in industry.
