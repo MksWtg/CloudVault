@@ -153,3 +153,5 @@ class AreaCalculator : IShapeVisitor
     }
 }
 ```
+
+If your objects are fixed, there are no new objects, but there are lots of new operations being added to the objects, use this pattern.
