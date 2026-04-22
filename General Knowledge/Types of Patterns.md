@@ -42,7 +42,8 @@ class Singleton
 
 #### Builder
 
-Step by step constru
+Step by step construction of complex objects
+
 ```csharp
 var person = new PersonBuilder()
     .WithName("Alex")
@@ -56,4 +57,99 @@ Structural patterns deal with how objects fit together
 
 #### Adapter
 
-Sits in front 
+Wrapper around underlying API to make it fit an interface
+
+```csharp
+class OldLogger { public void Write(string msg) {} }
+
+class LoggerAdapter
+{
+    private readonly OldLogger _old = new();
+    public void Log(string msg) => _old.Write(msg);
+}
+```
+
+#### Decorator
+
+Just a wrapper
+
+```csharp
+class LoggingService : IService
+{
+    private readonly IService _inner;
+    public LoggingService(IService inner) => _inner = inner;
+
+    public void Execute()
+    {
+        Console.WriteLine("Before");
+        _inner.Execute();
+        Console.WriteLine("After");
+    }
+}
+```
+
+## Behavioral Pattern 
+
+Deals with how objects communicate
+
+#### Visitor
+
+Problem: 
+
+You have a fixed set of object types, and you want to add new operations on them without modifying those classes.
+
+Element interface (fixed):
+
+```csharp
+interface IShape
+{
+    void Accept(IShapeVisitor visitor);
+}
+```
+
+Elements (fixed):
+
+```csharp
+class Circle : IShape
+{
+    public void Accept(IShapeVisitor visitor)
+    {
+        visitor.Visit(this);
+    }
+}
+
+class Rectangle : IShape
+{
+    public void Accept(IShapeVisitor visitor)
+    {
+        visitor.Visit(this);
+    }
+}
+```
+
+Visitor Interface (expand this):
+
+```csharp
+interface IShapeVisitor
+{
+    void Visit(Circle circle);
+    void Visit(Rectangle rectangle);
+}
+```
+
+Visitor (expand this):
+
+```csharp
+class AreaCalculator : IShapeVisitor
+{
+    public void Visit(Circle circle)
+    {
+        Console.WriteLine("Calculating area of circle");
+    }
+
+    public void Visit(Rectangle rectangle)
+    {
+        Console.WriteLine("Calculating area of rectangle");
+    }
+}
+```
