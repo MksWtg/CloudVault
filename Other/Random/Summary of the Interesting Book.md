@@ -12,3 +12,16 @@ The unnamed husband of Yeong-hye's sister, In-hye, is a video artist who is conf
 ### "Flaming Trees"
 
 In-hye remains the only member of the family to support Yeong-hye after her mental and physical decline. She has separated from her husband after the events of the previous section, and is left to take care of their son in addition to her deteriorating sister. As Yeong-hye's behavior worsens, she is admitted to a mental hospital at Mount Ch'ukseong, where, despite receiving high-level treatment for [anorexia nervosa](https://en.wikipedia.org/wiki/Anorexia_nervosa "Anorexia nervosa") and [schizophrenia](https://en.wikipedia.org/wiki/Schizophrenia "Schizophrenia"), she behaves gradually more plant-like. On one occasion she escapes the hospital and is found standing in a forest "soaked with rain as if she herself were one of the glistening trees". In-hye, who constantly ruminates about the pain of dealing with her divorce and the care of her child and who throughout the chapter shows signs of her own depression and mental instability, visits Yeong-hye regularly and continues to try to get her to eat. Yeong-hye has given up food altogether, and when In-hye witnesses the doctors force-feeding her and threatening sedation to prevent vomiting, In-hye bites the nurse holding her back and grabs her sister. In-hye and Yeong-hye are driven to a different hospital by ambulance, and In-hye observes trees as they pass by, which is a hint at the possible inheritance of similar vegetal psyche, which affects her as well.
+
+
+
+
+
+
+
+
+
+
+
+
+
