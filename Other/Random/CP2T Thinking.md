@@ -8,5 +8,6 @@ Main method:
 	- For each user: rename this into the target (remember source is necessarily not the same as target), so EnterpriseDbUser_M22PRD_Mukund1234 becomes EnterpriseDbUser_M22TST_Mukund1234
 	- `EnsureServerLoginExists()` Create a login for this user -> this is literally just creating a login with a random password, not mapping it to any login, the login name comes from each EnterpriseDbUser in the .bak, with its name updated. It is just a login.
 		- `GetRandomAlphanumericString()` to get the pword
-	- `RemapDatabaseUser()` IF the DB is new e.g. M22TST does not exist yet, there are no old logins and users to preserve. For each login we created (the logins have the right name) we map it to 
+	- `RemapDatabaseUser()` IF the DB is new e.g. M22TST does not exist yet, there are no old logins and users to preserve. We rename ever user to the new name and to the created login
+	- `EnsureDatabaseUserExists()` IF M22TST already exists we want to
 - `EnsureServerLoginsForDatabaseUsersExist()` Regardless.
