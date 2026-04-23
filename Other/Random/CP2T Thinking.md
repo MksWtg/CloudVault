@@ -20,8 +20,8 @@ Lets consider two separate situations:
 2) if the target db does already exist, we want to do the same thing but keep the old users (just in case)
 
 
-|     |     |     |
-| --- | --- | --- |
-|     |     |     |
-|     |     |     |
+|                                                      | Target DB exists (M22TST on top of M22TST) | Target DB does not exist (M22TST fresh)                                                                   |
+| ---------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| Deposited DB has same name (M22PRD -> M22PRD)        | 3rd simplest: keep all the existing users, | simplest: create logins for all users, map users to logins                                                |
+| Deposited DB has a different name (M22PRD -> M22TST) |                                            | 2nd simplest: rename all users (delete old users), create logins for these new users, map users to logins |
 
