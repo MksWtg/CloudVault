@@ -9,5 +9,5 @@ Main method:
 	- `EnsureServerLoginExists()` Create a login for this user -> this is literally just creating a login with a random password, not mapping it to any login, the login name comes from each EnterpriseDbUser in the .bak, with its name updated. It is just a login.
 		- `GetRandomAlphanumericString()` to get the pword
 	- `RemapDatabaseUser()` IF the DB is new e.g. M22TST does not exist yet, there are no old logins and users to preserve. We rename ever user to the new name and to the created login
-	- `EnsureDatabaseUserExists()` IF M22TST already exists we want to
+	- `EnsureDatabaseUserExists()` IF M22TST already exists we want to preserve existing logins and users and simply add new logins and users on top for the renamed target db. 
 - `EnsureServerLoginsForDatabaseUsersExist()` Regardless.
