@@ -12,4 +12,5 @@ Main method:
 	- `EnsureDatabaseUserExists()` IF M22TST already exists we want to preserve existing logins and users and simply add new logins and users on top for the renamed target db. If the target user does not exist, create it
 - `EnsureServerLoginsForDatabaseUsersExist()` Regardless:
 	- `GetEnterpriseDbUsersInDatabase()` get all enterprise DB users
-	- `EnsureServerLoginExistsWithSid()` if the 
+	- for each user:
+	- `EnsureServerLoginExistsWithSid()` if there exists a login with the same name as the user, presumably this has the same ID and is mapped. If there doesn't, create the login with random pword, map it to user
