@@ -25,3 +25,4 @@ Lets consider two separate situations:
 | Deposited DB has same name (M22TST is source name -> M22TST is the target name) | 3rd simplest: keep all the existing users, whichever users don't have matching logins presumably are new -> make logins for these | simplest: create logins for all users, map users to logins                                                |
 | Deposited DB has a different name (M22PRD -> M22TST)                            | complex: keep all the existing users, also rename all the users, create logins for these new users, map users to logins           | 2nd simplest: rename all users (delete old users), create logins for these new users, map users to logins |
 
+Flow of logic:
