@@ -14,3 +14,14 @@ Main method:
 	- `GetEnterpriseDbUsersInDatabase()` get all enterprise DB users
 	- for each user:
 	- `EnsureServerLoginExistsWithSid()` if there exists a login with the same name as the user, presumably this has the same ID and is mapped. If there doesn't, create the login with random pword, map it to user
+
+Lets consider two separate situations:
+1) target db does not already exist, we want to create logins for the new users, give them random passwords, rename the old users to new users, map these to the created logins
+2) if the target db does already exist, we want to do the same thing but keep the old users (just in case)
+
+
+|     |     |     |
+| --- | --- | --- |
+|     |     |     |
+|     |     |     |
+
