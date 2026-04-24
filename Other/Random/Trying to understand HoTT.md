@@ -10,3 +10,7 @@ separately, I understand higher inductive types but again not sure what this has
 
 can you link them?
 ```
+
+```
+In Hott, is the basic 
+```
