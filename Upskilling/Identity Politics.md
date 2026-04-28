@@ -18,5 +18,9 @@ Critics, on the other hand, argue that it can:
 - Encourage people to see themselves primarily through a single identity
 - Be used in ways that oversimplify complex issues
     
-
 In practice, most modern political systems involve some mix of identity-based concerns and broader policy debates (like economics, healthcare, or education).
+
+I'm trying to figure out if public opinion is good or bad- i think like communism, it would be good if implemented properly but due to how it has played out in history, we generally don't like it.
+
+Because it is a form of tribalism- us vs them mentality
+
