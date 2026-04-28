@@ -83,3 +83,7 @@ Verification steps:
  Resume this session with copilot --resume=ff070ba5-4981-4e31-be9b-2173c141fb58
 PS C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Console.git>
 ```
+
+
+Notes:
+- We need two PRs for the independent changes, one PR for `LicenseType` change which relies on the domain (e.g. SAND license, Production License, TEST system license) vs 
