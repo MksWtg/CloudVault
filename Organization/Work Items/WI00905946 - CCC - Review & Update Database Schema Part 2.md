@@ -86,4 +86,4 @@ PS C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Console.git>
 
 
 Notes:
-- We need two PRs for the independent changes, one PR for `LicenseType` change which relies on the domain (e.g. SAND license, Production License, TEST system are all licenses and they depend on domains such as `sand.wtg.zone`) and anohter PR for DataCenter (e.g. AU2 which relies on a region e.g. AUS)
+- We need two PRs for the independent changes, one PR for `LicenseType` change which relies on the domain (e.g. SAND license, Production License, TEST system are all licenses and they depend on domains such as `sand.wtg.zone`) and anohter PR for DataCenter (e.g. AU2 which relies on a region TODO what does a region entity look like and how is it different to a data center?)
