@@ -24,3 +24,4 @@ When the computer executes the program, it prints a message, reads an input from
 
 The syntax used to write the code is known as the language. Usually the extension of the source code indicates the language- in this case, `.c` after the file name tells us the language is 'C'.
 
+Source code is machine agnostic. It is a high level specification and consistent across all machines.
