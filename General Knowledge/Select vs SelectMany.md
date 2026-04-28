@@ -1,6 +1,6 @@
 `Select` and `SelectMany` are both LINQ methods
 
-Select is a one to one projection- for each element in the sequence it selects one thing. So your output size corresponds to your input size.
+`Select` is a one to one projection- for each element in the sequence it selects one thing. So your output size corresponds to your input size.
 
 ```csharp
 var numbers = new[] { 1, 2, 3 };
@@ -12,7 +12,7 @@ var squares = numbers.Select(x => 1);
 // Result: { 1, 1, 1 }
 ```
 
-SelectMany is used when each element returns a collection and then you flatten it.
+`SelectMany` is used when each element returns a collection and then you flatten it. So the dimensionality is the same but the size is not proportionate to the input list, it is proportionate to the square of the input length sort of.
 
 ```csharp
 var words = new[] { "hello", "world" };
@@ -21,3 +21,4 @@ var chars = words.SelectMany(w => w.ToCharArray());
 // Result: IEnumerable<char>
 // { 'h','e','l','l','o','w','o','r','l','d' }
 ```
+
