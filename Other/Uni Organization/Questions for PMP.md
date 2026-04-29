@@ -4,6 +4,7 @@ For interim 4:
 
 For interim 5:
 1) How are we supposed to create more tasks e.g. we have 60, what to do to get more milestones, more tasks
+	1) just make it up
 2) Do we have to cite the market for the hourly rates (yes/no).
 	1) yes
 3) Are we working within a budget for development? Why would we choose junior roles when we could have seniors?
