@@ -1,6 +1,3 @@
-
-# Functional Testing Plan: Service Task Toggle (AD OU Move)
-
 ## Feature Summary
 
 Operators can toggle whether a CW1 customer system has service tasks enabled/disabled via a checkbox in the Console UI. This moves the system's AD entry between orchestrated and non-orchestrated OUs. The feature is only available in non-production (SAND) environments.
