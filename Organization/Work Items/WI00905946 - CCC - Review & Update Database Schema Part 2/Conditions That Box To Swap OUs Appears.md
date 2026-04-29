@@ -1,4 +1,5 @@
 
+```
 Backend (always enforced):
 
  - [Authorize(Policy = Policies.RequireOperatorOrHigher)] — user must have Operator or Admin role
@@ -11,3 +12,4 @@ environment.isProduction() returns false)
 PUT-CustomerSystemController.CustomerSystemUpdateServiceTaskAsync
  - Checkbox is disabled if the system is not Active (e.g. Activating, Deactivating, Removing)
  - Checkbox is disabled if an update is already in flight for that row
+```
