@@ -74,7 +74,7 @@ scratch
    - After migration, existing CustomerSystem records still have correct LicenseType (old enum 0→1 ID mapping)
    - Existing DatabaseServer, IISServer records likewise correct
 
-  7. Validation
+  1. Validation ---???? todo what is this
 
    - On a "wisecloud.zone" domain, only "Production" and "Test" license types are accepted for create
    - On "sand.wtg.zone", only "Sand" is accepted
