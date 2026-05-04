@@ -13,3 +13,6 @@ If you exclude the relabelling they are the same.
 
 In this example, we are used to relabelling the symmetries of physical objects to match the common names of the groups in maths. So it might not seem like 
 
+## basically
+
+owo uwu
