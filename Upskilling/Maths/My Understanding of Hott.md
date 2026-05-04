@@ -15,4 +15,6 @@ In this example, we are used to relabelling the symmetries of physical objects t
 
 ## basically
 
-something to do with categories. both ha
+something to do with categories. both are cartesian closed, both have initial object, both have terminal object. this being the same collapses the theory.
+
+Every type is a space. every space is an infinity groupoid.
