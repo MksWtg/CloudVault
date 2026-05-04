@@ -1,7 +1,7 @@
 
 What does it mean for something to be an interpretation of something else, philosophically?
 
-We interpret algebraic theories- those that can be described mathematically with a syntax and grammar and semantics. So the question only makes sense when we talk about inter
+We interpret algebraic theories- those that can be described mathematically with a syntax and grammar and semantics. So the question only makes sense when we talk about interpreting algebraic theories. Which MLTT is. But lets take a step back and talk about 
 
 Well up to a certain difference, they must be the same. They are equivalent to an extent.
 
