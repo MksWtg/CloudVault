@@ -7,7 +7,7 @@
   app starts serving requests. So when you deploy, the schema changes + seed data (HasData inserts) are applied
   automatically. No manual dotnet ef database update needed in production.
 
-  ⚠️ Risk note: The migration does a UPDATE to backfill LicenseTypeId on existing rows. If the production DB is large,
+  Risk note: The migration does a UPDATE to backfill LicenseTypeId on existing rows. If the production DB is large,
   this could briefly lock tables. Worth testing timing on a staging copy first.
 ```
 
