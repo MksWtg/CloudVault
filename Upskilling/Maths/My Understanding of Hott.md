@@ -15,4 +15,4 @@ In this example, we are used to relabelling the symmetries of physical objects t
 
 ## basically
 
-owo uwu
+something to do with categories. both ha
