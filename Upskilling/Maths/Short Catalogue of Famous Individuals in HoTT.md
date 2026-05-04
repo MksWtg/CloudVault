@@ -1,0 +1,8 @@
+- Jesper Cockx (Agda maintainer, on discord)
+- Amelia Liao (Discord, blog, has contributed to nlab)
+- Dan Licata (Gave talk on HoTT for functional programmers)
+- Thierry Coquand (Wrote coq, on github)
+- Thorsten Altenkirch (Gave many talks on Computerphile)
+- Steve Awodey (Book Category Theory, talk to grad students about HoTT)
+- Anders Mortberg
+- Mike Schulman
