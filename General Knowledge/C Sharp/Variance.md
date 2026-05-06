@@ -52,7 +52,7 @@ List<Dog> b = a;
 
 In other words, does the transformation of the poset $P$ by the functor `List` preserve the poset?
 
-In this case no. Although `Poodle` $\le$ `Dog`, `List<Poodle>` $\nleq$ `List<Dog`. Logically, this is because if we did assign `a` to `List<Dog> b`, we would be able to perform `b.Add(new Doberman());` and treat `a` as if it really were `b`. Which it isn't. Adding a doberman to a list of poodles violates type safety.
+In this case no. Although `Poodle` $\le$ `Dog`, `List<Poodle>` $\nleq$ `List<Dog>`. Logically, this is because if we did assign `a` to `List<Dog> b`, we would be able to perform `b.Add(new Doberman());` and treat `a` as if it really were `b`. Which it isn't. Adding a doberman to a list of poodles violates type safety.
 
 What is an example that is covariant? The `IEnumerable<T>` interface. This code compiles:
 ```C#
@@ -70,7 +70,7 @@ Action<Poodle> b = a;
 Exercise for the reader: explain, with code examples, why.
 
 
-We can annotate generics as covariant or contravariant using the `in` (covariant) and `out` (contravariant) modifiers in the declaration. 
+We can annotate generics as covariant or contravariant using the `in` (contravariant) and `out` (covariant) modifiers in the declaration. 
 ```csharp
 public interface IProducer<out T>
 {
