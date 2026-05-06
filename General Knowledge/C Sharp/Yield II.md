@@ -100,4 +100,4 @@ After iteration, internal `state` is `3`.
 
 The next time, for line `C` we call `GetEnumerator` again. Since state is not `0` the `IEnumerator` has been used, so it returns a new instance of `new CountTo3StateMachine(0);`.
 
-This lets us keep iterating over seq.
+This lets us keep iterating over seq. We use the same `GetEnumerator` but it gives us a new iterator `IEnumerator`. But every iterator is hardcoded to give us the same objects (if they are reference types).

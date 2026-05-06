@@ -1,6 +1,6 @@
 A continuation is the piece of code that runs after an operation completes.
 
-It says “what should happen next” once a job finishes.
+It says 'what should happen next' once a job finishes.
 
 ## Simple Example
 
@@ -65,6 +65,8 @@ task.ContinueWith(t =>
 });
 
 ```
+
+You can find the definition for `ContinueWith` [here](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.continuewith?view=net-10.0)
 
 C# transforms async/await into a state machine. each await point becomes a suspension point, and the remainder of the method after the await is saved as a continuation delegate. When the awaited `Task` completes, the continuation is invoked.
 
