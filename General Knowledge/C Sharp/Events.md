@@ -55,14 +55,14 @@ class Program
 ```
 
 ## Purpose
-We have a situation where there exists a publisher, that knows it is being subscribed to, but not who is subscribing to it. It can send a notification trusting that those listening know what to do.
+We have a situation where there exists a publisher, that knows it is being subscribed to (it exposes OnNotify), but not who is subscribing to it (that happens outside). It can send a notification trusting that those listening know what to do.
 
 This is better than just a public delegate, because public delegates are unsafe. Any subscriber can invoke a delegate. But only the owning class can invoke the event.
 
 Delegates anyone can invoke, overwrite, or clear.
-Events outsiders cannot invoke or overwrite, they can only add/remove handlers.
+Events outsiders cannot invoke or overwrite, they can only add/remove handlers. They cannot invoke. They cannot overwrite.
 
-you can manually mimic what event does by wrapping a delegate in a class or property that exposes only add/remove semantics but hides Invoke. This is essentially what C# does under the hood for events.
+You can manually mimic what event does by wrapping a delegate in a class or property that exposes only add/remove but hides Invoke. This is essentially what C# does under the hood for events.
 
 Every event in C# has underlying accessor methods.
 
