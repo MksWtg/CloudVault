@@ -86,8 +86,9 @@ If we have code like this:
 ```csharp
 var seq = CountTo3();
 
+// line A
 foreach (var a in CountTo3()) { ... }
 foreach (var b in CountTo3()) { ... }
 ```
 
-On the first invocation, we call `CountTo3().GetEnumerator()` which returns `new CountTo3StateMachine(0);`, this sets the state to `0`. Then immediately we 
+On the first invocation (line `A`), we call `CountTo3().GetEnumerator()` which returns `new CountTo3StateMachine(0);`, this sets the state to `0`. Then immediately we 
