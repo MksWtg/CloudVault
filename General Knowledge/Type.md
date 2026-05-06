@@ -1,5 +1,4 @@
 
-
 A type is a fundamental property of data that describes what kind of data a value is, and what operations are allowed on it.
 
 Languages that have types are called typed and these are most languages.
@@ -23,7 +22,11 @@ In some languages, only some types permit some operations and if you try to call
 In other languages, the language will coerce the type into another type and try to preserve meaning somewhat in this new language. For example, turning the string "0" into the number 0 when we try to add it to another number.
 
 
-|     |     |     |
-| --- | --- | --- |
-|     |     |     |
-|     |     |     |
+|         | Strong            | Weak            |
+| ------- | ----------------- | --------------- |
+| Static  | C#, Java, Haskell | C               |
+| Dynamic | Python, Ruby      | JavaScript, PHP |
+
+Note that weak but statically typed is a bit of a weird state. For a language to exist in this box you would need to know all types at compile time. But at the same time, allowing coercion into different types.
+
+C somewhat loosely (or even vacuously) fits the bill, as you can even multiply characters like the letter `a` and it will just use the int representation and do the math.
