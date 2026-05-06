@@ -1,7 +1,7 @@
 Prerequisites: [[Async Await]]
 
 
-- In debug build, to enable `EnC` (edit and continue), the state machine becomes a class for easier editing
+- In debug build, to enable `EnC` (edit and continue), the state machine becomes a class for easier editing. The CLR doesn't support adding fields to structs.
 - in release builds, `EnC` is not needed so the state machine becomes a struct for efficiency purposes (no need to reallocate memory).
 
 More reading:
