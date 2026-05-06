@@ -95,3 +95,9 @@ foreach (var b in seq) { ... }
 ```
 
 On the first invocation (line `A`), we call `seq = CountTo3()` which returns `new CountTo3StateMachine(0);`, this sets the state to `0`. Then immediately for the foreach loop we call `GetEnumerator()` on this object, which sets the state to `-1` and returns itself (to be used as an `IEnumerator` this time).
+
+After iteration, internal `state` is `3`.
+
+The next time, for line `C` we call `GetEnumerator` again. Since state is not `0` the `IEnumerator` has been used, so it returns a new instance of `new CountTo3StateMachine(0);`.
+
+This lets us keep iterating over seq.
