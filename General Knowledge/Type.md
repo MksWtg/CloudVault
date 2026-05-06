@@ -1,5 +1,10 @@
 
-A type is a fundamental property of data that describes what kind of data a value is, and what operations are allowed on it.
+In programming, a type is a fundamental property of data that describes what kind of data a value is, and what operations are allowed on it.
+
+Consider the language agnostic code
+```csharp
+int x = 10; // x is an identifier whose type is int. 10 is 
+```
 
 Languages that have types are called typed and these are most languages.
 
