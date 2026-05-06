@@ -1,6 +1,6 @@
 Prerequisites: [[Yield]]
 
-Yield actually expands this:
+Yield expands this:
 
 ```csharp
 IEnumerable<int> CountTo3()
@@ -57,6 +57,7 @@ class CountTo3StateMachine : IEnumerable<int>, IEnumerator<int>
 
     public void Dispose() { }
 
+	// in the first call we must return this object, every new call returns a new iterator
     public IEnumerator<int> GetEnumerator()
     {
         if (state == 0)
