@@ -1,4 +1,4 @@
-Prerequisites: [[IEnumerator]]
+Prerequisites: [[IEnumerator]], [[Interface]]
 
 `IEnumerable` is one of the core interfaces that represents a sequence you can iterate over.
 
