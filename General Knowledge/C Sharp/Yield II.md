@@ -84,11 +84,14 @@ IEnumerable<int> CountTo3()
 If we have code like this:
 
 ```csharp
+// Line A
 var seq = CountTo3();
 
-// line A
-foreach (var a in CountTo3()) { ... }
-foreach (var b in CountTo3()) { ... }
+// line B
+foreach (var a in seq) { ... }
+
+// line C
+foreach (var b in seq) { ... }
 ```
 
-On the first invocation (line `A`), we call `CountTo3().GetEnumerator()` which returns `new CountTo3StateMachine(0);`, this sets the state to `0`. Then immediately we 
+On the first invocation (line `A`), we call `seq = CountTo3()` which returns `new CountTo3StateMachine(0);`, this sets the state to `0`. Then immediately for the foreach loop we call `GetEnumerator()` on this object, which sets the state to `-1` and returns itself (to be used as an `IEnumerator` this time).
