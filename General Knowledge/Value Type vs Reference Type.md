@@ -1,4 +1,4 @@
-Prerequisite: Type
+Prerequisite: [[Type]]
 
 In programming language we create and manipulate data.
 
@@ -41,3 +41,5 @@ p1.Name = "Alice";
 Person p2 = p1;
 p2.Name = "Bob";
 ```
+
+Modifying p2 modifies p1 because they are two different names for the same object.
