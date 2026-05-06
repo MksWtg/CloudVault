@@ -1,3 +1,5 @@
+Prerequisite: [[IEnumerable]]
+
 The `yield` keyword is used to create iterators- methods that return a sequence of values one at a time, instead of building and returning a full collection at once.
 
 ## Yield Return
