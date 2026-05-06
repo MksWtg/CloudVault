@@ -20,4 +20,6 @@ If we run the above code it will print "not equal".
 
 But in C#, it will print "equal".
 
-This is because the CLR 'interns" the string "hello"- it figures out that 
+This is because the CLR 'interns' the string "hello"- it stores "hello" on the heap and any reference to any other string "hello" is replaced with a reference to this one.
+
+So `a` and `b` are the same object, and they are equal.

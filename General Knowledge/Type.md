@@ -42,4 +42,8 @@ They are independent things. Whether a language is dynamic does not affect wheth
 
 Note that weak but statically typed is a bit of a weird state. For a language to exist in this box you would need to know all types at compile time. But at the same time, allowing coercion into different types.
 
-C somewhat loosely (or even vacuously) fits the bill, as you can even multiply characters like the letter `a` and it will just use the int representation and do the math. But it isn't really statically typed like regular static languages are, if you do an operation on a data type that shouldn't allow it, C might not complain and it might just compile.
+C somewhat loosely (or even vacuously) fits the bill, as you can even multiply characters like the letter `a` and it will just use the int representation and do the math. But it isn't really statically typed like regular static languages are, if you do an operation on a data type that shouldn't allow it, C might not complain and it might just compile. It also might not compile.
+
+E.g. assigning pointers of one type to pointers of another won't compile. Like if you pass a long to a function that needs a short.
+
+TODO fact check the last two paras.
