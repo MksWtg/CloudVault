@@ -5,3 +5,14 @@ Command: a function that does something, has some effect, e.g. write to console,
 Query: return some data, e.g. read from DB, `int square(int x)`, etc.
 
 A method should not both have an effect and return a result.
+
+## Exceptions
+
+Some default .NET methods violate CQS by design.
+
+E.g.
+
+```cs
+bool success = dict.TryGetValue("key", out string value);
+```
+
