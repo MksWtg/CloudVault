@@ -6,4 +6,10 @@ Apologies for the delay. The form looks to be complete and accurate. I had a few
 
 Firstly, my annual payslip reported my gross taxable income as $71892.4$ but in the return it is reported as $71615.0$. Can I please know if this number comes directly from the income statement from the ATO or if there is a reason for this small discrepancy?
 
-Secondly, there is a figure $2148.45$ 
+Secondly, there is a figure $2148.45$ (placed beneath medicare levy) that is appended to tax owed. Do you know what this quantity represents?
+
+Thirdly, underneath HELP/SSL there is a quantity $4172.0$ that is not used anywhere else in the return. Do you know what this is for?
+
+Thank you very much for your patience and help.
+
+Mukund
