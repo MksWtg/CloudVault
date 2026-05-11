@@ -44,7 +44,7 @@ au2sp-torc-401.sand.wtg.zone//InternalSand.Orc//InternalSand.Orc
     
 ```
 
-This was observed in CS02323076, where multiple databases that could not be queried were reported through the ORC WebEndPoint status monitor as upgrade lock exceptions, even though the underlying problem was not necessarily a real database upgrade lock.
+This was observed in CS02323076 (`see above`), where multiple databases that could not be queried were reported through the ORC WebEndPoint status monitor as upgrade lock exceptions, even though the underlying problem was not necessarily a real database upgrade lock (`TOOD: what was it.
 
 The expected behaviour is to reserve the upgrade lock path for genuine applock conflicts only. When the target database does not exist, ORC should surface a clear "does not exist" message. When the target database exists but is not accessible, for example OFFLINE, RECOVERING, or RESTORING, ORC should surface a clear "database is unavailable" message that includes the current database state.
 
