@@ -9,4 +9,7 @@ VALUES (
 	(SELECT Id FROM WiseCloudDeploymentService.dbo.ApplicationRole WHERE Name = 'Administrator'),
 	(SELECT Id FROM WiseCloudDeploymentService.dbo.UserSecurityGroup WHERE Name = 'Cargowise Cloud')
 );
-    ```
+```
+
+```
+```
