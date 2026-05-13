@@ -19,9 +19,15 @@ Customer database instances are segregates one per instance. There might be 30 i
 	- If customer has fewer services than required get a new one.
 	- Each of these goes in the plan
 3) Actions are grouped by hosts and run in parallel across hosts. Actions on the same host run sequentially. `sc.exe` is used to start and stop services.
-4) 
+4) If the main round made no changes, the orchestrator moves services from overloaded hosts to underloaded ones.
 
+Additional responsibilities:
+- cleaning up log files from the host
+- polling the cpu and disk metric for all hosts
+- HTTP status endpoints are hosted that SCOM points at
+- environmental failures go into an expiring messafe cache that is ingested by scom
 
+There is one orc per data centre domain combination
 
 
 
