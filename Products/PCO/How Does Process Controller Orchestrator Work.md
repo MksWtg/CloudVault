@@ -27,14 +27,9 @@ Additional responsibilities:
 - HTTP status endpoints are hosted that SCOM points at
 - environmental failures go into an expiring messafe cache that is ingested by scom
 
-There is one orc per data centre domain combination
+There is one orc per data centre domain combination.
 
-
-
-
-
-
-
+So in the AU2 data centre we have a PCO for sand, prod, test and corp.
 
 ## CargoWise as a Prerequisite for PCO
 
