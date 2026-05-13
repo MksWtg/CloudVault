@@ -7,11 +7,19 @@ Every round (which occurs once every 5 minutes) the `EnvironmentNormalizationTas
 
 There are PC host servers (physical servers/VM servers) in a data centre that run PC services. Maybe 10-20 host computers. Each of these needs to have cargowise start on it (see [[How Does Process Controller Orchestrator Work#CargoWise as a Prerequisite for PCO]]).
 
-Customer database instances are segregates one per instance. There might be 30 instances for 30 customers,
+Customer database instances are segregates one per instance. There might be 30 instances for 30 customers, which is 30 dbs, but all running off one host.
 
 1) Discovery:
-	- What PC host servers exist in my data centre?
-	- What customer instances exist in my domain
+	- What are all the hosts that can have PCO?
+	- What are all the instances that need a corresponding orchestrator?
+2) Create a plan:
+	- If a service has no matching customer record, it is an orphan, remove the service
+	- If a customer has more than the required number of services for some reason, remove excess
+	- If service is in a bad state, remove it and get a new one
+	- If customer has fewer services than required get a new one.
+	- Each of these goes in the plan
+3) Actions are grouped by hosts and run in parallel across hosts. Actions on the same host run sequentially. `sc.exe` is used to start and stop services.
+4) 
 
 
 
