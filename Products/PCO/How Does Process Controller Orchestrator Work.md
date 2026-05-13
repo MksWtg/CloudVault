@@ -50,3 +50,5 @@ The orchestrator calls `Invoke-RemoteScript` over an encrypted WinRM connection 
 
 TODO where is the code that does this.
 
+Full process:
+1) invoke on the remote host as the system account via a windows scheduled task, to download the binaries for the right cw version (handled by CW start? TODO)
