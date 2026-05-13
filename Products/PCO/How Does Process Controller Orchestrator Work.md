@@ -52,3 +52,6 @@ TODO where is the code that does this.
 
 Full process:
 1) invoke on the remote host as the system account via a windows scheduled task, to download the binaries for the right cw version (handled by CW start? TODO)
+2) Determine the service account name
+3) check that the db is not upgrading
+4) install the windows service using a command like: `ServiceManager.Host.CW.exe -install -automatic "-username:s_gMSA_ACME$@wisecloud.zone" <SQLServer> <Database> -quiet`
