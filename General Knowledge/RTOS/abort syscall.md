@@ -1,0 +1,1 @@
+like exit(), but uncontrolled
