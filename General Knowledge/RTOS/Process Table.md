@@ -23,4 +23,7 @@ process states are:
 - zombie
 - suspended
 
-When
+When is entry removed from table? all of these need to happen
+- when process terminates using exit
+- when the kernel marks it as a zombie
+- the parent calls wait or waitpid
