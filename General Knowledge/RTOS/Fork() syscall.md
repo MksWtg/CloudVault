@@ -18,4 +18,8 @@ the type is `pid_t`
 
 - fork creates a child process with the data and code inherited from the parent
 - exec() replaces the code and data and then executes the code
-- exit() terminates the process. not
+- exit() terminates the process. note that void exit(int status) where status is used as the return value of the process. exit(i) can be used to announce success or failure e.g. exit(0) or exit(-1)
+
+#### Note:
+
+`return 0;` and `exit(0);` both terminate a program successfully, but they work differently depending on where they are used.
