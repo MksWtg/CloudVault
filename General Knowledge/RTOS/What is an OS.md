@@ -25,4 +25,5 @@ OS Functionality
 	- resource management (page faults)
 - memory management: allocate memory to processes, move processes between disk and memory (instructions are binaries like an .exe, they need to be loaded into memory)
 - file system allocates space for storage of programs and data on disk
-- networks and distributed computing 
+- networks and distributed computing allows computers to work today
+- security and protection
