@@ -24,4 +24,5 @@ OS Functionality
 	- CPU scheduling (we use algorithms such as RR to solve this)
 	- resource management (page faults)
 - memory management: allocate memory to processes, move processes between disk and memory (instructions are binaries like an .exe, they need to be loaded into memory)
-- 
+- file system allocates space for storage of programs and data on disk
+- networks and distributed computing 
