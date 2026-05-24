@@ -18,4 +18,5 @@ Why do we need an OS?
 
 OS Functionality
 - concurrency
-	- within a process, m
+	- within a process, multiple tasks are running at once (each one is one thread)
+	- processes can commm
