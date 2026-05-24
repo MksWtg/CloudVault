@@ -7,4 +7,4 @@ In Linux, a new process is created by means of the fork() - system call. The OS 
 
 Note:
 - fork actually is called once but returns twice
-- in ord
+- in order to know all the pids, issue a `getpid()` call before and after forking
