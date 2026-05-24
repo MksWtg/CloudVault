@@ -18,3 +18,7 @@ how does syscall pass params?
 1) pass via the stack by pushing
 2) can put into registers (doesnt work if many params)
 3) can put into memory (address passed as a param in a register)
+
+A system call executes kernel code
+
+A system call can cause a process to **suspend (block)** if the requested resource is not immediately available. Instead of continuing execution, the operating system puts the process into a waiting state until the resource becomes available, and only then resumes it.
