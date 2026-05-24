@@ -33,4 +33,5 @@ Caller doesnt need to know how the sys call is implemented, just to obey the API
 
 Details of the OS hidden by API
 
-Disadvantae with using the same interface for S/
+Disadvantage with using the same interface for S/W and H/W is you cant capture functionality of different devices using the same API
+
