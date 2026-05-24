@@ -19,3 +19,7 @@ IPC can be done via message passing or shared memory
 Question: Distinguish between the client-server, known as C-S, and peer-to-peer, known as P-P, models of distributed systems
 
 Answer: The C-S requests services that are provided by the S. while P-P is equal P can request and provide services – or both. A node may request a service from another P, or the node may in fact provide such a service to other peers in the system
+
+**Client-Server:** A central server provides resources/services and clients request them, creating a clear distinction between provider and consumer (e.g., a web browser requesting a webpage from a web server).
+
+**Peer-to-Peer (P2P):** Every node acts as both client and server simultaneously, communicating directly with each other without a central authority (e.g., BitTorrent file sharing).
