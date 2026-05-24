@@ -1,5 +1,5 @@
 
-An OS is the interface between the user (or high ) and the hardware
+An OS is the interface between the user (or high level software) and the hardware
 
 It does a lot of things:
 1) controls and coordinates the user of hardware devices among all the apps and users
@@ -15,3 +15,7 @@ Why do we need an OS?
 - gather the hardware software, DSA into one system
 - abstraction and summary of resources
 - deciding which functions should be implemented in hardware (H/W) and which should be implemented in software (S/W)
+
+OS Functionality
+- concurrency
+	- within a process, m
