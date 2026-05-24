@@ -16,7 +16,7 @@ the type is `pid_t`
 
 #### Important Syscalls
 
-- fork creates a child process with the data and code inherited from the parent
+- fork creates a child process with the data and code inherited from the parent it returns twice, 0 in the child and the child in the parent
 - exec() replaces the code and data and then executes the code
 - exit() terminates the process. note that void exit(int status) where status is used as the return value of the process. exit(i) can be used to announce success or failure e.g. exit(0) or exit(-1)
 - wait() suspends the parent process until one of the child processes terminates.
