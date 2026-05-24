@@ -5,5 +5,4 @@ At the user level, it uses authentication like passwords or biometrics to verify
 
 At the permission level, it enforces access control on files, devices, and system resources (for example, read/write/execute permissions). 
 
-
 At the execution level, it isolates processes using memory protection so one program can’t read or overwrite another program’s memory, and it separates user mode from kernel mode so only trusted system code can access critical hardware.

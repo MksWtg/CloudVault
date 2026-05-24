@@ -27,3 +27,8 @@ OS Functionality
 - file system allocates space for storage of programs and data on disk
 - networks and distributed computing allows computers to work today
 - security and protection
+
+
+#### Structure
+
+![[Pasted image 20260524205516.png]]
