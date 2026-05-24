@@ -23,5 +23,7 @@ A system call executes kernel code
 
 A system call can cause a process to **suspend (block)** if the requested resource is not immediately available. Instead of continuing execution, the operating system puts the process into a waiting state until the resource becomes available, and only then resumes it.
 
-A syscall might return a value which represents if it succeeded or not
+A syscall might return a value which represents if it succeeded or not.
+
+The system call interface interpreters (intercepts) function calls in the API and invokes the necessary system calls within the operating system
 
