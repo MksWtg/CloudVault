@@ -8,3 +8,9 @@ Interrupts and Exceptions both alter program flow. The difference being, interru
 
 A trap or exception is a software-generated interrupt caused either by an error or a user request
 
+
+
+ISR is a piece of kernel code that handles the interrupt
+e.g. reading a pressed key
+
+the interrupt vector is a lookup table in memory, every type of interrupt has an ID that maps to the right ISR so the CPU knows how to handle it
