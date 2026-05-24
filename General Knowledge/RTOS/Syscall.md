@@ -39,4 +39,8 @@ Disadvantage with using the same interface for S/W and H/W is you cant capture f
 
 Advatnages:
 - simple programming model with functions like open, read, write, close
-- Easier OS design and extensibility since all devices are handled throuhg a file like interface, so if we want a new device driver we implement the standard file operations for the driver like read write an
+- Easier OS design and extensibility since all devices are handled throuhg a file like interface, so if we want a new device driver we implement the standard file operations for the driver like read write and open without changing the rest of the OS
+- and it is a uniform abstraction, user programs dont need to know if it is a disk file or a hardware device
+
+Disadvantages:
+- not all devices behave like files- files are sequential or random access and are finite data stored on disk
