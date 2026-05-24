@@ -21,7 +21,7 @@ the type is `pid_t`
 - exit() terminates the process. note that void exit(int status) where status is used as the return value of the process. exit(i) can be used to announce success or failure e.g. exit(0) or exit(-1)
 - wait() suspends the parent process until one of the child processes terminates.
 	- when a process creates a child with fork the two run independently. sometimes the parent wants to pause, so thats what wait and waitpid do. wait pauses the parent until any one of the children finish. when child finishes, the kernel wakes the parent.
-	- without wait, a child can become a zombie- it finishes executing but still has an entry in the process table because parent has not yet collected its execute status 
+	- without wait, a child can become a zombie- it finishes executing but still has an entry in the process table because parent has not yet collected its execute status using wait()
 #### Note:
 
 `return 0;` and `exit(0);` both terminate a program successfully, but they work differently depending on where they are used.
