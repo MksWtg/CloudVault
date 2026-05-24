@@ -18,5 +18,6 @@ Why do we need an OS?
 
 OS Functionality
 - concurrency
-	- within a process, multiple tasks are running at once (each one is one thread)
-	- processes can commm
+	- within a process, multiple tasks are running at once (we use multithreading to solve this)
+	- processes can communicate (we use IPC to solve this)
+	- processes may require mutual exclusive access to some resource (we use mutexes and semaphores to solve this)
