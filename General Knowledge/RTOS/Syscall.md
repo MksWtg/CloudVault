@@ -35,3 +35,8 @@ Details of the OS hidden by API
 
 Disadvantage with using the same interface for S/W and H/W is you cant capture functionality of different devices using the same API
 
+#### What are the advantages and disadvantages of using the same system call interface for manipulating both files and devices?
+
+Advatnages:
+- simple programming model with functions like open, read, write, close
+- Easier OS design and extensibility since all devices are handled throuhg a file like interface, so if we want a new device driver we implement the standard file operations for the driver like read write an
