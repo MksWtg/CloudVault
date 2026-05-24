@@ -43,4 +43,6 @@ Advantages:
 - and it is a uniform abstraction, user programs dont need to know if it is a disk file or a hardware device
 
 Disadvantages:
-- not all devices behave like files- files are sequential or random access and are finite data stored on disk
+- not all devices behave like files- files are sequential or random access and are finite data stored on disk. devices may be interactive, they might stream, etc. so the file api is bad for device features
+- some device features dont fit read/write like changing the screen resolution etc.
+- forcing everything into a file abstraction adds overh
