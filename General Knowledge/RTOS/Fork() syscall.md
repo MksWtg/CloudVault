@@ -41,4 +41,6 @@ void f() {
 
 #### More Info
 
-to wait for a particular child to
+to wait for a particular child to terminate you can use `waitpid()` or `wait()`
+
+you can use getpid, getppid (parent process) getuid to get the user id
