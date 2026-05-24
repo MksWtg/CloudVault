@@ -32,4 +32,5 @@ OS Functionality
 #### Structure
 
 ![[Pasted image 20260524205516.png]]
-When you call something like `open()` in your instructions, those go and call 
+When you call something like `open()` in your instructions, the kernel actually executes that in kernel mode.
+
