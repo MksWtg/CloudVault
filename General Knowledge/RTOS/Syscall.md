@@ -29,7 +29,7 @@ The system call interface interpreters (intercepts) function calls in the API an
 
 Typically, a number associated with each system call. System-call interface maintains a table indexed according to these numbers
 
-Caller doesnt need to know how the sys call is implemented, just to obey the API and understand what OS will do
+Caller doesn't need to know how the sys call is implemented, just to obey the API and understand what OS will do
 
 Details of the OS hidden by API
 
@@ -37,7 +37,7 @@ Disadvantage with using the same interface for S/W and H/W is you cant capture f
 
 #### What are the advantages and disadvantages of using the same system call interface for manipulating both files and devices?
 
-Advatnages:
+Advantages:
 - simple programming model with functions like open, read, write, close
 - Easier OS design and extensibility since all devices are handled throuhg a file like interface, so if we want a new device driver we implement the standard file operations for the driver like read write and open without changing the rest of the OS
 - and it is a uniform abstraction, user programs dont need to know if it is a disk file or a hardware device
