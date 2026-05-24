@@ -6,4 +6,6 @@ this module focuses on:
 What will i be able to do by the end?
 - what are process state cpu switch and threads
 - how does fork work
-- how to describe shceduling o
+- how to describe scheduling creation and termination
+- how does ipc such as message synchronization and shared memory work
+-
