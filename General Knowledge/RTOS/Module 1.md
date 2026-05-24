@@ -17,3 +17,5 @@ Vocab:
 An OS structure is the way an operating system is organized internally, including how its components such as the kernel, file system, memory manager, and device drivers are arranged and communicate. Common OS structures include monolithic kernels, microkernels, layered systems, modular systems, and hybrid kernels. The structure affects performance, security, maintainability, and how easily the operating system can be extended or debugged.
 
 #### OS Service
+
+An operating system service is a function provided by the operating system to help programs and users interact with computer hardware safely and efficiently. Common OS services include file management, memory management, process scheduling, device control, security, and user interfaces. These services allow application programs to run without needing to directly control hardware components.
