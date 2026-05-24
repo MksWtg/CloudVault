@@ -15,8 +15,8 @@ OS uses table to switch between processes and schedule CPU time
 
 ___
 process states are:
-- new
-- ready
+- new: admitted to ready queue and is considered by scheduler
+- ready: cpu scheduler chooses that process to execute next
 - running 
 - waiting
 - terminated
