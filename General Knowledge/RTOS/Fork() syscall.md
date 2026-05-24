@@ -1,0 +1,1 @@
+In Linux, a new process is created by means of the fork() - system call. The OS performs the following functions:
