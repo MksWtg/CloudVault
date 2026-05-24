@@ -1,0 +1,1 @@
+A kernel is the core part of an operating system that manages communication between software and hardware.
