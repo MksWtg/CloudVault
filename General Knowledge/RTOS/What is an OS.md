@@ -23,4 +23,5 @@ OS Functionality
 	- processes may require mutual exclusive access to some resource (we use mutexes and semaphores to solve this)
 	- CPU scheduling (we use algorithms such as RR to solve this)
 	- resource management (page faults)
-- memory management: allocate memory to processes, move processes between disk and memory (instructions are binaries like an .exe)
+- memory management: allocate memory to processes, move processes between disk and memory (instructions are binaries like an .exe, they need to be loaded into memory)
+- 
