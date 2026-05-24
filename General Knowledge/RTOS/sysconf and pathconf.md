@@ -23,3 +23,8 @@ Examples: max filename length, max path length, max symlinks for a specific path
 long val = pathconf("/home", _PC_NAME_MAX);  // max filename length at /home
 long val = pathconf("/tmp", _PC_PATH_MAX);   // max path length at /tmp
 ```
+
+execl(), execlp(), execle()        ← C library wrappers
+execv(), execvp(), execvpe()       ← C library wrappers
+        ↓
+    execve()                       ← the actual syscall
