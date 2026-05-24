@@ -5,3 +5,5 @@ It does a lot of things:
 1) controls and coordinates the user of hardware devices among all the apps and users
 2) Provides standard services such as process, cpu scheduling, memory management, file system, networking
 3) User mode and kernel mode
+	1) user mode is where normal apps like browsers run, they have limited access so they cant modify critical memory.
+	2) kernel mode is where 
