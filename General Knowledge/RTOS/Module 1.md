@@ -12,6 +12,8 @@ What will i be able to do at the end of this module?
 
 Vocab:
 
-#### OS structure
+#### OS Structure
 
 An OS structure is the way an operating system is organized internally, including how its components such as the kernel, file system, memory manager, and device drivers are arranged and communicate. Common OS structures include monolithic kernels, microkernels, layered systems, modular systems, and hybrid kernels. The structure affects performance, security, maintainability, and how easily the operating system can be extended or debugged.
+
+#### OS Service
