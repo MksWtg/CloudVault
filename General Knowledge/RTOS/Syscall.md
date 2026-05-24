@@ -10,4 +10,11 @@ close closes an open file descriptor;
 fork creates a new process by duplicating the current one;
 execve replaces the current process with a new program;
 wait waits for a child process to finish and collects its exit status;
-mmap maps files or devices into memory for direct access; brk changes the size of the process’s data segment for memory allocation; exit terminates the current process and returns a status code to the OS
+mmap maps files or devices into memory for direct access;
+brk changes the size of the process’s data segment for memory allocation;
+exit terminates the current process and returns a status code to the OS
+
+how does syscall pass params?
+1) pass via the stack by pushing
+2) can put into registers (doesnt work if many params)
+3) can put into memory (address passed as a param in a register)
