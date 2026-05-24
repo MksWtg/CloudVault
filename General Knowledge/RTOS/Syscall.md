@@ -27,3 +27,10 @@ A syscall might return a value which represents if it succeeded or not.
 
 The system call interface interpreters (intercepts) function calls in the API and invokes the necessary system calls within the operating system
 
+Typically, a number associated with each system call. System-call interface maintains a table indexed according to these numbers
+
+Caller doesnt need to know how the sys call is implemented, just to obey the API and understand what OS will do
+
+Details of the OS hidden by API
+
+Disadvantae with using the same interface for S/
