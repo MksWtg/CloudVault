@@ -45,4 +45,6 @@ Advantages:
 Disadvantages:
 - not all devices behave like files- files are sequential or random access and are finite data stored on disk. devices may be interactive, they might stream, etc. so the file api is bad for device features
 - some device features dont fit read/write like changing the screen resolution etc.
-- forcing everything into a file abstraction adds overh
+- forcing everything into a file abstraction adds overhead
+
+ioctl which stands for input output control is a syscall that allows commands outside read and write
