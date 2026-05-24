@@ -7,7 +7,20 @@ it includes program code, CPU state, memory such as stack or heap, open files, p
 
 program is passive (just a file on disk) but process is active and currently executing
 
+___
 
 Process table is kernel DS which stores info about all active processes, such as PID, state, cpu register values, memory info
 
-OS uses tabl
+OS uses table to switch between processes and schedule CPU time
+
+___
+process states are:
+- new
+- ready
+- running 
+- waiting
+- terminated
+- zombie
+- suspended
+
+When
