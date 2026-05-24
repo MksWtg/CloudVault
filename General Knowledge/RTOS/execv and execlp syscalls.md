@@ -19,7 +19,7 @@ int main() {
 
     printf("Before execv\n");
 
-    execv("/bin/ls", args);
+    execv("/bin/ls", args); // path and an array of arguments
 
     // Only runs if execv fails
     perror("execv failed");
@@ -34,7 +34,7 @@ int main() {
 int main() {
     printf("Before execlp\n");
 
-    execlp("ls",      // searched in PATH
+    execlp("ls",      // searched in PATH // program name in path and a variable number of arguments, variadic
            "ls",      // argv[0]
            "-l",
            "/tmp",
