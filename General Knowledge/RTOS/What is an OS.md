@@ -8,4 +8,4 @@ It does a lot of things:
 	1) user mode is where normal apps like browsers run, they have limited access so they cant modify critical memory.
 	2) kernel mode is where the kernel (core OS code) runs with full access to the CPU, memory and devices to it can manage hardware
 	3) CPU needs to switch between these modes so that user programs stay isolated and the system remains stable
-	4) 
+4) OS implements a VM that is easier to program than bare hardware (e.g. system calls, files, processes are all higher level abstractions)
