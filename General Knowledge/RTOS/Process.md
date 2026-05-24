@@ -15,11 +15,10 @@ OS uses table to switch between processes and schedule CPU time
 
 ___
 process states are:
-- new: admitted to ready queue and is considered by scheduler (sometimes not yet in queue)
-	- OS allocating memory
+- new: OS allocating memory
 - ready: waiting in ready queue
 - running: actively executing, can transition into ready if preempted
-- waiting
+- waiting: requested IO or waiting for a child or signal
 - terminated
 - zombie
 - suspended
