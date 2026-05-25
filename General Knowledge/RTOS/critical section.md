@@ -9,3 +9,16 @@ As usual synchronization primitive, a semaphore is based on a variable. This var
 
 a semaphore keeps a queue of waiting processes
 when an icnrement from -2 to -1 happens, it frees up a process
+
+processes are put to sleep or woken up by moving them between queues like waiting queue
+
+sem wait decrements
+sem post or signal increments
+
+busy waiting is using a loop
+we dont do that, unix moves to wait queue
+
+
+---
+
+There is an idea to use disabling interrupts when reaching the critical section. unfortunately this is not a viable option
