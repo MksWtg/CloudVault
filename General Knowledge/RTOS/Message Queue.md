@@ -66,3 +66,10 @@ They do completely different things, even though they often appear together in I
 > “Remove this filename from the directory.”
 
 Deletes the **directory entry (name → inode mapping)**
+
+
+#### Improvement over FIFO:
+- fifo does not have mesage boundaries- HELLO WORLD is just HELLOWORLD but mq does
+- mq can have priority
+- FIFO cannot choose categories or types it just reads sequentially
+

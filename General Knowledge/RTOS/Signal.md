@@ -26,4 +26,11 @@ The process may configure how it handles a signal
 Use cases:
 - exception handling
 - asynchronous event notification (kernel handles the inerrupt but then sends a signal)
-- 
+
+
+Signals are like a software interrupt?
+- they are generated and used to handle events
+- they arrive asynchonously and demand to be handled
+
+SIGALARM notifies a process when some time has passed
+
