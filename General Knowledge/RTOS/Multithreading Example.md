@@ -1,5 +1,5 @@
 
-See: Thread
+See: [[Thread]]
 
 ```C
 #include <stdio.h>
@@ -40,3 +40,5 @@ int main() {
     return 0;
 }
 ```
+
+attributes can detach and choose the scheduling policy
