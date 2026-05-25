@@ -23,3 +23,8 @@ Comparison vs regular pipe
 | Unrelated process IPC    | Hard                                               | Easy                 |
 | Kernel buffering         | Yes                                                | Yes                  |
 | Blocking behavior        | Yes                                                | Yes                  |
+named pipes exist beyond the process that created them, they have to be actively deleted (i think pipes are cleaned up by the kernel)
+
+unlink must be called to clean up named pipes
+
+named pipes are usually half duplex- data flows one way
