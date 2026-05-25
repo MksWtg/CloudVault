@@ -30,3 +30,12 @@ Scheduling Algorithm Optimization Criteria – Max CPU utilization – Max throu
 - shortest remaining time first -> preempts, so if a shorter process comes it pushes it up
 - Priority scheduling pushes some up by priority
 - RR we know
+	- time slice might take 10ms to 100ms 
+	- context swtichign takes 0.1 to 1 ms
+---
+
+A **Multilevel Feedback Queue (MLFQ)** is a CPU scheduling algorithm where processes are placed in **multiple priority queues**, and they can **move between queues based on their behavior over time**.
+
+Unlike fixed priority systems, MLFQ _learns from how a process behaves_.
+
+E.g. 2RR and one FCFS
