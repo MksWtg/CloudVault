@@ -42,4 +42,12 @@ SIGCHLD means the child had a problem
 SIGALRM means some time has passed
 
 #### Default behaviour
-If it hasn't
+If it hasn't been set up it will terminate
+
+#### Blocking vs Ignoring
+
+termporarily prevent a signal from being sent
+
+ignoring means disregard it completely
+
+it is idempotent- queueing sigint 100 times will only send it once
