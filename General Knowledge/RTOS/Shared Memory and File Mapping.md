@@ -39,4 +39,19 @@ int main() {
 
     return 0;
 }
+
 ```
+
+`shm_open()` — “create or open shared memory object”
+
+- It does **NOT give you memory**
+- It gives you a **file descriptor (fd)**
+
+# `mmap()` — “map memory into your process”
+
+## What it does
+
+`mmap()` takes:
+
+- a file descriptor (or shared memory object)
+- and maps it into your process’s virtual address space
