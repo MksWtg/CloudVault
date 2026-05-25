@@ -1,6 +1,8 @@
 
 See: [[Pipes]]
 
+these showed up in POSIX 4
+
 you create a named pipe with mkfifo (not with pipe in c)
 
 ```C

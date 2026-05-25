@@ -21,3 +21,9 @@ The process may configure how it handles a signal
 - Signals and interrupts are both asynchronous
 - Signals in unix/Linux have names and numbers
 - Use ‘man kill’ to see the types of signals
+
+
+Use cases:
+- exception handling
+- asynchronous event notification (kernel handles the inerrupt but then sends a signal)
+- 
