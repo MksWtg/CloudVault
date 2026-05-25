@@ -40,3 +40,6 @@ SIGTERM is terminate (polite)
 SIGSEGV is a seg fault
 SIGCHLD means the child had a problem
 SIGALRM means some time has passed
+
+#### Default behaviour
+If it hasn't
