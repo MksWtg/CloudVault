@@ -55,3 +55,7 @@ int main() {
 
 - a file descriptor (or shared memory object)
 - and maps it into your process’s virtual address space
+---
+
+in shared memory you control the layout so it is flexible
+but p
