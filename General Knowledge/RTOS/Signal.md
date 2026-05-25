@@ -34,3 +34,9 @@ Signals are like a software interrupt?
 
 SIGALARM notifies a process when some time has passed
 
+SIGINT is a Ctrl C interrupt
+SIGKILL is terminate forced
+SIGTERM is terminate (polite)
+SIGSEGV is a seg fault
+SIGCHLD means the child had a problem
+SIGALRM means some time has passed

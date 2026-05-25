@@ -44,3 +44,6 @@ int main() {
 The handler is the function or method or function pointer that handles the signal
 
 Two default handlers, SIG_IGN and SIG_DFL allow us to respectively ignore a signal, or to call a default handler
+
+
+e.g. for sigkill, we send sigkill as a signal but whether it is actually killed or not who knows
