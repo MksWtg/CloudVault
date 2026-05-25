@@ -42,8 +42,13 @@ e.g. if a process tries to read but nothing has written yet, the kernel suspends
 
 if the writer writes too much the writer blocks
 
+if you try to write to a pipe but the reading end has been closed, OS kernel genertaes a signal (SIGPIPE)
+
 (even though pipe is used in one process, after fork multiple processes may inherit the same file descriptor)
 
 ready from fd[0] write to fd[1]
 
 0 1 2 are usually reserved fds for stdin stdout and stderr
+
+
+if you try t
