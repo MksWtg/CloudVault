@@ -18,3 +18,15 @@ Response time – amount of time it takes from when a request was submitted unti
 Predictability -- Variance in any of these measures 
 
 Scheduling Algorithm Optimization Criteria – Max CPU utilization – Max throughput – Min turnaround time – Min waiting time – Min response time
+
+---
+
+## Algos:
+
+- first come first serve depends on the order of arrival
+	- can be good if short ones come first
+	- bad if long ones come first (called the convoy effect)
+- shortest job first makes the shortest job come first
+- shortest remaining time first -> preempts, so if a shorter process comes it pushes it up
+- Priority scheduling pushes some up by priority
+- RR we know
