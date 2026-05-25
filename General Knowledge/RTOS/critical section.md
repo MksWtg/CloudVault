@@ -21,4 +21,4 @@ we dont do that, unix moves to wait queue
 
 ---
 
-There is an idea to use disabling interrupts when reaching the critical section. unfortunately this is not a viable option
+There is an idea to use disabling interrupts when reaching the critical section. unfortunately this is not a viable option as it breaks the whole OS, scheduling stops happenign and context switcing stops happening
