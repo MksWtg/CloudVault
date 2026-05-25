@@ -47,3 +47,4 @@ Two default handlers, SIG_IGN and SIG_DFL allow us to respectively ignore a sign
 
 
 e.g. for sigkill, we send sigkill as a signal but whether it is actually killed or not who knows
+if we send a sigterm the process may handle it
