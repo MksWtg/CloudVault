@@ -58,4 +58,37 @@ int main() {
 ---
 
 in shared memory you control the layout so it is flexible
-but p
+but prone to race conditions
+
+```C
+#include <stdio.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int main() {
+    const char *name = "/my_shm";
+
+// this just gives a file descriptor
+    int fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+    // needed
+    ftruncate(fd, sizeof(int));
+
+// this is the shape of the shraed data
+    int *ptr = mmap(NULL, sizeof(int),
+                    PROT_READ | PROT_WRITE,
+                    MAP_SHARED,
+                    fd, 0);
+
+// dereference and set value
+    *ptr = 42;
+    printf("Writer wrote: %d\n", *ptr);
+
+    sleep(10); // keep alive so reader can access
+
+// delete
+    shm_unlink(name);
+    return 0;
+}
+```
