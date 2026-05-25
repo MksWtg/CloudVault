@@ -39,3 +39,5 @@ they dont need their own address space sot hey are cheap to create
 | Parallelism         | Yes (across cores)                        | Yes (within same or across cores)              |
 | Example             | Two separate programs (browser + editor)  | Browser tabs or worker threads in a server     |
 All of the threads in a process: ➢ Share address space, program code, global variables, heap, and OS resources
+
+If a program is sequential it cannot be multithreaded
