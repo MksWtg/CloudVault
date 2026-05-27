@@ -2,16 +2,10 @@ Prerequisites: [[What is CargoWise]]
 A desktop app. You can download it from the software center. Chances are, if you are a wisetech employee, you use it every day. It looks like this:
 ![[Pasted image 20260218155701.png]]
 
-## Why CCC?
+## The Problem
 
-Every solution in WiseCloud exists to solve a problem.
+All CWC solutions exist to solve a problem. The problem is for hosted customers, we run cargowise on our servers but how does the user use them if they run on our servers?
 
-### The Problem
+## The Solution
 
-TODO: kind of shocking, but i don't really know haha
-
-Historically, hosted customers accessed Cargowise via RDP. Cargowise runso n 
-
-### The Solution
-
-Accessor
+WCA is both a client side interface for users to initiate a session and other parts that connect the user to a running cargowise instance.
