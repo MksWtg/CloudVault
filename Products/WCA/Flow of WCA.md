@@ -10,7 +10,7 @@ It depends if they are using RDP or web.
 
 1. Double-click captured `ApplicationItemViewBehavior.AssociatedObject_MouseLeftButtonDown` fires, calls `applicationItem.AsyncRunCommand.Execute(null)`
 
-2. RDS upgrade gate
+2. RDS upgrade- before anything else progresses a check happens to make sure the latest RDS is installed.
 RdsInstallationAwareCommand.Execute — checks with the server whether RDS needs upgrading, handles it if so, then continues
 
 3. Get thumbprint (cached)
