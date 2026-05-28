@@ -10,12 +10,9 @@ It depends if they are using RDP or web.
 
 1. Double-click captured `ApplicationItemViewBehavior.AssociatedObject_MouseLeftButtonDown` fires, calls `applicationItem.AsyncRunCommand.Execute(null)`
 2. RDS upgrade- before anything else progresses a check happens to make sure the latest RDS is installed. At the lowest level this happens in `TryInstallLatestPerUserRds`. It doesn't run if there is a flag saying install per machine (not per user), or if it cant find the installer, or if per RDS is up to date.
-3. Get thumbprint (cached) `accessProvider.GetThumbprint()` sends a post request to the WCA frontend at `/WiseCloudAccessProviderService.svc/GetThumbprint`. This is received by `WiseCloudUnauthenticatedAccessProviderService.GetThumbprint()` then it calls `RdpSign.GetCertificateThumbprint()` which opens the certificate store on the frontend server and returns the sha
-
-4. Get RDP file (cached)
-accessProvider.GetRdpFile(applicationType, applicationId, username, password, countryCode) — another network call to the frontend.
-
-Both calls go through WebWiseCloudAccessProvider which sits inside WebFailover — it injects the WCACFE sticky session cookie and retries fallback URLs if the primary fails.
+3. Get thumbprint (cached) `accessProvider.GetThumbprint()` sends a post request to the WCA frontend at `/WiseCloudAccessProviderService.svc/GetThumbprint`. This is received by `WiseCloudUnauthenticatedAccessProviderService.GetThumbprint()` then it calls `RdpSign.GetCertificateThumbprint()` which opens the certificate store on the frontend server and returns the sha of the certificate.
+4. Get RDP file accessProvider.GetRdpFile(applicationType, applicationId, username, password, countryCode) another network call to the frontend.
+5. Both calls go through WebWiseCloudAccessProvider which sits inside WebFailover — it injects the WCACFE sticky session cookie and retries fallback URLs if the primary fails.
 
 -------------------------------------------------------------------------------------------------
 
