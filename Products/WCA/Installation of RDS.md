@@ -1,5 +1,5 @@
 
-> This process says RDS but it refers to remote desktop connection `mstsc.exe`
+> This process says RDS- it does not refer to microsoft's RDS but 
 
 
 RDS needs to be installed on the client to enable a user to connect to the session host/RD session host/cargowise host via RDP.
