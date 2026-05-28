@@ -14,8 +14,6 @@ It depends if they are using RDP or web.
 4. Get RDP file accessProvider.GetRdpFile(applicationType, applicationId, username, password, countryCode) another network call to the frontend.
 5. Both calls go through WebWiseCloudAccessProvider which sits inside WebFailover — it injects the WCACFE sticky session cookie and retries fallback URLs if the primary fails.
 
--------------------------------------------------------------------------------------------------
-
 #### WiseCloudAccessorServer (frontend IIS server the first server your request hits)
 
 5. Receive GetRdpFile
