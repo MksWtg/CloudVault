@@ -16,7 +16,7 @@ It depends if they are using RDP or web.
 
 -------------------------------------------------------------------------------------------------
 
-📦 WiseCloudAccessorServer (frontend IIS server — the first server your request hits)
+#### WiseCloudAccessorServer (frontend IIS server the first server your request hits)
 
 5. Receive GetRdpFile
 WiseCloudAccessProviderController.GetRdpFile receives the POST
