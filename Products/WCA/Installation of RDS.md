@@ -1,5 +1,5 @@
 
-> This process says RDS- it does not refer to microsoft's RDS but 
+> This process says RDS- it does not refer to microsoft's RDS but WTG's special RDS. It comes from https://github.com/WiseTechGlobal/CargoWise.RemoteDesktopServices/tree/master
 
 
 RDS needs to be installed on the client to enable a user to connect to the session host/RD session host/cargowise host via RDP.
