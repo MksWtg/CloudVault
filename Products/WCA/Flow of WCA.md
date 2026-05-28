@@ -9,10 +9,10 @@ It depends if they are using RDP or web.
 #### WiseCloudClientLegacy / WiseCloudTokenClient (your PC)
 
 1. Double-click captured `ApplicationItemViewBehavior.AssociatedObject_MouseLeftButtonDown` fires, calls `applicationItem.AsyncRunCommand.Execute(null)`
-2. RDS upgrade- before anything else progresses a check happens to make sure the latest RDS is installed. At the lowest level this happens in `TryInstallLatestPerUserRds`.
+2. RDS upgrade- before anything else progresses a check happens to make sure the latest RDS is installed. At the lowest level this happens in `TryInstallLatestPerUserRds`. It doesn't run if there is a flag saying install per machine (not per user), or if it cant find the installer, or if per RDS is up to date.
 
 
-2. Get thumbprint (cached)
+3. Get thumbprint (cached)
 RDPApplicationRunCommand.Execute calls accessProvider.GetThumbprint() — this is a network call to the frontend if not cached locally. The thumbprint is stored in the registry so Windows trusts the RDP publisher certificate.
 
 4. Get RDP file (cached)
