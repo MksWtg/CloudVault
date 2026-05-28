@@ -8,4 +8,4 @@ All CWC solutions exist to solve a problem. The problem is for hosted customers,
 
 ## The Solution
 
-WCA is both a client side interface for users to initiate a session and other parts that connect the user to a running cargowise instance.
+WCA is both a client side interface for users to initiate a session and other server side softwares that connect the user to a running cargowise instance.
