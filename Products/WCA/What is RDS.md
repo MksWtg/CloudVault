@@ -1,3 +1,8 @@
+
+RDS is two things:
+
+## Microsoft RDS
+
 RDS is a group of related microsoft technologies for doing RDP.
 
 It includes 
@@ -15,3 +20,7 @@ Install-WindowsFeature RDS-RD-Server -IncludeManagementTools
 
 Restart-Computer
 ```
+
+## WiseTech's RDS
+
+https://github.com/WiseTechGlobal/CargoWise.RemoteDesktopServices/tree/master
