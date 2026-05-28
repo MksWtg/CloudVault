@@ -2,3 +2,5 @@
 CargoWise.ApplicationManager https://github.com/WiseTechGlobal/CargoWise.ApplicationManager
 
 Is a wisetech built windows service that runs with admin rights on a computer. Long ago wtg installed it on both internal and customer machines so that their apps could send it commands over a pipe and execute arbitrary code. WCA uses appmanager to install and uninstall msis. Specifically, writing to program files and hklm in the registry. Because the WCA client and RDS are per machine installs, they need admin rights to isntall so they proxy through the AppManager service rather than prompting the user for uac (user account control).
+
+The file you want to run as admin has to implement IAppManagerInvocable or some similar interface. It should compile to a dll. You then need to create a new appmanager client and send the dll over
