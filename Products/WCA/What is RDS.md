@@ -1,0 +1,1 @@
+RDS is a microsoft technology, a role you install on windows. It includes RD session host, RD gateway, RD broker, RD licensing and remoteappwhen i
