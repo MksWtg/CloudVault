@@ -1,0 +1,7 @@
+- SRE: kibana and elastic stuff
+- SecOps/CSIRT: security incidents internally and some other security stuff
+- SecEng: in charge of cloudflare, so for example if we want to put something behind cloudflare we need to ask them for help
+- Process Controller Team: manage the process controllers
+- Architecture: TODO
+- Architecture Core: TODO
+- Core: TODO (note)
