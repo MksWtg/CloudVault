@@ -12,5 +12,5 @@ TODO (remove if not related to cloud):
 - Core: TODO
 - Business Intelligence
 - Automation
-- Sam Wang's team
+- Product extensions (Sam wang's team)
 - Billing
