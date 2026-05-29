@@ -4,7 +4,7 @@
 - Process Controller Team: manage the process controllers (Mikhail Gerasimov)
 - Global Product Support: interface with customers, spin up or tear down instances on demand (Denny)
 - IS Hosting: TODO (Immanuel)
-- DBAs ()
+- DBAs (Ermal, Sri, Aman) do database related things, like database upgrades, migrations, teardowns
 
 TODO (remove if not related to cloud):
 - Architecture: TODO (Geoff Bennett)
