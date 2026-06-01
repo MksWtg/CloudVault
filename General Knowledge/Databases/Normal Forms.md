@@ -6,4 +6,8 @@ First normal form:
 
 Second normal form:
 - 1nf
-- 
+- every non key column depends on all the pks
+
+Third normal form:
+- 2nf
+- non key columsn do not depend on other non key columns
