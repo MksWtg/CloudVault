@@ -7,4 +7,5 @@ Can you please verify the following for me:
 Then can you please grant those perms:
 - SAND gmsa can create and delete records in SAND orc OU
 - SAND gmsa can create and delete records in SAND non orc OU
-- 
+- PROD gmsa can create and delete records in PROD orc OU
+- PROD gmsa can create and delete records in PROD non orc OU
