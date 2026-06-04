@@ -5,4 +5,6 @@ Can you please verify the following for me:
 - PROD gmsa does not have create and delete perms in PROD non orc OU
 
 Then can you please grant those perms:
-- SAND 
+- SAND gmsa can create and delete records in SAND orc OU
+- SAND gmsa can create and delete records in SAND non orc OU
+- 
