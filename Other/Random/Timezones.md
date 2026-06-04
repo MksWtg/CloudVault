@@ -16,3 +16,8 @@ and another call is:
 6PM CET
 
 so everything is consistent
+
+difference between calls is 7 hours. so in gmt it is 10am then 5pm. or 11am then 6pm
+
+Which means if the first call was 8pm sydney it should be 3am sydney
+if the first call was 7pm sydney it should be 2am sydney
