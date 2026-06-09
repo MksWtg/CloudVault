@@ -3,4 +3,5 @@
 hi im following up on a concurrent study application i was wondering if you could tell me the state of my application
 
 
-is there any way for me to talk to someone else
+- get some way to talk to someone else
+- 

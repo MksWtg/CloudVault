@@ -7,4 +7,7 @@
 	1) checkbox is checked in but greyed out (cannot click)
 	2) While greyed out, database pending service task change is set to true
 	3) while greyed out you cannot click it
-	4) while greyed out, clock icon appears and on hover a tooltip
+	4) while greyed out, clock icon appears and on hover a tooltip says "service tasks will be toggled in next 2 minutes"
+3) Wait for the scheduled task to be picked up in the next two minutes
+	1) in the next two minutes (once the scheduled task performs the toggle) the greyed out disappears, clock icon with tooltip disappears
+	2) 
