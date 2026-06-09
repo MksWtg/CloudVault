@@ -8,6 +8,8 @@
 	2) While greyed out, database pending service task change is set to true
 	3) while greyed out you cannot click it
 	4) while greyed out, clock icon appears and on hover a tooltip says "service tasks will be toggled in next 2 minutes"
-3) Wait for the scheduled task to be picked up in the next two minutes
-	1) in the next two minutes (once the scheduled task performs the toggle) the greyed out disappears, clock icon with tooltip disappears
-	2) 
+3) Refresh and verify all the points from step #2
+4) Wait for the scheduled task to be picked up in the next two minutes
+	1) the greyed out disappears, clock icon with tooltip disappears
+	2) in the backend the pending service task change column is set to false
+5) You can toggle it again from orchestrated to unorchestrated and verify the same in reverse
