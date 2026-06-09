@@ -67,3 +67,7 @@ Idea:
 
 Command:
 `PS C:\Users\Mukund.Srinivasan\AppData\Roaming\ASP.NET\https> openssl pkcs12 -export -out test.client.pfx -inkey test.client.key -in test.client.pem -passout pass:ConsoleCertPassword`
+
+#### Dropping and recreating DB 
+
+If you make DB changes you will need to regenerate the DB for functional test
