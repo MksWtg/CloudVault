@@ -70,4 +70,20 @@ Command:
 
 #### Dropping and recreating DB 
 
-If you make DB changes you will need to regenerate the DB for functional test
+If you make DB changes you will need to regenerate the DB for functional test:
+1) open SSMS and connect to database server
+2) right click `WiseCloudDeploymentService` and click `Delete` then click `Ok` in the confirmation window.
+3) navigate to `Source` using `cd C:\git\GitHub\WiseTechGlobal\CargoWiseCloud.Console.git\Source`.
+4) Run `dotnet ef database update --context CloudConsoleAuditingDbContext --project Core\Core.csproj`
+5) Insert admin role for localhost: 
+```sql
+INSERT INTO	WiseCloudDeploymentService.dbo.UserSecurityGroup (Name, Domain) VALUES ('Cargowise Cloud', 'wtg.zone');
+    INSERT INTO WiseCloudDeploymentService.dbo.ApplicationRole (Name, Comment) VALUES ('Administrator', 'Administrator');
+
+    /* This line of code create a mapping between UserSecurityGroup Cargowise Cloud and ApplicationRole Administrator */
+    INSERT INTO WiseCloudDeploymentService.dbo.UserSecurityGroupApplicationRole (ApplicationRoleId, UserSecurityGroupId)
+    VALUES (
+        (SELECT Id FROM WiseCloudDeploymentService.dbo.ApplicationRole WHERE Name = 'Administrator'),
+        (SELECT Id FROM WiseCloudDeploymentService.dbo.UserSecurityGroup WHERE Name = 'Cargowise Cloud')
+    );
+```
