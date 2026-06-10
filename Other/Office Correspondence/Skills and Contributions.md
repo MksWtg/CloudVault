@@ -16,25 +16,24 @@ Skills
 	- writing APIs and contracts
 - Soft skills
 	- communication both in person and written communication
-	- collaboratoin through code reviews
+	- collaboration through code reviews
 	- problem solving mindset
-	- ownership
-	- adaptability
+	- adaptability (willing to take on new work items in )
 	- time management
 	- curiosity, learning and upskilling
 	- empathy (considering the user when making technical decisions, writing code for other people)
 
 Contributions
-- have implemented features and defect fixes in the following products
+- have implemented features, defect fixes and done code reviews in the following products
 	- Console
 	- WCA
 	- PCO
 	- DBBR/CP2T
 	- Document Utility
 	- WCAM (e2e monitor)
-- Ownership over document utility through the S3 migration project 
 - Taken on a rotating E&L mentor and unofficially provided assistance/mentorship to other E&L devs in the team
-- Contributed to team culture by hosting multiple sit downs and learning sessions
+- Contributed to team culture by hosting multiple sit downs and learning sessions such as 
 	- Type driven development with idris learning session
 	- AI session on workflows, worktrees, context
 	- Sitdown where we discussed removing appmanager from cargowise and CCA 
+- Ownership of document utility through the S3 migration project when customers requested backups of their edocs
