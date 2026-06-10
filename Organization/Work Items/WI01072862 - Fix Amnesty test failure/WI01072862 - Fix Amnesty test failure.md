@@ -73,3 +73,41 @@ OneTimeSetUp: System.IO.FileNotFoundException : Failed to download MSI from Choc
 error 6
 OneTimeSetUp: System.Web.HttpException : Failed to retrieve version list for cargowisecloudclient-prod from https://proget.wtg.zone/nuget/WTG-Chocolatey/v3/flatcontainer/cargowisecloudclient-prod/index.json. Status: 503 Service Unavailable. Response:
 ```
+
+```
+Method 3:
+LoginSucceed
+
+OneTimeSetUp: Failed to initialize BackendPassword at https://A2DAT083-DAT19:49735/  
+at WiseCloudClientServerTesting.WiseCloudClientServerTestBase.SetupAWiseCloudServer(ServiceType serviceType, Boolean waitForInitialization) in /_/Source/WiseCloudClientServerTesting/WiseCloudClientServerTestBase.cs:line 605 at WiseCloudClientServerTesting.WiseCloudClientServerTestBase.OneTimeSetUp() in /_/Source/WiseCloudClientServerTesting/WiseCloudClientServerTestBase.cs:line 71
+
+This test went MIA (Missing In Action) on machine A2DAT117-DAT14 with a timeout of 00:09:00 and machine did not report back the timeout.
+
+OneTimeSetUp: Failed to install BackendPassword server MSI. Exit code: 1618 MSI path: C:\ProgramData\CargoWise edi\DAT\Content\572d6a92-cef7-450e-a2ce-b4046e176d6d\Binaries\deployment\WiseCloudBackendPasswordServer.Installer.msi MSI log: C:\Users\datbackground\AppData\Local\Temp\BackendPasswordInstall_e8ae1c2e-2b4c-4321-b6fc-854edff84a64.log Site name: UTBackendPassword15d6a9a8-e34e-4cb8-ba47-2c3e2fa3df56 Deployment path: C:\ProgramData\WiseCloudClientServerTest\7ae2aac8-afe9-4a75-8ac3-9a239f9ab189 HTTPS port: 63249 Build configuration: DEBUG --- msiexec stdout --- Another program is being installed. Please wait until that installation is complete, and then try installing this software again. --- MSI failure context --- No MSI failure markers were found in the log. The full MSI log is attached separately; inspect it around the first failed custom action. --- MSI log tail --- === Verbose logging started: 1/06/2026 19:29:37 Build type: SHIP UNICODE 5.00.10011.00 Calling process: C:\Windows\SYSTEM32\msiexec.exe === MSI (c) (98:48) [19:29:37:618]: Resetting cached policy values MSI (c) (98:48) [19:29:37:618]: Machine policy value 'Debug' is 0 MSI (c) (98:48) [19:29:37:618]: ******* RunEngine: ******* Product: C:\ProgramData\CargoWise edi\DAT\Content\572d6a92-cef7-450e-a2ce-b4046e176d6d\Binaries\deployment\WiseCloudBackendPasswordServer.Installer.msi ******* Action: ******* CommandLine: ********** MSI (c) (98:48) [19:29:37:618]: Client-side and UI is none or basic: Running entire install on the server. MSI (c) (98:48) [19:29:37:618]: Grabbed execution mutex. MSI (c) (98:48) [19:29:37:618]: Cloaking enabled. MSI (c) (98:48) [19:29:37:618]: Attempting to enable all disabled privileges before calling Install on Server MSI (c) (98:48) [19:29:37:631]: Incrementing counter to disable shutdown. Counter after increment: 0 MSI (c) (98:48) [19:29:37:631]: Decrementing counter to disable shutdown. If counter >= 0, shutdown will be denied. Counter after decrement: -1 MSI (c) (98:48) [19:29:37:631]: MainEngineThread is returning 1618 === Verbose logging stopped: 1/06/2026 19:29:37 ===  
+at WiseCloudClientServerTesting.WiseCloudClientServerTestBase.SetupAWiseCloudServer(ServiceType serviceType, Boolean waitForInitialization) in /_/Source/WiseCloudClientServerTesting/WiseCloudClientServerTestBase.cs:line 577 at WiseCloudClientServerTesting.WiseCloudClientServerTestBase.OneTimeSetUp() in /_/Source/WiseCloudClientServerTesting/WiseCloudClientServerTestBase.cs:line 71
+
+OneTimeSetUp: Failed to install BackendPassword server MSI. Exit code: 1618 MSI path: C:\ProgramData\CargoWise edi\DAT\Content\de490fc4-d3d7-42f7-888f-ff88afc9c62a\Binaries\deployment\WiseCloudBackendPasswordServer.Installer.msi MSI log: C:\Users\datbackground\AppData\Local\Temp\BackendPasswordInstall_a7bb5427-1e9d-4584-85b1-186f97a792e3.log Site name: UTBackendPasswordf9ec1794-1aee-4397-882f-e787801ddd66 Deployment path: C:\ProgramData\WiseCloudClientServerTest\72d0363d-e153-4481-8273-a7a0904f2928 HTTPS port: 51190 Build configuration: DEBUG --- msiexec stdout --- A\u0000n\u0000o\u0000t\u0000h\u0000e\u0000r\u0000
+
+OneTimeSetUp: System.IO.FileNotFoundException : Failed to download MSI from Chocolatey: WiseCloudClient v6.5.18482 Error: Failed to download package cargowisecloudclient-prod 6.5.18482 from https://proget.wtg.zone/nuget/WTG-Chocolatey/package/cargowisecloudclient-prod/6.5.18482. Status: 503 Service Unavailable. Response
+
+OneTimeSetUp: System.Web.HttpException : Failed to retrieve version list for cargowisecloudclient-prod from https://proget.wtg.zone/nuget/WTG-Chocolatey/v3/flatcontainer/cargowisecloudclient-prod/index.json. Status: 503 Service Unavailable. Response:
+
+
+```
+
+```
+method 4
+LoginInvalidPassword
+
+OneTimeSetUp: Failed to install BackendPassword server MSI. Exit code: 1618 MSI path: C:\ProgramData\CargoWise edi\DAT\Content\05452c3a-7f32-4930-9214-1b7a8775a0cc\Binaries\deployment\WiseCloudBackendPasswordServer.Installer.msi MSI log: C:\Users\datbackground\AppData\Local\Temp\BackendPasswordInstall_83c57a0d-13d5-4a6f-9fb3-595bd0b77ba7.log Site name: UTBackendPasswordac8bb691-62db-47d1-99a5-507d8b32c18f Deployment path:
+
+OneTimeSetUp: Failed to initialize BackendPassword at https://A2DAT074-DAT6:54376/  
+at WiseCloudClientServerTesting.WiseCloudClientServerTestBase.SetupAWiseCloudServer(ServiceType serviceType, Boolean waitForInitialization) in /_/Source/WiseCloudClientServerTesting/WiseCloudClientServerTestBase.cs:line 605 at WiseCloudClientServerTesting.WiseCloudClientServerTestBase.OneTimeSetUp() in /_/Source/WiseCloudClientServerTesting/WiseCloudClientServerTestBase.cs:line 71
+
+OneTimeSetUp: Failed to install BackendPassword server MSI. Exit code: 1618 MSI path: C:\ProgramData\CargoWise edi\DAT\Content\a3019818-6e5a-4355-8324-3d11226e57cf\Binaries\deployment\WiseCloudBackendPasswordServer.Installer.msi MSI log: C:\Users\datbackground\AppData\Local\Temp\BackendPasswordInstall_9f8248b4-2bbc-46f0-9594-06fe1b36fe0d.log Site name: UTBackendPassworde17c408c-05ad-4278-848c-300507a0a113 Deployment path: C:\ProgramData\WiseCloudClientServerTest\9ba31fa4-825b-4249-85f6-903581d28ec6 HTTPS port: 60094 Build configuration: DEBUG --- msiexec stdout --- A\u0000n
+
+OneTimeSetUp: System.IO.FileNotFoundException : Failed to download MSI from Chocolatey: WiseCloudClient v6.5.18482 Error: Failed to download package cargowisecloudclient-prod 6.5.18482 from https://proget.wtg.zone/nuget/WTG-Chocolatey/package/cargowisecloudclient-prod/6.5.18482. Status: 503 Service Unavailable. Response:
+
+OneTimeSetUp: System.Web.HttpException : Failed to retrieve version list for cargowisecloudclient-prod from https://proget.wtg.zone/nuget/WTG-Chocolatey/v3/flatcontainer/cargowisecloudclient-prod/index.json. Status: 503 Service Unavailable. Response:
+
+```
