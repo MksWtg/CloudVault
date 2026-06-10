@@ -4,7 +4,6 @@ Skills
 	- C# Programming (ASPNET, Nunit, Moq, Wix/msi, Msbuild, EF)
 	- Vue/js Programming
 	- git
-	- TDD
 	- SQL Server
 	- Hyper V
 	- powershell
@@ -14,6 +13,7 @@ Skills
 	- Debugging (both at the code level and network/infrastructure level)
 	- Product knowledge (technical and low level understanding of most of the CWC projects)
 	- writing APIs and contracts
+	- TDD
 - Soft skills
 	- communication both in person and written communication
 	- collaboration through code reviews
