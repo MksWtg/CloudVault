@@ -6,6 +6,9 @@ Skills
 	- git
 	- TDD
 	- SQL Server
+	- Hyper V
+	- powershell
+	- Copilot CLI
 - Technical skills
 	- Writing technical documentation, functional review steps
 	- Debugging (both at the code level and network/infrastructure level)
@@ -29,4 +32,9 @@ Contributions
 	- DBBR/CP2T
 	- Document Utility
 	- WCAM (e2e monitor)
-- 
+- Ownership over document utility through the S3 migration project 
+- Taken on a rotating E&L mentor and unofficially provided assistance/mentorship to other E&L devs in the team
+- Contributed to team culture by hosting multiple sit downs and learning sessions
+	- Type driven development with idris learning session
+	- AI session on workflows, worktrees, context
+	- Sitdown where we discussed removing appmanager from cargowise and CCA 
