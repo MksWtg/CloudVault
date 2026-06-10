@@ -36,4 +36,4 @@ Contributions
 	- Type driven development with idris learning session
 	- AI session on workflows, worktrees, context
 	- Sitdown where we discussed removing appmanager from cargowise and CCA 
-- Ownership of document utility through the S3 migration project when customers requested backups of their edocs
+- Ownership of document utility (used when customers request backups of their edocs)
