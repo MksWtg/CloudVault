@@ -32,25 +32,43 @@ public class Variable : IExpression
 	{
 		if (this.Identifier == wrt.Identifier)
 		{
-			return new Constant(1);
+			return Constant.One;
 		}
+		
+		return Constant.Zero;
 	}
 }
 
 public class Constant : IExpression
 {
 	public required string Value { get; init; }
+	
+	public static Zero = new Constant("0");
+	public static One = new Constant("1");
+	
+	// We are differentiating a constant wrt a variable, this is always 0
+	public IExpression Differentiate(Variable wrt)
+	{	
+		return Constant.Zero;
+	}
 }
 
 public class UnaryOperation
 {
 	public required string Name { get; init; }
+	public required UnaryOperation Derivative { get; init; }
 }
 
-public class UnaryApplicationApplication : IExpression
+public class UnaryOperationApplication : IExpression
 {
 	public required UnaryOperation operation { get; init; }
 	public required IExpression argument { get; init; }
+	
+	// We are differentiating sin(x) wrt y
+	public IExpression Differentiate(Variable wrt)
+	{	
+		return new UnaryOperationApplication()
+	}
 }
 
 public class BinaryOperation
