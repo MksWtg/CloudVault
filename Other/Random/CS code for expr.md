@@ -22,7 +22,25 @@ public class Constant : IExpression
 
 public class UnaryOperation
 {
-	public UnaryOperation()
+	public required string Name { get; init; }
+}
+
+public class UnaryApplicationApplication : IExpression
+{
+	public required UnaryOperation operation { get; init; }
+	public required IExpression argument { get; init; }
+}
+
+public class BinaryOperation
+{
+	public required string Name { get; init; }
+}
+
+public class BinaryOperationApplication : IExpression
+{
+	public required BinaryOperation operation { get; init; }
+	public required IExpression argument1 { get; init; }
+	public required IExpression argument2 { get; init; }
 }
 
 // an expression is either an entity, or a unary operation of an entity or a binary operation of an entity
