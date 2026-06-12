@@ -57,6 +57,9 @@ public class UnaryOperation
 {
 	public required string Name { get; init; }
 	public required UnaryOperation Derivative { get; init; }
+	
+	public static Negative = ...
+	public static Reciprocal = ...
 }
 
 public class UnaryOperationApplication : IExpression
@@ -67,13 +70,17 @@ public class UnaryOperationApplication : IExpression
 	// We are differentiating sin(x) wrt y
 	public IExpression Differentiate(Variable wrt)
 	{	
-		return new UnaryOperationApplication()
+		return new UnaryOperationnew UnaryOperationApplication() { UnaryOperation = operation.Derivative, argument = argument }
 	}
 }
 
 public class BinaryOperation
 {
 	public required string Name { get; init; }
+	
+	public static Addition = ...
+	public static Multiplication = ...
+	public static Exponentiation = ...
 }
 
 public class BinaryOperationApplication : IExpression
