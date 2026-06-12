@@ -70,7 +70,7 @@ public class UnaryOperationApplication : IExpression
 	// We are differentiating sin(x) wrt y
 	public IExpression Differentiate(Variable wrt)
 	{	
-		return new UnaryOperationnew UnaryOperationApplication() { UnaryOperation = operation.Derivative, argument = argument }
+		return new BinaryOpeationApplication() { operationn = BinaryOperation.Multiplication, argument1 = new UnaryOperationnew UnaryOperationApplication() { UnaryOperation = operation.Derivative, argument = argument }, argument2 = 
 	}
 }
 
