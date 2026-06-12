@@ -8,7 +8,10 @@ public class Program
 	}
 }
 
-public interface IExpression { }
+public interface IExpression
+{
+	IExpression Differentiate(IExpression wrt);
+}
 
 public class Variable : IExpression
 {
