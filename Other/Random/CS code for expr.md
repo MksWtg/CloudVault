@@ -20,7 +20,10 @@ public class Constant : IExpression
 	public required string Value { get; init; }
 }
 
-public class 
+public class UnaryOperation
+{
+	public UnaryOperation()
+}
 
 // an expression is either an entity, or a unary operation of an entity or a binary operation of an entity
 ```
