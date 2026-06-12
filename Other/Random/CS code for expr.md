@@ -10,7 +10,16 @@ public class Program
 
 public interface IExpression
 {
-	IExpression Differentiate(IExpression wrt);
+	// we should be able to differentiate an expression wrt another expression
+	// variable is standard, constant is trivial, wrt another expr is kind of complicated
+	// du/dv = du/dx / dv/dx
+		// two problems: where do we get the division operator and where do we get "x"
+		// neither of these are captured in du/dv
+	// IExpression Differentiate(IExpression wrt);
+	
+	IExpression Differentiate(
+	
+	
 }
 
 public class Variable : IExpression
