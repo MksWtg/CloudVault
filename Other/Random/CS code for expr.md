@@ -17,7 +17,7 @@ public interface IExpression
 		// neither of these are captured in du/dv
 	// IExpression Differentiate(IExpression wrt);
 	
-	IExpression Differentiate(
+	IExpression Differentiate(Variable wrt);
 	
 	
 }
@@ -25,6 +25,8 @@ public interface IExpression
 public class Variable : IExpression
 {
 	public required string Identifier { get; init; }
+	
+	Differentiat
 }
 
 public class Constant : IExpression
