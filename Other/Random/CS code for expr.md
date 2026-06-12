@@ -10,6 +10,7 @@ public class Program
 
 public interface IExpression
 {
+	// note: review this
 	// we should be able to differentiate an expression wrt another expression
 	// variable is standard, constant is trivial, wrt another expr is kind of complicated
 	// du/dv = du/dx / dv/dx
@@ -26,7 +27,14 @@ public class Variable : IExpression
 {
 	public required string Identifier { get; init; }
 	
-	Differentiat
+	// We are differentiating a variable wrt a variable, a variable is atomic and not a function of antoher variable
+	public IExpression Differentiate(Variable wrt)
+	{
+		if (this.Identifier == wrt.Identifier)
+		{
+			return new Constant(1);
+		}
+	}
 }
 
 public class Constant : IExpression
