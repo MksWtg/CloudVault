@@ -73,5 +73,21 @@
 	- The constraint `EDICommunicationsMode_EK_ECC_CommunicationPartyConfig_FK2_EDICommunicationPartyConfig_RRR_120N` from way back is still valid during the insert operation- which means inserting test rows may fail because there are no test configs in the configs table. This aligns with the fifth note yash made in dec 11 last year. `However, the preserved TEST EDICommunicationsMode rows still reference **TEST-only** EK_ECC_CommunicationPartyConfig values. When these rows are re-inserted, the FK constraint rejects them because the referenced ECC_PK values are not present in the PROD-restored EDICommunicationPartyConfig table. This results in the FK violation during the restore.` He summarizes the above 5 notes with the following 6th note: `Preserved **TEST** EDICommunicationsMode **incompatible** with the PROD-restored EDICommunicationPartyConfig data, causing FK violations during CP2T restore.`
 - Quick question: where does the new data in the mode table come from?
 - Ok, great. We know what is failing. We even know enough to reproduce it/the exact situation which would cause this to appear in PROD. That being: after the CP2T operation if the config table is missing a PK and we try blindly inserting into the mode table we get an FK error. We have an old and a new proposed fix
-	- OLD: only insert data into mode table that has a pk that is in the config table. drop remaining rows
-	- NE
+	- OLD: only insert data into mode table that has a pk that is in the config table. drop remaining rows. This is the last correspondence to occur on 11th dec.
+	- NEW: preserve as many rows as possible from the `EDICommunicationPartyConfig`- have as many rows from EDICommunicationPartyConfig as are required for none of the rows in the child mode table to be orphaned. This is decided on 12th Jan.
+- From here on instead of doing logical deductions and stuff, lets just work through the comms:
+- 2nd Mar
+```
+PTW 02-Mar-26 14:13 GMT+11:00: Updated design:
+
+1. Preserve TEST-system EDICommunicationsModes
+
+2. Do not preserve PROD EDICommunicationsModes (clear any PROD-unique data)
+
+3. Due to dependency on EDICommunicationsParty and EDICommunicationPartyConfig, preseve TEST data for these
+
+4. Clear PROD-unique data from EDICommunicationsParty and EDICommunicationPartyConfig
+```
+- This raises questions such as
+	- how do we know if data is prod or test
+	- presumably the db we start with is a prod db
