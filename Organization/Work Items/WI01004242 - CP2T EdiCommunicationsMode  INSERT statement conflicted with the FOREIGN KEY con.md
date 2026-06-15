@@ -87,4 +87,5 @@ PTW 02-Mar-26 14:13 GMT+11:00: Updated design:
 ```
 - Following patrick's instructions the fix must comply with the following rules
 	1) all test system data that comes from the test db pre cp2t in the table `EDICommunicationsModes` must be preserved after cp2t
-	2) 
+	2) any data from the prod table that blindly overwrites the test database (before we restore our saved test settings on top of that) needs to be cleared. if there is absolutely no prod data that is being inserted in the mode table there is no chance of there being insert FK constraint errors
+	3) all test systems must preserve data for 
