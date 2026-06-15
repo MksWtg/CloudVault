@@ -13,4 +13,6 @@
 		- `ECC_PK` is the column that the fk column is connected to
 		- `EDICommunicationsMode_EK_ECC_CommunicationPartyConfig_FK2_EDICommunicationPartyConfig_RRR_120N` is the constraint
 		- What happened: we tried to insert a row into the "[EDICommunicationsMode]" table and it errored in the "[EDICommunicationsMode]" table because the FK column didn't correspond to a PK in the "[EDICommunicationPartyConfig]" table
+		- Other info: the fk column in the child is nullable- so it doesnt have to be linked to a parent
+			- This leads us to the first confirmed
 		- Question: why was this? why did we try inserting a bad row into the mode table?
