@@ -16,5 +16,6 @@
 		- Other info: the fk column in the child is nullable- so it doesnt have to be linked to a parent
 		- This leads us to the first note that yash made in dec 11 last year: `EDICommunicationsMode.EK_ECC_CommunicationPartyConfig must be either **NULL** or reference an existing EDICommunicationPartyConfig.ECC_PK row.` This was the error and we understand how this happened at the lowest level- because we inserted a bad row into the child. The question remains: why did we try inserting a bad row into the mode table?
 	- Let us trace a copy production to test operation
-		- Common high level DBBR method `RestoreDatabasesUnsafe` runs
+		- Common high level DBBR method `RestoreDatabasesUnsafe` is called
+		- Performs collection of generic step methods: 
 		- 
