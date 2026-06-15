@@ -37,3 +37,5 @@
 		- Call `GetClearDataScripts` which returns a hardcoded list of class instances
 		- foreach of those, call `BuildScript`. One of these is `ClearEDICommunicationMode.BuildScript`
 		- When this last line of code runs, it empties this table (presumably). This is a safe option since this table is the child. This aligns with the second note that yash made in dec 11 last year: `_ClearEDICommunicationMode.cs_ - CP2T clear scripts run 'DELETE FROM EDICommunicationsMode' (table is cleared, no FK violations)`
+	- Separately
+		- Static method `CopyProductionToTestScriptManager.GetClearDataToBeOverwrittenByTestDataScript` is called
