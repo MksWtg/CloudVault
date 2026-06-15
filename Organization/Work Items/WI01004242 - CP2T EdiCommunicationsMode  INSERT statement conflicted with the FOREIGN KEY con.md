@@ -42,29 +42,31 @@
 		- `CopyAuxiliaryDataToTestDatabase` is called as the final step
 		- Static method `CopyProductionToTestScriptManager.GetCopyTempDbDataToTestDbScript` is called
 		- Iterate through `CopyProductionToTestScriptsCollection` which is a collection of scripts, for each script we call `GetCopyTempDbDataToTestDbScript`. So at some point we call `EDICommunicationModeToPreserve.GetCopyTempDbDataToTestDbScript`. This runs a fat copy data into test db query:
-```SQL
--- OVERWRITE PROD DATA WITH TEST DATA IF DUPLICATE PKS --
-		DECLARE @OverwriteProdEdiCommsWithTestIfDuplicatePK NVARCHAR(MAX) = N'
+			```SQL
+			-- OVERWRITE PROD DATA WITH TEST DATA IF DUPLICATE PKS --
+			DECLARE @OverwriteProdEdiCommsWithTestIfDuplicatePK NVARCHAR(MAX) = N'
 			UPDATE [{1}].[dbo].[EDICommunicationsMode] SET '
- 
+			
 			SELECT @OverwriteProdEdiCommsWithTestIfDuplicatePK = @OverwriteProdEdiCommsWithTestIfDuplicatePK + c.COLUMN_NAME + ' = b.' + c.COLUMN_NAME + ','
 			FROM [{1}].INFORMATION_SCHEMA.COLUMNS as c
 			WHERE TABLE_NAME = 'EDICommunicationsMode'
- 
+			
 			SET @OverwriteProdEdiCommsWithTestIfDuplicatePK = SUBSTRING(@OverwriteProdEdiCommsWithTestIfDuplicatePK, 1, LEN(@OverwriteProdEdiCommsWithTestIfDuplicatePK) - 1)
- 
+			
 			SET @OverwriteProdEdiCommsWithTestIfDuplicatePK = @OverwriteProdEdiCommsWithTestIfDuplicatePK + ' FROM [{0}]..[TempEDICommunicationsMode] b '
 			SET @OverwriteProdEdiCommsWithTestIfDuplicatePK = @OverwriteProdEdiCommsWithTestIfDuplicatePK + 'JOIN [{1}]..[EDICommunicationsMode] a '
 			SET @OverwriteProdEdiCommsWithTestIfDuplicatePK = @OverwriteProdEdiCommsWithTestIfDuplicatePK + 'ON a.EK_PK = b.EK_PK'
- 
-		EXEC sp_executesql @OverwriteProdEdiCommsWithTestIfDuplicatePK
-
--- COPY TEST SPECIFIC DATA INTO TEST DB --
-		DECLARE @CopyOldTestEdiCommsIntoNewTestDatabase NVARCHAR(MAX) = N'
+			
+			EXEC sp_executesql @OverwriteProdEdiCommsWithTestIfDuplicatePK
+			
+			-- COPY TEST SPECIFIC DATA INTO TEST DB --
+			DECLARE @CopyOldTestEdiCommsIntoNewTestDatabase NVARCHAR(MAX) = N'
 			INSERT [{1}]..EDICommunicationsMode
 			SELECT *
 			FROM [{0}]..TempEDICommunicationsMode
 			WHERE EK_PK NOT IN (SELECT EK_PK FROM [{1}]..EDICommunicationsMode)'
-
-		EXEC sp_executesql @CopyOldTestEdiCommsIntoNewTestDatabase
-```
+			
+			EXEC sp_executesql @CopyOldTestEdiCommsIntoNewTestDatabase
+			```
+		- This aligns with the third note yash made in dec 11 last year
+	- Importantly, both of the points regarding dropping rows and copying in test data are for `EDICommunicationsMode`. The config table `EDICommunicationPartyConfig` only has PROD rows, it has not been touched. This aligns with the fourth note yash made in dec 11 last year.
