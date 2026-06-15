@@ -81,13 +81,10 @@
 PTW 02-Mar-26 14:13 GMT+11:00: Updated design:
 
 1. Preserve TEST-system EDICommunicationsModes
-
 2. Do not preserve PROD EDICommunicationsModes (clear any PROD-unique data)
-
 3. Due to dependency on EDICommunicationsParty and EDICommunicationPartyConfig, preseve TEST data for these
-
 4. Clear PROD-unique data from EDICommunicationsParty and EDICommunicationPartyConfig
 ```
 - This raises questions such as
 	- how do we know if data is prod or test
-	- presumably the db we start with is a prod db
+	- presumably when we start we have both a prod db and a test db and then we c
