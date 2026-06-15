@@ -85,6 +85,6 @@ PTW 02-Mar-26 14:13 GMT+11:00: Updated design:
 3. Due to dependency on EDICommunicationsParty and EDICommunicationPartyConfig, preseve TEST data for these
 4. Clear PROD-unique data from EDICommunicationsParty and EDICommunicationPartyConfig
 ```
-- This raises questions such as
-	- how do we know if data is prod or test
-	- presumably when we start we have both a prod db and a test db and then we c
+- Following patrick's instructions the fix must comply with the following rules
+	1) all test system data that comes from the test db pre cp2t in the table `EDICommunicationsModes` must be preserved after cp2t
+	2) 
