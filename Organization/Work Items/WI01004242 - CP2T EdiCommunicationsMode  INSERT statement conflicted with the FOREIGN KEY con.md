@@ -34,5 +34,3 @@
 		- Call `PerformCopyProductionToTestPostRestoreSteps` after the restore
 		- Call `ClearProductionInfoFromTestSystem` as part of the post restore steps
 		- Call static method `CopyProductionToTestScriptManager.GetClearDataToBeOverwrittenByTestDataScript`
-		- Pulls an sql script using `GetClearDataToBeOverwrittenByTestDataScript`
-		- 
