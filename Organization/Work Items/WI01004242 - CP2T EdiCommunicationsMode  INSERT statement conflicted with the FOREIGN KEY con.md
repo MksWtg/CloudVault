@@ -18,20 +18,21 @@
 	- Let us trace a copy production to test operation
 		- Common high level DBBR method `RestoreDatabasesUnsafe` is called
 		- Performs collection of generic step methods: 
-```cs
+			```cs
 				try
 				{
 					// Save test specific data before restoring production backup over it
 					PerformCopyProductionToTestPreRestoreSteps(connection, dbRestoreSettings, vaultAuxDbName, isNewDb);
 					DoRestore(connection, mainServerConfig, auditServerConfig, edwServerConfig, dbRestoreSettings);
-#if DEBUG
+			#if DEBUG
 					ApplyChangeAfterRestoreDatabase(connection, dbRestoreSettings.TargetDbName);
-#endif
+			#endif
 					// Re-apply test specific data (from vault DB) and make other test system related adjustments
 					PerformCopyProductionToTestPostRestoreSteps(connection, dbRestoreSettings, vaultAuxDbName, isNewDb);
 				}
-```
-
-- 
-	- 
-		- call
+			```
+		- Call `PerformCopyProductionToTestPostRestoreSteps` after the restore
+		- Call `ClearProductionInfoFromTestSystem` as part of the post restore steps
+		- Call static method `CopyProductionToTestScriptManager.GetClearDataToBeOverwrittenByTestDataScript`
+		- Pulls an sql script using `GetClearDataToBeOverwrittenByTestDataScript`
+		- 
