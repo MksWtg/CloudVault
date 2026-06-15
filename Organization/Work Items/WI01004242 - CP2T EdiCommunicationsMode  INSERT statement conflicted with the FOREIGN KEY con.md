@@ -96,5 +96,5 @@ PTW 02-Mar-26 14:13 GMT+11:00: Updated design:
 	- In fact, if mode points to party config and party config points to both party and auth, we need to preserve these as well.
 		- By extension, what about all foreign keys? What about `GlbGroup` (pointed to by "mode") and `GlbDepartment` (pointed to by "party config"). Is it safe bet that test db has not been modified to remove any of these rows to the point where
 - another question, just thinking out loud here:
-	- why do we need to remove pre and post requisite tables? lets say we keep prod for party config and overwrite with test in mode, then we will not be able to insert becasue we are missing test data
-	- why do we need to remove the one
+	- why do we need to remove pre and post requisite tables? lets say we keep prod for party config (parent) and overwrite with test in mode (child), then we will not be able to insert because we are missing test data
+	- why do we need to remove the ones
