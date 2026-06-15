@@ -11,3 +11,5 @@
 		- `EDICommunicationPartyConfig` is the table
 		- `ECC_PK` is the column
 		- `EDICommunicationsMode_EK_ECC_CommunicationPartyConfig_FK2_EDICommunicationPartyConfig_RRR_120N` is the constraint
+		- What happened: we tried to insert a row into the "[EDICommunicationsMode]" table and it errored in the "[EDICommunicationsMode]" table because the FK column didnt correspond to a PK in the "[EDICommunicationPartyConfig]" table
+		- Question:
