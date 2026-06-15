@@ -89,3 +89,5 @@ PTW 02-Mar-26 14:13 GMT+11:00: Updated design:
 	1) all test data that is initially in the test db must be preserved- for the child "mode" and both parents "party" and "party config"
 	2) no prod data for all of the above tables
 - If i am correct, this would entail introducing a new script that preserves data in `IPreserveTestValueScripts`
+	- In fact, if mode points to party config and party config points to both party and auth, we need to preserve these as well.
+		- By extension, what about all foreign keys? What about `GlbGroup` (pointed to by "mode") and `GlbDepartment` (pointed to by "party config"). Is it ss
