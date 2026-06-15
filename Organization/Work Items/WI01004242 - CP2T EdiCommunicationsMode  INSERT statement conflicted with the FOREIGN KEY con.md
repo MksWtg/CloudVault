@@ -39,3 +39,4 @@
 		- When this last line of code runs, it empties this table (presumably). This is a safe option since this table is the child. This aligns with the second note that yash made in dec 11 last year: `_ClearEDICommunicationMode.cs_ - CP2T clear scripts run 'DELETE FROM EDICommunicationsMode' (table is cleared, no FK violations)`
 	- Separately
 		- Static method `CopyProductionToTestScriptManager.GetClearDataToBeOverwrittenByTestDataScript` is called
+		- We iterate through `CopyProductionToTestScriptsCollection.Reverse()` in 
