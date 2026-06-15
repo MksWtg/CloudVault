@@ -71,7 +71,11 @@
 		- This aligns with the third note yash made in dec 11 last year
 	- Importantly, both of the points regarding dropping rows and copying in test data are for `EDICommunicationsMode`. The config table `EDICommunicationPartyConfig` only has PROD rows, it has not been touched. This aligns (mostly) with the fourth note yash made in dec 11 last year. I say mostly because he included the assertion `TEST-only EDICommunicationPartyConfig rows no longer exist.` which is not technically true because there were never test only config rows. EDIT FROM THE FUTURE- it turns out the test database predate the cp2t operation and it actually did have test data, that we pulled out, saved in aux, and then overwrote with prod (and then re overwrote with the saved test data). so tihs is true.
 	- The constraint `EDICommunicationsMode_EK_ECC_CommunicationPartyConfig_FK2_EDICommunicationPartyConfig_RRR_120N` from way back is still valid during the insert operation- which means inserting test rows may fail because there are no test configs in the configs table. This aligns with the fifth note yash made in dec 11 last year. `However, the preserved TEST EDICommunicationsMode rows still reference **TEST-only** EK_ECC_CommunicationPartyConfig values. When these rows are re-inserted, the FK constraint rejects them because the referenced ECC_PK values are not present in the PROD-restored EDICommunicationPartyConfig table. This results in the FK violation during the restore.` He summarizes the above 5 notes with the following 6th note: `Preserved **TEST** EDICommunicationsMode **incompatible** with the PROD-restored EDICommunicationPartyConfig data, causing FK violations during CP2T restore.`
-- Quick question: where does the new data in the mode table come from?
+- Quick recap of process
+	- PHASE 1) test DB is archived
+	- PHASE 1.5) CP2T occurs
+	- PHASE 2) Prod data in test is cleared
+	- PHASE 3) (risky) Test data that was archived into aux temp is put back into prod. but we accidentally wiped party config test data. so if there was a discrepancy between prod and test party config it will show now.
 - Ok, great. We know what is failing. We even know enough to reproduce it/the exact situation which would cause this to appear in PROD. That being: after the CP2T operation if the config table is missing a PK and we try blindly inserting into the mode table we get an FK error. We have an old and a new proposed fix
 	- OLD: only insert data into mode table that has a pk that is in the config table. drop remaining rows. This is the last correspondence to occur on 11th dec.
 	- NEW: preserve as many rows as possible from the `EDICommunicationPartyConfig`- have as many rows from EDICommunicationPartyConfig as are required for none of the rows in the child mode table to be orphaned. This is decided on 12th Jan.
@@ -90,4 +94,4 @@ PTW 02-Mar-26 14:13 GMT+11:00: Updated design:
 	2) no prod data for all of the above tables
 - If i am correct, this would entail introducing a new script that preserves data in `IPreserveTestValueScripts`
 	- In fact, if mode points to party config and party config points to both party and auth, we need to preserve these as well.
-		- By extension, what about all foreign keys? What about `GlbGroup` (pointed to by "mode") and `GlbDepartment` (pointed to by "party config"). Is it ss
+		- By extension, what about all foreign keys? What about `GlbGroup` (pointed to by "mode") and `GlbDepartment` (pointed to by "party config"). Is it safe bet that test db has not been modified to remove any of these rows to the point where
