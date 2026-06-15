@@ -38,5 +38,33 @@
 		- foreach of those, call `BuildScript`. One of these is `ClearEDICommunicationMode.BuildScript`
 		- When this last line of code runs, it empties this table (presumably). This is a safe option since this table is the child. This aligns with the second note that yash made in dec 11 last year: `_ClearEDICommunicationMode.cs_ - CP2T clear scripts run 'DELETE FROM EDICommunicationsMode' (table is cleared, no FK violations)`
 	- Separately
-		- Static method `CopyProductionToTestScriptManager.GetClearDataToBeOverwrittenByTestDataScript` is called
-		- We iterate through `CopyProductionToTestScriptsCollection.Reverse()` in 
+		- `PerformCopyProductionToTestPostRestoreSteps` (see above)
+		- `CopyAuxiliaryDataToTestDatabase` is called as the final step
+		- Static method `CopyProductionToTestScriptManager.GetCopyTempDbDataToTestDbScript` is called
+		- Iterate through `CopyProductionToTestScriptsCollection` which is a collection of scripts, for each script we call `GetCopyTempDbDataToTestDbScript`. So at some point we call `EDICommunicationModeToPreserve.GetCopyTempDbDataToTestDbScript`. This runs a fat copy data into test db query:
+```SQL
+-- OVERWRITE PROD DATA WITH TEST DATA IF DUPLICATE PKS --
+		DECLARE @OverwriteProdEdiCommsWithTestIfDuplicatePK NVARCHAR(MAX) = N'
+			UPDATE [{1}].[dbo].[EDICommunicationsMode] SET '
+ 
+			SELECT @OverwriteProdEdiCommsWithTestIfDuplicatePK = @OverwriteProdEdiCommsWithTestIfDuplicatePK + c.COLUMN_NAME + ' = b.' + c.COLUMN_NAME + ','
+			FROM [{1}].INFORMATION_SCHEMA.COLUMNS as c
+			WHERE TABLE_NAME = 'EDICommunicationsMode'
+ 
+			SET @OverwriteProdEdiCommsWithTestIfDuplicatePK = SUBSTRING(@OverwriteProdEdiCommsWithTestIfDuplicatePK, 1, LEN(@OverwriteProdEdiCommsWithTestIfDuplicatePK) - 1)
+ 
+			SET @OverwriteProdEdiCommsWithTestIfDuplicatePK = @OverwriteProdEdiCommsWithTestIfDuplicatePK + ' FROM [{0}]..[TempEDICommunicationsMode] b '
+			SET @OverwriteProdEdiCommsWithTestIfDuplicatePK = @OverwriteProdEdiCommsWithTestIfDuplicatePK + 'JOIN [{1}]..[EDICommunicationsMode] a '
+			SET @OverwriteProdEdiCommsWithTestIfDuplicatePK = @OverwriteProdEdiCommsWithTestIfDuplicatePK + 'ON a.EK_PK = b.EK_PK'
+ 
+		EXEC sp_executesql @OverwriteProdEdiCommsWithTestIfDuplicatePK
+
+-- COPY TEST SPECIFIC DATA INTO TEST DB --
+		DECLARE @CopyOldTestEdiCommsIntoNewTestDatabase NVARCHAR(MAX) = N'
+			INSERT [{1}]..EDICommunicationsMode
+			SELECT *
+			FROM [{0}]..TempEDICommunicationsMode
+			WHERE EK_PK NOT IN (SELECT EK_PK FROM [{1}]..EDICommunicationsMode)'
+
+		EXEC sp_executesql @CopyOldTestEdiCommsIntoNewTestDatabase
+```
