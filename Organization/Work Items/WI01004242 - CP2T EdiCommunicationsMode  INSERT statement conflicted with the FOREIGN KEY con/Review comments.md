@@ -4,7 +4,7 @@ Summary of changes?
 3) In the SQL file `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business.Test/Restore/TestFiles/testProdCopy.sql` a ton of changes were made including to the encoding (most likely), impossible to see the diff without pulling locally [TODO]
 4) In the file `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business.Test/Restore/TestFiles/testProdDbCopyWithInterchangeAndMessage.sql` we made some changes: this sql query is used to set up a db to perform the cp2t operation when we have messaging data that needs to be treated specially. The schema has been modified to include a foreign key reference to itself, not sure why
 	1) see if EM_EM_RequestMessage is used anywhere else in the logic
-	2) `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business.Test/Restore/DbRestoreManagerTest.cs` is a TEST file and is not very important. In one test: `TestCopyProductionToTest`, 
+	2) `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business.Test/Restore/DbRestoreManagerTest.cs` is a TEST file and is not very important. In one test: `TestCopyProductionToTest`, there is an assertion that all the tables we want to clean up (and strip prod data from) are empty. This is because the requirement from product is that all PROD data is wiped. BUT all test data should be copied back into this table. We should leave a comment suggesting to have data in the aux pre CP2T that we can assert is still there post operation, although this only works if we have a mechanism to have a "pre" db and that the CP2T isnt done onto an empty/non existent test.
 
 
 ```
