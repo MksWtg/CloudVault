@@ -1,0 +1,10 @@
+- Transfer money
+- Pay HECS
+- Apply for reimbursement for summer 2025
+- Message Ebi saying thanks
+	- AFTER he responds and ONLY IF he says no, message safa (this is important so we don't interrupt an ongoing process)
+- RTOS investigation (why lost marks)
+	- Message Jian's helper prof and appeal
+- Buy Ethan's birthday card
+- Get home for dinner
+- 
