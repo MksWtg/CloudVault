@@ -9,7 +9,7 @@ Summary of changes?
 6) `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business.Test/DbBackupAndRestore.Business.Test.csproj` is a csproj- they have removed `<None Remove="Restore\TestFiles\testProdDbCopyWithInterchangeAndMessage.sql" />` and `<EmbeddedResource Include="Restore\TestFiles\testProdDbCopyWithInterchangeAndMessage.sql" />`. I believe the first line effectively does nothing but recognizes the file in vs solution explorer. The second line combines the file binary into the test assembly. So by removing these two lines we are trying to have the file not be recognized by vs and not included in the test binary? although I am not sure why.
 7) `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business/Restore/CopyProductionToTest/ClearDataScripts/ClearEDICommunication.cs` looks like we are clearing data from all the tables. i bet this info just comes direct form patrick. THIS WAS ADDED BTW
 8) The above file replaces EdiCommunicationMode.cs `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business/Restore/CopyProductionToTest/ClearDataScripts/ClearEDICommunicationMode.cs` which previously just cleared one table, this has been removed
-9) 
+9) `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business/Restore/CopyProductionToTest/DataToPreserve/EDICommunicationModeToPreserve.cs` has been removed, so we are no longer inserting test data back into test from aux temp db 
 
 
 ```
