@@ -13,5 +13,5 @@ I am trying to understand the order of operations in the class CopyProductionToT
 
 
 ```
-Does the test "TestCopyProductionToTest" perform the CP2T operation on top of an existing test db with existing data or does it do the CP2T fresh and create the 
+Does the test "TestCopyProductionToTest" perform the CP2T operation on top of an existing test db with existing data (does the test setup create this db before doing the CP2T) or does it do the CP2T fresh and create the DB as part of CP2T?
 ```
