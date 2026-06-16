@@ -10,6 +10,7 @@ Summary of changes?
 7) `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business/Restore/CopyProductionToTest/ClearDataScripts/ClearEDICommunication.cs` looks like we are clearing data from all the tables. i bet this info just comes direct form patrick. THIS WAS ADDED BTW
 8) The above file replaces EdiCommunicationMode.cs `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business/Restore/CopyProductionToTest/ClearDataScripts/ClearEDICommunicationMode.cs` which previously just cleared one table, this has been removed
 9) `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business/Restore/CopyProductionToTest/DataToPreserve/EDICommunicationModeToPreserve.cs` has been removed, so we are no longer inserting test data back into test from aux temp db 
+10) `Enterprise/Product/Core/DataTools/DbBackupAndRestore/DbBackupAndRestore.Business/Restore/CopyProductionToTest/CopyProductionToTestScriptManager.cs` no longer uses edi communication mode to preserve class to copy data from aux into mode table. we also dont just clear the mode table, but other tables too :D
 
 
 ```
