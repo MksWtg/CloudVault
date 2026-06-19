@@ -33,5 +33,5 @@ Also, test npm:startall
 ## Update
 
 ```
-Please read through all the documentation to make sure it is accurate. In getting started for developers we want one method, the easiest, to recommend. I think npm run dev
+Please read through all the documentation to make sure it is accurate. In getting started for developers we want one method, the easiest, to recommend to new devs. I think npm run dev for FE and double clicking exe in the BE. I think this is already there but check. Somewhere else in the docs we need to explain there are 3 methods to running the frontend and backend and ideally they can all be run in parallel (this excludes service tasks and is only for testing the web api), please put this in the appropriate place and make sure there is no duplicate docs.
 ```
