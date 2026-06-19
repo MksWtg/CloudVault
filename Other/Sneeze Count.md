@@ -1,6 +1,6 @@
 
 Thursday: 0 
-Friday: 3 
+Friday: 12
 Saturday: 0 x
 Sunday: 0 x
 Monday: 0 x
