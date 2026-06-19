@@ -33,5 +33,5 @@ Also, test npm:startall
 ## Update
 
 ```
-Please read through all the documentation to make sure it is accurate. In getting started for developers we want the closes
+Please read through all the documentation to make sure it is accurate. In getting started for developers we want one method, the easiest, to recommend. I think npm run dev
 ```
