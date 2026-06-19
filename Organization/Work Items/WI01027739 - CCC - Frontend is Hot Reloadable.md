@@ -28,7 +28,7 @@ Need to test these scenarios:
 | Backend: Debugger |                       |                  |                   |
 | Backend: Exe      |                       |                  |                   |
 | Backend: Service  |                       |                  |                   |
-Also, test npm:startall
+Also, test npm:startall and npm start and cy test
 
 ## Update
 
