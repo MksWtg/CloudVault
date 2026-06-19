@@ -29,3 +29,9 @@ Need to test these scenarios:
 | Backend: Exe      |                       |                  |                   |
 | Backend: Service  |                       |                  |                   |
 Also, test npm:startall
+
+## Update
+
+```
+Please read through all the documentation to make sure it is accurate. In getting started for developers we want the closes
+```
