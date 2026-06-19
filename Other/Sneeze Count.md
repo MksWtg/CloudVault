@@ -1,15 +1,15 @@
 
-Thursday: 0
-Friday: 3
-Saturday: 0
-Sunday: 0
-Monday: 0
-Tuesday: 0
-Wednesday: 0
-Thursday: 0
-Friday: 0
-Saturday: 0
-Sunday: 0
-Monday: 0
-Tuesday: 0
+Thursday: 0 
+Friday: 3 
+Saturday: 0 x
+Sunday: 0 x
+Monday: 0 x
+Tuesday: 0 x
+Wednesday: 0 x
+Thursday: 0 x
+Friday: 0 x
+Saturday: 0 x
+Sunday: 0 x
+Monday: 0 x
+Tuesday: 0 x
 Wednesday LEAVING
