@@ -1,4 +1,8 @@
 - flights there
 - flights back
 - insurance
-- accom 
+- accom vienna
+- email pecs
+- accom budapest
+- accom czechia
+- 
