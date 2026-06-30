@@ -1,0 +1,4 @@
+- flights there
+- flights back
+- insurance
+- accom 
